@@ -12,7 +12,7 @@ import { sms } from '@kit.TelephonyKit';
 function setDefaultSmsSlotId(slotId: int, callback: AsyncCallback<void>): void
 ```
 
-Sets the default SIM card for sending SMS messages. You can obtain the default SIM card by using {@code getDefaultSmsSlotId}.
+Sets the default slot ID of the SIM card used to send SMS messages. This API uses an asynchronous callback to return the result.
 
 **Since:** 7
 
@@ -30,8 +30,8 @@ Sets the default SIM card for sending SMS messages. You can obtain the default S
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| slotId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Indicates the default SIM card for sending SMS messages. The value {@code 0} indicates card slot 1, and the value {@code 1} indicates card slot 2. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | The callback of setDefaultSmsSlotId. |
+| slotId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | SIM card slot ID. &lt;br&gt;- **0**: card slot 1 &lt;br&gt;- **1**: card slot 2 &lt;br&gt;- **-1**: Clears the default configuration. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
 
@@ -64,7 +64,7 @@ sms.setDefaultSmsSlotId(0, (err: BusinessError) => {
 function setDefaultSmsSlotId(slotId: int): Promise<void>
 ```
 
-Sets the default SIM card for sending SMS messages. You can obtain the default SIM card by using {@code getDefaultSmsSlotId}.
+Sets the default slot ID of the SIM card used to send SMS messages. This API uses a promise to return the result.
 
 **Since:** 7
 
@@ -82,13 +82,13 @@ Sets the default SIM card for sending SMS messages. You can obtain the default S
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| slotId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Indicates the default SIM card for sending SMS messages. The value {@code 0} indicates card slot 1, and the value {@code 1} indicates card slot 2. |
+| slotId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | SIM card slot ID. &lt;br&gt;- **0**: card slot 1 &lt;br&gt;- **1**: card slot 2 &lt;br&gt;- **-1**: Clears the default configuration. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | The promise returned by the setDefaultSmsSlotId. |
+| Promise&lt;void&gt; | Promise used to return the result. |
 
 **Error codes:**
 

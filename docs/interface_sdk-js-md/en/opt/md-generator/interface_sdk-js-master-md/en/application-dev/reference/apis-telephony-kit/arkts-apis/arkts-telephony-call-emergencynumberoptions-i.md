@@ -1,6 +1,6 @@
 # EmergencyNumberOptions
 
-Indicates the option for determining if a number is an emergency number for specified slot.
+Provides an option for determining whether a number is an emergency number for the SIM card in the specified slot.
 
 **Since:** 7
 
@@ -20,7 +20,10 @@ import { call } from '@kit.TelephonyKit';
 slotId?: number
 ```
 
-Indicates the card slot index number, ranging from 0 to the maximum card slot index number supported by the device.
+Card slot ID.
+
+- **0**: card slot 1  
+- **1**: card slot 2
 
 **Type:** number
 

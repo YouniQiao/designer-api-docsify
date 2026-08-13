@@ -12,7 +12,7 @@ import { call } from '@kit.TelephonyKit';
 function updateImsCallMode(callId: number, mode: ImsCallMode, callback: AsyncCallback<void>): void
 ```
 
-Update Ims call mode.
+Updates the IMS call mode. This API uses an asynchronous callback to return the result.
 
 **Since:** 8
 
@@ -65,7 +65,7 @@ call.updateImsCallMode(1, 1, (err: BusinessError) => {
 function updateImsCallMode(callId: number, mode: ImsCallMode): Promise<void>
 ```
 
-Update Ims call mode.
+Updates the IMS call mode. This API uses a promise to return the result.
 
 **Since:** 8
 

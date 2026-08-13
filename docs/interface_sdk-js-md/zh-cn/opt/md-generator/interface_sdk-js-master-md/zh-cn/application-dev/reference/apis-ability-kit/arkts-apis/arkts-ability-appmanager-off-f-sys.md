@@ -23,7 +23,7 @@ function off(type: 'appForegroundState', observer?: AppForegroundStateObserver):
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | type | 'appForegroundState' | 是 |
-| observer | [AppForegroundStateObserver](arkts-ability-appforegroundstateobserver-i-sys.md) | 否 |
+| [observer](../../apis-telephony-kit/arkts-apis/arkts-telephony-observer.md) | [AppForegroundStateObserver](arkts-ability-appforegroundstateobserver-i-sys.md) | 否 |
 
 **错误码：**
 
@@ -92,7 +92,7 @@ function off(type: 'abilityFirstFrameState', observer?: AbilityFirstFrameStateOb
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | type | 'abilityFirstFrameState' | 是 |
-| observer | [AbilityFirstFrameStateObserver](arkts-ability-appmanager-abilityfirstframestateobserver-t-sys.md) | 否 |
+| [observer](../../apis-telephony-kit/arkts-apis/arkts-telephony-observer.md) | [AbilityFirstFrameStateObserver](arkts-ability-appmanager-abilityfirstframestateobserver-t-sys.md) | 否 |
 
 **错误码：**
 

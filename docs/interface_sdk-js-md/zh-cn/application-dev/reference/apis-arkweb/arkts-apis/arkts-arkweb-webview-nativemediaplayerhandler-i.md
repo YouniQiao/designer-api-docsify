@@ -163,7 +163,7 @@ handleNetworkStateChanged(state: NetworkState): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| state | [NetworkState](arkts-arkweb-webview-networkstate-e.md) | 是 | 播放器的网络状态。 |
+| state | NetworkState | 是 | 播放器的网络状态。 |
 
 ## handlePlaybackRateChanged
 

@@ -1,6 +1,6 @@
 # MmsReadOrigInd (System API)
 
-Defines the original MMS message reading indication.
+Defines the original MMS message reading index.
 
 **Since:** 8
 
@@ -22,7 +22,7 @@ import { sms } from '@kit.TelephonyKit';
 date: number
 ```
 
-Indicates the date for the original MMS message reading indication.
+Date.
 
 **Type:** number
 
@@ -40,7 +40,7 @@ Indicates the date for the original MMS message reading indication.
 from: MmsAddress
 ```
 
-Indicates the source address for the original MMS message reading indication.
+Source address.
 
 **Type:** [MmsAddress](arkts-telephony-sms-mmsaddress-i-sys.md)
 
@@ -58,7 +58,7 @@ Indicates the source address for the original MMS message reading indication.
 messageId: string
 ```
 
-Indicates the message ID for the original MMS message reading indication.
+Message ID.
 
 **Type:** string
 
@@ -76,7 +76,7 @@ Indicates the message ID for the original MMS message reading indication.
 readStatus: number
 ```
 
-Indicates the read status for the original MMS message reading indication.
+Read status.
 
 **Type:** number
 
@@ -94,7 +94,7 @@ Indicates the read status for the original MMS message reading indication.
 to: Array<MmsAddress>
 ```
 
-Indicates the destination address for the original MMS message reading indication.
+Destination address.
 
 **Type:** Array&lt;[MmsAddress](arkts-telephony-sms-mmsaddress-i-sys.md)&gt;
 
@@ -112,7 +112,7 @@ Indicates the destination address for the original MMS message reading indicatio
 version: MmsVersionType
 ```
 
-Indicates the version for the original MMS message reading indication.
+Version.
 
 **Type:** [MmsVersionType](arkts-telephony-sms-mmsversiontype-e-sys.md)
 

@@ -12,7 +12,7 @@ import { call } from '@kit.TelephonyKit';
 function getMainCallId(callId: int, callback: AsyncCallback<int>): void
 ```
 
-Get the main call Id.
+Obtains the main call ID. This API uses an asynchronous callback to return the result.
 
 **Since:** 7
 
@@ -28,8 +28,8 @@ Get the main call Id.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Indicates the identifier of the call. |
-| callback | ArkTS-Dyn: [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;number&gt;  <br>ArkTS-Sta：[AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;int&gt; | Yes | Indicates the callback for getting the main call id. |
+| callId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Call ID. |
+| callback | ArkTS-Dyn: [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;number&gt;  <br>ArkTS-Sta：[AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;int&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
 
@@ -63,7 +63,7 @@ call.getMainCallId(1, (err: BusinessError, data: number) => {
 function getMainCallId(callId: int): Promise<int>
 ```
 
-Get the main call Id.
+Obtains the main call ID. This API uses a promise to return the result.
 
 **Since:** 7
 
@@ -79,13 +79,13 @@ Get the main call Id.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Indicates the identifier of the call. |
+| callId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Call ID. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: Promise&lt;number&gt;  <br>ArkTS-Sta：Promise&lt;int&gt; | Returns the main call id. |
+| ArkTS-Dyn: Promise&lt;number&gt;  <br>ArkTS-Sta：Promise&lt;int&gt; | Promise used to return the result. |
 
 **Error codes:**
 

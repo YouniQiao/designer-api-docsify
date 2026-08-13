@@ -1,6 +1,6 @@
 # ImsCallMode (System API)
 
-Indicates the mode of the ims call.
+Enumerates IMS call modes.
 
 **Since:** 8
 
@@ -16,7 +16,7 @@ Indicates the mode of the ims call.
 CALL_MODE_AUDIO_ONLY = 0
 ```
 
-Indicates audio only calls.
+Audio call only.
 
 **Since:** 8
 
@@ -32,7 +32,7 @@ Indicates audio only calls.
 CALL_MODE_SEND_ONLY = 1
 ```
 
-Indicates that only calls are sent.
+Sending calls only.
 
 **Since:** 8
 
@@ -48,7 +48,7 @@ Indicates that only calls are sent.
 CALL_MODE_RECEIVE_ONLY = 2
 ```
 
-Indicates receiving only calls.
+Receiving calls only.
 
 **Since:** 8
 
@@ -64,7 +64,7 @@ Indicates receiving only calls.
 CALL_MODE_SEND_RECEIVE = 3
 ```
 
-Indicates permission to send and receive calls.
+Sending and receiving calls.
 
 **Since:** 8
 
@@ -80,7 +80,7 @@ Indicates permission to send and receive calls.
 CALL_MODE_VIDEO_PAUSED = 4
 ```
 
-Indicates a pause in video calls.
+Pausing video calls.
 
 **Since:** 8
 

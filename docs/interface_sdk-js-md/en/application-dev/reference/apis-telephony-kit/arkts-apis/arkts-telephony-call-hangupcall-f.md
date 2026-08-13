@@ -12,7 +12,7 @@ import { call } from '@kit.TelephonyKit';
 function hangUpCall(callback: AsyncCallback<void>): void
 ```
 
-Hang up the foreground call without callId.
+Ends a call. This API uses an asynchronous callback to return the result.
 
 **Since:** 23
 
@@ -28,7 +28,7 @@ Hang up the foreground call without callId.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | The callback of hangUpCall. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the call is hung up successfully, the value of **err** is **undefined**. Otherwise, the value is an error object. |
 
 **Error codes:**
 

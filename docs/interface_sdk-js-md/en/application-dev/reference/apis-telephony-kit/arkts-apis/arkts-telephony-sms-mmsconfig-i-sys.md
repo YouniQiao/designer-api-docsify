@@ -1,6 +1,6 @@
 # MmsConfig (System API)
 
-Defines the MMS message config.
+MMS configuration file.
 
 **Since:** 11
 
@@ -24,7 +24,7 @@ import { sms } from '@kit.TelephonyKit';
 userAgent: string
 ```
 
-Indicates the user agent used for the MMS message.
+User agent.
 
 **Type:** string
 
@@ -44,7 +44,7 @@ Indicates the user agent used for the MMS message.
 userAgentProfile: string
 ```
 
-Indicates the user agent profile for the MMS message.
+User agent profile.
 
 **Type:** string
 

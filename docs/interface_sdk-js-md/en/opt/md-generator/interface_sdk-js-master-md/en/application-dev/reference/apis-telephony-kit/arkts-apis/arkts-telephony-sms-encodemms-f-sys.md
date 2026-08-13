@@ -12,7 +12,7 @@ import { sms } from '@kit.TelephonyKit';
 function encodeMms(mms: MmsInformation, callback: AsyncCallback<Array<number>>): void
 ```
 
-Encode the message content.
+MMS message code. This API uses an asynchronous callback to return the result.
 
 **Since:** 8
 
@@ -67,7 +67,7 @@ sms.encodeMms(mmsInformation, (err: BusinessError, data: number[]) => {
 function encodeMms(mms: MmsInformation): Promise<Array<number>>
 ```
 
-Encode the message content.
+MMS message code. This API uses a promise to return the result.
 
 **Since:** 8
 

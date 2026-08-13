@@ -12,7 +12,7 @@ import { sms } from '@kit.TelephonyKit';
 function getDefaultSmsSlotId(callback: AsyncCallback<int>): void
 ```
 
-Obtains the default SIM card for sending SMS messages.
+Obtains the default slot ID of the SIM card used to send SMS messages. This API uses an asynchronous callback to return the result.
 
 **Since:** 7
 
@@ -26,7 +26,7 @@ Obtains the default SIM card for sending SMS messages.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | ArkTS-Dyn: [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;number&gt;  <br>ArkTS-Sta：[AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;int&gt; | Yes | Indicates the callback for getting the default SIM card for sending SMS messages. Returns {@code 0} if the default SIM card for sending SMS messages is in card slot 1; Returns {@code 1} if the default SIM card for sending SMS messages is in card slot 2. |
+| callback | ArkTS-Dyn: [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;number&gt;  <br>ArkTS-Sta：[AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;int&gt; | Yes | Callback used to return the result. &lt;br&gt;- **0**: card slot 1. &lt;br&gt;- **1**: card slot 2 |
 
 ## Examples
 
@@ -46,7 +46,7 @@ sms.getDefaultSmsSlotId((err: BusinessError, data: number) => {
 function getDefaultSmsSlotId(): Promise<int>
 ```
 
-Obtains the default SIM card for sending SMS messages.
+Obtains the default slot ID of the SIM card used to send SMS messages. This API uses a promise to return the result.
 
 **Since:** 7
 
@@ -60,7 +60,7 @@ Obtains the default SIM card for sending SMS messages.
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: Promise&lt;number&gt;  <br>ArkTS-Sta：Promise&lt;int&gt; | Returns { |
+| ArkTS-Dyn: Promise&lt;number&gt;  <br>ArkTS-Sta：Promise&lt;int&gt; | Promise used to return the result. &lt;br&gt;- **0**: card slot 1. &lt;br&gt;- **1**: card slot 2 |
 
 ## Examples
 

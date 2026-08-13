@@ -12,7 +12,7 @@ import { sms } from '@kit.TelephonyKit';
 function decodeMms(mmsFilePathName: string | Array<int>, callback: AsyncCallback<MmsInformation>): void
 ```
 
-Decode the message content.
+Decodes MMS messages. This API uses an asynchronous callback to return the result.
 
 **Since:** 8
 
@@ -28,8 +28,8 @@ Decode the message content.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| mmsFilePathName | ArkTS-Dyn: string \| Array&lt;number&gt;  <br>ArkTS-Sta：string \| Array&lt;int&gt; | Yes | Indicates the path name of the multimedia message file. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[MmsInformation](arkts-telephony-sms-mmsinformation-i-sys.md)&gt; | Yes | Indicates the callback for getting a {@code MmsInformation} object. |
+| mmsFilePathName | ArkTS-Dyn: string \| Array&lt;number&gt;  <br>ArkTS-Sta：string \| Array&lt;int&gt; | Yes | MMS message file path. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[MmsInformation](arkts-telephony-sms-mmsinformation-i-sys.md)&gt; | Yes | Callback used to return the result, which is carried in {@code MmsInformation}. |
 
 **Error codes:**
 
@@ -66,7 +66,7 @@ sms.decodeMms(mmsPdu, (err: BusinessError, data: sms.MmsInformation) => {
 function decodeMms(mmsFilePathName: string | Array<int>): Promise<MmsInformation>
 ```
 
-Decode the message content.
+Decodes MMS messages. This API uses a promise to return the result.
 
 **Since:** 8
 
@@ -82,13 +82,13 @@ Decode the message content.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| mmsFilePathName | ArkTS-Dyn: string \| Array&lt;number&gt;  <br>ArkTS-Sta：string \| Array&lt;int&gt; | Yes | Indicates the path name of the multimedia message file. |
+| mmsFilePathName | ArkTS-Dyn: string \| Array&lt;number&gt;  <br>ArkTS-Sta：string \| Array&lt;int&gt; | Yes | MMS message file path. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;[MmsInformation](arkts-telephony-sms-mmsinformation-i-sys.md)&gt; | Returns a { |
+| Promise&lt;[MmsInformation](arkts-telephony-sms-mmsinformation-i-sys.md)&gt; | Promise used to return the result. |
 
 **Error codes:**
 

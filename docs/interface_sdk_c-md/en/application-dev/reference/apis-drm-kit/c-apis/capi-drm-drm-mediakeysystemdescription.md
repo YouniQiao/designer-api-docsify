@@ -6,7 +6,7 @@ typedef struct DRM_MediaKeySystemDescription {...} DRM_MediaKeySystemDescription
 
 ## Overview
 
-Name and UUID of DRM plugin.
+The struct describes the DRM solution name and UUID list.
 
 **Since**: 12
 

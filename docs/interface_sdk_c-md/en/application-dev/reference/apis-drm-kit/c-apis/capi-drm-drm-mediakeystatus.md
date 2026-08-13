@@ -6,7 +6,7 @@ typedef struct DRM_MediaKeyStatus {...} DRM_MediaKeyStatus
 
 ## Overview
 
-Media key status like policy etc.
+The struct describes the media key status.
 
 **Since**: 11
 

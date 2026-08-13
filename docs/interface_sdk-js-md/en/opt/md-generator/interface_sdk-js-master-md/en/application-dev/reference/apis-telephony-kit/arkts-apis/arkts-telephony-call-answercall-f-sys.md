@@ -12,7 +12,7 @@ import { call } from '@kit.TelephonyKit';
 function answerCall(callId: number, callback: AsyncCallback<void>): void
 ```
 
-Answers the incoming call.
+Answers a call. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
 
@@ -64,7 +64,7 @@ call.answerCall(1, (err: BusinessError) => {
 function answerCall(callId?: number): Promise<void>
 ```
 
-Answers the incoming call.
+Answers a call. This API uses a promise to return the result.
 
 **Since:** 9
 
@@ -119,7 +119,7 @@ call.answerCall(1).then(() => {
 function answerCall(videoState: VideoStateType, callId: number): Promise<void>
 ```
 
-Answers the incoming video call
+Answers a call. This API uses a promise to return the result.
 
 **Since:** 11
 

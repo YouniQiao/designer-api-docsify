@@ -12,7 +12,7 @@ import { call } from '@kit.TelephonyKit';
 function sendCallUiEvent(callId: int, eventName: string): Promise<void>
 ```
 
-Send call ui event.
+Sends a call UI event. This API uses a promise to return the result.
 
 **Since:** 12
 
@@ -30,14 +30,14 @@ Send call ui event.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Indicates the identifier of the call. |
-| eventName | string | Yes | Indicates the event name. |
+| callId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Call ID. |
+| eventName | string | Yes | Event name. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | The promise returned by the sendCallUiEvent. |
+| Promise&lt;void&gt; | Promise used to return the result. |
 
 **Error codes:**
 

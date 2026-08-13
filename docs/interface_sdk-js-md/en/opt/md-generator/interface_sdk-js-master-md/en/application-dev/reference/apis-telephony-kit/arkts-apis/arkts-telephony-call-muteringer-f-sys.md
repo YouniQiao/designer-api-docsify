@@ -12,9 +12,7 @@ import { call } from '@kit.TelephonyKit';
 function muteRinger(callback: AsyncCallback<void>): void
 ```
 
-Stops the ringtone.
-
-If an incoming call is ringing, the phone stops ringing. Otherwise, this method does not function.
+Mutes the ringtone while it is playing. It does not work if the ringtone has been muted. This API uses an asynchronous callback to return the result.
 
 **Since:** 8
 
@@ -65,9 +63,7 @@ call.muteRinger((err: BusinessError) => {
 function muteRinger(): Promise<void>
 ```
 
-Stops the ringtone.
-
-If an incoming call is ringing, the phone stops ringing. Otherwise, this method does not function.
+Mutes the ringtone while it is playing. It does not work if the ringtone has been muted. This API uses a promise to return the result.
 
 **Since:** 8
 

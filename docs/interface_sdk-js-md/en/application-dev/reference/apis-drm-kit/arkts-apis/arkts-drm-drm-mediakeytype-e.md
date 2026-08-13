@@ -1,10 +1,10 @@
 # MediaKeyType
 
-Enumerates media key type.
+Enumerates the types of media keys.
 
-**Since:** 14
+**Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 <!--Device-drm-enum MediaKeyType--><!--Device-drm-enum MediaKeyType-End-->
 
@@ -16,11 +16,11 @@ Enumerates media key type.
 MEDIA_KEY_TYPE_OFFLINE = 0
 ```
 
-Offline media key type.
+Offline media key.
 
-**Since:** 14
+**Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
 
@@ -31,18 +31,18 @@ Offline media key type.
 ## MEDIA_KEY_TYPE_ONLINE
 
 ```TypeScript
-MEDIA_KEY_TYPE_ONLINE
+MEDIA_KEY_TYPE_ONLINE = 1
 ```
 
-Online media key type.
+Online media key.
 
-**Since:** 14
+**Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
 
-<!--Device-MediaKeyType-MEDIA_KEY_TYPE_ONLINE--><!--Device-MediaKeyType-MEDIA_KEY_TYPE_ONLINE-End-->
+<!--Device-MediaKeyType-MEDIA_KEY_TYPE_ONLINE = 1--><!--Device-MediaKeyType-MEDIA_KEY_TYPE_ONLINE = 1-End-->
 
 **System capability:** SystemCapability.Multimedia.Drm.Core
 

@@ -12,7 +12,7 @@ import { call } from '@kit.TelephonyKit';
 function setDeviceDirection(callId: int, deviceDirection: DeviceDirection): Promise<void>
 ```
 
-Set device direction when video call.
+Sets the video call screen to follow the device direction. This API uses a promise to return the result.
 
 **Since:** 11
 
@@ -30,14 +30,14 @@ Set device direction when video call.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Indicates the identifier of the call. |
-| deviceDirection | [DeviceDirection](arkts-telephony-call-devicedirection-e-sys.md) | Yes | Indicates the identifier of the direction for the display. |
+| callId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Call ID. You can obtain the value by subscribing to **callDetailsChange** events. |
+| deviceDirection | [DeviceDirection](arkts-telephony-call-devicedirection-e-sys.md) | Yes | Device direction. It determines the direction of the video call screen. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | The promise returned by the setDeviceDirection. |
+| Promise&lt;void&gt; | Promise used to return the result. |
 
 **Error codes:**
 

@@ -12,7 +12,7 @@ import { call } from '@kit.TelephonyKit';
 function getCallWaitingStatus(slotId: number, callback: AsyncCallback<CallWaitingStatus>): void
 ```
 
-Get call waiting status.
+Obtains the call waiting status. This API uses an asynchronous callback to return the result.
 
 **Since:** 7
 
@@ -64,7 +64,7 @@ call.getCallWaitingStatus(0, (err: BusinessError, data: call.CallWaitingStatus) 
 function getCallWaitingStatus(slotId: number): Promise<CallWaitingStatus>
 ```
 
-Get call waiting status.
+Obtains the call waiting status. This API uses a promise to return the result.
 
 **Since:** 7
 

@@ -1,10 +1,10 @@
 # ContentProtectionLevel
 
-Enumerates content protection level.
+Enumerates the content protection levels.
 
-**Since:** 12
+**Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 <!--Device-drm-enum ContentProtectionLevel--><!--Device-drm-enum ContentProtectionLevel-End-->
 
@@ -16,11 +16,11 @@ Enumerates content protection level.
 CONTENT_PROTECTION_LEVEL_UNKNOWN = 0
 ```
 
-Device decrypt and decode type unknown.
+Unknown content protection level.
 
-**Since:** 12
+**Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -31,72 +31,72 @@ Device decrypt and decode type unknown.
 ## CONTENT_PROTECTION_LEVEL_SW_CRYPTO
 
 ```TypeScript
-CONTENT_PROTECTION_LEVEL_SW_CRYPTO
+CONTENT_PROTECTION_LEVEL_SW_CRYPTO = 1
 ```
 
-Device using software level.
+Software-based content protection.
 
-**Since:** 12
+**Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
-<!--Device-ContentProtectionLevel-CONTENT_PROTECTION_LEVEL_SW_CRYPTO--><!--Device-ContentProtectionLevel-CONTENT_PROTECTION_LEVEL_SW_CRYPTO-End-->
+<!--Device-ContentProtectionLevel-CONTENT_PROTECTION_LEVEL_SW_CRYPTO = 1--><!--Device-ContentProtectionLevel-CONTENT_PROTECTION_LEVEL_SW_CRYPTO = 1-End-->
 
 **System capability:** SystemCapability.Multimedia.Drm.Core
 
 ## CONTENT_PROTECTION_LEVEL_HW_CRYPTO
 
 ```TypeScript
-CONTENT_PROTECTION_LEVEL_HW_CRYPTO
+CONTENT_PROTECTION_LEVEL_HW_CRYPTO = 2
 ```
 
-Device using hardware level.
+Hardware-based content protection.
 
-**Since:** 12
+**Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
-<!--Device-ContentProtectionLevel-CONTENT_PROTECTION_LEVEL_HW_CRYPTO--><!--Device-ContentProtectionLevel-CONTENT_PROTECTION_LEVEL_HW_CRYPTO-End-->
+<!--Device-ContentProtectionLevel-CONTENT_PROTECTION_LEVEL_HW_CRYPTO = 2--><!--Device-ContentProtectionLevel-CONTENT_PROTECTION_LEVEL_HW_CRYPTO = 2-End-->
 
 **System capability:** SystemCapability.Multimedia.Drm.Core
 
 ## CONTENT_PROTECTION_LEVEL_ENHANCED_HW
 
 ```TypeScript
-CONTENT_PROTECTION_LEVEL_ENHANCED_HW
+CONTENT_PROTECTION_LEVEL_ENHANCED_HW = 3
 ```
 
-Device using enhanced hardware level.
+Enhanced hardware-based content protection.
 
-**Since:** 12
+**Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
-<!--Device-ContentProtectionLevel-CONTENT_PROTECTION_LEVEL_ENHANCED_HW--><!--Device-ContentProtectionLevel-CONTENT_PROTECTION_LEVEL_ENHANCED_HW-End-->
+<!--Device-ContentProtectionLevel-CONTENT_PROTECTION_LEVEL_ENHANCED_HW = 3--><!--Device-ContentProtectionLevel-CONTENT_PROTECTION_LEVEL_ENHANCED_HW = 3-End-->
 
 **System capability:** SystemCapability.Multimedia.Drm.Core
 
 ## CONTENT_PROTECTION_LEVEL_MAX
 
 ```TypeScript
-CONTENT_PROTECTION_LEVEL_MAX
+CONTENT_PROTECTION_LEVEL_MAX = 4
 ```
 
-Max mode.
+Maximum content protection level.
 
-**Since:** 12
+**Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
-<!--Device-ContentProtectionLevel-CONTENT_PROTECTION_LEVEL_MAX--><!--Device-ContentProtectionLevel-CONTENT_PROTECTION_LEVEL_MAX-End-->
+<!--Device-ContentProtectionLevel-CONTENT_PROTECTION_LEVEL_MAX = 4--><!--Device-ContentProtectionLevel-CONTENT_PROTECTION_LEVEL_MAX = 4-End-->
 
 **System capability:** SystemCapability.Multimedia.Drm.Core
 

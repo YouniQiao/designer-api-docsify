@@ -12,7 +12,7 @@ import { sms } from '@kit.TelephonyKit';
 function isImsSmsSupported(slotId: number, callback: AsyncCallback<boolean>): void
 ```
 
-SMS over IMS is supported if IMS is registered and SMS is supported on IMS.
+Checks whether SMS is supported on IMS. This API uses an asynchronous callback to return the result.
 
 **Since:** 8
 
@@ -59,7 +59,7 @@ sms.isImsSmsSupported(slotId, (err: BusinessError, data: boolean) => {
 function isImsSmsSupported(slotId: number): Promise<boolean>
 ```
 
-SMS over IMS is supported if IMS is registered and SMS is supported on IMS.
+Checks whether SMS is supported on IMS. This API uses a promise to return the result.
 
 **Since:** 8
 

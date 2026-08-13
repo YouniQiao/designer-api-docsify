@@ -1,6 +1,6 @@
 # ObserverOptions
 
-Indicates observer options.
+Defines event subscription parameters.
 
 **Since:** 11
 
@@ -20,7 +20,10 @@ import { observer } from '@kit.TelephonyKit';
 slotId: number
 ```
 
-Indicates the ID of the target card slot.
+Card slot ID.
+
+- **0**: card slot 1.  
+- **1**: card slot 2.
 
 **Type:** number
 

@@ -1,0 +1,124 @@
+# setCallRestriction（系统接口）
+
+## setCallRestriction
+
+```TypeScript
+function setCallRestriction(slotId: int, info: CallRestrictionInfo, callback: AsyncCallback<void>): void
+```
+
+设置呼叫限制状态。使用callback异步回调。
+
+**起始版本：** 8
+
+**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
+
+**需要权限：** ohos.permission.SET_TELEPHONY_STATE
+
+<!--Device-call-function setCallRestriction(slotId: int, info: CallRestrictionInfo, callback: AsyncCallback<void>): void--><!--Device-call-function setCallRestriction(slotId: int, info: CallRestrictionInfo, callback: AsyncCallback<void>): void-End-->
+
+**系统能力：** SystemCapability.Telephony.CallManager
+
+**系统接口：** 此接口为系统接口。
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| slotId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 是 | 卡槽ID。&lt;br/&gt;- 0：卡槽1。&lt;br/&gt;- 1：卡槽2。 |
+| info | [CallRestrictionInfo](arkts-telephony-call-callrestrictioninfo-i-sys.md) | 是 | 呼叫限制信息。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 以回调函数的方式返回设置呼叫限制状态的结果。 |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameters types; |
+| [801](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
+| [201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [202](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) | Non-system applications use system APIs. |
+| [8300002](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-telephony-kit/errorcode-telephony.md#8300002-服务连接失败) | Operation failed. Cannot connect to service. |
+| [8300003](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-telephony-kit/errorcode-telephony.md#8300003-系统内部错误) | System internal error. |
+| [8300001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-telephony-kit/errorcode-telephony.md#8300001-输入参数不在处理范围内) | Invalid parameter value. |
+
+## 示例
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let callRestrictionInfo: call.CallRestrictionInfo = {
+    type: call.CallRestrictionType.RESTRICTION_TYPE_ALL_OUTGOING,
+    password: "123456",
+    mode: call.CallRestrictionMode.RESTRICTION_MODE_ACTIVATION
+}
+call.setCallRestriction(0, callRestrictionInfo, (err: BusinessError) => {
+    if (err) {
+        console.error(`setCallRestriction fail, err->${JSON.stringify(err)}`);
+    } else {
+        console.info(`setCallRestriction success.`);
+    }
+});
+```
+
+
+## setCallRestriction
+
+```TypeScript
+function setCallRestriction(slotId: int, info: CallRestrictionInfo): Promise<void>
+```
+
+设置呼叫限制状态。使用Promise异步回调。
+
+**起始版本：** 8
+
+**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
+
+**需要权限：** ohos.permission.SET_TELEPHONY_STATE
+
+<!--Device-call-function setCallRestriction(slotId: int, info: CallRestrictionInfo): Promise<void>--><!--Device-call-function setCallRestriction(slotId: int, info: CallRestrictionInfo): Promise<void>-End-->
+
+**系统能力：** SystemCapability.Telephony.CallManager
+
+**系统接口：** 此接口为系统接口。
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| slotId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 是 | 卡槽ID。&lt;br/&gt;- 0：卡槽1。&lt;br/&gt;- 1：卡槽2。 |
+| info | [CallRestrictionInfo](arkts-telephony-call-callrestrictioninfo-i-sys.md) | 是 | 呼叫限制信息。 |
+
+**返回值：**
+
+| 类型 | 说明 |
+| --- | --- |
+| Promise&lt;void&gt; | 以Promise形式异步返回结果。 |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameters types; |
+| [801](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
+| [201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [202](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) | Non-system applications use system APIs. |
+| [8300002](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-telephony-kit/errorcode-telephony.md#8300002-服务连接失败) | Operation failed. Cannot connect to service. |
+| [8300003](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-telephony-kit/errorcode-telephony.md#8300003-系统内部错误) | System internal error. |
+| [8300001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-telephony-kit/errorcode-telephony.md#8300001-输入参数不在处理范围内) | Invalid parameter value. |
+
+## 示例
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let callRestrictionInfo: call.CallRestrictionInfo = {
+    type: call.CallRestrictionType.RESTRICTION_TYPE_ALL_INCOMING,
+    password: "123456",
+    mode: call.CallRestrictionMode.RESTRICTION_MODE_ACTIVATION
+}
+call.setCallRestriction(0, callRestrictionInfo).then(() => {
+    console.info(`setCallRestriction success.`);
+}).catch((err: BusinessError) => {
+    console.error(`setCallRestriction fail, promise: err->${JSON.stringify(err)}`);
+});
+```
+

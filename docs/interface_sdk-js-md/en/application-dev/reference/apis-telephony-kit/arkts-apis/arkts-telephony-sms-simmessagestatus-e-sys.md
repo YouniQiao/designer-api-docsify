@@ -18,7 +18,7 @@ Defines the SIM message status.
 SIM_MESSAGE_STATUS_FREE = 0
 ```
 
-Status free space on SIM.
+Free space state of the SIM card.
 
 **Since:** 7
 
@@ -36,7 +36,7 @@ Status free space on SIM.
 SIM_MESSAGE_STATUS_READ = 1
 ```
 
-Indicates a read message.
+Read state.
 
 **Since:** 7
 
@@ -54,7 +54,7 @@ Indicates a read message.
 SIM_MESSAGE_STATUS_UNREAD = 3
 ```
 
-Indicates an unread message.
+Unread state.
 
 **Since:** 7
 
@@ -72,7 +72,7 @@ Indicates an unread message.
 SIM_MESSAGE_STATUS_SENT = 5
 ```
 
-Indicates a sent message (only applicable to SMS).
+Storage of sent messages (applicable only to SMS).
 
 **Since:** 7
 
@@ -90,7 +90,7 @@ Indicates a sent message (only applicable to SMS).
 SIM_MESSAGE_STATUS_UNSENT = 7
 ```
 
-Indicates an unsent message (only applicable to SMS).
+Storage of unsent messages (applicable only to SMS).
 
 **Since:** 7
 

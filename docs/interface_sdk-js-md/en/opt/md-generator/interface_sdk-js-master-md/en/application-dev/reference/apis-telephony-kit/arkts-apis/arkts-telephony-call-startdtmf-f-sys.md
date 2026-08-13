@@ -12,7 +12,7 @@ import { call } from '@kit.TelephonyKit';
 function startDTMF(callId: number, character: string, callback: AsyncCallback<void>): void
 ```
 
-Start DTMF(Dual Tone Multi Frequency).
+Starts playing DTMF tones. This API uses an asynchronous callback to return the result.
 
 **Since:** 7
 
@@ -65,7 +65,7 @@ call.startDTMF(1, "0", (err: BusinessError) => {
 function startDTMF(callId: number, character: string): Promise<void>
 ```
 
-Start DTMF(Dual Tone Multi Frequency).
+Starts playing DTMF tones. This API uses a promise to return the result.
 
 **Since:** 7
 

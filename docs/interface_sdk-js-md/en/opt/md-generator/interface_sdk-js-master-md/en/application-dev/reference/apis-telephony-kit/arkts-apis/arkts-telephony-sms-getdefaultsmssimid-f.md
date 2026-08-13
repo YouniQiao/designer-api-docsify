@@ -12,7 +12,7 @@ import { sms } from '@kit.TelephonyKit';
 function getDefaultSmsSimId(callback: AsyncCallback<number>): void
 ```
 
-Obtains the default SIM ID for sending SMS messages.
+Obtains the default ID of the SIM card used to send SMS messages. This API uses an asynchronous callback to return the result.
 
 **Since:** 10
 
@@ -56,7 +56,7 @@ sms.getDefaultSmsSimId((err: BusinessError, data: number) => {
 function getDefaultSmsSimId(): Promise<number>
 ```
 
-Obtains the default SIM ID for sending SMS messages.
+Obtains the default ID of the SIM card used to send SMS messages. This API uses a promise to return the result.
 
 **Since:** 10
 

@@ -6,7 +6,7 @@ typedef struct MediaKeySystem MediaKeySystem
 
 ## Overview
 
-Media key system struct.
+The struct describes a media key system.
 
 **Since**: 11
 

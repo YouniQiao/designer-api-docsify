@@ -12,9 +12,7 @@ import { sms } from '@kit.TelephonyKit';
 function createMessage(pdu: Array<int>, specification: string, callback: AsyncCallback<ShortMessage>): void
 ```
 
-Creates an SMS message instance based on the protocol data unit (PDU) and the specified SMS protocol.
-
-&lt;p&gt;After receiving the original PDU data, the system creates an SMS message instance according to the specified SMS protocol.
+Creates an SMS instance based on the protocol data unit (PDU) and specified SMS protocol. This API uses an asynchronous callback to return the result.
 
 **Since:** 6
 
@@ -28,9 +26,9 @@ Creates an SMS message instance based on the protocol data unit (PDU) and the sp
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| pdu | ArkTS-Dyn: Array&lt;number&gt;  <br>ArkTS-Sta：Array&lt;int&gt; | Yes | Indicates the original data, which is obtained from the received SMS. |
-| specification | string | Yes | Indicates the SMS protocol type. The value {@code 3gpp} indicates GSM/UMTS/LTE SMS, and the value {@code 3gpp2} indicates CDMA/LTE SMS. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[ShortMessage](arkts-telephony-sms-shortmessage-i.md)&gt; | Yes | Indicates the callback for getting an SMS message instance; returns {@code null} if {@code pdu} is empty or {@code specification} is not supported. |
+| pdu | ArkTS-Dyn: Array&lt;number&gt;  <br>ArkTS-Sta：Array&lt;int&gt; | Yes | Protocol data unit, which is obtained from the received SMS message. |
+| specification | string | Yes | SMS protocol type. &lt;br&gt;- **3gpp**: GSM/UMTS/LTE SMS &lt;br&gt;- **3gpp2**: CDMA SMS |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[ShortMessage](arkts-telephony-sms-shortmessage-i.md)&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
 
@@ -63,9 +61,7 @@ sms.createMessage(pdu, specification, (err: BusinessError, data: sms.ShortMessag
 function createMessage(pdu: Array<int>, specification: string): Promise<ShortMessage>
 ```
 
-Creates an SMS message instance based on the protocol data unit (PDU) and the specified SMS protocol.
-
-&lt;p&gt;After receiving the original PDU data, the system creates an SMS message instance according to the specified SMS protocol.
+Creates an SMS instance based on the protocol data unit (PDU) and specified SMS protocol. This API uses a promise to return the result.
 
 **Since:** 6
 
@@ -79,14 +75,14 @@ Creates an SMS message instance based on the protocol data unit (PDU) and the sp
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| pdu | ArkTS-Dyn: Array&lt;number&gt;  <br>ArkTS-Sta：Array&lt;int&gt; | Yes | Indicates the original data, which is obtained from the received SMS. |
-| specification | string | Yes | Indicates the SMS protocol type. The value {@code 3gpp} indicates GSM/UMTS/LTE SMS, and the value {@code 3gpp2} indicates CDMA/LTE SMS. |
+| pdu | ArkTS-Dyn: Array&lt;number&gt;  <br>ArkTS-Sta：Array&lt;int&gt; | Yes | Protocol data unit, which is obtained from the received SMS message. |
+| specification | string | Yes | SMS protocol type. &lt;br&gt;- **3gpp**: GSM/UMTS/LTE SMS &lt;br&gt;- **3gpp2**: CDMA SMS |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;[ShortMessage](arkts-telephony-sms-shortmessage-i.md)&gt; | Returns an SMS message instance; returns { |
+| Promise&lt;[ShortMessage](arkts-telephony-sms-shortmessage-i.md)&gt; | Promise used to return the result. |
 
 **Error codes:**
 

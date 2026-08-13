@@ -18,7 +18,7 @@ Enumerates MMS versions.
 MMS_VERSION_1_0 = 0x10
 ```
 
-Indicates MMS version 1_0.
+MMS version 1_0.
 
 **Since:** 8
 
@@ -33,16 +33,16 @@ Indicates MMS version 1_0.
 ## MMS_VERSION_1_1
 
 ```TypeScript
-MMS_VERSION_1_1
+MMS_VERSION_1_1 = 0x11
 ```
 
-Indicates MMS version 1_1.
+MMS version 1_1.
 
 **Since:** 8
 
 **ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
-<!--Device-MmsVersionType-MMS_VERSION_1_1--><!--Device-MmsVersionType-MMS_VERSION_1_1-End-->
+<!--Device-MmsVersionType-MMS_VERSION_1_1 = 0x11--><!--Device-MmsVersionType-MMS_VERSION_1_1 = 0x11-End-->
 
 **System capability:** SystemCapability.Telephony.SmsMms
 
@@ -51,16 +51,16 @@ Indicates MMS version 1_1.
 ## MMS_VERSION_1_2
 
 ```TypeScript
-MMS_VERSION_1_2
+MMS_VERSION_1_2 = 0x12
 ```
 
-Indicates MMS version 1_2.
+MMS version 1_2.
 
 **Since:** 8
 
 **ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
-<!--Device-MmsVersionType-MMS_VERSION_1_2--><!--Device-MmsVersionType-MMS_VERSION_1_2-End-->
+<!--Device-MmsVersionType-MMS_VERSION_1_2 = 0x12--><!--Device-MmsVersionType-MMS_VERSION_1_2 = 0x12-End-->
 
 **System capability:** SystemCapability.Telephony.SmsMms
 
@@ -69,16 +69,16 @@ Indicates MMS version 1_2.
 ## MMS_VERSION_1_3
 
 ```TypeScript
-MMS_VERSION_1_3
+MMS_VERSION_1_3 = 0x13
 ```
 
-Indicates MMS version 1_3.
+MMS version 1_3.
 
 **Since:** 8
 
 **ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
-<!--Device-MmsVersionType-MMS_VERSION_1_3--><!--Device-MmsVersionType-MMS_VERSION_1_3-End-->
+<!--Device-MmsVersionType-MMS_VERSION_1_3 = 0x13--><!--Device-MmsVersionType-MMS_VERSION_1_3 = 0x13-End-->
 
 **System capability:** SystemCapability.Telephony.SmsMms
 

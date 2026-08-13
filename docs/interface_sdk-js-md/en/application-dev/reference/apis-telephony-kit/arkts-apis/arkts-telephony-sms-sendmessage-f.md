@@ -12,9 +12,12 @@ import { sms } from '@kit.TelephonyKit';
 function sendMessage(options: SendMessageOptions): void
 ```
 
-Sends a text or data SMS message.
+Sends an SMS message.
 
-&lt;p&gt;This method checks whether the length of an SMS message exceeds the maximum length. If the maximum length is exceeded, the SMS message is split into multiple parts and sent separately.
+> **NOTE：**
+> 
+> This API is supported since API version 6 and deprecated since API version 10. You are advised to use
+> [sendShortMessage](arkts-telephony-sms-sendshortmessage-f.md#sendShortMessage).
 
 **Since:** 6
 
@@ -34,7 +37,7 @@ Sends a text or data SMS message.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | SendMessageOptions | Yes | Indicates the parameters and callback for sending the SMS message. |
+| options | SendMessageOptions | Yes | Options (including the callback) for sending SMS messages. For details, see [SendMessageOptions](arkts-telephony-sms-sendmessageoptions-i.md#SendMessageOptions). |
 
 **Error codes:**
 

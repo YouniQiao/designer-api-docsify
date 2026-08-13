@@ -6,7 +6,7 @@ typedef struct DRM_PsshInfo {...} DRM_PsshInfo
 
 ## Overview
 
-PSSH info by uuid.
+The struct describes the Protection System Specific Header (PSSH) data for a DRM system.
 
 **Since**: 11
 
@@ -21,7 +21,7 @@ PSSH info by uuid.
 | Name | Description |
 | -- | -- |
 | uint8_t uuid[DRM_UUID_LEN] | Uuid. |
-| int32_t dataLen | PSSH data len. |
+| int32_t dataLen | Length of the PSSH data payload. |
 | uint8_t data[MAX_PSSH_DATA_LEN] | uint8_t PSSH data. |
 
 

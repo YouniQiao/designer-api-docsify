@@ -1,6 +1,6 @@
 # NumberFormatOptions
 
-Indicates the option for number formatting.
+Provides an option for number formatting.
 
 **Since:** 7
 
@@ -22,7 +22,7 @@ import { call } from '@kit.TelephonyKit';
 countryCode?: string
 ```
 
-Indicates the country code.
+Country code, for example, **CN** (China). All country codes are supported. The default value is **CN**.
 
 **Type:** string
 

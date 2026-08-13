@@ -12,7 +12,7 @@ import { sms } from '@kit.TelephonyKit';
 function getSmsSegmentsInfo(slotId: number, message: string, force7bit: boolean, callback: AsyncCallback<SmsSegmentsInfo>): void
 ```
 
-Get an SMS segment encode relation information.
+Obtains SMS message segment information. This API uses an asynchronous callback to return the result.
 
 **Since:** 8
 
@@ -61,7 +61,7 @@ sms.getSmsSegmentsInfo(slotId, "message", false, (err: BusinessError, data: sms.
 function getSmsSegmentsInfo(slotId: number, message: string, force7bit: boolean): Promise<SmsSegmentsInfo>
 ```
 
-Get an SMS segment encode relation information.
+Obtains SMS message segment information. This API uses a promise to return the result.
 
 **Since:** 8
 

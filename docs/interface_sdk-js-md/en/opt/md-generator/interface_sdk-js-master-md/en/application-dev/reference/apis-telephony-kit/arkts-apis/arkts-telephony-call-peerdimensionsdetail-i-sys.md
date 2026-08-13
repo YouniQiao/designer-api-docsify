@@ -1,6 +1,6 @@
 # PeerDimensionsDetail (System API)
 
-Indicates the peer dimension.
+Defines the peer image resolution in a video call.
 
 **Since:** 11
 
@@ -22,7 +22,7 @@ import { call } from '@kit.TelephonyKit';
 callId: number
 ```
 
-Indicates the id of call.
+Call ID.
 
 **Type:** number
 
@@ -40,7 +40,7 @@ Indicates the id of call.
 height: number
 ```
 
-Indicates the the peer dimensions height.
+Height of the peer image, in pixels.
 
 **Type:** number
 
@@ -58,7 +58,7 @@ Indicates the the peer dimensions height.
 width: number
 ```
 
-Indicates the peer dimensions width.
+Width of the peer image, in pixels.
 
 **Type:** number
 

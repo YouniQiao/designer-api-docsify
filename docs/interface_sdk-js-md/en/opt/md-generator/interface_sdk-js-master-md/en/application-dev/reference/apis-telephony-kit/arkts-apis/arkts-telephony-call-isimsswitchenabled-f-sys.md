@@ -12,7 +12,7 @@ import { call } from '@kit.TelephonyKit';
 function isImsSwitchEnabled(slotId: number, callback: AsyncCallback<boolean>): void
 ```
 
-Judge whether the Ims switch is enabled.
+Checks whether the IMS service is enabled. This API uses an asynchronous callback to return the result.
 
 **Since:** 8
 
@@ -61,7 +61,7 @@ call.isImsSwitchEnabled(0, (err: BusinessError, data: boolean) => {
 function isImsSwitchEnabled(slotId: number): Promise<boolean>
 ```
 
-Judge whether the Ims switch is enabled.
+Checks whether the IMS service is enabled. This API uses a promise to return the result.
 
 **Since:** 8
 

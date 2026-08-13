@@ -12,7 +12,7 @@ import { sms } from '@kit.TelephonyKit';
 function getSmsSegmentsInfo(slotId: int, message: string, force7bit: boolean, callback: AsyncCallback<SmsSegmentsInfo>): void
 ```
 
-Get an SMS segment encode relation information.
+Obtains SMS message segment information. This API uses an asynchronous callback to return the result.
 
 **Since:** 8
 
@@ -28,10 +28,10 @@ Get an SMS segment encode relation information.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| slotId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Indicates the card slot index number, ranging from 0 to the maximum card slot index number supported by the device. |
-| message | string | Yes | Indicates short message. |
-| force7bit | boolean | Yes | Indicates whether to use 7 bit encoding. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[SmsSegmentsInfo](arkts-telephony-sms-smssegmentsinfo-i-sys.md)&gt; | Yes | Indicates the callback for getting a {@code SmsSegmentsInfo} object. |
+| slotId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | SIM card slot ID. &lt;br&gt;- **0**: card slot 1 &lt;br&gt;- **1**: card slot 2 |
+| message | string | Yes | SMS message. |
+| force7bit | boolean | Yes | Whether to use 7-bit encoding. The default value is **false**. &lt;br&gt;- **true**: yes &lt;br&gt;- **false**: no |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[SmsSegmentsInfo](arkts-telephony-sms-smssegmentsinfo-i-sys.md)&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
 
@@ -63,7 +63,7 @@ sms.getSmsSegmentsInfo(slotId, "message", false, (err: BusinessError, data: sms.
 function getSmsSegmentsInfo(slotId: int, message: string, force7bit: boolean): Promise<SmsSegmentsInfo>
 ```
 
-Get an SMS segment encode relation information.
+Obtains SMS message segment information. This API uses a promise to return the result.
 
 **Since:** 8
 
@@ -79,15 +79,15 @@ Get an SMS segment encode relation information.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| slotId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Indicates the card slot index number, ranging from 0 to the maximum card slot index number supported by the device. |
-| message | string | Yes | Indicates short message. |
-| force7bit | boolean | Yes | Indicates whether to use 7 bit encoding. |
+| slotId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | SIM card slot ID. &lt;br&gt;- **0**: card slot 1 &lt;br&gt;- **1**: card slot 2 |
+| message | string | Yes | SMS message. |
+| force7bit | boolean | Yes | Whether to use 7-bit encoding. The default value is **false**. &lt;br&gt;- **true**: yes &lt;br&gt;- **false**: no |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;[SmsSegmentsInfo](arkts-telephony-sms-smssegmentsinfo-i-sys.md)&gt; | Returns a { |
+| Promise&lt;[SmsSegmentsInfo](arkts-telephony-sms-smssegmentsinfo-i-sys.md)&gt; | Promise used to return the result. |
 
 **Error codes:**
 

@@ -24,7 +24,7 @@ import { sms } from '@kit.TelephonyKit';
 enable: boolean
 ```
 
-Indicates whether to enable cell broadcast.
+Whether to enable cell broadcast.
 
 **Type:** boolean
 
@@ -44,7 +44,7 @@ Indicates whether to enable cell broadcast.
 endMessageId: int
 ```
 
-Indicates the end message ID for the cell broadcast configuration options.
+End message ID.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -64,7 +64,7 @@ Indicates the end message ID for the cell broadcast configuration options.
 ranType: RanType
 ```
 
-Indicates the RAN type for the cell broadcast configuration options.
+RAN type.
 
 **Type:** [RanType](arkts-telephony-sms-rantype-e-sys.md)
 
@@ -84,7 +84,7 @@ Indicates the RAN type for the cell broadcast configuration options.
 slotId: int
 ```
 
-Indicates the card slot ID for the cell broadcast configuration options.
+Card slot ID.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -104,7 +104,7 @@ Indicates the card slot ID for the cell broadcast configuration options.
 startMessageId: int
 ```
 
-Indicates the start message ID for the cell broadcast configuration options.
+Start message ID.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 

@@ -12,9 +12,9 @@ import { drm } from '@kit.DrmKit';
 function getMediaKeySystemUuid(name: string): string
 ```
 
-Get a MediaKeySystem's UUID.
+Obtains the UUID of the DRM content protection system supported by the specified DRM solution.
 
-**Since:** 14
+**Since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
 

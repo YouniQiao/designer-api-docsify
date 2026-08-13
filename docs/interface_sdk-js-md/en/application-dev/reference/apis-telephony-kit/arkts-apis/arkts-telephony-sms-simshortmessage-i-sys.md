@@ -24,7 +24,7 @@ import { sms } from '@kit.TelephonyKit';
 indexOnSim: int
 ```
 
-Indicates the index of SMS messages in the SIM.
+SIM card index.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -44,7 +44,7 @@ Indicates the index of SMS messages in the SIM.
 shortMessage: ShortMessage
 ```
 
-Indicates the SMS message in the SIM.
+SMS message.
 
 **Type:** [ShortMessage](arkts-telephony-sms-shortmessage-i.md)
 
@@ -64,7 +64,7 @@ Indicates the SMS message in the SIM.
 simMessageStatus: SimMessageStatus
 ```
 
-Indicates the storage status of SMS messages in the SIM.
+SIM message status.
 
 **Type:** [SimMessageStatus](arkts-telephony-sms-simmessagestatus-e-sys.md)
 

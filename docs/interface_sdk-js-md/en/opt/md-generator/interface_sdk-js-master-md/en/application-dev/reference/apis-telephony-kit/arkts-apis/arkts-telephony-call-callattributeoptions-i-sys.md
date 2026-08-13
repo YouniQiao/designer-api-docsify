@@ -1,6 +1,6 @@
 # CallAttributeOptions (System API)
 
-Indicates the options of call attribute.
+Defines the call attribute options.
 
 **Since:** 7
 
@@ -22,7 +22,7 @@ import { call } from '@kit.TelephonyKit';
 accountId: number
 ```
 
-Indicates the id of account.
+Account ID.
 
 **Type:** number
 
@@ -40,7 +40,7 @@ Indicates the id of account.
 accountNumber: string
 ```
 
-Indicates the number of account.
+Account number.
 
 **Type:** string
 
@@ -58,7 +58,7 @@ Indicates the number of account.
 callId: number
 ```
 
-Indicates the id of call.
+Call ID.
 
 **Type:** number
 
@@ -76,7 +76,7 @@ Indicates the id of call.
 callState: DetailedCallState
 ```
 
-Indicates the detailed state of call.
+Detailed call state.
 
 **Type:** [DetailedCallState](arkts-telephony-call-detailedcallstate-e-sys.md)
 
@@ -94,7 +94,7 @@ Indicates the detailed state of call.
 callType: CallType
 ```
 
-Indicates the type of call.
+Enumerates call types.
 
 **Type:** [CallType](arkts-telephony-call-calltype-e-sys.md)
 
@@ -112,7 +112,7 @@ Indicates the type of call.
 conferenceState: ConferenceState
 ```
 
-Indicates the state of conference.
+Enumerates conference states.
 
 **Type:** [ConferenceState](arkts-telephony-call-conferencestate-e-sys.md)
 
@@ -130,7 +130,7 @@ Indicates the state of conference.
 crsType: number
 ```
 
-Indicates the color tone type.
+Video RBT type.
 
 **Type:** number
 
@@ -184,7 +184,10 @@ Indicates is custom accessibility enabled.
 isEcc: boolean
 ```
 
-Indicates if this is an emergency call.
+Whether the call is an ECC. The default value is **false**.
+
+- **true**: yes  
+- **false**: no
 
 **Type:** boolean
 
@@ -202,7 +205,7 @@ Indicates if this is an emergency call.
 numberLocation?: string
 ```
 
-Indicates the location of the phone number.
+Home location area of the number.
 
 **Type:** string
 
@@ -220,7 +223,7 @@ Indicates the location of the phone number.
 numberMarkInfo?: NumberMarkInfo
 ```
 
-Indicates the mark information of the phone number.
+Number mark.
 
 **Type:** [NumberMarkInfo](arkts-telephony-call-numbermarkinfo-i-sys.md)
 
@@ -238,7 +241,7 @@ Indicates the mark information of the phone number.
 originalCallType: number
 ```
 
-Indicates the initial type of this call.
+Original call type of the Video RBT service.
 
 **Type:** number
 
@@ -274,7 +277,10 @@ Indicates the rtt state.
 speakerphoneOn: boolean
 ```
 
-Indicates if the call is start with speaker.
+Whether the speakerphone is used to answer a call. The default value is **false**.
+
+- **true**: yes  
+- **false**: no
 
 **Type:** boolean
 
@@ -292,7 +298,7 @@ Indicates if the call is start with speaker.
 startTime: number
 ```
 
-Indicates the start time.
+Start time.
 
 **Type:** number
 
@@ -310,7 +316,7 @@ Indicates the start time.
 videoState: VideoStateType
 ```
 
-Indicates the type of video state.
+Video state type.
 
 **Type:** [VideoStateType](arkts-telephony-call-videostatetype-e-sys.md)
 
@@ -328,7 +334,7 @@ Indicates the type of video state.
 voipCallAttribute?: VoipCallAttribute
 ```
 
-Indicates the detail information of voip call.
+Defines the VoIP call information.
 
 **Type:** [VoipCallAttribute](arkts-telephony-call-voipcallattribute-i-sys.md)
 
@@ -346,7 +352,7 @@ Indicates the detail information of voip call.
 xCallType?: XCallType
 ```
 
-Indicates the xcall type.
+X-Call type.
 
 **Type:** [XCallType](arkts-telephony-call-xcalltype-e-sys.md)
 

@@ -1,8 +1,8 @@
 # PreDefinedConfigName
 
-Enumerates the config names that can be obtained.
+Enumerates the predefined configuration properties.
 
-**Since:** 14
+**Since:** 11
 
 <!--Device-drm-enum PreDefinedConfigName--><!--Device-drm-enum PreDefinedConfigName-End-->
 
@@ -14,9 +14,10 @@ Enumerates the config names that can be obtained.
 CONFIG_DEVICE_VENDOR = 'vendor'
 ```
 
-Config name vendor
+Plugin vendor name, which corresponds to the value of **vendor** in the return value of   
+[getConfigurationString](arkts-drm-drm-mediakeysystem-i.md#getConfigurationString).
 
-**Since:** 14
+**Since:** 11
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
 
@@ -30,9 +31,10 @@ Config name vendor
 CONFIG_DEVICE_VERSION = 'version'
 ```
 
-Config name version
+Plugin version number, which corresponds to the value of **version** in the return value of   
+[getConfigurationString](arkts-drm-drm-mediakeysystem-i.md#getConfigurationString).
 
-**Since:** 14
+**Since:** 11
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
 
@@ -46,9 +48,10 @@ Config name version
 CONFIG_DEVICE_DESCRIPTION = 'description'
 ```
 
-Config name description
+Device description, which corresponds to the value of **description** in the return value of   
+[getConfigurationString](arkts-drm-drm-mediakeysystem-i.md#getConfigurationString).
 
-**Since:** 14
+**Since:** 11
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
 
@@ -62,9 +65,10 @@ Config name description
 CONFIG_DEVICE_ALGORITHMS = 'algorithms'
 ```
 
-Config name algorithms
+Supported algorithms, which correspond to the value of **algorithms** in the return value of   
+[getConfigurationString](arkts-drm-drm-mediakeysystem-i.md#getConfigurationString).
 
-**Since:** 14
+**Since:** 11
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
 
@@ -78,9 +82,10 @@ Config name algorithms
 CONFIG_DEVICE_UNIQUE_ID = 'deviceUniqueId'
 ```
 
-Config name deviceUniqueId
+Unique device ID, which corresponds to the value of **deviceUniqueId** in the return value of   
+[getConfigurationByteArray](arkts-drm-drm-mediakeysystem-i.md#getConfigurationByteArray).
 
-**Since:** 14
+**Since:** 11
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
 
@@ -94,9 +99,10 @@ Config name deviceUniqueId
 CONFIG_SESSION_MAX = 'maxSessionNum'
 ```
 
-Config name maxSessionNum
+Maximum number of supported sessions, which corresponds to the value of **maxSessionNum** in the return value of   
+[getConfigurationString](arkts-drm-drm-mediakeysystem-i.md#getConfigurationString).
 
-**Since:** 14
+**Since:** 11
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
 
@@ -110,9 +116,10 @@ Config name maxSessionNum
 CONFIG_SESSION_CURRENT = 'currentSessionNum'
 ```
 
-Config name currentSessionNum
+Number of active sessions, which corresponds to the value of **currentSessionNum** in the return value of   
+[getConfigurationString](arkts-drm-drm-mediakeysystem-i.md#getConfigurationString).
 
-**Since:** 14
+**Since:** 11
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
 

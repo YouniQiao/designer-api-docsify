@@ -1,6 +1,6 @@
 # AudioDeviceType (System API)
 
-Indicates the device type of the audio device.
+Enumerates audio device types.
 
 **Since:** 10
 
@@ -18,7 +18,7 @@ Indicates the device type of the audio device.
 DEVICE_EARPIECE = 0
 ```
 
-Indicates the audio device is earpiece.
+Headset device.
 
 **Since:** 10
 
@@ -36,7 +36,7 @@ Indicates the audio device is earpiece.
 DEVICE_SPEAKER = 1
 ```
 
-Indicates the audio device is speaker.
+Speaker device.
 
 **Since:** 10
 
@@ -54,7 +54,7 @@ Indicates the audio device is speaker.
 DEVICE_WIRED_HEADSET = 2
 ```
 
-Indicates the audio device is wired headset.
+Wired headset device.
 
 **Since:** 10
 
@@ -72,7 +72,7 @@ Indicates the audio device is wired headset.
 DEVICE_BLUETOOTH_SCO = 3
 ```
 
-Indicates the audio device is bluetooth headset.
+Bluetooth SCO device.
 
 **Since:** 10
 
@@ -90,7 +90,7 @@ Indicates the audio device is bluetooth headset.
 DEVICE_DISTRIBUTED_AUTOMOTIVE = 4
 ```
 
-Indicates the audio device is distributed automotive device.
+Distributed head unit.
 
 **Since:** 11
 

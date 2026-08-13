@@ -1,8 +1,8 @@
 # DrmErrorCode
 
-Enumerates DRM error codes.
+Enumerates the DRM error codes.
 
-**Since:** 14
+**Since:** 11
 
 <!--Device-drm-enum DrmErrorCode--><!--Device-drm-enum DrmErrorCode-End-->
 
@@ -14,9 +14,9 @@ Enumerates DRM error codes.
 ERROR_UNKNOWN = 24700101
 ```
 
-All unknown errors.
+Unknown error.
 
-**Since:** 14
+**Since:** 11
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
 
@@ -30,9 +30,9 @@ All unknown errors.
 MAX_SYSTEM_NUM_REACHED = 24700103
 ```
 
-Meet max MediaKeySystem num limit.
+Maximum number of MediaKeySystem instances (64) reached.
 
-**Since:** 14
+**Since:** 11
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
 
@@ -46,9 +46,9 @@ Meet max MediaKeySystem num limit.
 MAX_SESSION_NUM_REACHED = 24700104
 ```
 
-Meet max MediaKeySession num limit.
+Maximum number of MediaKeySession instances (64) reached.
 
-**Since:** 14
+**Since:** 11
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
 
@@ -62,9 +62,9 @@ Meet max MediaKeySession num limit.
 SERVICE_FATAL_ERROR = 24700201
 ```
 
-Fatal service error, for example, service died.
+DRM service fatal error.
 
-**Since:** 14
+**Since:** 11
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
 

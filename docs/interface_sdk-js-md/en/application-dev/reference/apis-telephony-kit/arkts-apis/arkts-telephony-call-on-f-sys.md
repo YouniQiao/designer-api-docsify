@@ -12,7 +12,7 @@ import { call } from '@kit.TelephonyKit';
 function on(type: 'callDetailsChange', callback: Callback<CallAttributeOptions>): void
 ```
 
-Subscribe to the callDetailsChange event.
+Subscribes to **callDetailsChange** events. This API uses an asynchronous callback to return the result.
 
 **Since:** 7
 
@@ -30,8 +30,8 @@ Subscribe to the callDetailsChange event.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'callDetailsChange' | Yes | Event type. Indicates the callDetailsChange event to be subscribed to. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[CallAttributeOptions](arkts-telephony-call-callattributeoptions-i-sys.md)&gt; | Yes | Indicates the callback for getting the result of call details. |
+| type | 'callDetailsChange' | Yes | Call event change. This field has a fixed value of **callDetailsChange**. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[CallAttributeOptions](arkts-telephony-call-callattributeoptions-i-sys.md)&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
 
@@ -60,7 +60,7 @@ call.on('callDetailsChange', (data: call.CallAttributeOptions) => {
 function on(type: 'callEventChange', callback: Callback<CallEventOptions>): void
 ```
 
-Subscribe to the callEventChange event.
+Subscribes to **callEventChange** events. This API uses an asynchronous callback to return the result.
 
 **Since:** 8
 
@@ -78,8 +78,8 @@ Subscribe to the callEventChange event.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'callEventChange' | Yes | Event type. Indicates the callEventChange event to be subscribed to. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[CallEventOptions](arkts-telephony-call-calleventoptions-i-sys.md)&gt; | Yes | Indicates the callback for getting the call event id. |
+| type | 'callEventChange' | Yes | Call event change. This field has a fixed value of **callEventChange**. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[CallEventOptions](arkts-telephony-call-calleventoptions-i-sys.md)&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
 
@@ -108,7 +108,7 @@ call.on('callEventChange', (data: call.CallEventOptions) => {
 function on(type: 'callDisconnectedCause', callback: Callback<DisconnectedDetails>): void
 ```
 
-Subscribe to the callDisconnectedCause event.
+Subscribes to **callDisconnectedCause** events. This API uses an asynchronous callback to return the result.
 
 **Since:** 8
 
@@ -126,8 +126,8 @@ Subscribe to the callDisconnectedCause event.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'callDisconnectedCause' | Yes | Event type. Indicates the callDisconnectedCause event to be subscribed to. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[DisconnectedDetails](arkts-telephony-call-disconnecteddetails-i-sys.md)&gt; | Yes | Indicates the callback for getting the call disconnection reason. |
+| type | 'callDisconnectedCause' | Yes | Call disconnection cause. This field has a fixed value of **callDisconnectedCause**. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[DisconnectedDetails](arkts-telephony-call-disconnecteddetails-i-sys.md)&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
 
@@ -156,7 +156,7 @@ call.on('callDisconnectedCause', (data: call.DisconnectedDetails) => {
 function on(type: 'mmiCodeResult', callback: Callback<MmiCodeResults>): void
 ```
 
-Subscribe to the mmiCodeResult event.
+Subscribes to **mmiCodeResult** events. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
 
@@ -174,8 +174,8 @@ Subscribe to the mmiCodeResult event.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'mmiCodeResult' | Yes | Event type. Indicates the mmiCodeResult event to be subscribed to. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[MmiCodeResults](arkts-telephony-call-mmicoderesults-i-sys.md)&gt; | Yes | Indicates the callback for getting the result of MMI code. |
+| type | 'mmiCodeResult' | Yes | MMI code result. This field has a fixed value of **mmiCodeResult**. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[MmiCodeResults](arkts-telephony-call-mmicoderesults-i-sys.md)&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
 
@@ -204,7 +204,7 @@ call.on('mmiCodeResult', (data: call.MmiCodeResults) => {
 function on(type: 'audioDeviceChange', callback: Callback<AudioDeviceCallbackInfo>): void
 ```
 
-Subscribe to the audioDeviceChange event.
+Subscribes to audio device change events. This API uses an asynchronous callback to return the result.
 
 **Since:** 10
 
@@ -222,8 +222,8 @@ Subscribe to the audioDeviceChange event.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'audioDeviceChange' | Yes | Event type. Indicates the audioDeviceChange event to be subscribed to. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[AudioDeviceCallbackInfo](arkts-telephony-call-audiodevicecallbackinfo-i-sys.md)&gt; | Yes | Indicates the callback for getting the result of Current AudioDevice. |
+| type | 'audioDeviceChange' | Yes | Audio device change. This field has a fixed value of **audioDeviceChange**. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[AudioDeviceCallbackInfo](arkts-telephony-call-audiodevicecallbackinfo-i-sys.md)&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
 
@@ -252,7 +252,7 @@ call.on('audioDeviceChange', (data: call.AudioDeviceCallbackInfo) => {
 function on(type: 'postDialDelay', callback: Callback<string>): void
 ```
 
-Subscribe to the postDialDelay event.
+Subscribes to **postDialDelay** events. This API uses an asynchronous callback to return the result.
 
 **Since:** 11
 
@@ -270,8 +270,8 @@ Subscribe to the postDialDelay event.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'postDialDelay' | Yes | Event type. Indicates the postDialDelay event to be subscribed to. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;string&gt; | Yes | Indicates the callback for getting the result of post-dial string. |
+| type | 'postDialDelay' | Yes | Post-dial delay. This field has a fixed value of **postDialDelay**. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;string&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
 
@@ -300,7 +300,7 @@ call.on('postDialDelay', (data: string) => {
 function on(type: 'imsCallModeChange', callback: Callback<ImsCallModeInfo>): void
 ```
 
-Subscribe to the imsCallModeChange event.
+Subscribes to **imsCallModeChange** events. This API uses an asynchronous callback to return the result.
 
 **Since:** 11
 
@@ -318,8 +318,8 @@ Subscribe to the imsCallModeChange event.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'imsCallModeChange' | Yes | Event type. Indicates the imsCallModeChange event to be subscribed to. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[ImsCallModeInfo](arkts-telephony-call-imscallmodeinfo-i-sys.md)&gt; | Yes | Indicates the callback for getting the result of ImsCallModeInfo details. |
+| type | 'imsCallModeChange' | Yes | Call mode change. This field has a fixed value of **imsCallModeChange**. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[ImsCallModeInfo](arkts-telephony-call-imscallmodeinfo-i-sys.md)&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
 
@@ -350,7 +350,7 @@ call.on('imsCallModeChange', (data: call.ImsCallModeInfo) => {
 function on(type: 'callSessionEvent', callback: Callback<CallSessionEvent>): void
 ```
 
-Subscribe to the callSessionEvent.
+Subscribes to **callSessionEvent** events. This API uses an asynchronous callback to return the result.
 
 **Since:** 11
 
@@ -368,8 +368,8 @@ Subscribe to the callSessionEvent.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'callSessionEvent' | Yes | Event type. Indicates the callSessionEvent event to be subscribed to. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[CallSessionEvent](arkts-telephony-call-callsessionevent-i-sys.md)&gt; | Yes | Indicates the callback for getting the result of CallSessionEvent. |
+| type | 'callSessionEvent' | Yes | Call session event. This field has a fixed value of **callSessionEvent**. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[CallSessionEvent](arkts-telephony-call-callsessionevent-i-sys.md)&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
 
@@ -400,7 +400,7 @@ call.on('callSessionEvent', (data: call.CallSessionEvent) => {
 function on(type: 'peerDimensionsChange', callback: Callback<PeerDimensionsDetail>): void
 ```
 
-Subscribe to the peerDimensionsChange event.
+Subscribes to **peerDimensionsChange** events. This API uses an asynchronous callback to return the result.
 
 **Since:** 11
 
@@ -418,8 +418,8 @@ Subscribe to the peerDimensionsChange event.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'peerDimensionsChange' | Yes | Event type. Indicates the peerDimensionsChange event to be subscribed to. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[PeerDimensionsDetail](arkts-telephony-call-peerdimensionsdetail-i-sys.md)&gt; | Yes | Indicates the callback for getting the result of PeerDimensionsDetail details. |
+| type | 'peerDimensionsChange' | Yes | Screen resolution change. This field has a fixed value of **peerDimensionsChange**. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[PeerDimensionsDetail](arkts-telephony-call-peerdimensionsdetail-i-sys.md)&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
 
@@ -450,7 +450,7 @@ call.on('peerDimensionsChange', (data: call.PeerDimensionsDetail) => {
 function on(type: 'cameraCapabilitiesChange', callback: Callback<CameraCapabilities>): void
 ```
 
-Subscribe to the cameraCapabilitiesChange event.
+Subscribes to **cameraCapabilitiesChange** events. This API uses an asynchronous callback to return the result.
 
 **Since:** 11
 
@@ -468,8 +468,8 @@ Subscribe to the cameraCapabilitiesChange event.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'cameraCapabilitiesChange' | Yes | Event type. Indicates the cameraCapabilitiesChange event to be subscribed to. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[CameraCapabilities](arkts-telephony-call-cameracapabilities-i-sys.md)&gt; | Yes | Indicates the callback for getting the result of CameraCapabilities details. |
+| type | 'cameraCapabilitiesChange' | Yes | Camera capability change. This field has a fixed value of **cameraCapabilitiesChange**. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[CameraCapabilities](arkts-telephony-call-cameracapabilities-i-sys.md)&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
 

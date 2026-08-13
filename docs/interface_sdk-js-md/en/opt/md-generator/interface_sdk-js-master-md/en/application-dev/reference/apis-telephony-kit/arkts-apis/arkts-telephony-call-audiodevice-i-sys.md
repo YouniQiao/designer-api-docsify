@@ -1,6 +1,6 @@
 # AudioDevice (System API)
 
-Indicates the audio device.
+Enumerates audio devices.
 
 **Since:** 10
 
@@ -22,7 +22,7 @@ import { call } from '@kit.TelephonyKit';
 address?: string
 ```
 
-Indicates the address of the audio device.
+Audio device address.
 
 **Type:** string
 
@@ -40,7 +40,7 @@ Indicates the address of the audio device.
 deviceName?: string
 ```
 
-Indicates the name of the audio device.
+Audio device name.
 
 **Type:** string
 
@@ -58,7 +58,7 @@ Indicates the name of the audio device.
 deviceType: AudioDeviceType
 ```
 
-Indicates the device type of the audio device.
+Audio device type.
 
 **Type:** [AudioDeviceType](arkts-telephony-call-audiodevicetype-e-sys.md)
 

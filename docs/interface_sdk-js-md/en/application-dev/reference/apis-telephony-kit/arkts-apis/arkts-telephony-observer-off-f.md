@@ -12,7 +12,12 @@ import { observer } from '@kit.TelephonyKit';
 function off(type: 'networkStateChange', callback?: Callback<NetworkState>): void
 ```
 
-Cancel callback when the network state is updated.
+Unregisters the observer for network status change events. This API uses an asynchronous callback to return the execution result.
+
+> **NOTE：**
+> 
+> You can pass the callback of the **on** function if you want to cancel listening for a certain type of event. If
+> you do not pass the callback, you will cancel listening for all events.
 
 **Since:** 6
 
@@ -26,8 +31,8 @@ Cancel callback when the network state is updated.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'networkStateChange' | Yes | Event type. Indicates the networkStateChange event to unsubscribe from. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;NetworkState&gt; | No | Indicates the callback for getting an instance of the {@code NetworkState} class. |
+| type | 'networkStateChange' | Yes | Network status change event. This field has a fixed value of **networkStateChange**. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;NetworkState&gt; | No | Callback used to return the network status object. which is the [NetworkState](arkts-telephony-radio-networkstate-i.md#NetworkState) object. |
 
 **Error codes:**
 
@@ -58,7 +63,12 @@ observer.off('networkStateChange');
 function off(type: 'signalInfoChange', callback?: Callback<Array<SignalInformation>>): void
 ```
 
-Cancel callback when the signal strength is updated.
+Unregisters the observer for signal status change events. This API uses an asynchronous callback to return the execution result.
+
+> **NOTE：**
+> 
+> You can pass the callback of the **on** function if you want to cancel listening for a certain type of event. If
+> you do not pass the callback, you will cancel listening for all events.
 
 **Since:** 6
 
@@ -72,8 +82,8 @@ Cancel callback when the signal strength is updated.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'signalInfoChange' | Yes | Event type. Indicates the signalInfoChange event to unsubscribe from. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;Array&lt;SignalInformation&gt;&gt; | No | Indicates the callback to unsubscribe from the signalInfoChange event. |
+| type | 'signalInfoChange' | Yes | Signal status change event. This field has a fixed value of **signalInfoChange**. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;Array&lt;SignalInformation&gt;&gt; | No | Callback used to return the signal strength object. For details, see [SignalInformation](arkts-telephony-radio-signalinformation-i.md#SignalInformation). |
 
 **Error codes:**
 
@@ -106,11 +116,16 @@ observer.off('signalInfoChange');
 function off(type: 'cellularDataConnectionStateChange', callback?: Callback<DataConnectionStateInfo>): void
 ```
 
-Cancel callback when the cellular data link connection state is updated.
+Unregisters the observer for connection status change events of the cellular data link. This API uses an asynchronous callback to return the result.
 
-**Since:** 11
+> **NOTE：**
+> 
+> You can pass the callback of the **on** function if you want to cancel listening for a certain type of event. If
+> you do not pass the callback, you will cancel listening for all events.
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
+**Since:** 7
+
+**ArkTS mode:** ArkTS-Dyn only, since version 7.
 
 <!--Device-observer-function off(type: 'cellularDataConnectionStateChange', callback?: Callback<DataConnectionStateInfo>): void--><!--Device-observer-function off(type: 'cellularDataConnectionStateChange', callback?: Callback<DataConnectionStateInfo>): void-End-->
 
@@ -120,8 +135,8 @@ Cancel callback when the cellular data link connection state is updated.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'cellularDataConnectionStateChange' | Yes | Event type. Indicates the cellularDataConnectionStateChange event to unsubscribe from. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[DataConnectionStateInfo](arkts-telephony-observer-dataconnectionstateinfo-i.md)&gt; | No | Indicates the callback to unsubscribe from the cellularDataConnectionStateChange event. |
+| type | 'cellularDataConnectionStateChange' | Yes | Cellular data connection status event. This field has a fixed value of **cellularDataConnectionStateChange**. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[DataConnectionStateInfo](arkts-telephony-observer-dataconnectionstateinfo-i.md)&gt; | No | Callback function used to return the cellular data connection status information object. For details, see [DataConnectState](arkts-telephony-data-dataconnectstate-e.md#DataConnectState) of **data** and [RadioTechnology](arkts-telephony-radio-radiotechnology-e.md#RadioTechnology) of **radio**. |
 
 **Error codes:**
 
@@ -152,7 +167,12 @@ observer.off('cellularDataConnectionStateChange');
 function off(type: 'cellularDataFlowChange', callback?: Callback<DataFlowType>): void
 ```
 
-Cancel callback when the uplink and downlink data flow state of cellular data services is updated.
+Unregisters the observer for the uplink and downlink data flow status change events of the cellular data service.This API uses an asynchronous callback to return the result.
+
+> **NOTE：**
+> 
+> You can pass the callback of the **on** function if you want to cancel listening for a certain type of event. If
+> you do not pass the callback, you will cancel listening for all events.
 
 **Since:** 7
 
@@ -166,8 +186,8 @@ Cancel callback when the uplink and downlink data flow state of cellular data se
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'cellularDataFlowChange' | Yes | Event type. Indicates the cellularDataFlowChange event to unsubscribe from. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;DataFlowType&gt; | No | Indicates the callback to unsubscribe from the cellularDataFlowChange event. |
+| type | 'cellularDataFlowChange' | Yes | Cellular data flow change event. This field has a fixed value of **cellularDataFlowChange**. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;DataFlowType&gt; | No | Callback function used to return the data flow status object. For details, see [DataFlowType](arkts-telephony-data-dataflowtype-e.md#DataFlowType) in **data**. |
 
 **Error codes:**
 
@@ -200,11 +220,16 @@ observer.off('cellularDataFlowChange');
 function off(type: 'callStateChange', callback?: Callback<CallStateInfo>): void
 ```
 
-Cancel callback when the call state is updated.
+Unregisters the observer for call status change events. This API uses an asynchronous callback to return the execution result.
 
-**Since:** 11
+> **NOTE：**
+> 
+> You can pass the callback of the **on** function if you want to cancel listening for a certain type of event. If
+> you do not pass the callback, you will cancel listening for all events.
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
+**Since:** 6
+
+**ArkTS mode:** ArkTS-Dyn only, since version 6.
 
 <!--Device-observer-function off(type: 'callStateChange', callback?: Callback<CallStateInfo>): void--><!--Device-observer-function off(type: 'callStateChange', callback?: Callback<CallStateInfo>): void-End-->
 
@@ -214,8 +239,8 @@ Cancel callback when the call state is updated.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'callStateChange' | Yes | Event type. Indicates the callStateChange event to unsubscribe from. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[CallStateInfo](arkts-telephony-observer-callstateinfo-i.md)&gt; | No | Indicates the callback to unsubscribe from the callStateChange event. |
+| type | 'callStateChange' | Yes | Call status change event. This field has a fixed value of **callStateChange**. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[CallStateInfo](arkts-telephony-observer-callstateinfo-i.md)&gt; | No | Callback function used to return the call status information object. For details, see [CallState](arkts-telephony-call-callstate-e.md#CallState). &lt;br&gt;**number**: phone number. |
 
 **Error codes:**
 
@@ -246,7 +271,12 @@ observer.off('callStateChange');
 function off(type: 'callStateChangeEx', callback?: Callback<TelCallState>): void
 ```
 
-Cancel callback when the telCall state is updated.
+Unregisters the observer for extended call status change events. This API uses an asynchronous callback to return the execution result.
+
+> **NOTE：**
+> 
+> You can pass the callback of the **on** function if you want to cancel listening for a certain type of event. If
+> you do not pass the callback, you will cancel listening for all events.
 
 **Since:** 21
 
@@ -260,8 +290,8 @@ Cancel callback when the telCall state is updated.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'callStateChangeEx' | Yes | Event type. Indicates the callStateChangeEx event to unsubscribe from. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;TelCallState&gt; | No | Indicates the callback to unsubscribe from the callStateChangeEx event. |
+| type | 'callStateChangeEx' | Yes | Call status change event. This field has a fixed value of **callStateChange**. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;TelCallState&gt; | No | Callback function used to return the call status information object. For details, see [TelCallState](arkts-telephony-call-telcallstate-e.md#TelCallState) in **call**. &lt;br&gt; |
 
 **Error codes:**
 
@@ -292,7 +322,12 @@ observer.off('callStateChangeEx');
 function off(type: 'simStateChange', callback?: Callback<SimStateData>): void
 ```
 
-Cancel callback when the sim state is updated.
+Unregisters the observer for SIM card status change events. This API uses an asynchronous callback to return the result.
+
+> **NOTE：**
+> 
+> You can pass the callback of the **on** function if you want to cancel listening for a certain type of event. If
+> you do not pass the callback, you will cancel listening for all events.
 
 **Since:** 7
 
@@ -306,8 +341,8 @@ Cancel callback when the sim state is updated.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'simStateChange' | Yes | Event type. Indicates the simStateChange event to unsubscribe from. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[SimStateData](arkts-telephony-observer-simstatedata-i.md)&gt; | No | Indicates the callback to unsubscribe from the simStateChange event. |
+| type | 'simStateChange' | Yes | SIM status change event. This field has a fixed value of **simStateChange**. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[SimStateData](arkts-telephony-observer-simstatedata-i.md)&gt; | No | Callback function used to return the SIM status data object. |
 
 **Error codes:**
 
@@ -338,7 +373,12 @@ observer.off('simStateChange');
 function off(type: 'iccAccountInfoChange', callback?: Callback<void>): void
 ```
 
-Cancel to receive an ICC account change.
+Unregisters the observer for account information change events of the SIM card. This API uses an asynchronous callback to return the result.
+
+> **NOTE：**
+> 
+> You can pass the callback of the **on** function if you want to cancel listening for a certain type of event. If
+> you do not pass the callback, you will cancel listening for all events.
 
 **Since:** 10
 
@@ -352,8 +392,8 @@ Cancel to receive an ICC account change.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'iccAccountInfoChange' | Yes | iccAccountInfoChange |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt; | No | including state Indicates the ICC account information, and reason Indicates the cause of the change. |
+| type | 'iccAccountInfoChange' | Yes | Account information change event. This field has a fixed value of **iccAccountInfoChange**. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt; | No | Callback used to return the result. If the account is successfully changed, the value of **err** is **undefined**. Otherwise, the value is an error object. |
 
 **Error codes:**
 

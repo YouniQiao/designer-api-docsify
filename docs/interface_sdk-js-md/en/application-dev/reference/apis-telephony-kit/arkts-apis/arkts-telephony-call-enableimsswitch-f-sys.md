@@ -12,7 +12,7 @@ import { call } from '@kit.TelephonyKit';
 function enableImsSwitch(slotId: int, callback: AsyncCallback<void>): void
 ```
 
-Turn on Ims switch.
+Enables the IMS service. This API uses an asynchronous callback to return the result.
 
 **Since:** 8
 
@@ -30,8 +30,8 @@ Turn on Ims switch.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| slotId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Indicates the card slot index number, ranging from 0 to the maximum card slot index number supported by the device. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | The callback of enableImsSwitch. |
+| slotId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Card slot ID. &lt;br&gt;- **0**: card slot 1. &lt;br&gt;- **1**: card slot 2. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
 
@@ -66,7 +66,7 @@ call.enableImsSwitch(0, (err: BusinessError) => {
 function enableImsSwitch(slotId: int): Promise<void>
 ```
 
-Turn on Ims switch.
+Enables the IMS service. This API uses a promise to return the result.
 
 **Since:** 8
 
@@ -84,13 +84,13 @@ Turn on Ims switch.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| slotId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Indicates the card slot index number, ranging from 0 to the maximum card slot index number supported by the device. |
+| slotId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Card slot ID. &lt;br&gt;- **0**: card slot 1. &lt;br&gt;- **1**: card slot 2. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | The promise returned by the enableImsSwitch. |
+| Promise&lt;void&gt; | Promise used to return the result. |
 
 **Error codes:**
 

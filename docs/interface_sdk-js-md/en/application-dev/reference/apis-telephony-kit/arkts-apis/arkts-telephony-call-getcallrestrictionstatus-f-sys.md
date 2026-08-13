@@ -12,7 +12,7 @@ import { call } from '@kit.TelephonyKit';
 function getCallRestrictionStatus(slotId: int, type: CallRestrictionType, callback: AsyncCallback<RestrictionStatus>): void
 ```
 
-Get call barring status.
+Obtains the call restriction status. This API uses an asynchronous callback to return the result.
 
 **Since:** 8
 
@@ -30,9 +30,9 @@ Get call barring status.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| slotId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Indicates the card slot index number, ranging from 0 to the maximum card slot index number supported by the device. |
-| type | [CallRestrictionType](arkts-telephony-call-callrestrictiontype-e-sys.md) | Yes | Indicates which type of call restriction to obtain. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[RestrictionStatus](arkts-telephony-call-restrictionstatus-e-sys.md)&gt; | Yes | Indicates the callback for getting the call restriction status. |
+| slotId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Card slot ID. &lt;br&gt;- **0**: card slot 1. &lt;br&gt;- **1**: card slot 2. |
+| type | [CallRestrictionType](arkts-telephony-call-callrestrictiontype-e-sys.md) | Yes | Call restriction type. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[RestrictionStatus](arkts-telephony-call-restrictionstatus-e-sys.md)&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
 
@@ -67,7 +67,7 @@ call.getCallRestrictionStatus(0, 1, (err: BusinessError, data: call.RestrictionS
 function getCallRestrictionStatus(slotId: int, type: CallRestrictionType): Promise<RestrictionStatus>
 ```
 
-Get call barring status.
+Obtains the call restriction status. This API uses a promise to return the result.
 
 **Since:** 8
 
@@ -85,14 +85,14 @@ Get call barring status.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| slotId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Indicates the card slot index number, ranging from 0 to the maximum card slot index number supported by the device. |
-| type | [CallRestrictionType](arkts-telephony-call-callrestrictiontype-e-sys.md) | Yes | Indicates which type of call restriction to obtain. |
+| slotId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Card slot ID. &lt;br&gt;- **0**: card slot 1. &lt;br&gt;- **1**: card slot 2. |
+| type | [CallRestrictionType](arkts-telephony-call-callrestrictiontype-e-sys.md) | Yes | Call restriction type. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;[RestrictionStatus](arkts-telephony-call-restrictionstatus-e-sys.md)&gt; | Returns the call restriction status. |
+| Promise&lt;[RestrictionStatus](arkts-telephony-call-restrictionstatus-e-sys.md)&gt; | Promise used to return the result. |
 
 **Error codes:**
 

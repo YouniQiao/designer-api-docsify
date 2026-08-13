@@ -12,7 +12,7 @@ import { sms } from '@kit.TelephonyKit';
 function updateSimMessage(options: UpdateSimMessageOptions, callback: AsyncCallback<void>): void
 ```
 
-Update a SIM SMS of SIM card.
+Updates a SIM message. This API uses an asynchronous callback to return the result.
 
 **Since:** 7
 
@@ -68,7 +68,7 @@ sms.updateSimMessage(updateSimMessageOptions, (err: BusinessError) => {
 function updateSimMessage(options: UpdateSimMessageOptions): Promise<void>
 ```
 
-Update a SIM SMS of SIM card.
+Updates a SIM message. This API uses a promise to return the result.
 
 **Since:** 7
 

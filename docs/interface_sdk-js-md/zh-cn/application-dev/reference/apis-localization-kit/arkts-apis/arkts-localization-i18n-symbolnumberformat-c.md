@@ -4,7 +4,7 @@
 [Intl.NumberFormat](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat)，支持  
 [Intl.NumberFormat](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat)的方法。
 
-**继承/实现关系：** SymbolNumberFormat extends [Intl.NumberFormat](arkts-localization-intl-numberformat-c.md#NumberFormat)
+**继承/实现关系：** SymbolNumberFormat extends [Intl.NumberFormat](../../apis-default/arkts-apis/arkts-intl-numberformat-c.md#NumberFormat)
 
 **起始版本：** 26.0.0
 

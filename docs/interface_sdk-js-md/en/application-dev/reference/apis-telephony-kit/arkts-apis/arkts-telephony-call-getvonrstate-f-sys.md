@@ -12,7 +12,7 @@ import { call } from '@kit.TelephonyKit';
 function getVoNRState(slotId: int, callback: AsyncCallback<VoNRState>): void
 ```
 
-Get switch state for voice over NR.
+Obtains the status of the VoNR switch. This API uses an asynchronous callback to return the result.
 
 **Since:** 10
 
@@ -30,8 +30,8 @@ Get switch state for voice over NR.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| slotId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Indicates the card slot index number, ranging from 0 to the maximum card slot index number supported by the device. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[VoNRState](arkts-telephony-call-vonrstate-e-sys.md)&gt; | Yes | Indicates the callback for getVoNRState. |
+| slotId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Card slot ID. &lt;br&gt;- **0**: card slot 1. &lt;br&gt;- **1**: card slot 2. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[VoNRState](arkts-telephony-call-vonrstate-e-sys.md)&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
 
@@ -67,7 +67,7 @@ call.getVoNRState(slotId, (err: BusinessError, data: call.VoNRState) => {
 function getVoNRState(slotId: int): Promise<VoNRState>
 ```
 
-Get switch state for voice over NR.
+Obtains the status of the VoNR switch. This API uses a promise to return the result.
 
 **Since:** 10
 
@@ -85,13 +85,13 @@ Get switch state for voice over NR.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| slotId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Indicates the card slot index number, ranging from 0 to the maximum card slot index number supported by the device. |
+| slotId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Card slot ID. &lt;br&gt;- **0**: card slot 1. &lt;br&gt;- **1**: card slot 2. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;[VoNRState](arkts-telephony-call-vonrstate-e-sys.md)&gt; | Returns the VoNR state. |
+| Promise&lt;[VoNRState](arkts-telephony-call-vonrstate-e-sys.md)&gt; | Promise used to return the result. |
 
 **Error codes:**
 

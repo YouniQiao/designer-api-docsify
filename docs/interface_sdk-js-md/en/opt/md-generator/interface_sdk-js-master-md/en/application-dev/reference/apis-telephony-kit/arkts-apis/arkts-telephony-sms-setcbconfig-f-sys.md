@@ -12,7 +12,7 @@ import { sms } from '@kit.TelephonyKit';
 function setCBConfig(options: CBConfigOptions, callback: AsyncCallback<void>): void
 ```
 
-Turn on or off Cell BroadCast.
+Sets the cell broadcast configuration. This API uses an asynchronous callback to return the result.
 
 **Since:** 7
 
@@ -68,7 +68,7 @@ sms.setCBConfig(cbConfigOptions, (err: BusinessError) => {
 function setCBConfig(options: CBConfigOptions): Promise<void>
 ```
 
-Turn on or off Cell BroadCast.
+Sets the cell broadcast configuration. This API uses a promise to return the result.
 
 **Since:** 7
 

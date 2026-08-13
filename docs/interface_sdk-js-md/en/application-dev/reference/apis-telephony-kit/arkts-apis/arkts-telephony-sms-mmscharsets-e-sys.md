@@ -18,7 +18,7 @@ Enumerates MMS character sets.
 BIG5 = 0X07EA
 ```
 
-Indicates the BIG5 format.
+BIG5 format.
 
 **Since:** 8
 
@@ -36,7 +36,7 @@ Indicates the BIG5 format.
 ISO_10646_UCS_2 = 0X03E8
 ```
 
-Indicates the ISO_10646_UCS_2 format.
+ISO_10646_UCS_2 format.
 
 **Since:** 8
 
@@ -54,7 +54,7 @@ Indicates the ISO_10646_UCS_2 format.
 ISO_8859_1 = 0X04
 ```
 
-Indicates the ISO_8859_1 format.
+ISO_8859_1 format.
 
 **Since:** 8
 
@@ -69,16 +69,16 @@ Indicates the ISO_8859_1 format.
 ## ISO_8859_2
 
 ```TypeScript
-ISO_8859_2
+ISO_8859_2 = 0X05
 ```
 
-Indicates the ISO_8859_2 format.
+ISO_8859_2 format.
 
 **Since:** 8
 
 **ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
-<!--Device-MmsCharSets-ISO_8859_2--><!--Device-MmsCharSets-ISO_8859_2-End-->
+<!--Device-MmsCharSets-ISO_8859_2 = 0X05--><!--Device-MmsCharSets-ISO_8859_2 = 0X05-End-->
 
 **System capability:** SystemCapability.Telephony.SmsMms
 
@@ -87,16 +87,16 @@ Indicates the ISO_8859_2 format.
 ## ISO_8859_3
 
 ```TypeScript
-ISO_8859_3
+ISO_8859_3 = 0X06
 ```
 
-Indicates the ISO_8859_3 format.
+ISO_8859_3 format.
 
 **Since:** 8
 
 **ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
-<!--Device-MmsCharSets-ISO_8859_3--><!--Device-MmsCharSets-ISO_8859_3-End-->
+<!--Device-MmsCharSets-ISO_8859_3 = 0X06--><!--Device-MmsCharSets-ISO_8859_3 = 0X06-End-->
 
 **System capability:** SystemCapability.Telephony.SmsMms
 
@@ -105,16 +105,16 @@ Indicates the ISO_8859_3 format.
 ## ISO_8859_4
 
 ```TypeScript
-ISO_8859_4
+ISO_8859_4 = 0X07
 ```
 
-Indicates the ISO_8859_4 format.
+ISO_8859_4 format.
 
 **Since:** 8
 
 **ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
-<!--Device-MmsCharSets-ISO_8859_4--><!--Device-MmsCharSets-ISO_8859_4-End-->
+<!--Device-MmsCharSets-ISO_8859_4 = 0X07--><!--Device-MmsCharSets-ISO_8859_4 = 0X07-End-->
 
 **System capability:** SystemCapability.Telephony.SmsMms
 
@@ -123,16 +123,16 @@ Indicates the ISO_8859_4 format.
 ## ISO_8859_5
 
 ```TypeScript
-ISO_8859_5
+ISO_8859_5 = 0X08
 ```
 
-Indicates the ISO_8859_5 format.
+ISO_8859_5 format.
 
 **Since:** 8
 
 **ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
-<!--Device-MmsCharSets-ISO_8859_5--><!--Device-MmsCharSets-ISO_8859_5-End-->
+<!--Device-MmsCharSets-ISO_8859_5 = 0X08--><!--Device-MmsCharSets-ISO_8859_5 = 0X08-End-->
 
 **System capability:** SystemCapability.Telephony.SmsMms
 
@@ -141,16 +141,16 @@ Indicates the ISO_8859_5 format.
 ## ISO_8859_6
 
 ```TypeScript
-ISO_8859_6
+ISO_8859_6 = 0X09
 ```
 
-Indicates the ISO_8859_6 format.
+ISO_8859_6 format.
 
 **Since:** 8
 
 **ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
-<!--Device-MmsCharSets-ISO_8859_6--><!--Device-MmsCharSets-ISO_8859_6-End-->
+<!--Device-MmsCharSets-ISO_8859_6 = 0X09--><!--Device-MmsCharSets-ISO_8859_6 = 0X09-End-->
 
 **System capability:** SystemCapability.Telephony.SmsMms
 
@@ -159,16 +159,16 @@ Indicates the ISO_8859_6 format.
 ## ISO_8859_7
 
 ```TypeScript
-ISO_8859_7
+ISO_8859_7 = 0X0a
 ```
 
-Indicates the ISO_8859_7 format.
+ISO_8859_7 format.
 
 **Since:** 8
 
 **ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
-<!--Device-MmsCharSets-ISO_8859_7--><!--Device-MmsCharSets-ISO_8859_7-End-->
+<!--Device-MmsCharSets-ISO_8859_7 = 0X0a--><!--Device-MmsCharSets-ISO_8859_7 = 0X0a-End-->
 
 **System capability:** SystemCapability.Telephony.SmsMms
 
@@ -177,16 +177,16 @@ Indicates the ISO_8859_7 format.
 ## ISO_8859_8
 
 ```TypeScript
-ISO_8859_8
+ISO_8859_8 = 0X0b
 ```
 
-Indicates the ISO_8859_8 format.
+ISO_8859_8 format.
 
 **Since:** 8
 
 **ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
-<!--Device-MmsCharSets-ISO_8859_8--><!--Device-MmsCharSets-ISO_8859_8-End-->
+<!--Device-MmsCharSets-ISO_8859_8 = 0X0b--><!--Device-MmsCharSets-ISO_8859_8 = 0X0b-End-->
 
 **System capability:** SystemCapability.Telephony.SmsMms
 
@@ -195,16 +195,16 @@ Indicates the ISO_8859_8 format.
 ## ISO_8859_9
 
 ```TypeScript
-ISO_8859_9
+ISO_8859_9 = 0X0c
 ```
 
-Indicates the ISO_8859_9 format.
+ISO_8859_9 format.
 
 **Since:** 8
 
 **ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
-<!--Device-MmsCharSets-ISO_8859_9--><!--Device-MmsCharSets-ISO_8859_9-End-->
+<!--Device-MmsCharSets-ISO_8859_9 = 0X0c--><!--Device-MmsCharSets-ISO_8859_9 = 0X0c-End-->
 
 **System capability:** SystemCapability.Telephony.SmsMms
 
@@ -216,7 +216,7 @@ Indicates the ISO_8859_9 format.
 SHIFT_JIS = 0X11
 ```
 
-Indicates the SHIFT_JIS format.
+SHIFT_JIS format.
 
 **Since:** 8
 
@@ -234,7 +234,7 @@ Indicates the SHIFT_JIS format.
 US_ASCII = 0X03
 ```
 
-Indicates the US_ASCII format.
+US_ASCII format.
 
 **Since:** 8
 
@@ -252,7 +252,7 @@ Indicates the US_ASCII format.
 UTF_8 = 0X6A
 ```
 
-Indicates the UTF_8 format.
+UTF_8 format.
 
 **Since:** 8
 

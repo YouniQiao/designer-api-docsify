@@ -12,7 +12,12 @@ import { observer } from '@kit.TelephonyKit';
 function off(type: 'cellInfoChange', callback?: Callback<Array<CellInformation>>): void
 ```
 
-Cancel callback when the cell information is updated.
+Unregisters the observer for cell information change events. This API uses an asynchronous callback to return the result.
+
+> **NOTE：**
+> 
+> You can pass the callback of the **on** function if you want to cancel listening for a certain type of event. If
+> you do not pass the callback, you will cancel listening for all events.
 
 **Since:** 8
 
@@ -28,8 +33,8 @@ Cancel callback when the cell information is updated.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'cellInfoChange' | Yes | Event type. Indicates the cellInfoChange event to unsubscribe from. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;Array&lt;CellInformation&gt;&gt; | No | Indicates the callback to unsubscribe from the cellInfoChange event. |
+| type | 'cellInfoChange' | Yes | Cell information change event. This field has a fixed value of **cellInfoChange**. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;Array&lt;CellInformation&gt;&gt; | No | Callback used to return the result. |
 
 **Error codes:**
 

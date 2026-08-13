@@ -12,7 +12,7 @@ import { call } from '@kit.TelephonyKit';
 function isRinging(callback: AsyncCallback<boolean>): void
 ```
 
-Judge whether there is a ringing call.
+Checks whether the ringtone is playing. This API uses an asynchronous callback to return the result.
 
 **Since:** 8
 
@@ -63,7 +63,7 @@ call.isRinging((err: BusinessError, data: boolean) => {
 function isRinging(): Promise<boolean>
 ```
 
-Judge whether there is a ringing call.
+Checks whether the ringtone is playing. This API uses a promise to return the result.
 
 **Since:** 8
 

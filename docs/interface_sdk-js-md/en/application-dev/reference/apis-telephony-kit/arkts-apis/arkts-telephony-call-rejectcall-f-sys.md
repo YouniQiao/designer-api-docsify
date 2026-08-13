@@ -12,7 +12,7 @@ import { call } from '@kit.TelephonyKit';
 function rejectCall(callId: int, options: RejectMessageOptions, callback: AsyncCallback<void>): void
 ```
 
-Reject the incoming call.
+Rejects a call. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
 
@@ -30,9 +30,9 @@ Reject the incoming call.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Indicates the identifier of the call to reject. |
-| options | [RejectMessageOptions](arkts-telephony-call-rejectmessageoptions-i-sys.md) | Yes | Indicates the text message to reject. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | The callback of rejectCall. |
+| callId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Call ID. You can obtain the value by subscribing to **callDetailsChange** events. |
+| options | [RejectMessageOptions](arkts-telephony-call-rejectmessageoptions-i-sys.md) | Yes | Options for the call rejection message. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
 
@@ -70,7 +70,7 @@ call.rejectCall(1, rejectMessageOptions, (err: BusinessError) => {
 function rejectCall(callId?: int, options?: RejectMessageOptions): Promise<void>
 ```
 
-Reject the incoming call.
+Rejects a call. This API uses a promise to return the result.
 
 **Since:** 9
 
@@ -88,14 +88,14 @@ Reject the incoming call.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | No | Indicates the identifier of the call to reject. |
-| options | [RejectMessageOptions](arkts-telephony-call-rejectmessageoptions-i-sys.md) | No | Indicates the text message to reject. |
+| callId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | No | Call ID. You can obtain the value by subscribing to **callDetailsChange** events. This field is optional from API version 9. &lt;br&gt;If this field is not set, the latest ringing call will be rejected. |
+| options | [RejectMessageOptions](arkts-telephony-call-rejectmessageoptions-i-sys.md) | No | Options for the call rejection message. If this field is not set, no call rejection message will be sent. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | The promise returned by the rejectCall. |
+| Promise&lt;void&gt; | Promise used to return the result. |
 
 **Error codes:**
 
@@ -131,7 +131,7 @@ call.rejectCall(1, rejectMessageOptions).then(() => {
 function rejectCall(callId: int, callback: AsyncCallback<void>): void
 ```
 
-Reject the incoming call.
+Rejects a call. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
 
@@ -149,8 +149,8 @@ Reject the incoming call.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Indicates the identifier of the call to reject. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | The callback of rejectCall. |
+| callId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Call ID. You can obtain the value by subscribing to **callDetailsChange** events. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
 
@@ -185,7 +185,7 @@ call.rejectCall(1, (err: BusinessError) => {
 function rejectCall(options: RejectMessageOptions, callback: AsyncCallback<void>): void
 ```
 
-Reject the incoming call without callId.
+Rejects a call. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
 
@@ -203,8 +203,8 @@ Reject the incoming call without callId.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [RejectMessageOptions](arkts-telephony-call-rejectmessageoptions-i-sys.md) | Yes | Indicates the text message to reject. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | The callback of rejectCall. |
+| options | [RejectMessageOptions](arkts-telephony-call-rejectmessageoptions-i-sys.md) | Yes | Options for the call rejection message. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
 

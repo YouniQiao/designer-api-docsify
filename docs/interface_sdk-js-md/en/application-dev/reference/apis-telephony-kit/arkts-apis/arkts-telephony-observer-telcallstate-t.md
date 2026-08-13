@@ -4,7 +4,7 @@
 type TelCallState = call.TelCallState
 ```
 
-Indicates the states of tel call.
+Enumerates call states.
 
 **Since:** 21
 

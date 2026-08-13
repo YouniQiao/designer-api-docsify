@@ -12,7 +12,7 @@ import { observer } from '@kit.TelephonyKit';
 function on(type: 'cellInfoChange', callback: Callback<Array<CellInformation>>): void
 ```
 
-Callback when the cell information corresponding to the default sim card is updated.
+Registers an observer for cell information change events. This API uses an asynchronous callback to return the result.
 
 **Since:** 8
 
@@ -30,8 +30,8 @@ Callback when the cell information corresponding to the default sim card is upda
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'cellInfoChange' | Yes | Event type. Indicates the cellInfoChange event to be subscribed to. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;Array&lt;CellInformation&gt;&gt; | Yes | Indicates the callback for getting an array of instances of the classes derived from [CellInformation](arkts-telephony-observer-cellinformation-t-sys.md#CellInformation). |
+| type | 'cellInfoChange' | Yes | Cell information change event. This field has a fixed value of **cellInfoChange**. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;Array&lt;CellInformation&gt;&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
 
@@ -62,11 +62,11 @@ observer.on('cellInfoChange', (data: Array<radio.CellInformation>) => {
 function on(type: 'cellInfoChange', options: ObserverOptions, callback: Callback<Array<CellInformation>>): void
 ```
 
-Callback when the cell information corresponding to a monitored {@code slotId} is updated.
+Registers an observer for signal status change events of the SIM card in the specified slot. This API uses an asynchronous callback to return the execution result.
 
-**Since:** 11
+**Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
+**ArkTS mode:** ArkTS-Dyn only, since version 8.
 
 **Required permissions:** ohos.permission.LOCATION and ohos.permission.APPROXIMATELY_LOCATION
 
@@ -80,9 +80,9 @@ Callback when the cell information corresponding to a monitored {@code slotId} i
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'cellInfoChange' | Yes | Event type. Indicates the cellInfoChange event to be subscribed to. |
-| options | ObserverOptions | Yes | Indicates the options for observer. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;Array&lt;CellInformation&gt;&gt; | Yes | Indicates the callback for getting an array of instances of the classes derived from [CellInformation](arkts-telephony-observer-cellinformation-t-sys.md#CellInformation). |
+| type | 'cellInfoChange' | Yes | Cell information change event. This field has a fixed value of **cellInfoChange**. |
+| options | ObserverOptions | Yes | Event subscription parameters. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;Array&lt;CellInformation&gt;&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
 

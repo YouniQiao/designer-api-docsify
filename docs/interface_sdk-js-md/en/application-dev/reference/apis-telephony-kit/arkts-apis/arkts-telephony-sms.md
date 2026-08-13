@@ -1,6 +1,6 @@
-# @ohos.telephony.sms
+# @ohos.telephony.sms(SMS)
 
-Provides the capabilities and methods for obtaining Short Message Service (SMS) management objects.
+The **sms** module provides basic SMS management functions. With the APIs provided by this module, you can create and send SMS messages, and obtain the ID of the default SIM card used to send and receive SMS messages, and check whether the current device can send and receive SMS messages.
 
 **Since:** 6
 
@@ -22,56 +22,56 @@ import { sms } from '@kit.TelephonyKit';
 
 | Name | Description |
 | --- | --- |
-| [createMessage](arkts-telephony-sms-createmessage-f.md#createmessage) | Creates an SMS message instance based on the protocol data unit (PDU) and the specified SMS protocol.  &lt;p&gt;After receiving the original PDU data, the system creates an SMS message instance according to the specified SMS protocol. |
-| [createMessage](arkts-telephony-sms-createmessage-f.md#createmessage-1) | Creates an SMS message instance based on the protocol data unit (PDU) and the specified SMS protocol.  &lt;p&gt;After receiving the original PDU data, the system creates an SMS message instance according to the specified SMS protocol. |
-| [getDefaultSmsSimId](arkts-telephony-sms-getdefaultsmssimid-f.md#getdefaultsmssimid) | Obtains the default SIM ID for sending SMS messages. |
-| [getDefaultSmsSimId](arkts-telephony-sms-getdefaultsmssimid-f.md#getdefaultsmssimid-1) | Obtains the default SIM ID for sending SMS messages. |
-| [getDefaultSmsSlotId](arkts-telephony-sms-getdefaultsmsslotid-f.md#getdefaultsmsslotid) | Obtains the default SIM card for sending SMS messages. |
-| [getDefaultSmsSlotId](arkts-telephony-sms-getdefaultsmsslotid-f.md#getdefaultsmsslotid-1) | Obtains the default SIM card for sending SMS messages. |
-| [hasSmsCapability](arkts-telephony-sms-hassmscapability-f.md#hassmscapability) | Returns whether a device is capable of sending and receiving SMS messages. |
-| [sendMessage](arkts-telephony-sms-sendmessage-f.md#sendmessage) | Sends a text or data SMS message.  &lt;p&gt;This method checks whether the length of an SMS message exceeds the maximum length. If the maximum length is exceeded, the SMS message is split into multiple parts and sent separately. |
-| [sendShortMessage](arkts-telephony-sms-sendshortmessage-f.md#sendshortmessage) | Sends a text or data SMS message.  &lt;p&gt;This method checks whether the length of an SMS message exceeds the maximum length. If the maximum length is exceeded, the SMS message is split into multiple parts and sent separately. |
-| [sendShortMessage](arkts-telephony-sms-sendshortmessage-f.md#sendshortmessage-1) | Sends a text or data SMS message.  &lt;p&gt;This method checks whether the length of an SMS message exceeds the maximum length. If the maximum length is exceeded, the SMS message is split into multiple parts and sent separately. |
+| [createMessage](arkts-telephony-sms-createmessage-f.md#createmessage) | Creates an SMS instance based on the protocol data unit (PDU) and specified SMS protocol. This API uses an asynchronous callback to return the result. |
+| [createMessage](arkts-telephony-sms-createmessage-f.md#createmessage-1) | Creates an SMS instance based on the protocol data unit (PDU) and specified SMS protocol. This API uses a promise to return the result. |
+| [getDefaultSmsSimId](arkts-telephony-sms-getdefaultsmssimid-f.md#getdefaultsmssimid) | Obtains the default ID of the SIM card used to send SMS messages. This API uses an asynchronous callback to return the result. |
+| [getDefaultSmsSimId](arkts-telephony-sms-getdefaultsmssimid-f.md#getdefaultsmssimid-1) | Obtains the default ID of the SIM card used to send SMS messages. This API uses a promise to return the result. |
+| [getDefaultSmsSlotId](arkts-telephony-sms-getdefaultsmsslotid-f.md#getdefaultsmsslotid) | Obtains the default slot ID of the SIM card used to send SMS messages. This API uses an asynchronous callback to return the result. |
+| [getDefaultSmsSlotId](arkts-telephony-sms-getdefaultsmsslotid-f.md#getdefaultsmsslotid-1) | Obtains the default slot ID of the SIM card used to send SMS messages. This API uses a promise to return the result. |
+| [hasSmsCapability](arkts-telephony-sms-hassmscapability-f.md#hassmscapability) | Checks whether the current device can send and receive SMS messages. This API works in synchronous mode. |
+| [sendMessage](arkts-telephony-sms-sendmessage-f.md#sendmessage) | Sends an SMS message.  > **NOTE：** >  > This API is supported since API version 6 and deprecated since API version 10. You are advised to use > [sendShortMessage](arkts-telephony-sms-sendshortmessage-f.md#sendShortMessage). |
+| [sendShortMessage](arkts-telephony-sms-sendshortmessage-f.md#sendshortmessage) | Sends an SMS message. This API uses an asynchronous callback to return the result. |
+| [sendShortMessage](arkts-telephony-sms-sendshortmessage-f.md#sendshortmessage-1) | Sends an SMS message. This API uses a promise to return the result. |
 
 <!--Del-->
 ### Functions（系统接口）
 
 | Name | Description |
 | --- | --- |
-| [addSimMessage](arkts-telephony-sms-addsimmessage-f-sys.md#addsimmessage) | Add an SMS Message to SIM card. |
-| [addSimMessage](arkts-telephony-sms-addsimmessage-f-sys.md#addsimmessage-1) | Add an SMS Message to SIM card. |
-| [decodeMms](arkts-telephony-sms-decodemms-f-sys.md#decodemms) | Decode the message content. |
-| [decodeMms](arkts-telephony-sms-decodemms-f-sys.md#decodemms-1) | Decode the message content. |
-| [delSimMessage](arkts-telephony-sms-delsimmessage-f-sys.md#delsimmessage) | Delete an SMS Message from the SIM card. |
-| [delSimMessage](arkts-telephony-sms-delsimmessage-f-sys.md#delsimmessage-1) | Delete an SMS Message from the SIM card. |
-| [downloadMms](arkts-telephony-sms-downloadmms-f-sys.md#downloadmms) | Downloads an MMS message. |
-| [downloadMms](arkts-telephony-sms-downloadmms-f-sys.md#downloadmms-1) | Downloads an MMS message. |
-| [encodeMms](arkts-telephony-sms-encodemms-f-sys.md#encodemms) | Encode the message content. |
-| [encodeMms](arkts-telephony-sms-encodemms-f-sys.md#encodemms-1) | Encode the message content. |
-| [getAllSimMessages](arkts-telephony-sms-getallsimmessages-f-sys.md#getallsimmessages) | Get all SMS records in SIM. |
-| [getAllSimMessages](arkts-telephony-sms-getallsimmessages-f-sys.md#getallsimmessages-1) | Get all SMS records in SIM. |
-| [getImsShortMessageFormat](arkts-telephony-sms-getimsshortmessageformat-f-sys.md#getimsshortmessageformat) | Gets SMS format supported on IMS. SMS over IMS format is either 3GPP or 3GPP2. |
-| [getImsShortMessageFormat](arkts-telephony-sms-getimsshortmessageformat-f-sys.md#getimsshortmessageformat-1) | Gets SMS format supported on IMS. SMS over IMS format is either 3GPP or 3GPP2. |
-| [getSmsSegmentsInfo](arkts-telephony-sms-getsmssegmentsinfo-f-sys.md#getsmssegmentsinfo) | Get an SMS segment encode relation information. |
-| [getSmsSegmentsInfo](arkts-telephony-sms-getsmssegmentsinfo-f-sys.md#getsmssegmentsinfo-1) | Get an SMS segment encode relation information. |
+| [addSimMessage](arkts-telephony-sms-addsimmessage-f-sys.md#addsimmessage) | Adds a message to the SIM card. If the SIM card is full, an error is reported. This API uses an asynchronous callback to return the result. |
+| [addSimMessage](arkts-telephony-sms-addsimmessage-f-sys.md#addsimmessage-1) | Adds a message to the SIM card. If the SIM card is full, an error is reported. This API uses a promise to return the result. |
+| [decodeMms](arkts-telephony-sms-decodemms-f-sys.md#decodemms) | Decodes MMS messages. This API uses an asynchronous callback to return the result. |
+| [decodeMms](arkts-telephony-sms-decodemms-f-sys.md#decodemms-1) | Decodes MMS messages. This API uses a promise to return the result. |
+| [delSimMessage](arkts-telephony-sms-delsimmessage-f-sys.md#delsimmessage) | Deletes a message from the SIM card. If the specified **msgIndex** is invalid, an error is reported. This API uses an asynchronous callback to return the result. |
+| [delSimMessage](arkts-telephony-sms-delsimmessage-f-sys.md#delsimmessage-1) | Deletes a message from the SIM card. If the specified **msgIndex** is invalid, an error is reported. This API uses a promise to return the result. |
+| [downloadMms](arkts-telephony-sms-downloadmms-f-sys.md#downloadmms) | Downloads an MMS message. This API uses an asynchronous callback to return the result. |
+| [downloadMms](arkts-telephony-sms-downloadmms-f-sys.md#downloadmms-1) | Downloads an MMS message. This API uses a promise to return the result. |
+| [encodeMms](arkts-telephony-sms-encodemms-f-sys.md#encodemms) | MMS message code. This API uses an asynchronous callback to return the result. |
+| [encodeMms](arkts-telephony-sms-encodemms-f-sys.md#encodemms-1) | MMS message code. This API uses a promise to return the result. |
+| [getAllSimMessages](arkts-telephony-sms-getallsimmessages-f-sys.md#getallsimmessages) | Obtains all SIM card messages. This API uses an asynchronous callback to return the result. |
+| [getAllSimMessages](arkts-telephony-sms-getallsimmessages-f-sys.md#getallsimmessages-1) | Obtains all SIM card messages. This API uses a promise to return the result. |
+| [getImsShortMessageFormat](arkts-telephony-sms-getimsshortmessageformat-f-sys.md#getimsshortmessageformat) | Obtains the SMS format supported by the IMS, for example, **3gpp**, **3gpp2**, or **unknown**. This API uses an asynchronous callback to return the result. |
+| [getImsShortMessageFormat](arkts-telephony-sms-getimsshortmessageformat-f-sys.md#getimsshortmessageformat-1) | Obtains the SMS format supported by the IMS, for example, **3gpp**, **3gpp2**, or **unknown**. This API uses a promise to return the result. |
+| [getSmsSegmentsInfo](arkts-telephony-sms-getsmssegmentsinfo-f-sys.md#getsmssegmentsinfo) | Obtains SMS message segment information. This API uses an asynchronous callback to return the result. |
+| [getSmsSegmentsInfo](arkts-telephony-sms-getsmssegmentsinfo-f-sys.md#getsmssegmentsinfo-1) | Obtains SMS message segment information. This API uses a promise to return the result. |
 | [getSmsShortCodeType](arkts-telephony-sms-getsmsshortcodetype-f-sys.md#getsmsshortcodetype) | Get the SMS short code type of the destination address. |
-| [getSmscAddr](arkts-telephony-sms-getsmscaddr-f-sys.md#getsmscaddr) | Obtains the SMSC address based on a specified slot ID. |
-| [getSmscAddr](arkts-telephony-sms-getsmscaddr-f-sys.md#getsmscaddr-1) | Obtains the SMSC address based on a specified slot ID. |
-| [isImsSmsSupported](arkts-telephony-sms-isimssmssupported-f-sys.md#isimssmssupported) | SMS over IMS is supported if IMS is registered and SMS is supported on IMS. |
-| [isImsSmsSupported](arkts-telephony-sms-isimssmssupported-f-sys.md#isimssmssupported-1) | SMS over IMS is supported if IMS is registered and SMS is supported on IMS. |
-| [sendMms](arkts-telephony-sms-sendmms-f-sys.md#sendmms) | Sends an MMS message. |
-| [sendMms](arkts-telephony-sms-sendmms-f-sys.md#sendmms-1) | Sends an MMS message. |
-| [setCBConfig](arkts-telephony-sms-setcbconfig-f-sys.md#setcbconfig) | Turn on or off Cell BroadCast. |
-| [setCBConfig](arkts-telephony-sms-setcbconfig-f-sys.md#setcbconfig-1) | Turn on or off Cell BroadCast. |
+| [getSmscAddr](arkts-telephony-sms-getsmscaddr-f-sys.md#getsmscaddr) | Obtains the SMSC address. This API uses an asynchronous callback to return the result. |
+| [getSmscAddr](arkts-telephony-sms-getsmscaddr-f-sys.md#getsmscaddr-1) | Obtains the SMSC address. This API uses a promise to return the result. |
+| [isImsSmsSupported](arkts-telephony-sms-isimssmssupported-f-sys.md#isimssmssupported) | Checks whether SMS is supported on IMS. This API uses an asynchronous callback to return the result. |
+| [isImsSmsSupported](arkts-telephony-sms-isimssmssupported-f-sys.md#isimssmssupported-1) | Checks whether SMS is supported on IMS. This API uses a promise to return the result. |
+| [sendMms](arkts-telephony-sms-sendmms-f-sys.md#sendmms) | Sends an MMS message. This API uses an asynchronous callback to return the result. |
+| [sendMms](arkts-telephony-sms-sendmms-f-sys.md#sendmms-1) | Sends an MMS message. This API uses a promise to return the result. |
+| [setCBConfig](arkts-telephony-sms-setcbconfig-f-sys.md#setcbconfig) | Sets the cell broadcast configuration. This API uses an asynchronous callback to return the result. |
+| [setCBConfig](arkts-telephony-sms-setcbconfig-f-sys.md#setcbconfig-1) | Sets the cell broadcast configuration. This API uses a promise to return the result. |
 | [setCBConfigList](arkts-telephony-sms-setcbconfiglist-f-sys.md#setcbconfiglist) | Turn on Cell BroadCast by list. |
-| [setDefaultSmsSlotId](arkts-telephony-sms-setdefaultsmsslotid-f-sys.md#setdefaultsmsslotid) | Sets the default SIM card for sending SMS messages. You can obtain the default SIM card by using {@code getDefaultSmsSlotId}. |
-| [setDefaultSmsSlotId](arkts-telephony-sms-setdefaultsmsslotid-f-sys.md#setdefaultsmsslotid-1) | Sets the default SIM card for sending SMS messages. You can obtain the default SIM card by using {@code getDefaultSmsSlotId}. |
-| [setSmscAddr](arkts-telephony-sms-setsmscaddr-f-sys.md#setsmscaddr) | Sets the address for the Short Message Service Center (SMSC) based on a specified slot ID. |
-| [setSmscAddr](arkts-telephony-sms-setsmscaddr-f-sys.md#setsmscaddr-1) | Sets the address for the Short Message Service Center (SMSC) based on a specified slot ID. |
-| [splitMessage](arkts-telephony-sms-splitmessage-f-sys.md#splitmessage) | Splits a long SMS message into multiple fragments.  &lt;p&gt;If the length of an SMS message exceeds the maximum length allowed (140 bytes),the SMS message is split into multiple segments for processing. |
-| [splitMessage](arkts-telephony-sms-splitmessage-f-sys.md#splitmessage-1) | Splits a long SMS message into multiple fragments.  &lt;p&gt;If the length of an SMS message exceeds the maximum length allowed (140 bytes),the SMS message is split into multiple segments for processing. |
-| [updateSimMessage](arkts-telephony-sms-updatesimmessage-f-sys.md#updatesimmessage) | Update a SIM SMS of SIM card. |
-| [updateSimMessage](arkts-telephony-sms-updatesimmessage-f-sys.md#updatesimmessage-1) | Update a SIM SMS of SIM card. |
+| [setDefaultSmsSlotId](arkts-telephony-sms-setdefaultsmsslotid-f-sys.md#setdefaultsmsslotid) | Sets the default slot ID of the SIM card used to send SMS messages. This API uses an asynchronous callback to return the result. |
+| [setDefaultSmsSlotId](arkts-telephony-sms-setdefaultsmsslotid-f-sys.md#setdefaultsmsslotid-1) | Sets the default slot ID of the SIM card used to send SMS messages. This API uses a promise to return the result. |
+| [setSmscAddr](arkts-telephony-sms-setsmscaddr-f-sys.md#setsmscaddr) | Sets the short message service center (SMSC) address. This API uses an asynchronous callback to return the result. |
+| [setSmscAddr](arkts-telephony-sms-setsmscaddr-f-sys.md#setsmscaddr-1) | Sets the SMSC address. This API uses a promise to return the result. |
+| [splitMessage](arkts-telephony-sms-splitmessage-f-sys.md#splitmessage) | Splits an SMS message into multiple segments. This API uses an asynchronous callback to return the result. |
+| [splitMessage](arkts-telephony-sms-splitmessage-f-sys.md#splitmessage-1) | Splits an SMS message into multiple segments. This API uses a promise to return the result. |
+| [updateSimMessage](arkts-telephony-sms-updatesimmessage-f-sys.md#updatesimmessage) | Updates a SIM message. This API uses an asynchronous callback to return the result. |
+| [updateSimMessage](arkts-telephony-sms-updatesimmessage-f-sys.md#updatesimmessage-1) | Updates a SIM message. This API uses a promise to return the result. |
 <!--DelEnd-->
 
 ### Interfaces
@@ -79,8 +79,8 @@ import { sms } from '@kit.TelephonyKit';
 | Name | Description |
 | --- | --- |
 | [IDeliveryShortMessageCallback](arkts-telephony-sms-ideliveryshortmessagecallback-i.md) | Provides the callback for the SMS message delivery report. |
-| [ISendShortMessageCallback](arkts-telephony-sms-isendshortmessagecallback-i.md) | Provides the callback for the SMS message sending result. |
-| [SendMessageOptions](arkts-telephony-sms-sendmessageoptions-i.md) | Provides the options (including callbacks) for sending an SMS message. |
+| [ISendShortMessageCallback](arkts-telephony-sms-isendshortmessagecallback-i.md) | Provides the callback for the SMS message sending result. It consists of three parts: SMS message sending result,URI for storing the sent SMS message, and whether the SMS message is the last part of a long SMS message. |
+| [SendMessageOptions](arkts-telephony-sms-sendmessageoptions-i.md) | Provides the options (including callbacks) for sending SMS messages. For example, you can specify the SMS message type by the optional parameter **content**. |
 | [ShortMessage](arkts-telephony-sms-shortmessage-i.md) | Defines an SMS message instance. |
 
 <!--Del-->
@@ -90,17 +90,17 @@ import { sms } from '@kit.TelephonyKit';
 | --- | --- |
 | [CBConfigListConfigs](arkts-telephony-sms-cbconfiglistconfigs-i-sys.md) | Defines the cell broadcast configuration list configs. |
 | [CBConfigOptions](arkts-telephony-sms-cbconfigoptions-i-sys.md) | Defines the cell broadcast configuration options. |
-| [MmsAcknowledgeInd](arkts-telephony-sms-mmsacknowledgeind-i-sys.md) | Defines an MMS confirmation indication. |
+| [MmsAcknowledgeInd](arkts-telephony-sms-mmsacknowledgeind-i-sys.md) | Defines an MMS confirmation index. |
 | [MmsAddress](arkts-telephony-sms-mmsaddress-i-sys.md) | Defines an MMSC address. |
 | [MmsAttachment](arkts-telephony-sms-mmsattachment-i-sys.md) | Defines the attachment of an MMS message. |
-| [MmsConfig](arkts-telephony-sms-mmsconfig-i-sys.md) | Defines the MMS message config. |
-| [MmsDeliveryInd](arkts-telephony-sms-mmsdeliveryind-i-sys.md) | Defines an MMS message delivery indication. |
+| [MmsConfig](arkts-telephony-sms-mmsconfig-i-sys.md) | MMS configuration file. |
+| [MmsDeliveryInd](arkts-telephony-sms-mmsdeliveryind-i-sys.md) | Defines an MMS message delivery index. |
 | [MmsInformation](arkts-telephony-sms-mmsinformation-i-sys.md) | Defines the MMS message information. |
-| [MmsNotificationInd](arkts-telephony-sms-mmsnotificationind-i-sys.md) | Defines an MMS notification indication. |
-| [MmsParams](arkts-telephony-sms-mmsparams-i-sys.md) | Defines the MMS message param. |
-| [MmsReadOrigInd](arkts-telephony-sms-mmsreadorigind-i-sys.md) | Defines the original MMS message reading indication. |
-| [MmsReadRecInd](arkts-telephony-sms-mmsreadrecind-i-sys.md) | Defines the MMS message reading indication. |
-| [MmsRespInd](arkts-telephony-sms-mmsrespind-i-sys.md) | Defines an MMS response indication. |
+| [MmsNotificationInd](arkts-telephony-sms-mmsnotificationind-i-sys.md) | Defines an MMS notification index. |
+| [MmsParams](arkts-telephony-sms-mmsparams-i-sys.md) | Defines the parameters for sending SMS messages. |
+| [MmsReadOrigInd](arkts-telephony-sms-mmsreadorigind-i-sys.md) | Defines the original MMS message reading index. |
+| [MmsReadRecInd](arkts-telephony-sms-mmsreadrecind-i-sys.md) | Defines the MMS message reading index. |
+| [MmsRespInd](arkts-telephony-sms-mmsrespind-i-sys.md) | Defines an MMS response index. |
 | [MmsRetrieveConf](arkts-telephony-sms-mmsretrieveconf-i-sys.md) | Defines the MMS message retrieval configuration. |
 | [MmsSendConf](arkts-telephony-sms-mmssendconf-i-sys.md) | Defines the MMS message sending configuration. |
 | [MmsSendReq](arkts-telephony-sms-mmssendreq-i-sys.md) | Defines an MMS message sending request. |
@@ -123,11 +123,11 @@ import { sms } from '@kit.TelephonyKit';
 | Name | Description |
 | --- | --- |
 | [DispositionType](arkts-telephony-sms-dispositiontype-e-sys.md) | Enumerates disposition types. |
-| [MessageType](arkts-telephony-sms-messagetype-e-sys.md) | Enumerates message type. |
+| [MessageType](arkts-telephony-sms-messagetype-e-sys.md) | Message type. |
 | [MmsCharSets](arkts-telephony-sms-mmscharsets-e-sys.md) | Enumerates MMS character sets. |
 | [MmsPriorityType](arkts-telephony-sms-mmsprioritytype-e-sys.md) | Enumerates MMS message priorities. |
 | [MmsVersionType](arkts-telephony-sms-mmsversiontype-e-sys.md) | Enumerates MMS versions. |
-| [RanType](arkts-telephony-sms-rantype-e-sys.md) | Enumerates RAN type. |
+| [RanType](arkts-telephony-sms-rantype-e-sys.md) | RAN type. |
 | [ReportType](arkts-telephony-sms-reporttype-e-sys.md) | Enumerates report types. |
 | [SimMessageStatus](arkts-telephony-sms-simmessagestatus-e-sys.md) | Defines the SIM message status. |
 | [SmsEncodingScheme](arkts-telephony-sms-smsencodingscheme-e-sys.md) | Enumerates SMS encoding schemes. |

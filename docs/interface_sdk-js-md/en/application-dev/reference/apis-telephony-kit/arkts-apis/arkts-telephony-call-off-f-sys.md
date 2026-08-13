@@ -12,7 +12,7 @@ import { call } from '@kit.TelephonyKit';
 function off(type: 'callDetailsChange', callback?: Callback<CallAttributeOptions>): void
 ```
 
-Unsubscribe from the callDetailsChange event.
+Unsubscribes from **callDetailsChange** events. This API uses an asynchronous callback to return the result.
 
 **Since:** 7
 
@@ -30,8 +30,8 @@ Unsubscribe from the callDetailsChange event.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'callDetailsChange' | Yes | Event type. Indicates the callDetailsChange event to unsubscribe from. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[CallAttributeOptions](arkts-telephony-call-callattributeoptions-i-sys.md)&gt; | No | Indicates the callback to unsubscribe from the callDetailsChange event. |
+| type | 'callDetailsChange' | Yes | Call details change. This field has a fixed value of **callDetailsChange**. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[CallAttributeOptions](arkts-telephony-call-callattributeoptions-i-sys.md)&gt; | No | Callback used to return the result. If this field is not set, no subscription cancellation result will be received. |
 
 **Error codes:**
 
@@ -60,7 +60,7 @@ call.off('callDetailsChange', (data: call.CallAttributeOptions) => {
 function off(type: 'callEventChange', callback?: Callback<CallEventOptions>): void
 ```
 
-Unsubscribe from the callEventChange event.
+Unsubscribes from **callEventChange** events. This API uses an asynchronous callback to return the result.
 
 **Since:** 8
 
@@ -78,8 +78,8 @@ Unsubscribe from the callEventChange event.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'callEventChange' | Yes | Event type. Indicates the callEventChange event to unsubscribe from. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[CallEventOptions](arkts-telephony-call-calleventoptions-i-sys.md)&gt; | No | Indicates the callback to unsubscribe from the callEventChange event. |
+| type | 'callEventChange' | Yes | Call event change. This field has a fixed value of **callEventChange**. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[CallEventOptions](arkts-telephony-call-calleventoptions-i-sys.md)&gt; | No | Callback used to return the result. If this field is not set, no subscription cancellation result will be received. |
 
 **Error codes:**
 
@@ -108,7 +108,7 @@ call.off('callEventChange', (data: call.CallEventOptions) => {
 function off(type: 'callDisconnectedCause', callback?: Callback<DisconnectedDetails>): void
 ```
 
-Unsubscribe from the callDisconnectedCause event.
+Unsubscribes from **callDisconnectedCause** events. This API uses an asynchronous callback to return the result.
 
 **Since:** 8
 
@@ -126,8 +126,8 @@ Unsubscribe from the callDisconnectedCause event.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'callDisconnectedCause' | Yes | Event type. Indicates the callDisconnectedCause event to unsubscribe from. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[DisconnectedDetails](arkts-telephony-call-disconnecteddetails-i-sys.md)&gt; | No | Indicates the callback used to cancel the registration monitoring for obtaining the call end reason. |
+| type | 'callDisconnectedCause' | Yes | Call disconnection cause. This field has a fixed value of **callDisconnectedCause**. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[DisconnectedDetails](arkts-telephony-call-disconnecteddetails-i-sys.md)&gt; | No | Callback used to return the result. If this field is not set, no subscription cancellation result will be received. |
 
 **Error codes:**
 
@@ -156,7 +156,7 @@ call.off('callDisconnectedCause', (data: call.DisconnectedDetails) => {
 function off(type: 'mmiCodeResult', callback?: Callback<MmiCodeResults>): void
 ```
 
-Unsubscribe from the mmiCodeResult event.
+Unsubscribes from **mmiCodeResult** events. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
 
@@ -174,8 +174,8 @@ Unsubscribe from the mmiCodeResult event.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'mmiCodeResult' | Yes | Event type. Indicates the mmiCodeResult event to unsubscribe from. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[MmiCodeResults](arkts-telephony-call-mmicoderesults-i-sys.md)&gt; | No | Indicates the callback used to cancel getting mmicode registered listening. |
+| type | 'mmiCodeResult' | Yes | MMI code result. This field has a fixed value of **mmiCodeResult**. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[MmiCodeResults](arkts-telephony-call-mmicoderesults-i-sys.md)&gt; | No | Callback used to return the result. If this field is not set, no subscription cancellation result will be received. |
 
 **Error codes:**
 
@@ -204,7 +204,7 @@ call.off('mmiCodeResult', (data: call.MmiCodeResults) => {
 function off(type: 'audioDeviceChange', callback?: Callback<AudioDeviceCallbackInfo>): void
 ```
 
-Unsubscribe from the audioDeviceChange event.
+Unsubscribes from **audioDeviceChange** events. This API uses an asynchronous callback to return the result.
 
 **Since:** 10
 
@@ -222,8 +222,8 @@ Unsubscribe from the audioDeviceChange event.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'audioDeviceChange' | Yes | Event type. Indicates the audioDeviceChange event to unsubscribe from. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[AudioDeviceCallbackInfo](arkts-telephony-call-audiodevicecallbackinfo-i-sys.md)&gt; | No | Indicates the callback for getting the result of Current AudioDevice. |
+| type | 'audioDeviceChange' | Yes | Audio device change. This field has a fixed value of **audioDeviceChange**. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[AudioDeviceCallbackInfo](arkts-telephony-call-audiodevicecallbackinfo-i-sys.md)&gt; | No | Callback used to return the result. If this field is not set, no subscription cancellation result will be received. |
 
 **Error codes:**
 
@@ -252,7 +252,7 @@ call.off('audioDeviceChange', (data: call.AudioDeviceCallbackInfo) => {
 function off(type: 'postDialDelay', callback?: Callback<string>): void
 ```
 
-Unsubscribe from the postDialDelay event.
+Unsubscribes from **postDialDelay** events. This API uses an asynchronous callback to return the result.
 
 **Since:** 11
 
@@ -270,8 +270,8 @@ Unsubscribe from the postDialDelay event.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'postDialDelay' | Yes | Event type. Indicates the postDialDelay event to unsubscribe from. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;string&gt; | No | Indicates the callback for getting the result of post-dial string. |
+| type | 'postDialDelay' | Yes | Post-dial delay. This field has a fixed value of **postDialDelay**. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;string&gt; | No | Callback used to return the result. If this field is not set, no subscription cancellation result will be received. |
 
 **Error codes:**
 
@@ -300,7 +300,7 @@ call.off('postDialDelay', (data: string) => {
 function off(type: 'imsCallModeChange', callback?: Callback<ImsCallModeInfo>): void
 ```
 
-Unsubscribe from the imsCallModeChange event.
+Unsubscribes from **imsCallModeChange** events. This API uses an asynchronous callback to return the result.
 
 **Since:** 11
 
@@ -318,8 +318,8 @@ Unsubscribe from the imsCallModeChange event.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'imsCallModeChange' | Yes | Event type. Indicates the imsCallModeChange event to unsubscribe from. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[ImsCallModeInfo](arkts-telephony-call-imscallmodeinfo-i-sys.md)&gt; | No | Indicates the callback to unsubscribe from the imsCallModeChange event. |
+| type | 'imsCallModeChange' | Yes | Call mode change. This field has a fixed value of **imsCallModeChange**. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[ImsCallModeInfo](arkts-telephony-call-imscallmodeinfo-i-sys.md)&gt; | No | Callback used to return the result. If this field is not set, no subscription cancellation result will be received. |
 
 **Error codes:**
 
@@ -350,7 +350,7 @@ call.off('imsCallModeChange', (data: call.ImsCallModeInfo) => {
 function off(type: 'callSessionEvent', callback?: Callback<CallSessionEvent>): void
 ```
 
-Unsubscribe from the callSessionEvent.
+Unsubscribes from **callSessionEvent** events. This API uses an asynchronous callback to return the result.
 
 **Since:** 11
 
@@ -368,8 +368,8 @@ Unsubscribe from the callSessionEvent.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'callSessionEvent' | Yes | Event type. Indicates the callSessionEventChange event to unsubscribe from. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[CallSessionEvent](arkts-telephony-call-callsessionevent-i-sys.md)&gt; | No | Indicates the callback to unsubscribe from the CallSessionEvent event. |
+| type | 'callSessionEvent' | Yes | Call session event. This field has a fixed value of **callSessionEvent**. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[CallSessionEvent](arkts-telephony-call-callsessionevent-i-sys.md)&gt; | No | Callback used to return the result. If this field is not set, no subscription cancellation result will be received. |
 
 **Error codes:**
 
@@ -400,7 +400,7 @@ call.off('callSessionEvent', (data: call.CallSessionEvent) => {
 function off(type: 'peerDimensionsChange', callback?: Callback<PeerDimensionsDetail>): void
 ```
 
-Unsubscribe from the peerDimensionsChange event.
+Unsubscribes from **peerDimensionsChange** events. This API uses an asynchronous callback to return the result.
 
 **Since:** 11
 
@@ -418,8 +418,8 @@ Unsubscribe from the peerDimensionsChange event.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'peerDimensionsChange' | Yes | Event type. Indicates the peerDimensionsChange event to unsubscribe from. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[PeerDimensionsDetail](arkts-telephony-call-peerdimensionsdetail-i-sys.md)&gt; | No | Indicates the callback to unsubscribe from peerDimensionsChange event. |
+| type | 'peerDimensionsChange' | Yes | Screen resolution change. This field has a fixed value of **peerDimensionsChange**. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[PeerDimensionsDetail](arkts-telephony-call-peerdimensionsdetail-i-sys.md)&gt; | No | Callback used to return the result. If this field is not set, no subscription cancellation result will be received. |
 
 **Error codes:**
 
@@ -450,7 +450,7 @@ call.off('peerDimensionsChange', (data: call.PeerDimensionsDetail) => {
 function off(type: 'cameraCapabilitiesChange', callback?: Callback<CameraCapabilities>): void
 ```
 
-Unsubscribe from the cameraCapabilitiesChange event.
+Unsubscribes from **cameraCapabilitiesChange** events. This API uses an asynchronous callback to return the result.
 
 **Since:** 11
 
@@ -468,8 +468,8 @@ Unsubscribe from the cameraCapabilitiesChange event.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'cameraCapabilitiesChange' | Yes | Event type. Indicates the cameraCapabilitiesChange event to unsubscribe from. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[CameraCapabilities](arkts-telephony-call-cameracapabilities-i-sys.md)&gt; | No | Indicates the callback to unsubscribe from cameraCapabilitiesChange event. |
+| type | 'cameraCapabilitiesChange' | Yes | Camera capability change. This field has a fixed value of **cameraCapabilitiesChange**. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[CameraCapabilities](arkts-telephony-call-cameracapabilities-i-sys.md)&gt; | No | Callback used to return the result. If this field is not set, no subscription cancellation result will be received. |
 
 **Error codes:**
 

@@ -1,6 +1,6 @@
 # MakeCallOptions
 
-Indicates the options of make call.
+Provides an option for determining whether a call is a video call.
 
 **Since:** 24
 
@@ -38,7 +38,7 @@ Whether the third-party app supports custom accessibility features.Default value
 isHideDialScreen?: boolean
 ```
 
-Whether to hide the dialer screen after call ends.&lt;br&gt;Default value: false.
+Whether to hide the dial screen. **true**: yes; **false**: no.
 
 **Type:** boolean
 

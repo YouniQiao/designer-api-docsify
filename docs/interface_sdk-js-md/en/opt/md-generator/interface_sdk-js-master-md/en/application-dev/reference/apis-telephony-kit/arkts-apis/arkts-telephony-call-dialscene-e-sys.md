@@ -1,6 +1,6 @@
 # DialScene (System API)
 
-Indicates the scenarios of the call to be made.
+Enumerates dialup scenarios.
 
 **Since:** 8
 
@@ -16,7 +16,7 @@ Indicates the scenarios of the call to be made.
 CALL_NORMAL = 0
 ```
 
-Indicates this is a common call.
+Common call.
 
 **Since:** 8
 
@@ -32,7 +32,7 @@ Indicates this is a common call.
 CALL_PRIVILEGED = 1
 ```
 
-Indicates this is a privileged call.
+Privileged call.
 
 **Since:** 8
 
@@ -48,7 +48,7 @@ Indicates this is a privileged call.
 CALL_EMERGENCY = 2
 ```
 
-Indicates this is an emergency call.
+Emergency call.
 
 **Since:** 8
 

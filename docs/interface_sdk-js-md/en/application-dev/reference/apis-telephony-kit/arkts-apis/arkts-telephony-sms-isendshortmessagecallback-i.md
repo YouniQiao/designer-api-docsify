@@ -1,6 +1,6 @@
 # ISendShortMessageCallback
 
-Provides the callback for the SMS message sending result.
+Provides the callback for the SMS message sending result. It consists of three parts: SMS message sending result,URI for storing the sent SMS message, and whether the SMS message is the last part of a long SMS message.
 
 **Since:** 6
 
@@ -22,7 +22,10 @@ import { sms } from '@kit.TelephonyKit';
 isLastPart: boolean
 ```
 
-Specifies whether this is the last part of a multi-part SMS message.
+Whether this SMS message is the last part of a long SMS message. The default value is **false**.
+
+- **true**: yes  
+- **false**: no
 
 **Type:** boolean
 
@@ -40,7 +43,7 @@ Specifies whether this is the last part of a multi-part SMS message.
 result: SendSmsResult
 ```
 
-Indicates the SMS message sending result.
+SMS message sending result.
 
 **Type:** [SendSmsResult](arkts-telephony-sms-sendsmsresult-e.md)
 
@@ -58,7 +61,7 @@ Indicates the SMS message sending result.
 url: string
 ```
 
-Indicates the URI to store the sent SMS message.
+URI for storing the sent SMS message.
 
 **Type:** string
 

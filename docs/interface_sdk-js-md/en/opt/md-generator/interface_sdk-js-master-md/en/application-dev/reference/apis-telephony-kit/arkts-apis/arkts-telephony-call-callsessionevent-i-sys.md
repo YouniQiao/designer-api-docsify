@@ -1,6 +1,6 @@
 # CallSessionEvent (System API)
 
-Indicates the call session event of a video call.
+Defines the video call event information.
 
 **Since:** 11
 
@@ -22,7 +22,7 @@ import { call } from '@kit.TelephonyKit';
 callId: number
 ```
 
-Indicates the id of call.
+Call ID.
 
 **Type:** number
 
@@ -40,7 +40,7 @@ Indicates the id of call.
 eventId: CallSessionEventId
 ```
 
-Indicates the event id of video call.
+Video call event.
 
 **Type:** [CallSessionEventId](arkts-telephony-call-callsessioneventid-e-sys.md)
 

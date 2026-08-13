@@ -12,9 +12,9 @@ import { call } from '@kit.TelephonyKit';
 function makeCall(phoneNumber: string, callback: AsyncCallback<void>): void
 ```
 
-Go to the dial screen and the called number is displayed.
+Launches the call screen and displays the dialed number. This API uses an asynchronous callback to return the result. This API can be called only in a UIAbility.
 
-**Since:** 11
+**Since:** 7
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -60,9 +60,9 @@ call.makeCall("138xxxxxxxx", (err: BusinessError) => {
 function makeCall(phoneNumber: string): Promise<void>
 ```
 
-Go to the dial screen and the called number is displayed.
+Launches the call screen and displays the dialed number. This API uses a promise to return the result. This API can be called only in a UIAbility.
 
-**Since:** 11
+**Since:** 7
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -111,7 +111,7 @@ call.makeCall("138xxxxxxxx").then(() => {
 function makeCall(phoneNumber: string, options?: MakeCallOptions): Promise<void>
 ```
 
-Go to the dial screen and the called number is displayed.
+Launches the call screen and displays the dialed number. This API uses a promise to return the result. This API can be called only in a UIAbility.
 
 **Since:** 24
 
@@ -167,7 +167,7 @@ call.makeCall("138xxxxxxxx", makeOptions).then(() => {
 function makeCall(context: Context, phoneNumber: string): Promise<void>
 ```
 
-Go to the dial screen and the called number is displayed.
+Launches the call screen and displays the dialed number. This API uses a promise to return the result. You need to declare the **ohos.permission.START_ABILITIES_FROM_BACKGROUND** permission if you want to call the API in the background.
 
 **Since:** 12
 

@@ -42,7 +42,7 @@ autoCollapse(enable: Optional<boolean>): ArcAlphabetIndexerAttribute
 
 | 类型 | 说明 |
 | --- | --- |
-| [ArcAlphabetIndexerAttribute](arkts-arkui-arkui-arcalphabetindexer-arcalphabetindexerattribute-c.md) |  |
+| [ArcAlphabetIndexerAttribute](arkts-arkui-arkui-arcalphabetindexer-arcalphabetindexerattribute-i.md) |  |
 
 ## color
 
@@ -72,7 +72,7 @@ color(color: Optional<ColorMetrics>): ArcAlphabetIndexerAttribute
 
 | 类型 | 说明 |
 | --- | --- |
-| [ArcAlphabetIndexerAttribute](arkts-arkui-arkui-arcalphabetindexer-arcalphabetindexerattribute-c.md) |  |
+| [ArcAlphabetIndexerAttribute](arkts-arkui-arkui-arcalphabetindexer-arcalphabetindexerattribute-i.md) |  |
 
 ## font
 
@@ -102,7 +102,7 @@ font(font: Optional<Font>): ArcAlphabetIndexerAttribute
 
 | 类型 | 说明 |
 | --- | --- |
-| [ArcAlphabetIndexerAttribute](arkts-arkui-arkui-arcalphabetindexer-arcalphabetindexerattribute-c.md) |  |
+| [ArcAlphabetIndexerAttribute](arkts-arkui-arkui-arcalphabetindexer-arcalphabetindexerattribute-i.md) |  |
 
 ## itemSize
 
@@ -132,7 +132,7 @@ itemSize(size: Optional<LengthMetrics>): ArcAlphabetIndexerAttribute
 
 | 类型 | 说明 |
 | --- | --- |
-| [ArcAlphabetIndexerAttribute](arkts-arkui-arkui-arcalphabetindexer-arcalphabetindexerattribute-c.md) |  |
+| [ArcAlphabetIndexerAttribute](arkts-arkui-arkui-arcalphabetindexer-arcalphabetindexerattribute-i.md) |  |
 
 ## onSelect
 
@@ -162,7 +162,7 @@ onSelect(handler: Optional<OnSelectCallback>): ArcAlphabetIndexerAttribute
 
 | 类型 | 说明 |
 | --- | --- |
-| [ArcAlphabetIndexerAttribute](arkts-arkui-arkui-arcalphabetindexer-arcalphabetindexerattribute-c.md) |  |
+| [ArcAlphabetIndexerAttribute](arkts-arkui-arkui-arcalphabetindexer-arcalphabetindexerattribute-i.md) |  |
 
 ## popupBackground
 
@@ -192,7 +192,7 @@ popupBackground(color: Optional<ColorMetrics>): ArcAlphabetIndexerAttribute
 
 | 类型 | 说明 |
 | --- | --- |
-| [ArcAlphabetIndexerAttribute](arkts-arkui-arkui-arcalphabetindexer-arcalphabetindexerattribute-c.md) |  |
+| [ArcAlphabetIndexerAttribute](arkts-arkui-arkui-arcalphabetindexer-arcalphabetindexerattribute-i.md) |  |
 
 ## popupBackgroundBlurStyle
 
@@ -205,7 +205,7 @@ popupBackgroundBlurStyle(style: Optional<BlurStyle>): ArcAlphabetIndexerAttribut
 > **说明：**
 
 > 当通过popupBackgroundBlurStyle设置弹窗气泡的背景模糊材质时，不建议再通过
-> [popupBackground](#popupBackground)设置背景色。
+> [popupBackground](arkts-arkui-arkui-arcalphabetindexer-arcalphabetindexerattribute-i.md#popupBackground)设置背景色。
 
 **起始版本：** 18
 
@@ -227,7 +227,7 @@ popupBackgroundBlurStyle(style: Optional<BlurStyle>): ArcAlphabetIndexerAttribut
 
 | 类型 | 说明 |
 | --- | --- |
-| [ArcAlphabetIndexerAttribute](arkts-arkui-arkui-arcalphabetindexer-arcalphabetindexerattribute-c.md) |  |
+| [ArcAlphabetIndexerAttribute](arkts-arkui-arkui-arcalphabetindexer-arcalphabetindexerattribute-i.md) |  |
 
 ## popupColor
 
@@ -257,7 +257,7 @@ popupColor(color: Optional<ColorMetrics>): ArcAlphabetIndexerAttribute
 
 | 类型 | 说明 |
 | --- | --- |
-| [ArcAlphabetIndexerAttribute](arkts-arkui-arkui-arcalphabetindexer-arcalphabetindexerattribute-c.md) |  |
+| [ArcAlphabetIndexerAttribute](arkts-arkui-arkui-arcalphabetindexer-arcalphabetindexerattribute-i.md) |  |
 
 ## popupFont
 
@@ -287,7 +287,7 @@ popupFont(font: Optional<Font>): ArcAlphabetIndexerAttribute
 
 | 类型 | 说明 |
 | --- | --- |
-| [ArcAlphabetIndexerAttribute](arkts-arkui-arkui-arcalphabetindexer-arcalphabetindexerattribute-c.md) |  |
+| [ArcAlphabetIndexerAttribute](arkts-arkui-arkui-arcalphabetindexer-arcalphabetindexerattribute-i.md) |  |
 
 ## selected
 
@@ -317,7 +317,7 @@ selected(index: Optional<number>): ArcAlphabetIndexerAttribute
 
 | 类型 | 说明 |
 | --- | --- |
-| [ArcAlphabetIndexerAttribute](arkts-arkui-arkui-arcalphabetindexer-arcalphabetindexerattribute-c.md) |  |
+| [ArcAlphabetIndexerAttribute](arkts-arkui-arkui-arcalphabetindexer-arcalphabetindexerattribute-i.md) |  |
 
 ## selectedBackgroundColor
 
@@ -347,7 +347,7 @@ selectedBackgroundColor(color: Optional<ColorMetrics>): ArcAlphabetIndexerAttrib
 
 | 类型 | 说明 |
 | --- | --- |
-| [ArcAlphabetIndexerAttribute](arkts-arkui-arkui-arcalphabetindexer-arcalphabetindexerattribute-c.md) |  |
+| [ArcAlphabetIndexerAttribute](arkts-arkui-arkui-arcalphabetindexer-arcalphabetindexerattribute-i.md) |  |
 
 ## selectedColor
 
@@ -377,7 +377,7 @@ selectedColor(color: Optional<ColorMetrics>): ArcAlphabetIndexerAttribute
 
 | 类型 | 说明 |
 | --- | --- |
-| [ArcAlphabetIndexerAttribute](arkts-arkui-arkui-arcalphabetindexer-arcalphabetindexerattribute-c.md) |  |
+| [ArcAlphabetIndexerAttribute](arkts-arkui-arkui-arcalphabetindexer-arcalphabetindexerattribute-i.md) |  |
 
 ## selectedFont
 
@@ -407,7 +407,7 @@ selectedFont(font: Optional<Font>): ArcAlphabetIndexerAttribute
 
 | 类型 | 说明 |
 | --- | --- |
-| [ArcAlphabetIndexerAttribute](arkts-arkui-arkui-arcalphabetindexer-arcalphabetindexerattribute-c.md) |  |
+| [ArcAlphabetIndexerAttribute](arkts-arkui-arkui-arcalphabetindexer-arcalphabetindexerattribute-i.md) |  |
 
 ## usePopup
 
@@ -437,5 +437,5 @@ usePopup(enabled: Optional<boolean>): ArcAlphabetIndexerAttribute
 
 | 类型 | 说明 |
 | --- | --- |
-| [ArcAlphabetIndexerAttribute](arkts-arkui-arkui-arcalphabetindexer-arcalphabetindexerattribute-c.md) |  |
+| [ArcAlphabetIndexerAttribute](arkts-arkui-arkui-arcalphabetindexer-arcalphabetindexerattribute-i.md) |  |
 

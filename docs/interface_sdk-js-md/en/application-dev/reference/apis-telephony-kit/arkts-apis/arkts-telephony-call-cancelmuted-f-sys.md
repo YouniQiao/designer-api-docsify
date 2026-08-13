@@ -12,7 +12,7 @@ import { call } from '@kit.TelephonyKit';
 function cancelMuted(callback: AsyncCallback<void>): void
 ```
 
-Unmute during a call.
+Cancels call muting. This API uses an asynchronous callback to return the result.
 
 **Since:** 8
 
@@ -28,7 +28,7 @@ Unmute during a call.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | The callback of cancelMuted. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
 
@@ -62,7 +62,7 @@ call.cancelMuted((err: BusinessError) => {
 function cancelMuted(): Promise<void>
 ```
 
-Unmute during a call.
+Cancels call muting. This API uses a promise to return the result.
 
 **Since:** 8
 
@@ -78,7 +78,7 @@ Unmute during a call.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | The promise returned by the cancelMuted. |
+| Promise&lt;void&gt; | Promise used to return the result. |
 
 **Error codes:**
 

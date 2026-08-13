@@ -12,7 +12,7 @@ import { call } from '@kit.TelephonyKit';
 function setCallRestriction(slotId: int, info: CallRestrictionInfo, callback: AsyncCallback<void>): void
 ```
 
-Set call barring status.
+Sets the call restriction status. This API uses an asynchronous callback to return the result.
 
 **Since:** 8
 
@@ -30,9 +30,9 @@ Set call barring status.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| slotId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Indicates the card slot index number, ranging from 0 to the maximum card slot index number supported by the device. |
-| info | [CallRestrictionInfo](arkts-telephony-call-callrestrictioninfo-i-sys.md) | Yes | Indicates the set call restriction information. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | The callback of setCallRestriction. |
+| slotId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Card slot ID. &lt;br&gt;- **0**: card slot 1. &lt;br&gt;- **1**: card slot 2. |
+| info | [CallRestrictionInfo](arkts-telephony-call-callrestrictioninfo-i-sys.md) | Yes | Call restriction information. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
 
@@ -72,7 +72,7 @@ call.setCallRestriction(0, callRestrictionInfo, (err: BusinessError) => {
 function setCallRestriction(slotId: int, info: CallRestrictionInfo): Promise<void>
 ```
 
-Set call barring status.
+Sets the call restriction status. This API uses a promise to return the result.
 
 **Since:** 8
 
@@ -90,14 +90,14 @@ Set call barring status.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| slotId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Indicates the card slot index number, ranging from 0 to the maximum card slot index number supported by the device. |
-| info | [CallRestrictionInfo](arkts-telephony-call-callrestrictioninfo-i-sys.md) | Yes | Indicates the set call restriction information. |
+| slotId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Card slot ID. &lt;br&gt;- **0**: card slot 1. &lt;br&gt;- **1**: card slot 2. |
+| info | [CallRestrictionInfo](arkts-telephony-call-callrestrictioninfo-i-sys.md) | Yes | Call restriction information. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | The promise returned by the setCallRestriction. |
+| Promise&lt;void&gt; | Promise used to return the result. |
 
 **Error codes:**
 

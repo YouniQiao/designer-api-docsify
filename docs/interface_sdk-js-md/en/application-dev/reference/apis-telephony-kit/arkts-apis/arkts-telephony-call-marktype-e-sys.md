@@ -1,6 +1,6 @@
 # MarkType (System API)
 
-Indicates the type of the number mark.
+Enumerates number mark types.
 
 **Since:** 12
 
@@ -18,7 +18,7 @@ Indicates the type of the number mark.
 MARK_TYPE_NONE = 0
 ```
 
-Indicates the mark is none.
+No mark.
 
 **Since:** 12
 
@@ -36,7 +36,7 @@ Indicates the mark is none.
 MARK_TYPE_CRANK = 1
 ```
 
-Indicates the mark is crank.
+Spam call.
 
 **Since:** 12
 
@@ -54,7 +54,7 @@ Indicates the mark is crank.
 MARK_TYPE_FRAUD = 2
 ```
 
-Indicates the mark is fraud.
+Fraud call.
 
 **Since:** 12
 
@@ -72,7 +72,7 @@ Indicates the mark is fraud.
 MARK_TYPE_EXPRESS = 3
 ```
 
-Indicates the mark is express.
+Express & delivery.
 
 **Since:** 12
 
@@ -90,7 +90,7 @@ Indicates the mark is express.
 MARK_TYPE_PROMOTE_SALES = 4
 ```
 
-Indicates the mark is promote sales.
+Advertising.
 
 **Since:** 12
 
@@ -108,7 +108,7 @@ Indicates the mark is promote sales.
 MARK_TYPE_HOUSE_AGENT = 5
 ```
 
-Indicates the mark is house agent.
+Estate agent.
 
 **Since:** 12
 
@@ -126,7 +126,7 @@ Indicates the mark is house agent.
 MARK_TYPE_INSURANCE = 6
 ```
 
-Indicates the mark is insurance.
+Insurance & loans.
 
 **Since:** 12
 
@@ -144,7 +144,7 @@ Indicates the mark is insurance.
 MARK_TYPE_TAXI = 7
 ```
 
-Indicates the mark is taxi.
+Taxi.
 
 **Since:** 12
 
@@ -162,7 +162,7 @@ Indicates the mark is taxi.
 MARK_TYPE_CUSTOM = 8
 ```
 
-Indicates the mark is custom.
+User-defined.
 
 **Since:** 12
 
@@ -180,7 +180,7 @@ Indicates the mark is custom.
 MARK_TYPE_OTHERS = 9
 ```
 
-Indicates the mark is others.
+Other.
 
 **Since:** 12
 
@@ -198,7 +198,7 @@ Indicates the mark is others.
 MARK_TYPE_YELLOW_PAGE = 10
 ```
 
-Indicates the mark is yellow page.
+Yellow page.
 
 **Since:** 12
 
@@ -216,7 +216,7 @@ Indicates the mark is yellow page.
 MARK_TYPE_ENTERPRISE = 11
 ```
 
-Indicates the mark is enterprise.
+Enterprise contact.
 
 **Since:** 14
 

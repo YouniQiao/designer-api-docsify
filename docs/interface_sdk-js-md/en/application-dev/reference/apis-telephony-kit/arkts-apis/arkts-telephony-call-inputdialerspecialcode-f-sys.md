@@ -12,7 +12,7 @@ import { call } from '@kit.TelephonyKit';
 function inputDialerSpecialCode(inputCode: string, callback: AsyncCallback<void>): void
 ```
 
-Enters the special code on the keypad.
+Performs a secret code broadcast. This API uses an asynchronous callback to return the result.
 
 **Since:** 10
 
@@ -30,8 +30,8 @@ Enters the special code on the keypad.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| inputCode | string | Yes | Indicates the special code to enter. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | The callback of inputDialerSpecialCode. |
+| inputCode | string | Yes | Secret code, for example, *#*#2846579#*#* (project menu). |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
 
@@ -65,7 +65,7 @@ call.inputDialerSpecialCode('*#*#2846579#*#*', (err: BusinessError) => {
 function inputDialerSpecialCode(inputCode: string): Promise<void>
 ```
 
-Enters the special code on the keypad.
+Performs a secret code broadcast. This API uses a promise to return the result.
 
 **Since:** 10
 
@@ -83,13 +83,13 @@ Enters the special code on the keypad.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| inputCode | string | Yes | Indicates the special code to enter. |
+| inputCode | string | Yes | Secret code, for example, *#*#2846579#*#* (project menu). |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | The promise returned by the inputDialerSpecialCode. |
+| Promise&lt;void&gt; | Promise used to return the result. |
 
 **Error codes:**
 

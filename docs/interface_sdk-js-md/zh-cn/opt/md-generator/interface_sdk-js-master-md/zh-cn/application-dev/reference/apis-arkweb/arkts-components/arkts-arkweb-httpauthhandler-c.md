@@ -44,7 +44,7 @@ confirm(userName: string, password: string): boolean
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| userName | string | 是 |
+| [userName](../../apis-telephony-kit/arkts-apis/arkts-telephony-call-voipcallattribute-i-sys.md) | string | 是 |
 | password | string | 是 |
 
 **返回值：**

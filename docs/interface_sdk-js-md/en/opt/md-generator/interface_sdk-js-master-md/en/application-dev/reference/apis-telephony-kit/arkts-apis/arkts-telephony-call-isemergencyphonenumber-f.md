@@ -12,7 +12,7 @@ import { call } from '@kit.TelephonyKit';
 function isEmergencyPhoneNumber(phoneNumber: string, options: EmergencyNumberOptions, callback: AsyncCallback<boolean>): void
 ```
 
-Checks whether a phone number is on the emergency number list.
+Checks whether the called number is an emergency number based on the phone number. This API uses an asynchronous callback to return the result.
 
 **Since:** 7
 
@@ -60,7 +60,7 @@ call.isEmergencyPhoneNumber("112", options, (err: BusinessError, data: boolean) 
 function isEmergencyPhoneNumber(phoneNumber: string, options?: EmergencyNumberOptions): Promise<boolean>
 ```
 
-Checks whether a phone number is on the emergency number list.
+Checks whether the called number is an emergency number based on the phone number. This API uses a promise to return the result.
 
 **Since:** 7
 
@@ -111,7 +111,7 @@ call.isEmergencyPhoneNumber("138xxxxxxxx", options).then((data: boolean) => {
 function isEmergencyPhoneNumber(phoneNumber: string, callback: AsyncCallback<boolean>): void
 ```
 
-Checks whether a phone number is on the emergency number list.
+Checks whether the called number is an emergency number. This API uses an asynchronous callback to return the result.
 
 **Since:** 7
 

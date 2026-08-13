@@ -12,9 +12,9 @@ import { drm } from '@kit.DrmKit';
 function isMediaKeySystemSupported(name: string, mimeType: string, level: ContentProtectionLevel): boolean
 ```
 
-Judge whether a system that specifies name, mimetype and content protection level is supported.
+Checks whether the device supports the combination of the DRM solution, MIME type, and content protection level.
 
-**Since:** 14
+**Since:** 11
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
 
@@ -60,9 +60,9 @@ console.info("isMediaKeySystemSupported: ", supported);
 function isMediaKeySystemSupported(name: string, mimeType: string): boolean
 ```
 
-Judge whether a system that specifies name, mimetype is supported.
+Checks whether the device supports the combination of the DRM solution and MIME type.
 
-**Since:** 14
+**Since:** 11
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
 
@@ -107,9 +107,9 @@ console.info("isMediaKeySystemSupported: ", supported);
 function isMediaKeySystemSupported(name: string): boolean
 ```
 
-Judge whether a system that specifies name is supported.
+Checks whether the device supports the specified DRM solution.
 
-**Since:** 14
+**Since:** 11
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
 

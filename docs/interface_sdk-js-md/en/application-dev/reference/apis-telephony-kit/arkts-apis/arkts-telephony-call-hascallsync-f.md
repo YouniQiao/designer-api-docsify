@@ -12,7 +12,7 @@ import { call } from '@kit.TelephonyKit';
 function hasCallSync(): boolean
 ```
 
-Checks whether a call is ongoing.
+Checks whether a call is in progress.
 
 **Since:** 10
 
@@ -26,7 +26,7 @@ Checks whether a call is ongoing.
 
 | Type | Description |
 | --- | --- |
-| boolean | Returns { |
+| boolean | Promise used to return the result. The value **true** indicates that a call is in progress, and the value **false** indicates the opposite. |
 
 ## Examples
 

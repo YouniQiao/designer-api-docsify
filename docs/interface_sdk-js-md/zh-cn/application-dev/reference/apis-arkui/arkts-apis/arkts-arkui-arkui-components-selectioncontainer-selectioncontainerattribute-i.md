@@ -42,7 +42,7 @@ default attributeModifier(modifier: AttributeModifier<SelectionContainerAttribut
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| modifier | AttributeModifier&lt;[SelectionContainerAttribute](arkts-arkui-arkui-components-selectioncontainer-selectioncontainerattribute-i.md)&gt; \| AttributeModifier&lt;CommonMethod&gt; \| undefined | 是 |  |
+| modifier | AttributeModifier&lt;[SelectionContainerAttribute](arkts-arkui-arkui-components-selectioncontainer-selectioncontainerattribute-c.md)&gt; \| AttributeModifier&lt;CommonMethod&gt; \| undefined | 是 |  |
 
 **返回值：**
 
@@ -176,7 +176,7 @@ default editMenuOptions(editMenu: SelectionContainerEditMenuOptions | undefined)
 
 > **说明：**
 > 
-> 当同时为当前场景设置了[bindSelectionMenu](#bindSelectionMenu)和editMenuOptions时，优先使用bindSelectionMenu，editMenuOptions不生
+> 当同时为当前场景设置了[bindSelectionMenu](arkts-arkui-arkui-components-selectioncontainer-selectioncontainerattribute-c.md#bindSelectionMenu)和editMenuOptions时，优先使用bindSelectionMenu，editMenuOptions不生
 > 效。bindSelectionMenu用于完全自定义菜单风格和触发条件，由开发者定义所有菜单项；editMenuOptions用于在系统默认菜单基础上添加扩展项，触发条件不变。建议根据自定义程度需求选择。
 
 **起始版本：** 26.0.0
@@ -243,9 +243,9 @@ default onCopy(callback: Callback<string> | undefined): this
 
 > **说明：**
 > 
-> - 回调参数为按Text组件视觉顺序拼接后的选中文本，拼接方式由[textJoinStyle](#textJoinStyle)配置决定。
+> - 回调参数为按Text组件视觉顺序拼接后的选中文本，拼接方式由[textJoinStyle](arkts-arkui-arkui-components-selectioncontainer-selectioncontainerattribute-c.md#textJoinStyle)配置决定。
 > 
-> - 仅当容器级[onWillCopy](#onWillCopy)返回true时，该回调才会触发。
+> - 仅当容器级[onWillCopy](arkts-arkui-arkui-components-selectioncontainer-selectioncontainerattribute-c.md#onWillCopy)返回true时，该回调才会触发。
 
 **起始版本：** 26.0.0
 
@@ -317,9 +317,9 @@ default onWillCopy(callback: Callback<string, boolean> | undefined): this
 
 > **说明：**
 > 
-> - 回调参数为按Text组件视觉顺序拼接后的选中文本，拼接方式由[textJoinStyle](#textJoinStyle)配置决定。
+> - 回调参数为按Text组件视觉顺序拼接后的选中文本，拼接方式由[textJoinStyle](arkts-arkui-arkui-components-selectioncontainer-selectioncontainerattribute-c.md#textJoinStyle)配置决定。
 > 
-> - 返回false时，会阻止本次跨节点复制及容器级[onCopy](#onCopy)回调触发，但不会影响各Text子组件已独立处理完成的复制事件逻辑。
+> - 返回false时，会阻止本次跨节点复制及容器级[onCopy](arkts-arkui-arkui-components-selectioncontainer-selectioncontainerattribute-c.md#onCopy)回调触发，但不会影响各Text子组件已独立处理完成的复制事件逻辑。
 
 **起始版本：** 26.0.0
 
@@ -415,7 +415,7 @@ default textJoinStyle(style: SelectionContainerTextJoinStyle | undefined): this
 
 > **说明：**
 > 
-> - 该配置会影响[onWillCopy](#onWillCopy)、[onCopy](#onCopy)、[bindSelectionMenu](#bindSelectionMenu)相关回调中返回
+> - 该配置会影响[onWillCopy](arkts-arkui-arkui-components-selectioncontainer-selectioncontainerattribute-c.md#onWillCopy)、[onCopy](arkts-arkui-arkui-components-selectioncontainer-selectioncontainerattribute-c.md#onCopy)、[bindSelectionMenu](arkts-arkui-arkui-components-selectioncontainer-selectioncontainerattribute-c.md#bindSelectionMenu)相关回调中返回
 > 的文本内容。
 > 
 > - 该配置也会影响系统内置菜单项中依赖文本拼接结果的逻辑。例如，选择两个Text节点中的文本时，若配置为SelectionContainerTextJoinStyle.NEWLINE，执行复制后两段文本之间会插入换行符；若配置

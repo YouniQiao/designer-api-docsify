@@ -1,6 +1,6 @@
 # MmsRespInd (System API)
 
-Defines an MMS response indication.
+Defines an MMS response index.
 
 **Since:** 8
 
@@ -24,7 +24,7 @@ import { sms } from '@kit.TelephonyKit';
 reportAllowed?: ReportType
 ```
 
-Indicates the report allowed for the MMS response indication.
+Report allowed.
 
 **Type:** ReportType
 
@@ -44,7 +44,7 @@ Indicates the report allowed for the MMS response indication.
 status: int
 ```
 
-Indicates the status for the MMS response indication.
+Status.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -64,7 +64,7 @@ Indicates the status for the MMS response indication.
 transactionId: string
 ```
 
-Indicates the event ID for the MMS response indication.
+Event ID.
 
 **Type:** string
 
@@ -84,7 +84,7 @@ Indicates the event ID for the MMS response indication.
 version: MmsVersionType
 ```
 
-Indicates the version for the MMS response indication.
+Version.
 
 **Type:** [MmsVersionType](arkts-telephony-sms-mmsversiontype-e-sys.md)
 

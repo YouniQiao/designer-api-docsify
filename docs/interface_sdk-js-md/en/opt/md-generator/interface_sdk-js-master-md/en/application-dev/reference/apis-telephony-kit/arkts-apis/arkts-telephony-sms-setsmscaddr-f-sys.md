@@ -12,7 +12,7 @@ import { sms } from '@kit.TelephonyKit';
 function setSmscAddr(slotId: number, smscAddr: string, callback: AsyncCallback<void>): void
 ```
 
-Sets the address for the Short Message Service Center (SMSC) based on a specified slot ID.
+Sets the short message service center (SMSC) address. This API uses an asynchronous callback to return the result.
 
 **Since:** 7
 
@@ -64,7 +64,7 @@ sms.setSmscAddr(slotId, smscAddr, (err: BusinessError) => {
 function setSmscAddr(slotId: number, smscAddr: string): Promise<void>
 ```
 
-Sets the address for the Short Message Service Center (SMSC) based on a specified slot ID.
+Sets the SMSC address. This API uses a promise to return the result.
 
 **Since:** 7
 

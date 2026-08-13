@@ -12,7 +12,9 @@ import { call } from '@kit.TelephonyKit';
 function formatPhoneNumberToE164(phoneNumber: string, countryCode: string, callback: AsyncCallback<string>): void
 ```
 
-Formats a phone number into an E.164 representation.
+Converts a phone number into the E.164 format. This API uses an asynchronous callback to return the result.
+
+The phone number must match the specified country code. For example, for a China phone number, the country code must be **CN**. Otherwise, **null** will be returned.
 
 **Since:** 7
 
@@ -26,9 +28,9 @@ Formats a phone number into an E.164 representation.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| phoneNumber | string | Yes | Indicates the phone number to format. |
-| countryCode | string | Yes | Indicates a two-digit country code defined in ISO 3166-1. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;string&gt; | Yes | Returns an E.164 number. Returns an empty string if the input phone number is invalid. |
+| phoneNumber | string | Yes | Phone number. |
+| countryCode | string | Yes | Country code, for example, **CN** (China). All country codes are supported. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;string&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
 
@@ -61,7 +63,11 @@ call.formatPhoneNumberToE164("138xxxxxxxx", "CN", (err: BusinessError, data: str
 function formatPhoneNumberToE164(phoneNumber: string, countryCode: string): Promise<string>
 ```
 
-Formats a phone number into an E.164 representation.
+Converts a phone number into the E.164 format. This API uses a promise to return the result.
+
+The phone number must match the specified country code. For example, for a China phone number, the country code must be **CN**. Otherwise, **null** will be returned.
+
+All country codes are supported.
 
 **Since:** 7
 
@@ -75,14 +81,14 @@ Formats a phone number into an E.164 representation.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| phoneNumber | string | Yes | Indicates the phone number to format. |
-| countryCode | string | Yes | Indicates a two-digit country code defined in ISO 3166-1. |
+| phoneNumber | string | Yes | Phone number. |
+| countryCode | string | Yes | Country code, for example, **CN** (China). All country codes are supported. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;string&gt; | Returns an E.164 number. Returns an empty string if the input phone number is invalid. |
+| Promise&lt;string&gt; | Promise used to return the result. |
 
 **Error codes:**
 

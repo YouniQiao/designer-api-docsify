@@ -1,6 +1,6 @@
-# @ohos.telephony.sms
+# @ohos.telephony.sms(SMS)
 
-Provides the capabilities and methods for obtaining Short Message Service (SMS) management objects.
+The **sms** module provides basic SMS management functions. With the APIs provided by this module, you can create and send SMS messages, and obtain the ID of the default SIM card used to send and receive SMS messages, and check whether the current device can send and receive SMS messages.
 
 **Since:** 6
 

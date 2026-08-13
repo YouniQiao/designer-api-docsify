@@ -12,7 +12,7 @@ import { call } from '@kit.TelephonyKit';
 function getCallRestrictionStatus(slotId: number, type: CallRestrictionType, callback: AsyncCallback<RestrictionStatus>): void
 ```
 
-Get call barring status.
+Obtains the call restriction status. This API uses an asynchronous callback to return the result.
 
 **Since:** 8
 
@@ -65,7 +65,7 @@ call.getCallRestrictionStatus(0, 1, (err: BusinessError, data: call.RestrictionS
 function getCallRestrictionStatus(slotId: number, type: CallRestrictionType): Promise<RestrictionStatus>
 ```
 
-Get call barring status.
+Obtains the call restriction status. This API uses a promise to return the result.
 
 **Since:** 8
 

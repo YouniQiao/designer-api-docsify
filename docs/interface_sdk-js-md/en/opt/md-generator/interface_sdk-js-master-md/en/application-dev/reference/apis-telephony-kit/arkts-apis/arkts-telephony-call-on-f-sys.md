@@ -12,7 +12,7 @@ import { call } from '@kit.TelephonyKit';
 function on(type: 'callDetailsChange', callback: Callback<CallAttributeOptions>): void
 ```
 
-Subscribe to the callDetailsChange event.
+Subscribes to **callDetailsChange** events. This API uses an asynchronous callback to return the result.
 
 **Since:** 7
 
@@ -58,7 +58,7 @@ call.on('callDetailsChange', (data: call.CallAttributeOptions) => {
 function on(type: 'callEventChange', callback: Callback<CallEventOptions>): void
 ```
 
-Subscribe to the callEventChange event.
+Subscribes to **callEventChange** events. This API uses an asynchronous callback to return the result.
 
 **Since:** 8
 
@@ -104,7 +104,7 @@ call.on('callEventChange', (data: call.CallEventOptions) => {
 function on(type: 'callDisconnectedCause', callback: Callback<DisconnectedDetails>): void
 ```
 
-Subscribe to the callDisconnectedCause event.
+Subscribes to **callDisconnectedCause** events. This API uses an asynchronous callback to return the result.
 
 **Since:** 8
 
@@ -150,7 +150,7 @@ call.on('callDisconnectedCause', (data: call.DisconnectedDetails) => {
 function on(type: 'mmiCodeResult', callback: Callback<MmiCodeResults>): void
 ```
 
-Subscribe to the mmiCodeResult event.
+Subscribes to **mmiCodeResult** events. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
 
@@ -196,7 +196,7 @@ call.on('mmiCodeResult', (data: call.MmiCodeResults) => {
 function on(type: 'audioDeviceChange', callback: Callback<AudioDeviceCallbackInfo>): void
 ```
 
-Subscribe to the audioDeviceChange event.
+Subscribes to audio device change events. This API uses an asynchronous callback to return the result.
 
 **Since:** 10
 
@@ -242,7 +242,7 @@ call.on('audioDeviceChange', (data: call.AudioDeviceCallbackInfo) => {
 function on(type: 'postDialDelay', callback: Callback<string>): void
 ```
 
-Subscribe to the postDialDelay event.
+Subscribes to **postDialDelay** events. This API uses an asynchronous callback to return the result.
 
 **Since:** 11
 
@@ -288,7 +288,7 @@ call.on('postDialDelay', (data: string) => {
 function on(type: 'imsCallModeChange', callback: Callback<ImsCallModeInfo>): void
 ```
 
-Subscribe to the imsCallModeChange event.
+Subscribes to **imsCallModeChange** events. This API uses an asynchronous callback to return the result.
 
 **Since:** 11
 
@@ -336,7 +336,7 @@ call.on('imsCallModeChange', (data: call.ImsCallModeInfo) => {
 function on(type: 'callSessionEvent', callback: Callback<CallSessionEvent>): void
 ```
 
-Subscribe to the callSessionEvent.
+Subscribes to **callSessionEvent** events. This API uses an asynchronous callback to return the result.
 
 **Since:** 11
 
@@ -384,7 +384,7 @@ call.on('callSessionEvent', (data: call.CallSessionEvent) => {
 function on(type: 'peerDimensionsChange', callback: Callback<PeerDimensionsDetail>): void
 ```
 
-Subscribe to the peerDimensionsChange event.
+Subscribes to **peerDimensionsChange** events. This API uses an asynchronous callback to return the result.
 
 **Since:** 11
 
@@ -432,7 +432,7 @@ call.on('peerDimensionsChange', (data: call.PeerDimensionsDetail) => {
 function on(type: 'cameraCapabilitiesChange', callback: Callback<CameraCapabilities>): void
 ```
 
-Subscribe to the cameraCapabilitiesChange event.
+Subscribes to **cameraCapabilitiesChange** events. This API uses an asynchronous callback to return the result.
 
 **Since:** 11
 

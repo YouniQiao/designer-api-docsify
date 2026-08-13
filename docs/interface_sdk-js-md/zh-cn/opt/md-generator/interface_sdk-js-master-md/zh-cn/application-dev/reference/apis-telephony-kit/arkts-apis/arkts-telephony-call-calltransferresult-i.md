@@ -1,0 +1,105 @@
+# CallTransferResult
+
+呼叫转移结果。
+
+**起始版本：** 26.0.0
+
+<!--Device-call-export interface CallTransferResult--><!--Device-call-export interface CallTransferResult-End-->
+
+**系统能力：** SystemCapability.Telephony.CallManager
+
+## endHour
+
+```TypeScript
+endHour: number
+```
+
+结束时间的小时数。
+
+**类型：** number
+
+**起始版本：** 26.0.0
+
+<!--Device-CallTransferResult-endHour: int--><!--Device-CallTransferResult-endHour: int-End-->
+
+**系统能力：** SystemCapability.Telephony.CallManager
+
+## endMinute
+
+```TypeScript
+endMinute: number
+```
+
+结束时间的分钟数。
+
+**类型：** number
+
+**起始版本：** 26.0.0
+
+<!--Device-CallTransferResult-endMinute: int--><!--Device-CallTransferResult-endMinute: int-End-->
+
+**系统能力：** SystemCapability.Telephony.CallManager
+
+## number
+
+```TypeScript
+number: string
+```
+
+号码。
+
+**类型：** string
+
+**起始版本：** 8
+
+<!--Device-CallTransferResult-number: string--><!--Device-CallTransferResult-number: string-End-->
+
+**系统能力：** SystemCapability.Telephony.CallManager
+
+## startHour
+
+```TypeScript
+startHour: number
+```
+
+开始时间的小时数。
+
+**类型：** number
+
+**起始版本：** 26.0.0
+
+<!--Device-CallTransferResult-startHour: int--><!--Device-CallTransferResult-startHour: int-End-->
+
+**系统能力：** SystemCapability.Telephony.CallManager
+
+## startMinute
+
+```TypeScript
+startMinute: number
+```
+
+开始时间的分钟数。
+
+**类型：** number
+
+**起始版本：** 26.0.0
+
+<!--Device-CallTransferResult-startMinute: int--><!--Device-CallTransferResult-startMinute: int-End-->
+
+**系统能力：** SystemCapability.Telephony.CallManager
+
+## status
+
+```TypeScript
+status: TransferStatus
+```
+
+转移状态。
+
+**类型：** [TransferStatus](arkts-telephony-call-transferstatus-e.md)
+
+**起始版本：** 26.0.0
+
+<!--Device-CallTransferResult-status: TransferStatus--><!--Device-CallTransferResult-status: TransferStatus-End-->
+
+**系统能力：** SystemCapability.Telephony.CallManager

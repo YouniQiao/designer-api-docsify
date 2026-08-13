@@ -1,6 +1,6 @@
 # TransferStatus
 
-Indicates the status of call transfer.
+Enumerates call transfer states.
 
 **Since:** 26.0.0
 
@@ -16,7 +16,7 @@ Indicates the status of call transfer.
 TRANSFER_DISABLE = 0
 ```
 
-Indicates that call forwarding is not enabled.
+Call transfer disabled.
 
 **Since:** 26.0.0
 
@@ -32,7 +32,7 @@ Indicates that call forwarding is not enabled.
 TRANSFER_ENABLE = 1
 ```
 
-Indicates that call forwarding is enabled.
+Call transfer enabled.
 
 **Since:** 26.0.0
 

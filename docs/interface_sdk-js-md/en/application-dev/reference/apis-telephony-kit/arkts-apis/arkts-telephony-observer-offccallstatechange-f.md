@@ -12,7 +12,7 @@ import { observer } from '@kit.TelephonyKit';
 function offCCallStateChange(callback?: Callback<CCallStateInfo>): void
 ```
 
-Unsubscribes from the callback for listening to the carrier call state.
+Cancels the listening on the carrier call status and obtaining of the call number by a third-party application.This method uses an asynchronous callback to return the result.
 
 **Since:** 23
 
@@ -28,7 +28,7 @@ Unsubscribes from the callback for listening to the carrier call state.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[CCallStateInfo](arkts-telephony-observer-ccallstateinfo-i.md)&gt; | No | Indicates the callback to unsubscribe from. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[CCallStateInfo](arkts-telephony-observer-ccallstateinfo-i.md)&gt; | No | Callback function used to return the call status information object. &lt;br&gt;The application can obtain CCallState. &lt;br&gt; |
 
 **Error codes:**
 

@@ -1,6 +1,6 @@
 # TelCallState
 
-Indicates the states of telCall.
+Enumerates call states.
 
 **Since:** 21
 
@@ -16,7 +16,7 @@ Indicates the states of telCall.
 TEL_CALL_STATE_UNKNOWN = -1
 ```
 
-Indicates an invalid state, which is used when the call state fails to be obtained.
+The call status fails to be obtained and is unknown.
 
 **Since:** 21
 
@@ -32,7 +32,7 @@ Indicates an invalid state, which is used when the call state fails to be obtain
 TEL_CALL_STATE_IDLE = 0
 ```
 
-Indicates that there is no ongoing call.
+No call is in progress.
 
 **Since:** 21
 
@@ -48,7 +48,7 @@ Indicates that there is no ongoing call.
 TEL_CALL_STATE_RINGING = 1
 ```
 
-Indicates that an incoming call is ringing or waiting.
+The call is in the ringing or waiting state.
 
 **Since:** 21
 
@@ -64,7 +64,7 @@ Indicates that an incoming call is ringing or waiting.
 TEL_CALL_STATE_OFFHOOK = 2
 ```
 
-Indicates that a least one call is in the dialing, and there is no new incoming call ringing or waiting.
+At least one call is being dialed, and no new incoming call is in the ringing or waiting state.
 
 **Since:** 21
 
@@ -80,7 +80,7 @@ Indicates that a least one call is in the dialing, and there is no new incoming 
 TEL_CALL_STATE_ANSWERED = 3
 ```
 
-Indicates that call is answered
+The incoming call is answered.
 
 **Since:** 21
 
@@ -96,7 +96,7 @@ Indicates that call is answered
 TEL_CALL_STATE_CONNECTED = 4
 ```
 
-Indicates that call is connected
+The call is being connected or placed on hold.
 
 **Since:** 21
 

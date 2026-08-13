@@ -496,7 +496,7 @@ Set the placeholder.
 | Parameter | Description |
 | -- | -- |
 | [ArkUI_StyledString](capi-arkui-nativemodule-arkui-styledstring.md)* handle | A pointer to the ArkUI_StyledString object. |
-| OH_Drawing_PlaceholderSpan* placeholder | A pointer to the OH_Drawing_PlaceholderSpan object. |
+| [OH_Drawing_PlaceholderSpan](../ArkGraphics2D/capi-drawing-oh-drawing-placeholderspan.md)* placeholder | A pointer to the OH_Drawing_PlaceholderSpan object. |
 
 ### OH_ArkUI_StyledString_Descriptor_Create()
 
@@ -5946,7 +5946,7 @@ Sets the image drawing color filter in the image style.
 | Parameter | Description |
 | -- | -- |
 | [OH_ArkUI_ImageAttachment](capi-arkui-nativemodule-oh-arkui-imageattachment.md)* imageAttachment | Pointer to the [OH_ArkUI_ImageAttachment](capi-arkui-nativemodule-oh-arkui-imageattachment.md) object. |
-| const OH_Drawing_ColorFilter* drawingColorFilter | Pointer to the image drawing color filter. |
+| [const OH_Drawing_ColorFilter](../ArkGraphics2D/capi-drawing-oh-drawing-colorfilter.md)* drawingColorFilter | Pointer to the image drawing color filter. |
 
 **Returns**:
 
@@ -5974,7 +5974,7 @@ Obtains the image drawing color filter in the image style.
 | Parameter | Description |
 | -- | -- |
 | [const OH_ArkUI_ImageAttachment](capi-arkui-nativemodule-oh-arkui-imageattachment.md)* imageAttachment | Pointer to the [OH_ArkUI_ImageAttachment](capi-arkui-nativemodule-oh-arkui-imageattachment.md) object. |
-| OH_Drawing_ColorFilter* drawingColorFilter | Pointer to the image drawing color filter. |
+| [OH_Drawing_ColorFilter](../ArkGraphics2D/capi-drawing-oh-drawing-colorfilter.md)* drawingColorFilter | Pointer to the image drawing color filter. |
 
 **Returns**:
 
@@ -6113,7 +6113,7 @@ Obtains the range of the content to be replaced in the text change information.
 
 | Parameter | Description |
 | -- | -- |
-| [const OH_ArkUI_TextEditorChangeEvent](capi-arkui-nativemodule-oh-arkui-texteditorchangeevent.md)* event | Pointer to the [OH_ArkUI_TextEditorChangeEvent](capi-arkui-nativemodule-oh-arkui-texteditorchangeevent.md) object. |
+| const OH_ArkUI_TextEditorChangeEvent* event | Pointer to the [OH_ArkUI_TextEditorChangeEvent](capi-arkui-nativemodule-oh-arkui-texteditorchangeevent.md) object. |
 | uint32_t* start | Pointer to the start index of the range of the content to be replaced. |
 | uint32_t* end | Pointer to the end index of the range of the content to be replaced. |
 
@@ -6142,7 +6142,7 @@ Obtains the styled string used for replacement in the text change information.
 
 | Parameter | Description |
 | -- | -- |
-| [const OH_ArkUI_TextEditorChangeEvent](capi-arkui-nativemodule-oh-arkui-texteditorchangeevent.md)* event | Pointer to the [OH_ArkUI_TextEditorChangeEvent](capi-arkui-nativemodule-oh-arkui-texteditorchangeevent.md) object. |
+| const OH_ArkUI_TextEditorChangeEvent* event | Pointer to the [OH_ArkUI_TextEditorChangeEvent](capi-arkui-nativemodule-oh-arkui-texteditorchangeevent.md) object. |
 | ArkUI_StyledString_Descriptor* descriptor | Pointer to the [ArkUI_StyledString_Descriptor](capi-arkui-nativemodule-arkui-styledstring-descriptor.md) object. |
 
 **Returns**:
@@ -6170,7 +6170,7 @@ Obtains the styled string of the previewed content in the text change informatio
 
 | Parameter | Description |
 | -- | -- |
-| [const OH_ArkUI_TextEditorChangeEvent](capi-arkui-nativemodule-oh-arkui-texteditorchangeevent.md)* event | Pointer to the [OH_ArkUI_TextEditorChangeEvent](capi-arkui-nativemodule-oh-arkui-texteditorchangeevent.md) object. |
+| const OH_ArkUI_TextEditorChangeEvent* event | Pointer to the [OH_ArkUI_TextEditorChangeEvent](capi-arkui-nativemodule-oh-arkui-texteditorchangeevent.md) object. |
 | ArkUI_StyledString_Descriptor* descriptor | Pointer to the [ArkUI_StyledString_Descriptor](capi-arkui-nativemodule-arkui-styledstring-descriptor.md) object. |
 
 **Returns**:
@@ -6241,8 +6241,8 @@ Gets the rects for range.
 | [ArkUI_TextLayoutManager](capi-arkui-nativemodule-arkui-textlayoutmanager.md)* layoutManager | Indicates the pointer to an <b>ArkUI_TextLayoutManager</b> object. |
 | int32_t start | Indicates the start of range to set. |
 | int32_t end | Indicates the end of range to set. |
-| OH_Drawing_RectWidthStyle widthStyle | Indicates the width style to set.For details, see the enum <b>OH_Drawing_RectWidthStyle</b>. |
-| OH_Drawing_RectHeightStyle heightStyle | Indicates the height style to set.For details, see the enum <b>OH_Drawing_RectHeightStyle</b>. |
+| [OH_Drawing_RectWidthStyle](../ArkGraphics2D/capi-drawing-text-typography-h.md#oh_drawing_rectwidthstyle) widthStyle | Indicates the width style to set.For details, see the enum <b>OH_Drawing_RectWidthStyle</b>. |
+| [OH_Drawing_RectHeightStyle](../ArkGraphics2D/capi-drawing-text-typography-h.md#oh_drawing_rectheightstyle) heightStyle | Indicates the height style to set.For details, see the enum <b>OH_Drawing_RectHeightStyle</b>. |
 | [OH_Drawing_TextBox](../ArkGraphics2D/capi-drawing-oh-drawing-textbox.md)** outTextBoxes | Returns the array of rects for range. |
 
 **Returns**:
@@ -6296,7 +6296,7 @@ Get line metrics information.
 | -- | -- |
 | [ArkUI_TextLayoutManager](capi-arkui-nativemodule-arkui-textlayoutmanager.md)* layoutManager | Indicates the pointer to a typography object <b>ArkUI_TextLayoutManager</b>. |
 | int32_t lineNumber | Indicates the number of line. |
-| OH_Drawing_LineMetrics* outMetrics | Indicates the pointer to a line metrics object <b>OH_Drawing_LineMetrics</b>. |
+| [OH_Drawing_LineMetrics](../ArkGraphics2D/capi-drawing-oh-drawing-linemetrics.md)* outMetrics | Indicates the pointer to a line metrics object <b>OH_Drawing_LineMetrics</b>. |
 
 **Returns**:
 
@@ -6489,7 +6489,7 @@ Set linear gradient of paragraph style.
 | Parameter | Description |
 | -- | -- |
 | [OH_ArkUI_ParagraphStyle](capi-arkui-nativemodule-oh-arkui-paragraphstyle.md)* paragraphStyle | Pointer to the <b>OH_ArkUI_ParagraphStyle</b> object. |
-| [const OH_ArkUI_LinearGradientOptions](capi-arkui-nativemodule-oh-arkui-lineargradientoptions.md)* linearGradient | Pointer to the <b>OH_ArkUI_LinearGradientOptions</b> object. |
+| const OH_ArkUI_LinearGradientOptions* linearGradient | Pointer to the <b>OH_ArkUI_LinearGradientOptions</b> object. |
 
 **Returns**:
 
@@ -6517,7 +6517,7 @@ Get linear gradient of paragraph style.
 | Parameter | Description |
 | -- | -- |
 | [const OH_ArkUI_ParagraphStyle](capi-arkui-nativemodule-oh-arkui-paragraphstyle.md)* paragraphStyle | Pointer to the <b>OH_ArkUI_ParagraphStyle</b> object. |
-| [OH_ArkUI_LinearGradientOptions](capi-arkui-nativemodule-oh-arkui-lineargradientoptions.md)* linearGradient | Pointer to the <b>OH_ArkUI_LinearGradientOptions</b> object. |
+| OH_ArkUI_LinearGradientOptions* linearGradient | Pointer to the <b>OH_ArkUI_LinearGradientOptions</b> object. |
 
 **Returns**:
 
@@ -6545,7 +6545,7 @@ Set radial gradient of paragraph style.
 | Parameter | Description |
 | -- | -- |
 | [OH_ArkUI_ParagraphStyle](capi-arkui-nativemodule-oh-arkui-paragraphstyle.md)* paragraphStyle | Pointer to the <b>OH_ArkUI_ParagraphStyle</b> object. |
-| [const OH_ArkUI_RadialGradientOptions](capi-arkui-nativemodule-oh-arkui-radialgradientoptions.md)* radialGradient | Pointer to the <b>OH_ArkUI_RadialGradientOptions</b> object. |
+| const OH_ArkUI_RadialGradientOptions* radialGradient | Pointer to the <b>OH_ArkUI_RadialGradientOptions</b> object. |
 
 **Returns**:
 
@@ -6573,7 +6573,7 @@ Get radial gradient of paragraph style.
 | Parameter | Description |
 | -- | -- |
 | [const OH_ArkUI_ParagraphStyle](capi-arkui-nativemodule-oh-arkui-paragraphstyle.md)* paragraphStyle | Pointer to the <b>OH_ArkUI_ParagraphStyle</b> object. |
-| [OH_ArkUI_RadialGradientOptions](capi-arkui-nativemodule-oh-arkui-radialgradientoptions.md)* radialGradient | Pointer to the <b>OH_ArkUI_RadialGradientOptions</b> object. |
+| OH_ArkUI_RadialGradientOptions* radialGradient | Pointer to the <b>OH_ArkUI_RadialGradientOptions</b> object. |
 
 **Returns**:
 

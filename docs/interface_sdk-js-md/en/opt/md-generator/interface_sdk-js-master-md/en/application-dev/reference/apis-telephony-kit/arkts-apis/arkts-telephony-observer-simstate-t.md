@@ -4,7 +4,7 @@
 type SimState = sim.SimState
 ```
 
-Indicates the SIM card states.
+SIM card state.
 
 **Since:** 6
 

@@ -12,7 +12,7 @@ import { sms } from '@kit.TelephonyKit';
 function isImsSmsSupported(slotId: int, callback: AsyncCallback<boolean>): void
 ```
 
-SMS over IMS is supported if IMS is registered and SMS is supported on IMS.
+Checks whether SMS is supported on IMS. This API uses an asynchronous callback to return the result.
 
 **Since:** 8
 
@@ -28,8 +28,8 @@ SMS over IMS is supported if IMS is registered and SMS is supported on IMS.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| slotId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Indicates the default SIM card for Ims Sms. The value {@code 0} indicates card slot 1, and the value {@code 1} indicates card slot 2. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;boolean&gt; | Yes | Indicates the callback of isImsSmsSupported. Returns {@code true} if SMS over IMS is supported, {@code false} otherwise. |
+| slotId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | SIM card slot ID. &lt;br&gt;- **0**: card slot 1 &lt;br&gt;- **1**: card slot 2 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;boolean&gt; | Yes | Whether SMS is supported on IMS. The default value is **false**. &lt;br&gt;- **true**: yes &lt;br&gt;- **false**: no |
 
 **Error codes:**
 
@@ -61,7 +61,7 @@ sms.isImsSmsSupported(slotId, (err: BusinessError, data: boolean) => {
 function isImsSmsSupported(slotId: int): Promise<boolean>
 ```
 
-SMS over IMS is supported if IMS is registered and SMS is supported on IMS.
+Checks whether SMS is supported on IMS. This API uses a promise to return the result.
 
 **Since:** 8
 
@@ -77,13 +77,13 @@ SMS over IMS is supported if IMS is registered and SMS is supported on IMS.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| slotId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Indicates the default SIM card for Ims Sms. The value {@code 0} indicates card slot 1, and the value {@code 1} indicates card slot 2. |
+| slotId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Card slot ID. &lt;br&gt;- **0**: card slot 1 &lt;br&gt;- **1**: card slot 2 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;boolean&gt; | Returns { |
+| Promise&lt;boolean&gt; | Promise used to return the result. |
 
 **Error codes:**
 

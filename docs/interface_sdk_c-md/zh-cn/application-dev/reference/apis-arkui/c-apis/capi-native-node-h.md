@@ -21,7 +21,7 @@ Provides type definitions for <b>NativeNode</b> APIs.
 | [ArkUI_NodeComponentEvent](capi-arkui-nativemodule-arkui-nodecomponentevent.md) | ArkUI_NodeComponentEvent | Defines the parameter type of the component callback event. |
 | [ArkUI_StringAsyncEvent](capi-arkui-nativemodule-arkui-stringasyncevent.md) | ArkUI_StringAsyncEvent | Defines the string type parameter used by the component callback event. |
 | [ArkUI_TextChangeEvent](capi-arkui-nativemodule-arkui-textchangeevent.md) | ArkUI_TextChangeEvent | Defines a hybrid data structure for component events. |
-| [ArkUI_NativeNodeAPI_1](capi-arkui-nativemodule-arkui-nativenodeapi-1.md) | ArkUI_NativeNodeAPI_1 | Declares a collection of native node APIs provided by ArkUI.The APIs related to the native node must be called in the main thread. |
+| [ArkUI_NativeNodeAPI_1](capi-arkui-nativemodule-arkui-nativenodeapi-1.md) | ArkUI_NativeNodeAPI_1 | ArkUI提供的Native侧Node类型接口集合。Node模块相关接口需要在主线程上调用。 |
 | [OH_ArkUI_TextEditorChangeEvent](capi-arkui-nativemodule-oh-arkui-texteditorchangeevent.md) | OH_ArkUI_TextEditorChangeEvent | 定义TextEditor组件文本内容变化事件的结构体。 |
 | [ArkUI_NodeCustomEvent](capi-arkui-nativemodule-arkui-nodecustomevent.md) | ArkUI_NodeCustomEvent | Defines the general structure of a custom component event. |
 | [ArkUI_NodeAdapter*](capi-arkui-nativemodule-arkui-nodeadapter8h.md) | ArkUI_NodeAdapterHandle | Defines the component adapter, which is used for lazy loading of elements of scrollable components. |
@@ -114,15 +114,15 @@ ArkUI_NodeAdapterHandle handle, uint32_t startPosition, uint32_t itemCount)](#oh
 | [int32_t OH_ArkUI_NodeUtils_GetLayoutPositionInGlobalDisplay(ArkUI_NodeHandle node, ArkUI_IntOffset* offset)](#oh_arkui_nodeutils_getlayoutpositioninglobaldisplay) | - | 获取组件相对于全局屏幕的偏移。布局区域相对位置不包含图形变化属性，如平移。 |
 | [int32_t OH_ArkUI_NodeUtils_GetPositionWithTranslateInWindow(ArkUI_NodeHandle node, ArkUI_IntOffset* translateOffset)](#oh_arkui_nodeutils_getpositionwithtranslateinwindow) | - | Obtain the position of the component in the window, including the properties of graphic translation changes. |
 | [int32_t OH_ArkUI_NodeUtils_GetPositionWithTranslateInScreen(ArkUI_NodeHandle node, ArkUI_IntOffset* translateOffset)](#oh_arkui_nodeutils_getpositionwithtranslateinscreen) | - | Obtain the position of the component on the screen, including the attributes of graphic translation changes. |
-| [void OH_ArkUI_NodeUtils_AddCustomProperty(ArkUI_NodeHandle node, const char* name, const char* value)](#oh_arkui_nodeutils_addcustomproperty) | - | Add the custom property of the component. This interface only works on the main thread. |
-| [void OH_ArkUI_NodeUtils_RemoveCustomProperty(ArkUI_NodeHandle node, const char* name)](#oh_arkui_nodeutils_removecustomproperty) | - | Remove the custom property of the component. |
-| [int32_t OH_ArkUI_NodeUtils_GetCustomProperty(ArkUI_NodeHandle node, const char* name, ArkUI_CustomProperty** handle)](#oh_arkui_nodeutils_getcustomproperty) | - | 获取组件的自定义属性，并通过handle返回ArkUI_CustomProperty实例。 |
-| [ArkUI_NodeHandle OH_ArkUI_NodeUtils_GetParentInPageTree(ArkUI_NodeHandle node)](#oh_arkui_nodeutils_getparentinpagetree) | - | Get the parent node to obtain the component nodes created by ArkTs. |
-| [int32_t OH_ArkUI_NodeUtils_GetActiveChildrenInfo(ArkUI_NodeHandle head, ArkUI_ActiveChildrenInfo** handle)](#oh_arkui_nodeutils_getactivechildreninfo) | - | 获取内部活跃状态为true的FrameNode子节点，并生成ArkUI_ActiveChildrenInfo实例。Span不会被计入子节点统计。 获取成功后，可查询子节点数量并按下标读取子节点；实例使用完毕后必须调用OH_ArkUI_ActiveChildrenInfo_Destroy销毁。 |
-| [ArkUI_NodeHandle OH_ArkUI_NodeUtils_GetCurrentPageRootNode(ArkUI_NodeHandle node)](#oh_arkui_nodeutils_getcurrentpagerootnode) | - | Retrieve the root node of the current page. |
-| [bool OH_ArkUI_NodeUtils_IsCreatedByNDK(ArkUI_NodeHandle node)](#oh_arkui_nodeutils_iscreatedbyndk) | - | Retrieve whether the component is labeled by C-API. |
-| [int32_t OH_ArkUI_NodeUtils_GetNodeType(ArkUI_NodeHandle node)](#oh_arkui_nodeutils_getnodetype) | - | Get the type of node. |
-| [int32_t OH_ArkUI_NodeUtils_GetWindowInfo(ArkUI_NodeHandle node, ArkUI_HostWindowInfo** info)](#oh_arkui_nodeutils_getwindowinfo) | - | Get info of the window to which the node belongs. |
+| [void OH_ArkUI_NodeUtils_AddCustomProperty(ArkUI_NodeHandle node, const char* name, const char* value)](#oh_arkui_nodeutils_addcustomproperty) | - | 设置组件的自定义属性。该接口仅在主线程生效。 |
+| [void OH_ArkUI_NodeUtils_RemoveCustomProperty(ArkUI_NodeHandle node, const char* name)](#oh_arkui_nodeutils_removecustomproperty) | - | 移除组件已设置的自定义属性。 |
+| [int32_t OH_ArkUI_NodeUtils_GetCustomProperty(ArkUI_NodeHandle node, const char* name, ArkUI_CustomProperty** handle)](#oh_arkui_nodeutils_getcustomproperty) | - | 获取组件的自定义属性的值。 |
+| [ArkUI_NodeHandle OH_ArkUI_NodeUtils_GetParentInPageTree(ArkUI_NodeHandle node)](#oh_arkui_nodeutils_getparentinpagetree) | - | 获取父节点，可获取由ArkTs创建的组件节点。 |
+| [int32_t OH_ArkUI_NodeUtils_GetActiveChildrenInfo(ArkUI_NodeHandle head, ArkUI_ActiveChildrenInfo** handle)](#oh_arkui_nodeutils_getactivechildreninfo) | - | 获取某个节点所有活跃的子节点。Span将不会被计入子节点的统计中。在LazyForEach场景中，推荐使用[OH_ArkUI_NodeUtils_GetChildWithExpandMode](capi-native-node-h.md#oh_arkui_nodeutils_getchildwithexpandmode)接口进行遍历。 |
+| [ArkUI_NodeHandle OH_ArkUI_NodeUtils_GetCurrentPageRootNode(ArkUI_NodeHandle node)](#oh_arkui_nodeutils_getcurrentpagerootnode) | - | 获取当前页面的根节点。 |
+| [bool OH_ArkUI_NodeUtils_IsCreatedByNDK(ArkUI_NodeHandle node)](#oh_arkui_nodeutils_iscreatedbyndk) | - | 获取组件是否由C-API创建的标签。 |
+| [int32_t OH_ArkUI_NodeUtils_GetNodeType(ArkUI_NodeHandle node)](#oh_arkui_nodeutils_getnodetype) | - | 获取节点的类型。 |
+| [int32_t OH_ArkUI_NodeUtils_GetWindowInfo(ArkUI_NodeHandle node, ArkUI_HostWindowInfo** info)](#oh_arkui_nodeutils_getwindowinfo) | - | 获取节点所属的窗口信息。 |
 | [int32_t OH_ArkUI_NodeUtils_GetFirstChildIndexWithoutExpand(ArkUI_NodeHandle node, uint32_t* index)](#oh_arkui_nodeutils_getfirstchildindexwithoutexpand) | - | 获取目标节点在树上的第一个子节点的下标。 |
 | [int32_t OH_ArkUI_NodeUtils_GetLastChildIndexWithoutExpand(ArkUI_NodeHandle node, uint32_t* index)](#oh_arkui_nodeutils_getlastchildindexwithoutexpand) | - | 获取目标节点在树上的最后一个子节点的下标。 |
 | [int32_t OH_ArkUI_NodeUtils_GetChildWithExpandMode(ArkUI_NodeHandle node, int32_t position, ArkUI_NodeHandle* subnode, uint32_t expandMode)](#oh_arkui_nodeutils_getchildwithexpandmode) | - | 用不同的展开模式获取对应下标的子节点。 |
@@ -134,7 +134,7 @@ ArkUI_NodeAdapterHandle handle, uint32_t startPosition, uint32_t itemCount)](#oh
 | [void OH_ArkUI_UnregisterSystemFontStyleChangeEvent(ArkUI_NodeHandle node)](#oh_arkui_unregistersystemfontstylechangeevent) | - | Unregister the event callback when the system font style changes. |
 | [float OH_ArkUI_SystemFontStyleEvent_GetFontSizeScale(const ArkUI_SystemFontStyleEvent* event)](#oh_arkui_systemfontstyleevent_getfontsizescale) | - | Retrieve the font size value for system font change events. |
 | [float OH_ArkUI_SystemFontStyleEvent_GetFontWeightScale(const ArkUI_SystemFontStyleEvent* event)](#oh_arkui_systemfontstyleevent_getfontweightscale) | - | Retrieve the font thickness values for system font change events. |
-| [int32_t OH_ArkUI_NodeUtils_GetAttachedNodeHandleById(const char* id, ArkUI_NodeHandle* node)](#oh_arkui_nodeutils_getattachednodehandlebyid) | - | Get the node handle by id. |
+| [int32_t OH_ArkUI_NodeUtils_GetAttachedNodeHandleById(const char* id, ArkUI_NodeHandle* node)](#oh_arkui_nodeutils_getattachednodehandlebyid) | - | 根据用户id获取目标节点。 |
 | [int32_t OH_ArkUI_NodeUtils_MoveTo(ArkUI_NodeHandle node, ArkUI_NodeHandle target_parent, int32_t index)](#oh_arkui_nodeutils_moveto) | - | 将节点移动到目标父节点下，作为子节点。 |
 | [int32_t OH_ArkUI_NativeModule_InvalidateAttributes(ArkUI_NodeHandle node)](#oh_arkui_nativemodule_invalidateattributes) | - | 在当前帧触发节点属性更新。当前节点的属性在构建阶段后被修改，这些改动不会立即生效，而是延迟到下一帧统一处理。此功能强制当前帧内即时节点更新，确保同步应用渲染效果。 |
 | [int32_t OH_ArkUI_NodeUtils_SetCrossLanguageOption(ArkUI_NodeHandle node, ArkUI_CrossLanguageOption* option)](#oh_arkui_nodeutils_setcrosslanguageoption) | - | 设置目标节点跨语言设置属性的能力。 |
@@ -148,9 +148,9 @@ ArkUI_NodeAdapterHandle handle, uint32_t startPosition, uint32_t itemCount)](#oh
 | [int32_t OH_ArkUI_NodeUtils_GetPositionToParent(ArkUI_NodeHandle node, ArkUI_IntOffset* globalOffset)](#oh_arkui_nodeutils_getpositiontoparent) | - | 获取目标节点相对于父节点的偏移值，单位：px。 |
 | [ArkUI_ErrorCode OH_ArkUI_AddSupportedUIStates(ArkUI_NodeHandle node, int32_t uiStates, void (statesChangeHandler)(int32_t currentStates, void* userData), bool excludeInner, void* userData)](#oh_arkui_addsupporteduistates) | - | 设置组件支持的多态样式状态。为了更高效地处理，需传入所关注的状态值及对应的状态处理函数，当关注的状态发生时，处理函数会被执行。可在回调中根据当前状态调整UI样式。当在同一个节点上多次调用该方法时，将以最后一次传入的状态及处理函数为准。有些类型的组件节点，系统内部已有对某些状态的默认处理。例如，Button组件默认具备对PRESSED状态的样式变化，当在此类组件上使用此方法自定义状态处理时，会先应用系统默认样式变化，再执行自定义的样式处理，最终效果为两者叠加。可以通过指定excludeInner为true来禁用系统内部的默认样式效果，但这通常取决于系统内部实现规范是否允许。当调用该函数时，传入的statesChangeHandler函数会立即执行一次，且无需特意注册对NORMAL状态的监听，只要注册了非NORMAL状态，当状态从任意状态变化回NORMAL时，系统都会进行回调，以便应用进行样式复原。 |
 | [ArkUI_ErrorCode OH_ArkUI_RemoveSupportedUIStates(ArkUI_NodeHandle node, int32_t uiStates)](#oh_arkui_removesupporteduistates) | - | 删除注册的状态处理。当通过OH_ArkUI_AddSupportedUIStates注册的状态都被删除时，所注册的stateChangeHandler也不会再被执行。 |
-| [int32_t OH_ArkUI_RunTaskInScope(ArkUI_ContextHandle uiContext, void* userData, void(\*callback)(void* userData))](#oh_arkui_runtaskinscope) | - | Run a custom function inside the UIContext scope. |
+| [int32_t OH_ArkUI_RunTaskInScope(ArkUI_ContextHandle uiContext, void* userData, void(\*callback)(void* userData))](#oh_arkui_runtaskinscope) | - | 在目标UI上下文中执行传入的自定义回调函数。示例请参考：[在NDK中保证多实例场景功能正常](../../ui/ndk-scope-task.md)。 |
 | [int32_t OH_ArkUI_NodeUtils_GetNodeHandleByUniqueId(const uint32_t uniqueId, ArkUI_NodeHandle* node)](#oh_arkui_nodeutils_getnodehandlebyuniqueid) | - | Get the node handle by uniqueId. |
-| [int32_t OH_ArkUI_NodeUtils_GetNodeUniqueId(ArkUI_NodeHandle node, int32_t* uniqueId)](#oh_arkui_nodeutils_getnodeuniqueid) | - | Get the uniqueId of the target node handle. |
+| [int32_t OH_ArkUI_NodeUtils_GetNodeUniqueId(ArkUI_NodeHandle node, int32_t* uniqueId)](#oh_arkui_nodeutils_getnodeuniqueid) | - | 获取目标节点的uniqueId。 |
 | [int32_t OH_ArkUI_NativeModule_IsInRenderState(ArkUI_NodeHandle node, bool* isInRenderState)](#oh_arkui_nativemodule_isinrenderstate) | - | 获取节点是否处于渲染状态，如果一个节点的对应RenderNode在渲染树上，则处于渲染状态。 |
 | [int32_t OH_ArkUI_NativeModule_AdoptChild(ArkUI_NodeHandle node, ArkUI_NodeHandle child)](#oh_arkui_nativemodule_adoptchild) | - | 当前节点接纳目标节点为附属节点。被接纳的节点不能已有父节点。调用该接口实际上不会将其添加为子节点，而是仅允许其接收对应子节点的生命周期回调。 |
 | [int32_t OH_ArkUI_NativeModule_RemoveAdoptedChild(ArkUI_NodeHandle node, ArkUI_NodeHandle child)](#oh_arkui_nativemodule_removeadoptedchild) | - | 移除被接纳的目标附属节点。 |
@@ -162,12 +162,12 @@ ArkUI_NodeAdapterHandle handle, uint32_t startPosition, uint32_t itemCount)](#oh
 | [int32_t OH_ArkUI_NativeModule_ConvertPositionToWindow(ArkUI_NodeHandle currentNode, ArkUI_IntOffset localPosition, ArkUI_IntOffset* windowPosition)](#oh_arkui_nativemodule_convertpositiontowindow) | - | 将点的坐标从指定节点的坐标系转换至当前窗口的坐标系。节点的坐标系考虑节点本身的变换，例如，节点A的变换效果为向左平移100，会使得其坐标系中的点的坐标也向左平移100。 |
 | [int32_t OH_ArkUI_NativeModule_ConvertPositionFromWindow(ArkUI_NodeHandle targetNode, ArkUI_IntOffset windowPosition, ArkUI_IntOffset* localPosition)](#oh_arkui_nativemodule_convertpositionfromwindow) | - | 将点的坐标从当前窗口的坐标系转换至目标节点的坐标系。节点的坐标系考虑节点本身的变换，例如，节点A的变换效果为向左平移100，会使得其坐标系中的点的坐标也向左平移100。 |
 | [int32_t OH_ArkUI_Swiper_FinishAnimation(ArkUI_NodeHandle node)](#oh_arkui_swiper_finishanimation) | - | 停止指定的Swiper节点正在执行的翻页动画。 |
-| [int32_t OH_ArkUI_PostAsyncUITask(ArkUI_ContextHandle context, void* asyncUITaskData, void (\*asyncUITask)(void* asyncUITaskData), void (\*onFinish)(void* asyncUITaskData))](#oh_arkui_postasyncuitask) | - | Post UI task to background threads. |
-| [int32_t OH_ArkUI_PostUITask(ArkUI_ContextHandle context, void* taskData, void (\*task)(void* taskData))](#oh_arkui_postuitask) | - | Post UI task to UI thread. |
+| [int32_t OH_ArkUI_PostAsyncUITask(ArkUI_ContextHandle context, void* asyncUITaskData, void (\*asyncUITask)(void* asyncUITaskData), void (\*onFinish)(void* asyncUITaskData))](#oh_arkui_postasyncuitask) | - | 将asyncUITask函数提交至ArkUI框架提供的非UI线程中执行，asyncUITask函数执行完毕后，在UI线程调用onFinish函数。适用于多线程创建UI组件的场景，开发者可使用此接口在非UI线程创建UI组件，随后在UI线程将创建完成的组件挂载至主树上。 |
+| [int32_t OH_ArkUI_PostUITask(ArkUI_ContextHandle context, void* taskData, void (\*task)(void* taskData))](#oh_arkui_postuitask) | - | 将task函数提交至UI线程中执行。适用于多线程创建UI组件的场景，当开发者在自建的线程中创建UI组件时，可以使用此接口将创建完成的组件挂载到UI线程的主树上。 |
 | [int32_t OH_ArkUI_NativeModule_AtomicServiceMenuBarSetVisible(ArkUI_ContextHandle uiContext, bool visible)](#oh_arkui_nativemodule_atomicservicemenubarsetvisible) | - | 设置菜单栏的可见性。 |
 | [int32_t OH_ArkUI_NativeModule_RegisterCommonAreaApproximateChangeEvent(ArkUI_NodeHandle node, float expectedUpdateInterval, void* userData, void (\*callback)(ArkUI_NodeEvent* event))](#oh_arkui_nativemodule_registercommonareaapproximatechangeevent) | - | Registers a callback for listening for component dimension and area changes.This function can be called for a valid [ArkUI_NodeHandle](capi-arkui-nativemodule-arkui-node8h.md) node at any time. <br> The newly registered callback will replace the previously registered callback for this event and will take effect from the next frame. <br> When the callback is no longer needed, call [OH_ArkUI_NativeModule_UnregisterCommonAreaApproximateChangeEvent](capi-native-node-h.md#oh_arkui_nativemodule_unregistercommonareaapproximatechangeevent) to unregister it. <br> Otherwise, the callback will be automatically unregistered when the node is released. |
 | [int32_t OH_ArkUI_NativeModule_UnregisterCommonAreaApproximateChangeEvent(ArkUI_NodeHandle node)](#oh_arkui_nativemodule_unregistercommonareaapproximatechangeevent) | - | Unregisters the callback bound to the dimensions and area changes of a component. |
-| [int32_t OH_ArkUI_PostUITaskAndWait(ArkUI_ContextHandle context, void* taskData, void (\*task)(void* taskData))](#oh_arkui_postuitaskandwait) | - | Post UI task to UI thread and wait until UI task finished. |
+| [int32_t OH_ArkUI_PostUITaskAndWait(ArkUI_ContextHandle context, void* taskData, void (\*task)(void* taskData))](#oh_arkui_postuitaskandwait) | - | 将task函数提交至UI线程中执行，调用此接口的线程将阻塞，直至task函数执行完成。在UI线程调用此接口等同于同步调用task函数。适用于多线程创建UI组件的场景，当开发者在多线程创建组件过程中需要调用仅支持UI线程的函数时，使用此接口返回UI线程调用函数，调用完成后继续多线程创建组件。当UI线程负载较高时，调用此接口的非UI线程可能长时间阻塞，影响多线程创建UI组件的性能，不建议频繁使用。 |
 | [int32_t OH_ArkUI_Swiper_StartFakeDrag(ArkUI_NodeHandle node, bool* isSuccessful)](#oh_arkui_swiper_startfakedrag) | - | Start a fake drag of the Swiper node.Call OH_ArkUI_Swiper_FakeDragBy to simulate the drag motion. Call OH_ArkUI_Swiper_StopFakeDrag to complete thefake drag. A fake drag can be interrupted by a real drag. If you need to ignore touch events and other user inputduring a fake drag, use NODE_SWIPER_DISABLE_SWIPE. |
 | [int32_t OH_ArkUI_Swiper_FakeDragBy(ArkUI_NodeHandle node, float offset, bool* isConsumedOffset)](#oh_arkui_swiper_fakedragby) | - | Fake drag by an offset of the Swiper node.The OH_ArkUI_Swiper_StartFakeDrag must be called first. |
 | [int32_t OH_ArkUI_Swiper_StopFakeDrag(ArkUI_NodeHandle node, bool* isSuccessful)](#oh_arkui_swiper_stopfakedrag) | - | Stop a fake drag of the Swiper node. |
@@ -177,7 +177,7 @@ ArkUI_NodeAdapterHandle handle, uint32_t startPosition, uint32_t itemCount)](#oh
 | [int32_t OH_ArkUI_ArcSwiper_ShowPrevious(ArkUI_NodeHandle node)](#oh_arkui_arcswiper_showprevious) | - | Show the previous page of the ArcSwiper node. |
 | [int32_t OH_ArkUI_ArcSwiper_ShowNext(ArkUI_NodeHandle node)](#oh_arkui_arcswiper_shownext) | - | Show the next page of the ArcSwiper node. |
 | [int32_t OH_ArkUI_ArcSwiper_FinishAnimation(ArkUI_NodeHandle node)](#oh_arkui_arcswiper_finishanimation) | - | Stop the animation executed by the ArcSwiper node. |
-| [int32_t OH_ArkUI_NativeModule_GetPageRootNodeHandleByContext(ArkUI_ContextHandle context, ArkUI_NodeHandle* rootNode)](#oh_arkui_nativemodule_getpagerootnodehandlebycontext) | - | Get the root node handle of the corresponding page of the Context. |
+| [int32_t OH_ArkUI_NativeModule_GetPageRootNodeHandleByContext(ArkUI_ContextHandle context, ArkUI_NodeHandle* rootNode)](#oh_arkui_nativemodule_getpagerootnodehandlebycontext) | - | 获取指定实例的页面的根节点。 |
 | [ArkUI_GestureCollectInterceptInfo* OH_ArkUI_NodeEvent_GetGestureCollectInterceptInfo(ArkUI_NodeEvent* nodeEvent)](#oh_arkui_nodeevent_getgesturecollectinterceptinfo) | - | Obtains the <b>ArkUI_GestureCollectInterceptInfo</b> object from a specified <b>ArkUI_NodeEvent</b> object. |
 | [ArkUI_ErrorCode OH_ArkUI_NativeModule_SetChildMountPolicy(ArkUI_NodeHandle node, OH_ArkUI_NodeMountPolicy policy)](#oh_arkui_nativemodule_setchildmountpolicy) | - | Set the subnode mounting policy of the target node. |
 | [ArkUI_ErrorCode OH_ArkUI_NativeModule_GetChildMountPolicy(ArkUI_NodeHandle node, OH_ArkUI_NodeMountPolicy* policy)](#oh_arkui_nativemodule_getchildmountpolicy) | - | Get the current child mount policy of the specified node. |
@@ -1191,7 +1191,7 @@ Obtains the type of a component event.
 
 | 参数项 | 描述 |
 | -- | -- |
-| ArkUI_NodeEvent* event | Indicates the pointer to the component event. |
+| [ArkUI_NodeEvent](capi-arkui-nativemodule-arkui-nodeevent.md)* event | Indicates the pointer to the component event. |
 
 **返回：**
 
@@ -1215,7 +1215,7 @@ Obtains the custom ID of a component event.The event ID is passed in as a parame
 
 | 参数项 | 描述 |
 | -- | -- |
-| ArkUI_NodeEvent* event | Indicates the pointer to the component event. |
+| [ArkUI_NodeEvent](capi-arkui-nativemodule-arkui-nodeevent.md)* event | Indicates the pointer to the component event. |
 
 **返回：**
 
@@ -1239,13 +1239,13 @@ Obtains the component object that triggers a component event.
 
 | 参数项 | 描述 |
 | -- | -- |
-| ArkUI_NodeEvent* event | Indicates the pointer to the component event. |
+| [ArkUI_NodeEvent](capi-arkui-nativemodule-arkui-nodeevent.md)* event | Indicates the pointer to the component event. |
 
 **返回：**
 
 | 类型 | 说明 |
 | -- | -- |
-| ArkUI_NodeHandle | Returns the component object that triggers the component event. |
+| [ArkUI_NodeHandle](capi-arkui-nativemodule-arkui-node8h.md) | Returns the component object that triggers the component event. |
 
 ### OH_ArkUI_NodeEvent_GetInputEvent()
 
@@ -1263,13 +1263,13 @@ ArkUI_UIInputEvent* OH_ArkUI_NodeEvent_GetInputEvent(ArkUI_NodeEvent* event)
 
 | 参数项 | 描述 |
 | -- | -- |
-| ArkUI_NodeEvent* event | 组件事件指针。 |
+| [ArkUI_NodeEvent](capi-arkui-nativemodule-arkui-nodeevent.md)* event | 组件事件指针。 |
 
 **返回：**
 
 | 类型 | 说明 |
 | -- | -- |
-| [ArkUI_UIInputEvent*](capi-arkui-eventmodule-arkui-uiinputevent.md) | ArkUI_UIInputEvent 输入事件数据指针。 |
+| ArkUI_UIInputEvent* | ArkUI_UIInputEvent 输入事件数据指针。 |
 
 ### OH_ArkUI_NodeEvent_GetNodeComponentEvent()
 
@@ -1287,7 +1287,7 @@ Obtains the numerical data in a component event.
 
 | 参数项 | 描述 |
 | -- | -- |
-| ArkUI_NodeEvent* event | Indicates the pointer to the component event. |
+| [ArkUI_NodeEvent](capi-arkui-nativemodule-arkui-nodeevent.md)* event | Indicates the pointer to the component event. |
 
 **返回：**
 
@@ -1311,7 +1311,7 @@ Obtains the string data in a component event.
 
 | 参数项 | 描述 |
 | -- | -- |
-| ArkUI_NodeEvent* event | Indicates the pointer to the component event. |
+| [ArkUI_NodeEvent](capi-arkui-nativemodule-arkui-nodeevent.md)* event | Indicates the pointer to the component event. |
 
 **返回：**
 
@@ -1335,7 +1335,7 @@ Obtains the ArkUI_TextChangeEvent data from a component event.
 
 | 参数项 | 描述 |
 | -- | -- |
-| ArkUI_NodeEvent* event | Pointer to a component event. It cannot be null. |
+| [ArkUI_NodeEvent](capi-arkui-nativemodule-arkui-nodeevent.md)* event | Pointer to a component event. It cannot be null. |
 
 **返回：**
 
@@ -1359,7 +1359,7 @@ Obtains the custom data in a component event.This parameter is passed in [regist
 
 | 参数项 | 描述 |
 | -- | -- |
-| ArkUI_NodeEvent* event | Indicates the pointer to the component event. |
+| [ArkUI_NodeEvent](capi-arkui-nativemodule-arkui-nodeevent.md)* event | Indicates the pointer to the component event. |
 
 **返回：**
 
@@ -1383,9 +1383,9 @@ int32_t OH_ArkUI_NodeEvent_GetNumberValue(ArkUI_NodeEvent* event, int32_t index,
 
 | 参数项 | 描述 |
 | -- | -- |
-| ArkUI_NodeEvent* event | 组件事件指针。 |
+| [ArkUI_NodeEvent](capi-arkui-nativemodule-arkui-nodeevent.md)* event | 组件事件指针。 |
 | int32_t index | 返回值索引。 |
-| ArkUI_NumberValue* value | 具体返回值。 |
+| [ArkUI_NumberValue](capi-arkui-nativemodule-arkui-numbervalue.md)* value | 具体返回值。 |
 
 **返回：**
 
@@ -1409,7 +1409,7 @@ int32_t OH_ArkUI_NodeEvent_GetStringValue(ArkUI_NodeEvent* event, int32_t index,
 
 | 参数项 | 描述 |
 | -- | -- |
-| ArkUI_NodeEvent* event | 组件事件指针。 |
+| [ArkUI_NodeEvent](capi-arkui-nativemodule-arkui-nodeevent.md)* event | 组件事件指针。 |
 | int32_t index | 返回值索引。 |
 | char** string | 字符串数组的指针。 |
 | int32_t* stringSize | 字符串数组的长度。 |
@@ -1436,8 +1436,8 @@ int32_t OH_ArkUI_NodeEvent_SetReturnNumberValue(ArkUI_NodeEvent* event, ArkUI_Nu
 
 | 参数项 | 描述 |
 | -- | -- |
-| ArkUI_NodeEvent* event | 组件事件指针。 |
-| ArkUI_NumberValue* value | 事件数字类型数组。 |
+| [ArkUI_NodeEvent](capi-arkui-nativemodule-arkui-nodeevent.md)* event | 组件事件指针。 |
+| [ArkUI_NumberValue](capi-arkui-nativemodule-arkui-numbervalue.md)* value | 事件数字类型数组。 |
 | int32_t size | 数组长度。 |
 
 **返回：**
@@ -1468,7 +1468,7 @@ ArkUI_TouchTestInfo* OH_ArkUI_NodeEvent_GetTouchTestInfo(ArkUI_NodeEvent* nodeEv
 
 | 类型 | 说明 |
 | -- | -- |
-| [ArkUI_TouchTestInfo*](capi-arkui-eventmodule-arkui-touchtestinfo.md) | 返回指向[ArkUI_TouchTestInfo](capi-arkui-eventmodule-arkui-touchtestinfo.md)对象的指针。若传入的参数无效或并非触摸测试信息，则返回null。 |
+| ArkUI_TouchTestInfo* | 返回指向[ArkUI_TouchTestInfo](capi-arkui-eventmodule-arkui-touchtestinfo.md)对象的指针。若传入的参数无效或并非触摸测试信息，则返回null。 |
 
 ### OH_ArkUI_NodeEvent_GetTextEditorOnWillChangeEvent()
 
@@ -1486,7 +1486,7 @@ OH_ArkUI_TextEditorChangeEvent* OH_ArkUI_NodeEvent_GetTextEditorOnWillChangeEven
 
 | 参数项 | 描述 |
 | -- | -- |
-| ArkUI_NodeEvent* event | 指向[ArkUI_NodeEvent](capi-arkui-nativemodule-arkui-nodeevent.md)组件事件对象的指针。 |
+| [ArkUI_NodeEvent](capi-arkui-nativemodule-arkui-nodeevent.md)* event | 指向[ArkUI_NodeEvent](capi-arkui-nativemodule-arkui-nodeevent.md)组件事件对象的指针。 |
 
 **返回：**
 
@@ -1766,7 +1766,7 @@ int32_t OH_ArkUI_NodeAdapter_GetAllItems(ArkUI_NodeAdapterHandle handle, ArkUI_N
 | 参数项 | 描述 |
 | -- | -- |
 | [ArkUI_NodeAdapterHandle](capi-arkui-nativemodule-arkui-nodeadapter8h.md) handle | 组件适配器对象。 |
-| ArkUI_NodeHandle** items | 适配器内节点数组。 |
+| [ArkUI_NodeHandle](capi-arkui-nativemodule-arkui-node8h.md)** items | 适配器内节点数组。 |
 | uint32_t* size | 元素数量。 |
 
 **返回：**
@@ -1839,7 +1839,7 @@ Obtains the element to be removed for the event to be destroyed.
 
 | 类型 | 说明 |
 | -- | -- |
-| ArkUI_NodeHandle | Returns the element to be removed. |
+| [ArkUI_NodeHandle](capi-arkui-nativemodule-arkui-node8h.md) | Returns the element to be removed. |
 
 ### OH_ArkUI_NodeAdapterEvent_GetItemIndex()
 
@@ -1887,7 +1887,7 @@ Obtains the scrollable container node that uses the specified adapter.
 
 | 类型 | 说明 |
 | -- | -- |
-| ArkUI_NodeHandle | Returns the scrollable container node that uses the specified adapter. |
+| [ArkUI_NodeHandle](capi-arkui-nativemodule-arkui-node8h.md) | Returns the scrollable container node that uses the specified adapter. |
 
 ### OH_ArkUI_NodeAdapterEvent_SetItem()
 
@@ -1906,7 +1906,7 @@ int32_t OH_ArkUI_NodeAdapterEvent_SetItem(ArkUI_NodeAdapterEvent* event, ArkUI_N
 | 参数项 | 描述 |
 | -- | -- |
 | [ArkUI_NodeAdapterEvent](capi-arkui-nativemodule-arkui-nodeadapterevent.md)* event | 适配器事件对象。 |
-| ArkUI_NodeHandle node | 待添加的组件。 |
+| [ArkUI_NodeHandle](capi-arkui-nativemodule-arkui-node8h.md) node | 待添加的组件。 |
 
 **返回：**
 
@@ -1961,7 +1961,7 @@ Obtains the size constraint for measurement through a custom component event.
 
 | 类型 | 说明 |
 | -- | -- |
-| ArkUI_LayoutConstraint* | Returns the pointer to the size constraint. |
+| [ArkUI_LayoutConstraint*](capi-arkui-nativemodule-arkui-layoutconstraint.md) | Returns the pointer to the size constraint. |
 
 ### OH_ArkUI_NodeCustomEvent_GetPositionInLayout()
 
@@ -1985,7 +1985,7 @@ Obtains the expected position of a component relative to its parent component in
 
 | 类型 | 说明 |
 | -- | -- |
-| ArkUI_IntOffset | Returns the expected position relative to the parent component. |
+| [ArkUI_IntOffset](capi-arkui-nativemodule-arkui-intoffset.md) | Returns the expected position relative to the parent component. |
 
 ### OH_ArkUI_NodeCustomEvent_GetDrawContextInDraw()
 
@@ -2009,7 +2009,7 @@ Obtains the drawing context through a custom component event.
 
 | 类型 | 说明 |
 | -- | -- |
-| ArkUI_DrawContext* | Returns the drawing context. |
+| [ArkUI_DrawContext*](capi-arkui-nativemodule-arkui-drawcontext.md) | Returns the drawing context. |
 
 ### OH_ArkUI_NodeCustomEvent_GetEventTargetId()
 
@@ -2081,7 +2081,7 @@ Obtains a component object through a custom component event.
 
 | 类型 | 说明 |
 | -- | -- |
-| ArkUI_NodeHandle | Returns the component object. |
+| [ArkUI_NodeHandle](capi-arkui-nativemodule-arkui-node8h.md) | Returns the component object. |
 
 ### OH_ArkUI_NodeCustomEvent_GetEventType()
 
@@ -2124,7 +2124,7 @@ Obtains the measurement information of a custom span through a custom component 
 | 参数项 | 描述 |
 | -- | -- |
 | [ArkUI_NodeCustomEvent](capi-arkui-nativemodule-arkui-nodecustomevent.md)* event | Indicates the pointer to the custom component event. |
-| ArkUI_CustomSpanMeasureInfo* info | Indicates the measurement information to be obtained. |
+| [ArkUI_CustomSpanMeasureInfo](capi-arkui-nativemodule-arkui-customspanmeasureinfo.md)* info | Indicates the measurement information to be obtained. |
 
 **返回：**
 
@@ -2149,7 +2149,7 @@ Sets the measurement metrics of a custom span through a custom component event.
 | 参数项 | 描述 |
 | -- | -- |
 | [ArkUI_NodeCustomEvent](capi-arkui-nativemodule-arkui-nodecustomevent.md)* event | Indicates the pointer to the custom component event. |
-| ArkUI_CustomSpanMetrics* metrics | Indicates the measurement metrics to set. |
+| [ArkUI_CustomSpanMetrics](capi-arkui-nativemodule-arkui-customspanmetrics.md)* metrics | Indicates the measurement metrics to set. |
 
 **返回：**
 
@@ -2174,7 +2174,7 @@ Obtains the drawing information of a custom span through a custom component even
 | 参数项 | 描述 |
 | -- | -- |
 | [ArkUI_NodeCustomEvent](capi-arkui-nativemodule-arkui-nodecustomevent.md)* event | Indicates the pointer to the custom component event. |
-| ArkUI_CustomSpanDrawInfo* info | Indicates the drawing information to obtain. |
+| [ArkUI_CustomSpanDrawInfo](capi-arkui-nativemodule-arkui-customspandrawinfo.md)* info | Indicates the drawing information to obtain. |
 
 **返回：**
 
@@ -2210,7 +2210,7 @@ int32_t OH_ArkUI_NodeContent_RegisterCallback(ArkUI_NodeContentHandle content, A
 
 | 参数项 | 描述 |
 | -- | -- |
-| ArkUI_NodeContentHandle content | 需要注册事件的NodeContent对象。 |
+| [ArkUI_NodeContentHandle](capi-arkui-nativemodule-arkui-nodecontent8h.md) content | 需要注册事件的NodeContent对象。 |
 | [ArkUI_NodeContentCallback](capi-native-node-h.md#arkui_nodecontentcallback) callback | 事件触发时需要执行的函数回调。 |
 
 **返回：**
@@ -2265,7 +2265,7 @@ Obtains the node content object that triggers a node content event.
 
 | 类型 | 说明 |
 | -- | -- |
-| ArkUI_NodeContentHandle | Returns the node content object that triggers the node content event. |
+| [ArkUI_NodeContentHandle](capi-arkui-nativemodule-arkui-nodecontent8h.md) | Returns the node content object that triggers the node content event. |
 
 ### OH_ArkUI_NodeContent_SetUserData()
 
@@ -2283,7 +2283,7 @@ Saves custom data on the specified node content.
 
 | 参数项 | 描述 |
 | -- | -- |
-| ArkUI_NodeContentHandle content | Indicates the node content on which the custom data will be saved. |
+| [ArkUI_NodeContentHandle](capi-arkui-nativemodule-arkui-nodecontent8h.md) content | Indicates the node content on which the custom data will be saved. |
 | void* userData | Indicates the custom data to be saved. |
 
 **返回：**
@@ -2308,7 +2308,7 @@ Obtains the custom data saved on the specified node content.
 
 | 参数项 | 描述 |
 | -- | -- |
-| ArkUI_NodeContentHandle content | Indicates the target node content. |
+| [ArkUI_NodeContentHandle](capi-arkui-nativemodule-arkui-nodecontent8h.md) content | Indicates the target node content. |
 
 **返回：**
 
@@ -2332,8 +2332,8 @@ int32_t OH_ArkUI_NodeContent_AddNode(ArkUI_NodeContentHandle content, ArkUI_Node
 
 | 参数项 | 描述 |
 | -- | -- |
-| ArkUI_NodeContentHandle content | 需要被添加节点的NodeContent对象。 |
-| ArkUI_NodeHandle node | 需要被添加的节点。 |
+| [ArkUI_NodeContentHandle](capi-arkui-nativemodule-arkui-nodecontent8h.md) content | 需要被添加节点的NodeContent对象。 |
+| [ArkUI_NodeHandle](capi-arkui-nativemodule-arkui-node8h.md) node | 需要被添加的节点。 |
 
 **返回：**
 
@@ -2357,8 +2357,8 @@ int32_t OH_ArkUI_NodeContent_RemoveNode(ArkUI_NodeContentHandle content, ArkUI_N
 
 | 参数项 | 描述 |
 | -- | -- |
-| ArkUI_NodeContentHandle content | 需要被删除节点的NodeContent对象。 |
-| ArkUI_NodeHandle node | 需要被删除的节点。 |
+| [ArkUI_NodeContentHandle](capi-arkui-nativemodule-arkui-nodecontent8h.md) content | 需要被删除节点的NodeContent对象。 |
+| [ArkUI_NodeHandle](capi-arkui-nativemodule-arkui-node8h.md) node | 需要被删除的节点。 |
 
 **返回：**
 
@@ -2382,8 +2382,8 @@ int32_t OH_ArkUI_NodeContent_InsertNode(ArkUI_NodeContentHandle content, ArkUI_N
 
 | 参数项 | 描述 |
 | -- | -- |
-| ArkUI_NodeContentHandle content | 需要被插入节点的NodeContent对象。 |
-| ArkUI_NodeHandle node | 需要被插入的节点。 |
+| [ArkUI_NodeContentHandle](capi-arkui-nativemodule-arkui-nodecontent8h.md) content | 需要被插入节点的NodeContent对象。 |
+| [ArkUI_NodeHandle](capi-arkui-nativemodule-arkui-node8h.md) node | 需要被插入的节点。 |
 | int32_t position | 需要被插入的位置。 |
 
 **返回：**
@@ -2408,8 +2408,8 @@ int32_t OH_ArkUI_NodeUtils_GetLayoutSize(ArkUI_NodeHandle node, ArkUI_IntSize* s
 
 | 参数项 | 描述 |
 | -- | -- |
-| ArkUI_NodeHandle node | ArkUI_NodeHandle指针。 |
-| ArkUI_IntSize* size | 组件handle的绘制区域尺寸，单位：px。 |
+| [ArkUI_NodeHandle](capi-arkui-nativemodule-arkui-node8h.md) node | ArkUI_NodeHandle指针。 |
+| [ArkUI_IntSize](capi-arkui-nativemodule-arkui-intsize.md)* size | 组件handle的绘制区域尺寸，单位：px。 |
 
 **返回：**
 
@@ -2433,8 +2433,8 @@ int32_t OH_ArkUI_NodeUtils_GetLayoutPosition(ArkUI_NodeHandle node, ArkUI_IntOff
 
 | 参数项 | 描述 |
 | -- | -- |
-| ArkUI_NodeHandle node | ArkUI_NodeHandle指针。 |
-| ArkUI_IntOffset* localOffset | 组件handle相对父组件的偏移值，单位：px。 |
+| [ArkUI_NodeHandle](capi-arkui-nativemodule-arkui-node8h.md) node | ArkUI_NodeHandle指针。 |
+| [ArkUI_IntOffset](capi-arkui-nativemodule-arkui-intoffset.md)* localOffset | 组件handle相对父组件的偏移值，单位：px。 |
 
 **返回：**
 
@@ -2458,8 +2458,8 @@ int32_t OH_ArkUI_NodeUtils_GetLayoutPositionInWindow(ArkUI_NodeHandle node, ArkU
 
 | 参数项 | 描述 |
 | -- | -- |
-| ArkUI_NodeHandle node | ArkUI_NodeHandle指针。 |
-| ArkUI_IntOffset* globalOffset | 组件handle相对窗口的偏移值，单位：px。 |
+| [ArkUI_NodeHandle](capi-arkui-nativemodule-arkui-node8h.md) node | ArkUI_NodeHandle指针。 |
+| [ArkUI_IntOffset](capi-arkui-nativemodule-arkui-intoffset.md)* globalOffset | 组件handle相对窗口的偏移值，单位：px。 |
 
 **返回：**
 
@@ -2483,8 +2483,8 @@ int32_t OH_ArkUI_NodeUtils_GetLayoutPositionInScreen(ArkUI_NodeHandle node, ArkU
 
 | 参数项 | 描述 |
 | -- | -- |
-| ArkUI_NodeHandle node | ArkUI_NodeHandle指针。 |
-| ArkUI_IntOffset* screenOffset | 组件handle相对屏幕的偏移值，单位：px。 |
+| [ArkUI_NodeHandle](capi-arkui-nativemodule-arkui-node8h.md) node | ArkUI_NodeHandle指针。 |
+| [ArkUI_IntOffset](capi-arkui-nativemodule-arkui-intoffset.md)* screenOffset | 组件handle相对屏幕的偏移值，单位：px。 |
 
 **返回：**
 
@@ -2508,8 +2508,8 @@ int32_t OH_ArkUI_NodeUtils_GetLayoutPositionInGlobalDisplay(ArkUI_NodeHandle nod
 
 | 参数项 | 描述 |
 | -- | -- |
-| ArkUI_NodeHandle node | ArkUI_NodeHandle指针。 |
-| ArkUI_IntOffset* offset | 组件handle相对屏幕的偏移值，单位：px。 |
+| [ArkUI_NodeHandle](capi-arkui-nativemodule-arkui-node8h.md) node | ArkUI_NodeHandle指针。 |
+| [ArkUI_IntOffset](capi-arkui-nativemodule-arkui-intoffset.md)* offset | 组件handle相对屏幕的偏移值，单位：px。 |
 
 **返回：**
 
@@ -2533,8 +2533,8 @@ Obtain the position of the component in the window, including the properties of 
 
 | 参数项 | 描述 |
 | -- | -- |
-| ArkUI_NodeHandle node | ArkUI_NodeHandle pointer. |
-| ArkUI_IntOffset* translateOffset | The cumulative offset value of the component handle itself,parent components, and ancestor nodes, in px. |
+| [ArkUI_NodeHandle](capi-arkui-nativemodule-arkui-node8h.md) node | ArkUI_NodeHandle pointer. |
+| [ArkUI_IntOffset](capi-arkui-nativemodule-arkui-intoffset.md)* translateOffset | The cumulative offset value of the component handle itself,parent components, and ancestor nodes, in px. |
 
 **返回：**
 
@@ -2558,8 +2558,8 @@ Obtain the position of the component on the screen, including the attributes of 
 
 | 参数项 | 描述 |
 | -- | -- |
-| ArkUI_NodeHandle node | ArkUI_NodeHandle pointer. |
-| ArkUI_IntOffset* translateOffset | The cumulative offset value of the component handle itself,parent components, and ancestor nodes, in px. |
+| [ArkUI_NodeHandle](capi-arkui-nativemodule-arkui-node8h.md) node | ArkUI_NodeHandle pointer. |
+| [ArkUI_IntOffset](capi-arkui-nativemodule-arkui-intoffset.md)* translateOffset | The cumulative offset value of the component handle itself,parent components, and ancestor nodes, in px. |
 
 **返回：**
 
@@ -2575,7 +2575,7 @@ void OH_ArkUI_NodeUtils_AddCustomProperty(ArkUI_NodeHandle node, const char* nam
 
 **描述**
 
-Add the custom property of the component. This interface only works on the main thread.
+设置组件的自定义属性。该接口仅在主线程生效。
 
 **起始版本：** 13
 
@@ -2583,9 +2583,9 @@ Add the custom property of the component. This interface only works on the main 
 
 | 参数项 | 描述 |
 | -- | -- |
-| ArkUI_NodeHandle node | ArkUI_NodeHandle pointer. |
-| const char* name | The name of the custom property. Passing null pointers is not allowed. |
-| const char* value | The value of the custom property. Passing null pointers is not allowed. |
+| [ArkUI_NodeHandle](capi-arkui-nativemodule-arkui-node8h.md) node | ArkUI_NodeHandle指针。 |
+| const char* name | 自定义属性的名称。不允许传入空指针。 |
+| const char* value | 对应key参数名称的自定义属性的值。不允许传入空指针。 |
 
 ### OH_ArkUI_NodeUtils_RemoveCustomProperty()
 
@@ -2595,7 +2595,7 @@ void OH_ArkUI_NodeUtils_RemoveCustomProperty(ArkUI_NodeHandle node, const char* 
 
 **描述**
 
-Remove the custom property of the component.
+移除组件已设置的自定义属性。
 
 **起始版本：** 13
 
@@ -2603,8 +2603,8 @@ Remove the custom property of the component.
 
 | 参数项 | 描述 |
 | -- | -- |
-| ArkUI_NodeHandle node | ArkUI_NodeHandle pointer. |
-| const char* name | The name of the custom property. |
+| [ArkUI_NodeHandle](capi-arkui-nativemodule-arkui-node8h.md) node | ArkUI_NodeHandle指针。 |
+| const char* name | 自定义属性的名称。 |
 
 ### OH_ArkUI_NodeUtils_GetCustomProperty()
 
@@ -2614,7 +2614,7 @@ int32_t OH_ArkUI_NodeUtils_GetCustomProperty(ArkUI_NodeHandle node, const char* 
 
 **描述**
 
-获取组件的自定义属性，并通过handle返回ArkUI_CustomProperty实例。
+获取组件的自定义属性的值。
 
 **起始版本：** 14
 
@@ -2622,15 +2622,15 @@ int32_t OH_ArkUI_NodeUtils_GetCustomProperty(ArkUI_NodeHandle node, const char* 
 
 | 参数项 | 描述 |
 | -- | -- |
-| ArkUI_NodeHandle node | ArkUI-NodeHandle pointer. |
-| const char* name | The name of the custom attribute. |
-| [ArkUI_CustomProperty](capi-arkui-nativemodule-arkui-customproperty.md)** handle | The structure of the custom attribute corresponding to the key parameter name obtained. |
+| [ArkUI_NodeHandle](capi-arkui-nativemodule-arkui-node8h.md) node | ArkUI_NodeHandle指针。 |
+| const char* name | 自定义属性的名称。 |
+| [ArkUI_CustomProperty](capi-arkui-nativemodule-arkui-customproperty.md)** handle | 获取的对应key参数名称的自定义属性的结构体。 |
 
 **返回：**
 
 | 类型 | 说明 |
 | -- | -- |
-| int32_t | Error code.<br>         [ARKUI_ERROR_CODE_NO_ERROR](capi-native-type-h.md#arkui_errorcode) success.<br>         [ARKUI_ERROR_CODE_PARAM_INVALID](capi-native-type-h.md#arkui_errorcode) Function parameter exception. |
+| int32_t | 错误码。<br>     <br>[ARKUI_ERROR_CODE_NO_ERROR](capi-native-type-h.md#arkui_errorcode) 成功。<br>     <br>[ARKUI_ERROR_CODE_PARAM_INVALID](capi-native-type-h.md#arkui_errorcode) 函数参数异常。 |
 
 ### OH_ArkUI_NodeUtils_GetParentInPageTree()
 
@@ -2640,7 +2640,7 @@ ArkUI_NodeHandle OH_ArkUI_NodeUtils_GetParentInPageTree(ArkUI_NodeHandle node)
 
 **描述**
 
-Get the parent node to obtain the component nodes created by ArkTs.
+获取父节点，可获取由ArkTs创建的组件节点。
 
 **起始版本：** 14
 
@@ -2648,13 +2648,13 @@ Get the parent node to obtain the component nodes created by ArkTs.
 
 | 参数项 | 描述 |
 | -- | -- |
-| ArkUI_NodeHandle node | Target node object. |
+| [ArkUI_NodeHandle](capi-arkui-nativemodule-arkui-node8h.md) node | 目标节点对象。 |
 
 **返回：**
 
 | 类型 | 说明 |
 | -- | -- |
-| ArkUI_NodeHandle | Return the pointer of the component. |
+| [ArkUI_NodeHandle](capi-arkui-nativemodule-arkui-node8h.md) | 组件的指针，如果没有返回NULL。 |
 
 ### OH_ArkUI_NodeUtils_GetActiveChildrenInfo()
 
@@ -2664,7 +2664,7 @@ int32_t OH_ArkUI_NodeUtils_GetActiveChildrenInfo(ArkUI_NodeHandle head, ArkUI_Ac
 
 **描述**
 
-获取内部活跃状态为true的FrameNode子节点，并生成ArkUI_ActiveChildrenInfo实例。Span不会被计入子节点统计。 获取成功后，可查询子节点数量并按下标读取子节点；实例使用完毕后必须调用OH_ArkUI_ActiveChildrenInfo_Destroy销毁。
+获取某个节点所有活跃的子节点。Span将不会被计入子节点的统计中。在LazyForEach场景中，推荐使用[OH_ArkUI_NodeUtils_GetChildWithExpandMode](capi-native-node-h.md#oh_arkui_nodeutils_getchildwithexpandmode)接口进行遍历。
 
 **起始版本：** 14
 
@@ -2672,14 +2672,14 @@ int32_t OH_ArkUI_NodeUtils_GetActiveChildrenInfo(ArkUI_NodeHandle head, ArkUI_Ac
 
 | 参数项 | 描述 |
 | -- | -- |
-| ArkUI_NodeHandle head | Pass in the node that needs to be obtained. |
-| [ArkUI_ActiveChildrenInfo](capi-arkui-nativemodule-arkui-activechildreninfo.md)** handle | The structure corresponding to the sub node information of the head node. |
+| [ArkUI_NodeHandle](capi-arkui-nativemodule-arkui-node8h.md) head | 传入需要获取的节点。 |
+| [ArkUI_ActiveChildrenInfo](capi-arkui-nativemodule-arkui-activechildreninfo.md)** handle | 对应head节点子节点信息的结构体。 |
 
 **返回：**
 
 | 类型 | 说明 |
 | -- | -- |
-| int32_t | Error code.<br>         [ARKUI_ERROR_CODE_NO_ERROR](capi-native-type-h.md#arkui_errorcode) success.<br>         [ARKUI_ERROR_CODE_PARAM_INVALID](capi-native-type-h.md#arkui_errorcode) Function parameter exception. |
+| int32_t | 错误码。<br>     <br>[ARKUI_ERROR_CODE_NO_ERROR](capi-native-type-h.md#arkui_errorcode) 成功。<br>     <br>[ARKUI_ERROR_CODE_PARAM_INVALID](capi-native-type-h.md#arkui_errorcode) 函数参数异常。 |
 
 ### OH_ArkUI_NodeUtils_GetCurrentPageRootNode()
 
@@ -2689,7 +2689,7 @@ ArkUI_NodeHandle OH_ArkUI_NodeUtils_GetCurrentPageRootNode(ArkUI_NodeHandle node
 
 **描述**
 
-Retrieve the root node of the current page.
+获取当前页面的根节点。
 
 **起始版本：** 14
 
@@ -2697,13 +2697,13 @@ Retrieve the root node of the current page.
 
 | 参数项 | 描述 |
 | -- | -- |
-| ArkUI_NodeHandle node | Target node object. |
+| [ArkUI_NodeHandle](capi-arkui-nativemodule-arkui-node8h.md) node | 目标节点对象。 |
 
 **返回：**
 
 | 类型 | 说明 |
 | -- | -- |
-| ArkUI_NodeHandle | Return the pointer of the component. |
+| [ArkUI_NodeHandle](capi-arkui-nativemodule-arkui-node8h.md) | 根节点的指针，如果没有返回NULL。 |
 
 ### OH_ArkUI_NodeUtils_IsCreatedByNDK()
 
@@ -2713,7 +2713,7 @@ bool OH_ArkUI_NodeUtils_IsCreatedByNDK(ArkUI_NodeHandle node)
 
 **描述**
 
-Retrieve whether the component is labeled by C-API.
+获取组件是否由C-API创建的标签。
 
 **起始版本：** 14
 
@@ -2721,13 +2721,13 @@ Retrieve whether the component is labeled by C-API.
 
 | 参数项 | 描述 |
 | -- | -- |
-| ArkUI_NodeHandle node | Target node object. |
+| [ArkUI_NodeHandle](capi-arkui-nativemodule-arkui-node8h.md) node | 目标节点对象。 |
 
 **返回：**
 
 | 类型 | 说明 |
 | -- | -- |
-| bool | Return whether the node is a Tag created by C-API,<br>         true represents created by C-API, false represents not created by C-API. |
+| bool | 节点是否由C-API创建的Tag，true代表由C-API创建，false代表非C-API创建。 |
 
 ### OH_ArkUI_NodeUtils_GetNodeType()
 
@@ -2737,7 +2737,7 @@ int32_t OH_ArkUI_NodeUtils_GetNodeType(ArkUI_NodeHandle node)
 
 **描述**
 
-Get the type of node.
+获取节点的类型。
 
 **起始版本：** 14
 
@@ -2745,13 +2745,13 @@ Get the type of node.
 
 | 参数项 | 描述 |
 | -- | -- |
-| ArkUI_NodeHandle node | Target node object. |
+| [ArkUI_NodeHandle](capi-arkui-nativemodule-arkui-node8h.md) node | 目标节点对象。 |
 
 **返回：**
 
 | 类型 | 说明 |
 | -- | -- |
-| int32_t | Return the type of the node.<br>         For specific open types, refer to [ArkUI_NodeType](capi-native-node-h.md#arkui_nodetype). For unopened nodes, return -1. |
+| int32_t | 节点的类型，具体已开放类型参考[ArkUI_NodeType](capi-native-node-h.md#arkui_nodetype)，未开放结点返回-1。 |
 
 ### OH_ArkUI_NodeUtils_GetWindowInfo()
 
@@ -2761,7 +2761,7 @@ int32_t OH_ArkUI_NodeUtils_GetWindowInfo(ArkUI_NodeHandle node, ArkUI_HostWindow
 
 **描述**
 
-Get info of the window to which the node belongs.
+获取节点所属的窗口信息。
 
 **起始版本：** 15
 
@@ -2769,14 +2769,14 @@ Get info of the window to which the node belongs.
 
 | 参数项 | 描述 |
 | -- | -- |
-| ArkUI_NodeHandle node | Target node object. |
-| [ArkUI_HostWindowInfo](capi-arkui-nativemodule-arkui-hostwindowinfo.md)** info | Window info. Use [OH_ArkUI_HostWindowInfo_Destroy](capi-native-type-h.md#oh_arkui_hostwindowinfo_destroy) to release memory. |
+| [ArkUI_NodeHandle](capi-arkui-nativemodule-arkui-node8h.md) node | 目标节点对象。 |
+| [ArkUI_HostWindowInfo](capi-arkui-nativemodule-arkui-hostwindowinfo.md)** info | 窗口信息。使用[OH_ArkUI_HostWindowInfo_Destroy](capi-native-type-h.md#oh_arkui_hostwindowinfo_destroy)释放内存。 |
 
 **返回：**
 
 | 类型 | 说明 |
 | -- | -- |
-| int32_t | Error code.<br>         [ARKUI_ERROR_CODE_NO_ERROR](capi-native-type-h.md#arkui_errorcode) success.<br>         [ARKUI_ERROR_CODE_PARAM_INVALID](capi-native-type-h.md#arkui_errorcode) Function parameter exception.<br>         [ARKUI_ERROR_CODE_NODE_NOT_ON_MAIN_TREE](capi-native-type-h.md#arkui_errorcode) The node is not mounted. |
+| int32_t | 错误码。<br>     <br>[ARKUI_ERROR_CODE_NO_ERROR](capi-native-type-h.md#arkui_errorcode) 成功。<br>     <br>[ARKUI_ERROR_CODE_PARAM_INVALID](capi-native-type-h.md#arkui_errorcode) 函数参数异常。<br>     <br>[ARKUI_ERROR_CODE_CAPI_INIT_ERROR](capi-native-type-h.md#arkui_errorcode) CAPI初始化错误。<br>     <br>[ARKUI_ERROR_CODE_NODE_NOT_ON_MAIN_TREE](capi-native-type-h.md#arkui_errorcode) 节点未挂载到节点树上。 |
 
 ### OH_ArkUI_NodeUtils_GetFirstChildIndexWithoutExpand()
 
@@ -2794,7 +2794,7 @@ int32_t OH_ArkUI_NodeUtils_GetFirstChildIndexWithoutExpand(ArkUI_NodeHandle node
 
 | 参数项 | 描述 |
 | -- | -- |
-| ArkUI_NodeHandle node | 目标节点的指针。 |
+| [ArkUI_NodeHandle](capi-arkui-nativemodule-arkui-node8h.md) node | 目标节点的指针。 |
 | uint32_t* index | 子节点的下标值。 |
 
 **返回：**
@@ -2819,7 +2819,7 @@ int32_t OH_ArkUI_NodeUtils_GetLastChildIndexWithoutExpand(ArkUI_NodeHandle node,
 
 | 参数项 | 描述 |
 | -- | -- |
-| ArkUI_NodeHandle node | 目标节点的指针。 |
+| [ArkUI_NodeHandle](capi-arkui-nativemodule-arkui-node8h.md) node | 目标节点的指针。 |
 | uint32_t* index | 子节点的下标值。 |
 
 **返回：**
@@ -2844,9 +2844,9 @@ int32_t OH_ArkUI_NodeUtils_GetChildWithExpandMode(ArkUI_NodeHandle node, int32_t
 
 | 参数项 | 描述 |
 | -- | -- |
-| ArkUI_NodeHandle node | 目标节点的指针。 |
+| [ArkUI_NodeHandle](capi-arkui-nativemodule-arkui-node8h.md) node | 目标节点的指针。 |
 | int32_t position | 对应子节点的下标。 |
-| ArkUI_NodeHandle* subnode | 获取子节点的指针。 |
+| [ArkUI_NodeHandle](capi-arkui-nativemodule-arkui-node8h.md)* subnode | 获取子节点的指针。 |
 | uint32_t expandMode | 节点遍历展开方式。 [ArkUI_ExpandMode](capi-native-type-h.md#arkui_expandmode)。 |
 
 **返回：**
@@ -2871,7 +2871,7 @@ int32_t OH_ArkUI_List_CloseAllSwipeActions(ArkUI_NodeHandle node, void* userData
 
 | 参数项 | 描述 |
 | -- | -- |
-| ArkUI_NodeHandle node | 需要注册事件的节点对象。 |
+| [ArkUI_NodeHandle](capi-arkui-nativemodule-arkui-node8h.md) node | 需要注册事件的节点对象。 |
 | void\* userData | 自定义事件参数，当事件触发时在回调参数中携带回来。 |
 | void (\*onFinish)(void\* userData) | 在收起动画完成后触发的回调。 |
 
@@ -2897,13 +2897,13 @@ Obtain the UIContext pointer to the page where the node is located.
 
 | 参数项 | 描述 |
 | -- | -- |
-| ArkUI_NodeHandle node | The node. |
+| [ArkUI_NodeHandle](capi-arkui-nativemodule-arkui-node8h.md) node | The node. |
 
 **返回：**
 
 | 类型 | 说明 |
 | -- | -- |
-| ArkUI_ContextHandle | The UIContext pointer.<br>        If a null pointer is returned, it may be because the node is empty. |
+| [ArkUI_ContextHandle](capi-arkui-nativemodule-arkui-context8h.md) | The UIContext pointer.<br>        If a null pointer is returned, it may be because the node is empty. |
 
 ### OH_ArkUI_RegisterSystemColorModeChangeEvent()
 
@@ -2921,7 +2921,7 @@ The event called when the system color mode changes.Only one system color change
 
 | 参数项 | 描述 |
 | -- | -- |
-| ArkUI_NodeHandle node | Indicates the target node. |
+| [ArkUI_NodeHandle](capi-arkui-nativemodule-arkui-node8h.md) node | Indicates the target node. |
 | void\* userData | Indicates the custom data to be saved. |
 | void (\*onColorModeChange)(ArkUI_SystemColorMode colorMode | Callback Events. |
 
@@ -2947,7 +2947,7 @@ Unregister the event callback when the system color mode changes.
 
 | 参数项 | 描述 |
 | -- | -- |
-| ArkUI_NodeHandle node | Indicates the target node. |
+| [ArkUI_NodeHandle](capi-arkui-nativemodule-arkui-node8h.md) node | Indicates the target node. |
 
 ### OH_ArkUI_RegisterSystemFontStyleChangeEvent()
 
@@ -2965,7 +2965,7 @@ The event called when the system font style changes.Only one system font change 
 
 | 参数项 | 描述 |
 | -- | -- |
-| ArkUI_NodeHandle node | Indicates the target node. |
+| [ArkUI_NodeHandle](capi-arkui-nativemodule-arkui-node8h.md) node | Indicates the target node. |
 | void\* userData | Indicates the custom data to be saved. |
 | void (\*onFontStyleChange)(ArkUI_SystemFontStyleEvent\* event | Callback Events. |
 
@@ -2991,7 +2991,7 @@ Unregister the event callback when the system font style changes.
 
 | 参数项 | 描述 |
 | -- | -- |
-| ArkUI_NodeHandle node | Indicates the target node. |
+| [ArkUI_NodeHandle](capi-arkui-nativemodule-arkui-node8h.md) node | Indicates the target node. |
 
 ### OH_ArkUI_SystemFontStyleEvent_GetFontSizeScale()
 
@@ -3049,7 +3049,7 @@ int32_t OH_ArkUI_NodeUtils_GetAttachedNodeHandleById(const char* id, ArkUI_NodeH
 
 **描述**
 
-Get the node handle by id.
+根据用户id获取目标节点。
 
 **起始版本：** 15
 
@@ -3057,14 +3057,14 @@ Get the node handle by id.
 
 | 参数项 | 描述 |
 | -- | -- |
-| const char* id | The id of the target node handle. |
-| ArkUI_NodeHandle* node | The handle of target node handle. |
+| const char* id | 目标节点的id。 |
+| [ArkUI_NodeHandle](capi-arkui-nativemodule-arkui-node8h.md)* node | 目标节点的指针。 |
 
 **返回：**
 
 | 类型 | 说明 |
 | -- | -- |
-| int32_t | Error code.<br>         [ARKUI_ERROR_CODE_NO_ERROR](capi-native-type-h.md#arkui_errorcode) success.<br>         [ARKUI_ERROR_CODE_PARAM_INVALID](capi-native-type-h.md#arkui_errorcode) Function parameter exception. |
+| int32_t | 错误码。<br>     <br>[ARKUI_ERROR_CODE_NO_ERROR](capi-native-type-h.md#arkui_errorcode) 成功。<br>     <br>[ARKUI_ERROR_CODE_PARAM_INVALID](capi-native-type-h.md#arkui_errorcode) 函数参数异常。 |
 
 ### OH_ArkUI_NodeUtils_MoveTo()
 
@@ -3082,8 +3082,8 @@ int32_t OH_ArkUI_NodeUtils_MoveTo(ArkUI_NodeHandle node, ArkUI_NodeHandle target
 
 | 参数项 | 描述 |
 | -- | -- |
-| ArkUI_NodeHandle node | 待移动的节点对象。 |
-| ArkUI_NodeHandle target_parent | 目标父节点指针。 |
+| [ArkUI_NodeHandle](capi-arkui-nativemodule-arkui-node8h.md) node | 待移动的节点对象。 |
+| [ArkUI_NodeHandle](capi-arkui-nativemodule-arkui-node8h.md) target_parent | 目标父节点指针。 |
 | int32_t index | 转移后的节点下标，如果下标值为非法值，则添加在目标父节点的最后一位。 |
 
 **返回：**
@@ -3108,7 +3108,7 @@ int32_t OH_ArkUI_NativeModule_InvalidateAttributes(ArkUI_NodeHandle node)
 
 | 参数项 | 描述 |
 | -- | -- |
-| ArkUI_NodeHandle node | 待更新的节点对象。 |
+| [ArkUI_NodeHandle](capi-arkui-nativemodule-arkui-node8h.md) node | 待更新的节点对象。 |
 
 **返回：**
 
@@ -3132,7 +3132,7 @@ int32_t OH_ArkUI_NodeUtils_SetCrossLanguageOption(ArkUI_NodeHandle node, ArkUI_C
 
 | 参数项 | 描述 |
 | -- | -- |
-| ArkUI_NodeHandle node | 目标节点的指针。 |
+| [ArkUI_NodeHandle](capi-arkui-nativemodule-arkui-node8h.md) node | 目标节点的指针。 |
 | [ArkUI_CrossLanguageOption](capi-arkui-nativemodule-arkui-crosslanguageoption.md)* option | 跨语言配置项 [ArkUI_CrossLanguageOption](capi-arkui-nativemodule-arkui-crosslanguageoption.md)。 |
 
 **返回：**
@@ -3157,7 +3157,7 @@ int32_t OH_ArkUI_NodeUtils_GetCrossLanguageOption(ArkUI_NodeHandle node, ArkUI_C
 
 | 参数项 | 描述 |
 | -- | -- |
-| ArkUI_NodeHandle node | 目标节点的指针。 |
+| [ArkUI_NodeHandle](capi-arkui-nativemodule-arkui-node8h.md) node | 目标节点的指针。 |
 | [ArkUI_CrossLanguageOption](capi-arkui-nativemodule-arkui-crosslanguageoption.md)* option | 跨语言配置项 [ArkUI_CrossLanguageOption](capi-arkui-nativemodule-arkui-crosslanguageoption.md)。 |
 
 **返回：**
@@ -3182,7 +3182,7 @@ Registers a callback for node when layout is completed.
 
 | 参数项 | 描述 |
 | -- | -- |
-| ArkUI_NodeHandle node | Indicates the target node. |
+| [ArkUI_NodeHandle](capi-arkui-nativemodule-arkui-node8h.md) node | Indicates the target node. |
 | void\* userData | Indicates the custom data used in onLayoutCompleted callback function. |
 | void (\*onLayoutCompleted)(void\* userData) | Indicates the function when layout completed is callback. |
 
@@ -3208,7 +3208,7 @@ Registers a callback for node when draw is completed.
 
 | 参数项 | 描述 |
 | -- | -- |
-| ArkUI_NodeHandle node | Indicates the target node. |
+| [ArkUI_NodeHandle](capi-arkui-nativemodule-arkui-node8h.md) node | Indicates the target node. |
 | void\* userData | Indicates the custom data used in onDrawCompleted callback function. |
 | void (\*onDrawCompleted)(void\* userData) | Indicates the function when draw completed is callback. |
 
@@ -3234,7 +3234,7 @@ Unregisters the layout completed callback for node.
 
 | 参数项 | 描述 |
 | -- | -- |
-| ArkUI_NodeHandle node | Indicates the target node. |
+| [ArkUI_NodeHandle](capi-arkui-nativemodule-arkui-node8h.md) node | Indicates the target node. |
 
 **返回：**
 
@@ -3258,7 +3258,7 @@ Unregisters the draw completed callback for node.
 
 | 参数项 | 描述 |
 | -- | -- |
-| ArkUI_NodeHandle node | Indicates the target node. |
+| [ArkUI_NodeHandle](capi-arkui-nativemodule-arkui-node8h.md) node | Indicates the target node. |
 
 **返回：**
 
@@ -3282,9 +3282,9 @@ Obtains a snapshot of a given component. If the node is not in the component tre
 
 | 参数项 | 描述 |
 | -- | -- |
-| ArkUI_NodeHandle node | Target node. |
-| ArkUI_SnapshotOptions* snapshotOptions | Snapshot settings. If the value is null, the default settings are used.Snapshot settings include scaling, color space, and dynamic range configuration.Scaling: floating-point value greater than 0.Color space: <b>3</b> (DISPLAY_P3), <b>4</b> (SRGB), <b>27</b> (DISPLAY_BT2020_SRGB).Dynamic range: [ArkUI_DynamicRangeMode](capi-native-type-h.md#arkui_dynamicrangemode). |
-| OH_PixelmapNative** pixelmap | Pointer to the <b>Pixelmap</b> object created by the system. |
+| [ArkUI_NodeHandle](capi-arkui-nativemodule-arkui-node8h.md) node | Target node. |
+| [ArkUI_SnapshotOptions](capi-arkui-nativemodule-arkui-snapshotoptions.md)* snapshotOptions | Snapshot settings. If the value is null, the default settings are used.Snapshot settings include scaling, color space, and dynamic range configuration.Scaling: floating-point value greater than 0.Color space: <b>3</b> (DISPLAY_P3), <b>4</b> (SRGB), <b>27</b> (DISPLAY_BT2020_SRGB).Dynamic range: [ArkUI_DynamicRangeMode](capi-native-type-h.md#arkui_dynamicrangemode). |
+| [OH_PixelmapNative](capi-arkui-nativemodule-oh-pixelmapnative.md)** pixelmap | Pointer to the <b>Pixelmap</b> object created by the system. |
 
 **返回：**
 
@@ -3333,8 +3333,8 @@ int32_t OH_ArkUI_NodeUtils_GetPositionToParent(ArkUI_NodeHandle node, ArkUI_IntO
 
 | 参数项 | 描述 |
 | -- | -- |
-| ArkUI_NodeHandle node | 目标节点。 |
-| ArkUI_IntOffset* globalOffset | 目标节点相对父节点的偏移值，单位：px。 |
+| [ArkUI_NodeHandle](capi-arkui-nativemodule-arkui-node8h.md) node | 目标节点。 |
+| [ArkUI_IntOffset](capi-arkui-nativemodule-arkui-intoffset.md)* globalOffset | 目标节点相对父节点的偏移值，单位：px。 |
 
 **返回：**
 
@@ -3358,7 +3358,7 @@ ArkUI_ErrorCode OH_ArkUI_AddSupportedUIStates(ArkUI_NodeHandle node, int32_t uiS
 
 | 参数项 | 描述 |
 | -- | -- |
-| ArkUI_NodeHandle node | 目标节点。 |
+| [ArkUI_NodeHandle](capi-arkui-nativemodule-arkui-node8h.md) node | 目标节点。 |
 | int32_t uiStates | 目标节点需要处理的目标UI状态。所有目标UI状态的组合结果可以通过“|”操作来计算。例如：targetUIStates = ArkUI_UIState::PRESSED | ArkUI_UIState::FOCUSED。 |
 | void (statesChangeHandler)(int32_t currentStates | UI状态改变处理函数。返回当前UI状态，该值是所有当前状态枚举值“|”计算的结果，可以通过执行“&”操作来确定状态。例如：if (currentStates & ArkUI_UIState::PRESSED == ArkUI_UIState::PRESSED)。但是，对于正常状态检查，应直接使用等号。例如：if (currentStates == ArkUI_UIState::NORMAL) |
 | bool excludeInner | 禁止内部默认状态样式的标志。​​true​​表示禁用系统内部的默认样式，false表示不禁用。 |
@@ -3386,7 +3386,7 @@ ArkUI_ErrorCode OH_ArkUI_RemoveSupportedUIStates(ArkUI_NodeHandle node, int32_t 
 
 | 参数项 | 描述 |
 | -- | -- |
-| ArkUI_NodeHandle node | 目标节点。 |
+| [ArkUI_NodeHandle](capi-arkui-nativemodule-arkui-node8h.md) node | 目标节点。 |
 | int32_t uiStates | 节点需要删除的目标UI状态。 |
 
 **返回：**
@@ -3403,7 +3403,7 @@ int32_t OH_ArkUI_RunTaskInScope(ArkUI_ContextHandle uiContext, void* userData, v
 
 **描述**
 
-Run a custom function inside the UIContext scope.
+在目标UI上下文中执行传入的自定义回调函数。示例请参考：[在NDK中保证多实例场景功能正常](../../ui/ndk-scope-task.md)。
 
 **起始版本：** 20
 
@@ -3411,15 +3411,15 @@ Run a custom function inside the UIContext scope.
 
 | 参数项 | 描述 |
 | -- | -- |
-| ArkUI_ContextHandle uiContext | Indicates the pointer to a UI instance. |
-| void\* userData | Indicates the pointer to the custom data. |
-| void(\*callback)(void\* userData) | The custom function. |
+| [ArkUI_ContextHandle](capi-arkui-nativemodule-arkui-context8h.md) uiContext | 表示目标UI上下文的指针。 |
+| void\* userData | 开发者自定义数据指针，以便在回调函数中处理自定义数据，开发者需自行保证自定义函数被执行时的数据有效性。 |
+| void(\*callback)(void\* userData) | 开发者自定义回调函数。 |
 
 **返回：**
 
 | 类型 | 说明 |
 | -- | -- |
-| int32_t | Returns the result code.<br>         Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-native-type-h.md#arkui_errorcode) if the operation is successful.<br>         Returns [ARKUI_ERROR_CODE_CAPI_INIT_ERROR](capi-native-type-h.md#arkui_errorcode) if the CAPI init error.<br>         Returns [ARKUI_ERROR_CODE_UI_CONTEXT_INVALID](capi-native-type-h.md#arkui_errorcode) if the uiContext is invalid.<br>         Returns [ARKUI_ERROR_CODE_CALLBACK_INVALID](capi-native-type-h.md#arkui_errorcode) if the callback function is invalid. |
+| int32_t | 错误码。<br>     <br>[ARKUI_ERROR_CODE_NO_ERROR](capi-native-type-h.md#arkui_errorcode) 成功。<br>     <br>[ARKUI_ERROR_CODE_CAPI_INIT_ERROR](capi-native-type-h.md#arkui_errorcode) CAPI初始化错误。<br>     <br>[ARKUI_ERROR_CODE_UI_CONTEXT_INVALID](capi-native-type-h.md#arkui_errorcode) UIContext对象无效。<br>     <br>[ARKUI_ERROR_CODE_CALLBACK_INVALID](capi-native-type-h.md#arkui_errorcode) 回调函数无效。 |
 
 ### OH_ArkUI_NodeUtils_GetNodeHandleByUniqueId()
 
@@ -3438,7 +3438,7 @@ Get the node handle by uniqueId.
 | 参数项 | 描述 |
 | -- | -- |
 | const uint32_t uniqueId | The uniqueId of the target node handle. |
-| ArkUI_NodeHandle* node | The handle of target node handle. |
+| [ArkUI_NodeHandle](capi-arkui-nativemodule-arkui-node8h.md)* node | The handle of target node handle. |
 
 **返回：**
 
@@ -3454,7 +3454,7 @@ int32_t OH_ArkUI_NodeUtils_GetNodeUniqueId(ArkUI_NodeHandle node, int32_t* uniqu
 
 **描述**
 
-Get the uniqueId of the target node handle.
+获取目标节点的uniqueId。
 
 **起始版本：** 20
 
@@ -3462,14 +3462,14 @@ Get the uniqueId of the target node handle.
 
 | 参数项 | 描述 |
 | -- | -- |
-| ArkUI_NodeHandle node | The ArkUI-NodeHandle pointer. |
-| int32_t* uniqueId | The uniqueId of the target node handle, default value is -1. |
+| [ArkUI_NodeHandle](capi-arkui-nativemodule-arkui-node8h.md) node | ArkUI节点指针。 |
+| int32_t* uniqueId | 目标节点的uniqueId。组件标识ID只读，且进程内唯一，若该节点存在，返回该节点的uniqueId值；否则返回-1。 |
 
 **返回：**
 
 | 类型 | 说明 |
 | -- | -- |
-| int32_t | Error code.<br>         [ARKUI_ERROR_CODE_NO_ERROR](capi-native-type-h.md#arkui_errorcode) if the operation is successful.<br>         [ARKUI_ERROR_CODE_PARAM_INVALID](capi-native-type-h.md#arkui_errorcode) Function parameter exception.<br>         [ARKUI_ERROR_CODE_CAPI_INIT_ERROR](capi-native-type-h.md#arkui_errorcode) if the CAPI init error. |
+| int32_t | 错误码。<br>     <br>[ARKUI_ERROR_CODE_NO_ERROR](capi-native-type-h.md#arkui_errorcode) 成功。<br>     <br>[ARKUI_ERROR_CODE_PARAM_INVALID](capi-native-type-h.md#arkui_errorcode) 方法参数错误。<br>     <br>[ARKUI_ERROR_CODE_CAPI_INIT_ERROR](capi-native-type-h.md#arkui_errorcode) CAPI初始化错误。 |
 
 ### OH_ArkUI_NativeModule_IsInRenderState()
 
@@ -3487,7 +3487,7 @@ int32_t OH_ArkUI_NativeModule_IsInRenderState(ArkUI_NodeHandle node, bool* isInR
 
 | 参数项 | 描述 |
 | -- | -- |
-| ArkUI_NodeHandle node | ArkUI节点指针。 |
+| [ArkUI_NodeHandle](capi-arkui-nativemodule-arkui-node8h.md) node | ArkUI节点指针。 |
 | bool* isInRenderState | 节点是否处于渲染状态。true：处于渲染状态；false：不处于渲染状态。 |
 
 **返回：**
@@ -3512,8 +3512,8 @@ int32_t OH_ArkUI_NativeModule_AdoptChild(ArkUI_NodeHandle node, ArkUI_NodeHandle
 
 | 参数项 | 描述 |
 | -- | -- |
-| ArkUI_NodeHandle node | ArkUI_NodeHandle指针，指定待接纳节点的父节点。 |
-| ArkUI_NodeHandle child | ArkUI_NodeHandle指针，指定待被接纳的子节点。 |
+| [ArkUI_NodeHandle](capi-arkui-nativemodule-arkui-node8h.md) node | ArkUI_NodeHandle指针，指定待接纳节点的父节点。 |
+| [ArkUI_NodeHandle](capi-arkui-nativemodule-arkui-node8h.md) child | ArkUI_NodeHandle指针，指定待被接纳的子节点。 |
 
 **返回：**
 
@@ -3537,8 +3537,8 @@ int32_t OH_ArkUI_NativeModule_RemoveAdoptedChild(ArkUI_NodeHandle node, ArkUI_No
 
 | 参数项 | 描述 |
 | -- | -- |
-| ArkUI_NodeHandle node | ArkUI_NodeHandle指针，父节点。 |
-| ArkUI_NodeHandle child | ArkUI_NodeHandle指针，将要被移除的子节点。 |
+| [ArkUI_NodeHandle](capi-arkui-nativemodule-arkui-node8h.md) node | ArkUI_NodeHandle指针，父节点。 |
+| [ArkUI_NodeHandle](capi-arkui-nativemodule-arkui-node8h.md) child | ArkUI_NodeHandle指针，将要被移除的子节点。 |
 
 **返回：**
 
@@ -3562,7 +3562,7 @@ int32_t OH_ArkUI_SetForceDarkConfig(ArkUI_ContextHandle uiContext, bool forceDar
 
 | 参数项 | 描述 |
 | -- | -- |
-| ArkUI_ContextHandle uiContext | UI实例对象指针。 <br>         如果该值为null，则该功能适用于整个应用进程。 |
+| [ArkUI_ContextHandle](capi-arkui-nativemodule-arkui-context8h.md) uiContext | UI实例对象指针。 <br>         如果该值为null，则该功能适用于整个应用进程。 |
 | bool forceDark | 是否使用反色能力。取值为true：组件使用反色能力，取值为false：组件不使用反色能力。 |
 | [ArkUI_NodeType](capi-native-node-h.md#arkui_nodetype) nodeType | 指定使用反色能力生效组件范围。 <br>         ARKUI_NODE_UNDEFINED代表对所有组件类型生效。 |
 | uint32_t (\*colorInvertFunc)(uint32_t color) | 开发者自定义反色算法函数。 <br>         如果该值为nullptr，则对组件使用系统默认反色算法，即三原色取反。 |
@@ -3589,7 +3589,7 @@ int32_t OH_ArkUI_NativeModule_RegisterCommonEvent(ArkUI_NodeHandle node, ArkUI_N
 
 | 参数项 | 描述 |
 | -- | -- |
-| ArkUI_NodeHandle node | 目标节点。 |
+| [ArkUI_NodeHandle](capi-arkui-nativemodule-arkui-node8h.md) node | 目标节点。 |
 | [ArkUI_NodeEventType](capi-native-node-h.md#arkui_nodeeventtype) eventType | 事件类型。 |
 | void\* userData | 开发者自定义的数据指针，以便在回调函数中处理自定义数据，需确保自定义函数执行时数据有效。 |
 | void (\*callback)(ArkUI_NodeEvent\* event) | 开发者自定义的回调函数。 |
@@ -3616,7 +3616,7 @@ int32_t OH_ArkUI_NativeModule_UnregisterCommonEvent(ArkUI_NodeHandle node, ArkUI
 
 | 参数项 | 描述 |
 | -- | -- |
-| ArkUI_NodeHandle node | 目标节点。 |
+| [ArkUI_NodeHandle](capi-arkui-nativemodule-arkui-node8h.md) node | 目标节点。 |
 | [ArkUI_NodeEventType](capi-native-node-h.md#arkui_nodeeventtype) eventType | 事件类型。 |
 
 **返回：**
@@ -3641,7 +3641,7 @@ int32_t OH_ArkUI_NativeModule_RegisterCommonVisibleAreaApproximateChangeEvent(Ar
 
 | 参数项 | 描述 |
 | -- | -- |
-| ArkUI_NodeHandle node | 目标节点。 |
+| [ArkUI_NodeHandle](capi-arkui-nativemodule-arkui-node8h.md) node | 目标节点。 |
 | float\* ratios | 阈值数组，表示组件的可见区域。 |
 | int32_t size | 阈值数组的大小。 |
 | float expectedUpdateInterval | 开发人员预期的计算间隔。 |
@@ -3670,7 +3670,7 @@ int32_t OH_ArkUI_NativeModule_UnregisterCommonVisibleAreaApproximateChangeEvent(
 
 | 参数项 | 描述 |
 | -- | -- |
-| ArkUI_NodeHandle node | 目标节点。 |
+| [ArkUI_NodeHandle](capi-arkui-nativemodule-arkui-node8h.md) node | 目标节点。 |
 
 **返回：**
 
@@ -3694,9 +3694,9 @@ int32_t OH_ArkUI_NativeModule_ConvertPositionToWindow(ArkUI_NodeHandle currentNo
 
 | 参数项 | 描述 |
 | -- | -- |
-| ArkUI_NodeHandle currentNode | 指定节点。 |
-| ArkUI_IntOffset localPosition | 点在指定节点坐标系中的坐标，单位：px。 |
-| ArkUI_IntOffset* windowPosition | 指向接收转换后坐标（位于当前窗口坐标系中，单位：px）的指针。 |
+| [ArkUI_NodeHandle](capi-arkui-nativemodule-arkui-node8h.md) currentNode | 指定节点。 |
+| [ArkUI_IntOffset](capi-arkui-nativemodule-arkui-intoffset.md) localPosition | 点在指定节点坐标系中的坐标，单位：px。 |
+| [ArkUI_IntOffset](capi-arkui-nativemodule-arkui-intoffset.md)* windowPosition | 指向接收转换后坐标（位于当前窗口坐标系中，单位：px）的指针。 |
 
 **返回：**
 
@@ -3720,9 +3720,9 @@ int32_t OH_ArkUI_NativeModule_ConvertPositionFromWindow(ArkUI_NodeHandle targetN
 
 | 参数项 | 描述 |
 | -- | -- |
-| ArkUI_NodeHandle targetNode | 目标节点。 |
-| ArkUI_IntOffset windowPosition | 点在当前窗口坐标系中的坐标，单位：px。 |
-| ArkUI_IntOffset* localPosition | 指向接收转换后坐标（位于目标节点坐标系中，单位：px）的指针。 |
+| [ArkUI_NodeHandle](capi-arkui-nativemodule-arkui-node8h.md) targetNode | 目标节点。 |
+| [ArkUI_IntOffset](capi-arkui-nativemodule-arkui-intoffset.md) windowPosition | 点在当前窗口坐标系中的坐标，单位：px。 |
+| [ArkUI_IntOffset](capi-arkui-nativemodule-arkui-intoffset.md)* localPosition | 指向接收转换后坐标（位于目标节点坐标系中，单位：px）的指针。 |
 
 **返回：**
 
@@ -3746,7 +3746,7 @@ int32_t OH_ArkUI_Swiper_FinishAnimation(ArkUI_NodeHandle node)
 
 | 参数项 | 描述 |
 | -- | -- |
-| ArkUI_NodeHandle node | 指定的节点。 |
+| [ArkUI_NodeHandle](capi-arkui-nativemodule-arkui-node8h.md) node | 指定的节点。 |
 
 **返回：**
 
@@ -3762,7 +3762,7 @@ int32_t OH_ArkUI_PostAsyncUITask(ArkUI_ContextHandle context, void* asyncUITaskD
 
 **描述**
 
-Post UI task to background threads.
+将asyncUITask函数提交至ArkUI框架提供的非UI线程中执行，asyncUITask函数执行完毕后，在UI线程调用onFinish函数。适用于多线程创建UI组件的场景，开发者可使用此接口在非UI线程创建UI组件，随后在UI线程将创建完成的组件挂载至主树上。
 
 **起始版本：** 22
 
@@ -3770,16 +3770,16 @@ Post UI task to background threads.
 
 | 参数项 | 描述 |
 | -- | -- |
-| ArkUI_ContextHandle context | UIContext pointer of the page where the UI task located. |
-| void\* asyncUITaskData | Parameter of asyncUITask and onFinish. |
-| void (\*asyncUITask)(void\* asyncUITaskData) | Function executed by a background thread. |
-| void (\*onFinish)(void\* asyncUITaskData) | Function executed by UI thread after async UI task is executed. |
+| [ArkUI_ContextHandle](capi-arkui-nativemodule-arkui-context8h.md) context | UI实例对象指针。 |
+| void\* asyncUITaskData | 开发者自定义数据指针，作为asyncUITask和onFinish的入参。可以传入空指针。 |
+| void (\*asyncUITask)(void\* asyncUITaskData) | 在非UI线程执行的函数。 |
+| void (\*onFinish)(void\* asyncUITaskData) | asyncUITask执行完成后，在UI线程执行的函数。可以传入空指针。 |
 
 **返回：**
 
 | 类型 | 说明 |
 | -- | -- |
-| int32_t | Returns the result code.<br>         Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-native-type-h.md#arkui_errorcode) if the operation is successful.<br>         Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-native-type-h.md#arkui_errorcode) if context or asyncUITask is nullptr. |
+| int32_t | 错误码。<br>     <br>[ARKUI_ERROR_CODE_NO_ERROR](capi-native-type-h.md#arkui_errorcode) 成功。<br>     <br>[ARKUI_ERROR_CODE_PARAM_INVALID](capi-native-type-h.md#arkui_errorcode) context对象无效或asyncUITask为空指针。 |
 
 ### OH_ArkUI_PostUITask()
 
@@ -3789,7 +3789,7 @@ int32_t OH_ArkUI_PostUITask(ArkUI_ContextHandle context, void* taskData, void (*
 
 **描述**
 
-Post UI task to UI thread.
+将task函数提交至UI线程中执行。适用于多线程创建UI组件的场景，当开发者在自建的线程中创建UI组件时，可以使用此接口将创建完成的组件挂载到UI线程的主树上。
 
 **起始版本：** 22
 
@@ -3797,15 +3797,15 @@ Post UI task to UI thread.
 
 | 参数项 | 描述 |
 | -- | -- |
-| ArkUI_ContextHandle context | UIContext pointer of the page where the UI task located. |
-| void\* taskData | Parameter of task. |
-| void (\*task)(void\* taskData) | Function executed by UI thread. |
+| [ArkUI_ContextHandle](capi-arkui-nativemodule-arkui-context8h.md) context | UI实例对象指针。 |
+| void\* taskData | 开发者自定义数据指针，作为task的入参。可以传入空指针。 |
+| void (\*task)(void\* taskData) | 在UI线程执行的函数。 |
 
 **返回：**
 
 | 类型 | 说明 |
 | -- | -- |
-| int32_t | Returns the result code.<br>         Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-native-type-h.md#arkui_errorcode) if the operation is successful.<br>         Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-native-type-h.md#arkui_errorcode) if context or task is nullptr. |
+| int32_t | 错误码。<br>     <br>[ARKUI_ERROR_CODE_NO_ERROR](capi-native-type-h.md#arkui_errorcode) 成功。<br>     <br>[ARKUI_ERROR_CODE_PARAM_INVALID](capi-native-type-h.md#arkui_errorcode) context对象无效或task为空指针。 |
 
 ### OH_ArkUI_NativeModule_AtomicServiceMenuBarSetVisible()
 
@@ -3823,7 +3823,7 @@ int32_t OH_ArkUI_NativeModule_AtomicServiceMenuBarSetVisible(ArkUI_ContextHandle
 
 | 参数项 | 描述 |
 | -- | -- |
-| ArkUI_ContextHandle uiContext | ArkUI上下文句柄，指定的ArkUI容器上下文。 |
+| [ArkUI_ContextHandle](capi-arkui-nativemodule-arkui-context8h.md) uiContext | ArkUI上下文句柄，指定的ArkUI容器上下文。 |
 | bool visible | 菜单栏是否可见。true表示菜单栏可见，false表示菜单栏不可见。 |
 
 **返回：**
@@ -3848,7 +3848,7 @@ Registers a callback for listening for component dimension and area changes.This
 
 | 参数项 | 描述 |
 | -- | -- |
-| ArkUI_NodeHandle node | Pointer to [ArkUI_NodeHandle](capi-arkui-nativemodule-arkui-node8h.md). |
+| [ArkUI_NodeHandle](capi-arkui-nativemodule-arkui-node8h.md) node | Pointer to [ArkUI_NodeHandle](capi-arkui-nativemodule-arkui-node8h.md). |
 | float expectedUpdateInterval | Expected calculation interval, in milliseconds. |
 | void\* userData | Pointer to custom data. |
 | void (\*callback)(ArkUI_NodeEvent\* event) | Event callback. |
@@ -3875,7 +3875,7 @@ Unregisters the callback bound to the dimensions and area changes of a component
 
 | 参数项 | 描述 |
 | -- | -- |
-| ArkUI_NodeHandle node | Pointer to [ArkUI_NodeHandle](capi-arkui-nativemodule-arkui-node8h.md). |
+| [ArkUI_NodeHandle](capi-arkui-nativemodule-arkui-node8h.md) node | Pointer to [ArkUI_NodeHandle](capi-arkui-nativemodule-arkui-node8h.md). |
 
 **返回：**
 
@@ -3891,7 +3891,7 @@ int32_t OH_ArkUI_PostUITaskAndWait(ArkUI_ContextHandle context, void* taskData, 
 
 **描述**
 
-Post UI task to UI thread and wait until UI task finished.
+将task函数提交至UI线程中执行，调用此接口的线程将阻塞，直至task函数执行完成。在UI线程调用此接口等同于同步调用task函数。适用于多线程创建UI组件的场景，当开发者在多线程创建组件过程中需要调用仅支持UI线程的函数时，使用此接口返回UI线程调用函数，调用完成后继续多线程创建组件。当UI线程负载较高时，调用此接口的非UI线程可能长时间阻塞，影响多线程创建UI组件的性能，不建议频繁使用。
 
 **起始版本：** 22
 
@@ -3899,15 +3899,15 @@ Post UI task to UI thread and wait until UI task finished.
 
 | 参数项 | 描述 |
 | -- | -- |
-| ArkUI_ContextHandle context | UIContext pointer of the page where the UI task located. |
-| void\* taskData | Parameter of task. |
-| void (\*task)(void\* taskData) | Function executed by UI thread. |
+| [ArkUI_ContextHandle](capi-arkui-nativemodule-arkui-context8h.md) context | UI实例对象指针。 |
+| void\* taskData | 开发者自定义数据指针，作为task的入参。可以传入空指针。 |
+| void (\*task)(void\* taskData) | 在UI线程执行的函数。 |
 
 **返回：**
 
 | 类型 | 说明 |
 | -- | -- |
-| int32_t | Returns the result code.<br>         Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-native-type-h.md#arkui_errorcode) if the operation is successful.<br>         Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-native-type-h.md#arkui_errorcode) if context or task is nullptr. |
+| int32_t | 错误码。<br>     <br>[ARKUI_ERROR_CODE_NO_ERROR](capi-native-type-h.md#arkui_errorcode) 成功。<br>     <br>[ARKUI_ERROR_CODE_PARAM_INVALID](capi-native-type-h.md#arkui_errorcode) context对象无效或task为空指针。 |
 
 ### OH_ArkUI_Swiper_StartFakeDrag()
 
@@ -3925,7 +3925,7 @@ Start a fake drag of the Swiper node.Call OH_ArkUI_Swiper_FakeDragBy to simulate
 
 | 参数项 | 描述 |
 | -- | -- |
-| ArkUI_NodeHandle node | ArkUI_NodeHandle pointer. |
+| [ArkUI_NodeHandle](capi-arkui-nativemodule-arkui-node8h.md) node | ArkUI_NodeHandle pointer. |
 | bool* isSuccessful | If the fake drag started successfully, return true.If the Swiper is not ready to start the fake drag, or a real or fake drag is already in progress, return false. |
 
 **返回：**
@@ -3950,7 +3950,7 @@ Fake drag by an offset of the Swiper node.The OH_ArkUI_Swiper_StartFakeDrag must
 
 | 参数项 | 描述 |
 | -- | -- |
-| ArkUI_NodeHandle node | ArkUI_NodeHandle pointer. |
+| [ArkUI_NodeHandle](capi-arkui-nativemodule-arkui-node8h.md) node | ArkUI_NodeHandle pointer. |
 | float offset | The offset that needs to be scrolled. The unit is vp. |
 | bool* isConsumedOffset | If not in a fake drag progress, or no offset is consumed, return false.If any offset is consumed, return true. |
 
@@ -3976,7 +3976,7 @@ Stop a fake drag of the Swiper node.
 
 | 参数项 | 描述 |
 | -- | -- |
-| ArkUI_NodeHandle node | ArkUI_NodeHandle pointer. |
+| [ArkUI_NodeHandle](capi-arkui-nativemodule-arkui-node8h.md) node | ArkUI_NodeHandle pointer. |
 | bool* isSuccessful | If the fake drag stopped successfully, return true.If the Swiper is not ready to stop the fake drag, or no fake drag is in progress, return false. |
 
 **返回：**
@@ -4001,7 +4001,7 @@ Get the fake drag state of the Swiper node.
 
 | 参数项 | 描述 |
 | -- | -- |
-| ArkUI_NodeHandle node | ArkUI_NodeHandle pointer. |
+| [ArkUI_NodeHandle](capi-arkui-nativemodule-arkui-node8h.md) node | ArkUI_NodeHandle pointer. |
 | bool* isFakeDragging | If a fake drag is in progress return true, otherwise return false |
 
 **返回：**
@@ -4026,7 +4026,7 @@ Show the previous page of the Swiper node.
 
 | 参数项 | 描述 |
 | -- | -- |
-| ArkUI_NodeHandle node | ArkUI_NodeHandle pointer. |
+| [ArkUI_NodeHandle](capi-arkui-nativemodule-arkui-node8h.md) node | ArkUI_NodeHandle pointer. |
 
 **返回：**
 
@@ -4050,7 +4050,7 @@ Show the next page of the Swiper node.
 
 | 参数项 | 描述 |
 | -- | -- |
-| ArkUI_NodeHandle node | ArkUI_NodeHandle pointer. |
+| [ArkUI_NodeHandle](capi-arkui-nativemodule-arkui-node8h.md) node | ArkUI_NodeHandle pointer. |
 
 **返回：**
 
@@ -4074,7 +4074,7 @@ Show the previous page of the ArcSwiper node.
 
 | 参数项 | 描述 |
 | -- | -- |
-| ArkUI_NodeHandle node | ArkUI_NodeHandle pointer. |
+| [ArkUI_NodeHandle](capi-arkui-nativemodule-arkui-node8h.md) node | ArkUI_NodeHandle pointer. |
 
 **返回：**
 
@@ -4098,7 +4098,7 @@ Show the next page of the ArcSwiper node.
 
 | 参数项 | 描述 |
 | -- | -- |
-| ArkUI_NodeHandle node | ArkUI_NodeHandle pointer. |
+| [ArkUI_NodeHandle](capi-arkui-nativemodule-arkui-node8h.md) node | ArkUI_NodeHandle pointer. |
 
 **返回：**
 
@@ -4122,7 +4122,7 @@ Stop the animation executed by the ArcSwiper node.
 
 | 参数项 | 描述 |
 | -- | -- |
-| ArkUI_NodeHandle node | ArkUI_NodeHandle pointer. |
+| [ArkUI_NodeHandle](capi-arkui-nativemodule-arkui-node8h.md) node | ArkUI_NodeHandle pointer. |
 
 **返回：**
 
@@ -4138,7 +4138,7 @@ int32_t OH_ArkUI_NativeModule_GetPageRootNodeHandleByContext(ArkUI_ContextHandle
 
 **描述**
 
-Get the root node handle of the corresponding page of the Context.
+获取指定实例的页面的根节点。
 
 **起始版本：** 24
 
@@ -4146,14 +4146,14 @@ Get the root node handle of the corresponding page of the Context.
 
 | 参数项 | 描述 |
 | -- | -- |
-| ArkUI_ContextHandle context | A UIContext pointer. |
-| ArkUI_NodeHandle* rootNode | The handle of target root node handle. If the context's correspondingpage has no root node, the pointed-to value will be set to null. |
+| [ArkUI_ContextHandle](capi-arkui-nativemodule-arkui-context8h.md) context | UI实例对象指针。 |
+| [ArkUI_NodeHandle](capi-arkui-nativemodule-arkui-node8h.md)* rootNode | 目标根节点的句柄。如果上下文对应的页面没有根节点，则所指向的值将被设置为null。 |
 
 **返回：**
 
 | 类型 | 说明 |
 | -- | -- |
-| int32_t | Error code.<br>         Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-native-type-h.md#arkui_errorcode) if the operation is successful.<br>         Returns [ARKUI_ERROR_CODE_CAPI_INIT_ERROR](capi-native-type-h.md#arkui_errorcode) if the CAPI init error.<br>         Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-native-type-h.md#arkui_errorcode) if a parameter error occurs.<br>         Returns [ARKUI_ERROR_CODE_UI_CONTEXT_INVALID](capi-native-type-h.md#arkui_errorcode) if the uiContext is invalid. |
+| int32_t | 错误码。<br>     <br>[ARKUI_ERROR_CODE_NO_ERROR](capi-native-type-h.md#arkui_errorcode) 成功。<br>     <br>[ARKUI_ERROR_CODE_CAPI_INIT_ERROR](capi-native-type-h.md#arkui_errorcode) CAPI初始化错误。<br>     <br>[ARKUI_ERROR_CODE_UI_CONTEXT_INVALID](capi-native-type-h.md#arkui_errorcode) 实例异常。<br>     <br>[ARKUI_ERROR_CODE_PARAM_INVALID](capi-native-type-h.md#arkui_errorcode) 函数参数异常。 |
 
 ### OH_ArkUI_NodeEvent_GetGestureCollectInterceptInfo()
 
@@ -4171,7 +4171,7 @@ Obtains the <b>ArkUI_GestureCollectInterceptInfo</b> object from a specified <b>
 
 | 参数项 | 描述 |
 | -- | -- |
-| ArkUI_NodeEvent* nodeEvent | Pointer to the <b>ArkUI_NodeEvent</b> object. |
+| [ArkUI_NodeEvent](capi-arkui-nativemodule-arkui-nodeevent.md)* nodeEvent | Pointer to the <b>ArkUI_NodeEvent</b> object. |
 
 **返回：**
 
@@ -4195,7 +4195,7 @@ Set the subnode mounting policy of the target node.
 
 | 参数项 | 描述 |
 | -- | -- |
-| ArkUI_NodeHandle node | the target node handle. |
+| [ArkUI_NodeHandle](capi-arkui-nativemodule-arkui-node8h.md) node | the target node handle. |
 | [OH_ArkUI_NodeMountPolicy](capi-native-type-h.md#oh_arkui_nodemountpolicy) policy | the policy to set. Valid values correspond to [OH_ArkUI_NodeMountPolicy](capi-native-type-h.md#oh_arkui_nodemountpolicy). |
 
 **返回：**
@@ -4220,7 +4220,7 @@ Get the current child mount policy of the specified node.
 
 | 参数项 | 描述 |
 | -- | -- |
-| ArkUI_NodeHandle node | the target node handle. |
+| [ArkUI_NodeHandle](capi-arkui-nativemodule-arkui-node8h.md) node | the target node handle. |
 | [OH_ArkUI_NodeMountPolicy](capi-native-type-h.md#oh_arkui_nodemountpolicy)* policy | the pointer to receive child mounting policy of the target node. |
 
 **返回：**

@@ -1,6 +1,6 @@
 # MessageType (System API)
 
-Enumerates message type.
+Message type.
 
 **Since:** 8
 
@@ -18,7 +18,7 @@ Enumerates message type.
 TYPE_MMS_SEND_REQ = 128
 ```
 
-Indicates an MMS message sending request.
+MMS message sending request.
 
 **Since:** 8
 
@@ -33,16 +33,16 @@ Indicates an MMS message sending request.
 ## TYPE_MMS_SEND_CONF
 
 ```TypeScript
-TYPE_MMS_SEND_CONF
+TYPE_MMS_SEND_CONF = 129
 ```
 
-Indicates an MMS message sending configuration.
+MMS message sending configuration.
 
 **Since:** 8
 
 **ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
-<!--Device-MessageType-TYPE_MMS_SEND_CONF--><!--Device-MessageType-TYPE_MMS_SEND_CONF-End-->
+<!--Device-MessageType-TYPE_MMS_SEND_CONF = 129--><!--Device-MessageType-TYPE_MMS_SEND_CONF = 129-End-->
 
 **System capability:** SystemCapability.Telephony.SmsMms
 
@@ -51,16 +51,16 @@ Indicates an MMS message sending configuration.
 ## TYPE_MMS_NOTIFICATION_IND
 
 ```TypeScript
-TYPE_MMS_NOTIFICATION_IND
+TYPE_MMS_NOTIFICATION_IND = 130
 ```
 
-Indicates an MMS notification.
+MMS notification index.
 
 **Since:** 8
 
 **ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
-<!--Device-MessageType-TYPE_MMS_NOTIFICATION_IND--><!--Device-MessageType-TYPE_MMS_NOTIFICATION_IND-End-->
+<!--Device-MessageType-TYPE_MMS_NOTIFICATION_IND = 130--><!--Device-MessageType-TYPE_MMS_NOTIFICATION_IND = 130-End-->
 
 **System capability:** SystemCapability.Telephony.SmsMms
 
@@ -69,16 +69,16 @@ Indicates an MMS notification.
 ## TYPE_MMS_RESP_IND
 
 ```TypeScript
-TYPE_MMS_RESP_IND
+TYPE_MMS_RESP_IND = 131
 ```
 
-Indicates an MMS message response.
+MMS message response index.
 
 **Since:** 8
 
 **ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
-<!--Device-MessageType-TYPE_MMS_RESP_IND--><!--Device-MessageType-TYPE_MMS_RESP_IND-End-->
+<!--Device-MessageType-TYPE_MMS_RESP_IND = 131--><!--Device-MessageType-TYPE_MMS_RESP_IND = 131-End-->
 
 **System capability:** SystemCapability.Telephony.SmsMms
 
@@ -87,16 +87,16 @@ Indicates an MMS message response.
 ## TYPE_MMS_RETRIEVE_CONF
 
 ```TypeScript
-TYPE_MMS_RETRIEVE_CONF
+TYPE_MMS_RETRIEVE_CONF = 132
 ```
 
-Indicates an MMS message retrieval configuration.
+MMS message retrieval configuration.
 
 **Since:** 8
 
 **ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
-<!--Device-MessageType-TYPE_MMS_RETRIEVE_CONF--><!--Device-MessageType-TYPE_MMS_RETRIEVE_CONF-End-->
+<!--Device-MessageType-TYPE_MMS_RETRIEVE_CONF = 132--><!--Device-MessageType-TYPE_MMS_RETRIEVE_CONF = 132-End-->
 
 **System capability:** SystemCapability.Telephony.SmsMms
 
@@ -105,16 +105,16 @@ Indicates an MMS message retrieval configuration.
 ## TYPE_MMS_ACKNOWLEDGE_IND
 
 ```TypeScript
-TYPE_MMS_ACKNOWLEDGE_IND
+TYPE_MMS_ACKNOWLEDGE_IND = 133
 ```
 
-Indicates the type of multimedia message confirmation index.
+MMS message acknowledgement index.
 
 **Since:** 8
 
 **ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
-<!--Device-MessageType-TYPE_MMS_ACKNOWLEDGE_IND--><!--Device-MessageType-TYPE_MMS_ACKNOWLEDGE_IND-End-->
+<!--Device-MessageType-TYPE_MMS_ACKNOWLEDGE_IND = 133--><!--Device-MessageType-TYPE_MMS_ACKNOWLEDGE_IND = 133-End-->
 
 **System capability:** SystemCapability.Telephony.SmsMms
 
@@ -123,16 +123,16 @@ Indicates the type of multimedia message confirmation index.
 ## TYPE_MMS_DELIVERY_IND
 
 ```TypeScript
-TYPE_MMS_DELIVERY_IND
+TYPE_MMS_DELIVERY_IND = 134
 ```
 
-Indicates an MMS message delivery.
+MMS message delivery index.
 
 **Since:** 8
 
 **ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
-<!--Device-MessageType-TYPE_MMS_DELIVERY_IND--><!--Device-MessageType-TYPE_MMS_DELIVERY_IND-End-->
+<!--Device-MessageType-TYPE_MMS_DELIVERY_IND = 134--><!--Device-MessageType-TYPE_MMS_DELIVERY_IND = 134-End-->
 
 **System capability:** SystemCapability.Telephony.SmsMms
 
@@ -141,16 +141,16 @@ Indicates an MMS message delivery.
 ## TYPE_MMS_READ_REC_IND
 
 ```TypeScript
-TYPE_MMS_READ_REC_IND
+TYPE_MMS_READ_REC_IND = 135
 ```
 
-Indicates an MMS message read report on the recipient side.
+MMS message reading and receiving index.
 
 **Since:** 8
 
 **ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
-<!--Device-MessageType-TYPE_MMS_READ_REC_IND--><!--Device-MessageType-TYPE_MMS_READ_REC_IND-End-->
+<!--Device-MessageType-TYPE_MMS_READ_REC_IND = 135--><!--Device-MessageType-TYPE_MMS_READ_REC_IND = 135-End-->
 
 **System capability:** SystemCapability.Telephony.SmsMms
 
@@ -159,16 +159,16 @@ Indicates an MMS message read report on the recipient side.
 ## TYPE_MMS_READ_ORIG_IND
 
 ```TypeScript
-TYPE_MMS_READ_ORIG_IND
+TYPE_MMS_READ_ORIG_IND = 136
 ```
 
-Indicates an original MMS message read report on the originating side.
+Original MMS message reading index.
 
 **Since:** 8
 
 **ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
-<!--Device-MessageType-TYPE_MMS_READ_ORIG_IND--><!--Device-MessageType-TYPE_MMS_READ_ORIG_IND-End-->
+<!--Device-MessageType-TYPE_MMS_READ_ORIG_IND = 136--><!--Device-MessageType-TYPE_MMS_READ_ORIG_IND = 136-End-->
 
 **System capability:** SystemCapability.Telephony.SmsMms
 

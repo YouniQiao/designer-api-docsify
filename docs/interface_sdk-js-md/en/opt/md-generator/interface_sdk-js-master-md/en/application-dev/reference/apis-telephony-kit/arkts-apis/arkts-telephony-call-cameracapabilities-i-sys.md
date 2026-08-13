@@ -1,6 +1,6 @@
 # CameraCapabilities (System API)
 
-Indicates the camera capabilities.
+Defines the local image resolution in a video call.
 
 **Since:** 11
 
@@ -22,7 +22,7 @@ import { call } from '@kit.TelephonyKit';
 callId: number
 ```
 
-Indicates the id of call.
+Call ID.
 
 **Type:** number
 
@@ -40,7 +40,7 @@ Indicates the id of call.
 height: number
 ```
 
-Indicates the the camera height.
+Height of the local image, in pixels.
 
 **Type:** number
 
@@ -58,7 +58,7 @@ Indicates the the camera height.
 width: number
 ```
 
-Indicates the camera width.
+Width of the local image, in pixels.
 
 **Type:** number
 

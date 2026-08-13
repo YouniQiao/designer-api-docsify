@@ -12,7 +12,12 @@ import { observer } from '@kit.TelephonyKit';
 function off(type: 'cellInfoChange', callback?: Callback<Array<CellInformation>>): void
 ```
 
-Cancel callback when the cell information is updated.
+Unregisters the observer for cell information change events. This API uses an asynchronous callback to return the result.
+
+> **NOTE：**
+> 
+> You can pass the callback of the **on** function if you want to cancel listening for a certain type of event. If
+> you do not pass the callback, you will cancel listening for all events.
 
 **Since:** 8
 

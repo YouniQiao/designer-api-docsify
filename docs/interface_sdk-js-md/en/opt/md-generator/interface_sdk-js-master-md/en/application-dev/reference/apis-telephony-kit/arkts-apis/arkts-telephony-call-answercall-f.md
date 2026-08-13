@@ -12,7 +12,7 @@ import { call } from '@kit.TelephonyKit';
 function answerCall(callback: AsyncCallback<void>): void
 ```
 
-Answers the incoming call without callId.
+Answers a call. This API uses an asynchronous callback to return the result.
 
 **Since:** 23
 

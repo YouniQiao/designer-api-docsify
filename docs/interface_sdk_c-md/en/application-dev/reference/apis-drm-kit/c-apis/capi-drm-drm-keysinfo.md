@@ -6,7 +6,7 @@ typedef struct DRM_KeysInfo {...} DRM_KeysInfo
 
 ## Overview
 
-Media key info.
+The struct describes the information about media keys.
 
 **Since**: 11
 

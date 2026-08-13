@@ -1,8 +1,9 @@
 # MediaKeySession
 
-Provide functions and keep a decrypt module. Before calling an MediaKeySession method, we must use MediaKeySystem's createMediaKeySession to get a MediaKeySession instance.
+MediaKeySession implements media key management. Before calling any API in MediaKeySession, you must use   
+[createMediaKeySession](arkts-drm-drm-mediakeysystem-i.md#createMediaKeySession)to create a MediaKeySession instance.
 
-**Since:** 12
+**Since:** 11
 
 <!--Device-drm-interface MediaKeySession--><!--Device-drm-interface MediaKeySession-End-->
 
@@ -20,9 +21,9 @@ import { drm } from '@kit.DrmKit';
 checkMediaKeyStatus(): MediaKeyStatus[]
 ```
 
-Check the media key status
+Checks the status of the media keys in use.
 
-**Since:** 12
+**Since:** 11
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -49,9 +50,9 @@ Check the media key status
 clearMediaKeys(): void
 ```
 
-Remove media key.
+Clears the media keys in use.
 
-**Since:** 12
+**Since:** 11
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -72,9 +73,9 @@ Remove media key.
 destroy(): void
 ```
 
-Release the resource before the session gonna be unused.
+Destroys this MediaKeySession instance.
 
-**Since:** 12
+**Since:** 11
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -95,9 +96,9 @@ Release the resource before the session gonna be unused.
 generateMediaKeyRequest(mimeType: string, initData: Uint8Array, mediaKeyType: number, options?: OptionsData[]): Promise<MediaKeyRequest>
 ```
 
-Generate the media key request.
+Generates a media key request. This API uses a promise to return the result.
 
-**Since:** 12
+**Since:** 11
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -134,9 +135,9 @@ Generate the media key request.
 generateOfflineReleaseRequest(mediaKeyId: Uint8Array): Promise<Uint8Array>
 ```
 
-Generate offline media key request.
+Generates a request to release offline media keys. This API uses a promise to return the result.
 
-**Since:** 12
+**Since:** 11
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -170,9 +171,9 @@ Generate offline media key request.
 getContentProtectionLevel(): ContentProtectionLevel
 ```
 
-Get content protection level.
+Obtains the content protection level of this media key session.
 
-**Since:** 12
+**Since:** 11
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -199,9 +200,9 @@ Get content protection level.
 off(type: 'keyRequired', callback?: (eventInfo: EventInfo) => void): void
 ```
 
-Unregister keyRequired event.
+Unsubscribes from events indicating that the application requests a media key. This API uses an asynchronous callback to return the result.
 
-**Since:** 12
+**Since:** 11
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -229,9 +230,9 @@ Unregister keyRequired event.
 off(type: 'keyExpired', callback?: (eventInfo: EventInfo) => void): void
 ```
 
-Unregister keyExpired event.
+Unsubscribes from events indicating that a media key expires. This API uses an asynchronous callback to return the result.
 
-**Since:** 12
+**Since:** 11
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -259,9 +260,9 @@ Unregister keyExpired event.
 off(type: 'vendorDefined', callback?: (eventInfo: EventInfo) => void): void
 ```
 
-Unregister vendorDefined event.
+Unsubscribes from vendor-defined events. This API uses an asynchronous callback to return the result.
 
-**Since:** 12
+**Since:** 11
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -289,9 +290,9 @@ Unregister vendorDefined event.
 off(type: 'expirationUpdate', callback?: (eventInfo: EventInfo) => void): void
 ```
 
-Unregister expirationUpdate event.
+Unsubscribes from events indicating that a media key is updated upon expiry. This API uses an asynchronous callback to return the result.
 
-**Since:** 12
+**Since:** 11
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -319,9 +320,9 @@ Unregister expirationUpdate event.
 off(type: 'keysChange', callback?: (keyInfo: KeysInfo[], newKeyAvailable: boolean) => void): void
 ```
 
-Unregister keysChange event.
+Unsubscribes from events indicating that a media key changes. This API uses an asynchronous callback to return the result.
 
-**Since:** 12
+**Since:** 11
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -349,9 +350,9 @@ Unregister keysChange event.
 on(type: 'keyRequired', callback: (eventInfo: EventInfo) => void): void
 ```
 
-Register keyRequired event.
+Subscribes to events indicating that the application requests a media key. This API uses an asynchronous callback to return the result.
 
-**Since:** 12
+**Since:** 11
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -379,9 +380,9 @@ Register keyRequired event.
 on(type: 'keyExpired', callback: (eventInfo: EventInfo) => void): void
 ```
 
-Register keyExpired event.
+Subscribes to events indicating that a media key expires. This API uses an asynchronous callback to return the result.
 
-**Since:** 12
+**Since:** 11
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -409,9 +410,9 @@ Register keyExpired event.
 on(type: 'vendorDefined', callback: (eventInfo: EventInfo) => void): void
 ```
 
-Register vendorDefined event.
+Subscribes to vendor-defined events. This API uses an asynchronous callback to return the result.
 
-**Since:** 12
+**Since:** 11
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -439,9 +440,9 @@ Register vendorDefined event.
 on(type: 'expirationUpdate', callback: (eventInfo: EventInfo) => void): void
 ```
 
-Register expirationUpdate event.
+Subscribes to events indicating that a media key is updated upon expiry. This API uses an asynchronous callback to return the result.
 
-**Since:** 12
+**Since:** 11
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -469,9 +470,9 @@ Register expirationUpdate event.
 on(type: 'keysChange', callback: (keyInfo: KeysInfo[], newKeyAvailable: boolean) => void): void
 ```
 
-Register keysChange event.
+Subscribes to events indicating that a media key changes. This API uses an asynchronous callback to return the result.
 
-**Since:** 12
+**Since:** 11
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -499,9 +500,9 @@ Register keysChange event.
 processMediaKeyResponse(response: Uint8Array): Promise<Uint8Array>
 ```
 
-Process the response corresponding to the media key request obtained by the application.
+Processes a media key response. This API uses a promise to return the result.
 
-**Since:** 12
+**Since:** 11
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -535,9 +536,9 @@ Process the response corresponding to the media key request obtained by the appl
 processOfflineReleaseResponse(mediaKeyId: Uint8Array, response: Uint8Array): Promise<void>
 ```
 
-Process offline media key response.
+Processes a response to a request for releasing offline media keys. This API uses a promise to return the result.
 
-**Since:** 12
+**Since:** 11
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -572,9 +573,9 @@ Process offline media key response.
 requireSecureDecoderModule(mimeType: string): boolean
 ```
 
-Whether the encrypted content require a secure decoder or not.
+Checks whether secure decoding is required.
 
-**Since:** 12
+**Since:** 11
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -608,9 +609,9 @@ Whether the encrypted content require a secure decoder or not.
 restoreOfflineMediaKeys(mediaKeyId: Uint8Array): Promise<void>
 ```
 
-Restore offline media key.
+Restores offline media keys. This API uses a promise to return the result.
 
-**Since:** 12
+**Since:** 11
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

@@ -117,7 +117,7 @@ digitalCrownSensitivity(sensitivity: Optional<CrownSensitivity>): ArcListAttribu
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| [sensitivity](../../apis-localization-kit/arkts-apis/arkts-localization-intl-collatoroptions-i.md) | [Optional](../arkts-components/arkts-arkui-optional-t.md)&lt;[CrownSensitivity](arkts-arkui-crownsensitivity-e.md)&gt; | 是 |
+| [sensitivity](../../apis-default/arkts-apis/arkts-intl-collatoroptions-i.md) | [Optional](../arkts-components/arkts-arkui-optional-t.md)&lt;[CrownSensitivity](arkts-arkui-crownsensitivity-e.md)&gt; | 是 |
 
 **返回值：**
 

@@ -12,7 +12,7 @@ import { call } from '@kit.TelephonyKit';
 function setCallRestrictionPassword(slotId: number, oldPassword: string, newPassword: string, callback: AsyncCallback<void>): void
 ```
 
-Set call barring password.
+Changes the call barring password. This API uses an asynchronous callback to return the result.
 
 **Since:** 10
 
@@ -66,7 +66,7 @@ call.setCallRestrictionPassword(0, "123456", "654321", (err: BusinessError) => {
 function setCallRestrictionPassword(slotId: number, oldPassword: string, newPassword: string): Promise<void>
 ```
 
-Set call barring password.
+Changes the call barring password. This API uses a promise to return the result.
 
 **Since:** 10
 

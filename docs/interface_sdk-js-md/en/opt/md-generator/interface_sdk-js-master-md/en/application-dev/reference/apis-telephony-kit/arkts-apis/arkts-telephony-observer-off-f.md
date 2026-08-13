@@ -12,7 +12,12 @@ import { observer } from '@kit.TelephonyKit';
 function off(type: 'networkStateChange', callback?: Callback<NetworkState>): void
 ```
 
-Cancel callback when the network state is updated.
+Unregisters the observer for network status change events. This API uses an asynchronous callback to return the execution result.
+
+> **NOTE：**
+> 
+> You can pass the callback of the **on** function if you want to cancel listening for a certain type of event. If
+> you do not pass the callback, you will cancel listening for all events.
 
 **Since:** 6
 
@@ -56,7 +61,12 @@ observer.off('networkStateChange');
 function off(type: 'signalInfoChange', callback?: Callback<Array<SignalInformation>>): void
 ```
 
-Cancel callback when the signal strength is updated.
+Unregisters the observer for signal status change events. This API uses an asynchronous callback to return the execution result.
+
+> **NOTE：**
+> 
+> You can pass the callback of the **on** function if you want to cancel listening for a certain type of event. If
+> you do not pass the callback, you will cancel listening for all events.
 
 **Since:** 6
 
@@ -102,9 +112,14 @@ observer.off('signalInfoChange');
 function off(type: 'cellularDataConnectionStateChange', callback?: Callback<DataConnectionStateInfo>): void
 ```
 
-Cancel callback when the cellular data link connection state is updated.
+Unregisters the observer for connection status change events of the cellular data link. This API uses an asynchronous callback to return the result.
 
-**Since:** 11
+> **NOTE：**
+> 
+> You can pass the callback of the **on** function if you want to cancel listening for a certain type of event. If
+> you do not pass the callback, you will cancel listening for all events.
+
+**Since:** 7
 
 <!--Device-observer-function off(type: 'cellularDataConnectionStateChange', callback?: Callback<DataConnectionStateInfo>): void--><!--Device-observer-function off(type: 'cellularDataConnectionStateChange', callback?: Callback<DataConnectionStateInfo>): void-End-->
 
@@ -146,7 +161,12 @@ observer.off('cellularDataConnectionStateChange');
 function off(type: 'cellularDataFlowChange', callback?: Callback<DataFlowType>): void
 ```
 
-Cancel callback when the uplink and downlink data flow state of cellular data services is updated.
+Unregisters the observer for the uplink and downlink data flow status change events of the cellular data service.This API uses an asynchronous callback to return the result.
+
+> **NOTE：**
+> 
+> You can pass the callback of the **on** function if you want to cancel listening for a certain type of event. If
+> you do not pass the callback, you will cancel listening for all events.
 
 **Since:** 7
 
@@ -192,9 +212,14 @@ observer.off('cellularDataFlowChange');
 function off(type: 'callStateChange', callback?: Callback<CallStateInfo>): void
 ```
 
-Cancel callback when the call state is updated.
+Unregisters the observer for call status change events. This API uses an asynchronous callback to return the execution result.
 
-**Since:** 11
+> **NOTE：**
+> 
+> You can pass the callback of the **on** function if you want to cancel listening for a certain type of event. If
+> you do not pass the callback, you will cancel listening for all events.
+
+**Since:** 6
 
 <!--Device-observer-function off(type: 'callStateChange', callback?: Callback<CallStateInfo>): void--><!--Device-observer-function off(type: 'callStateChange', callback?: Callback<CallStateInfo>): void-End-->
 
@@ -236,7 +261,12 @@ observer.off('callStateChange');
 function off(type: 'callStateChangeEx', callback?: Callback<TelCallState>): void
 ```
 
-Cancel callback when the telCall state is updated.
+Unregisters the observer for extended call status change events. This API uses an asynchronous callback to return the execution result.
+
+> **NOTE：**
+> 
+> You can pass the callback of the **on** function if you want to cancel listening for a certain type of event. If
+> you do not pass the callback, you will cancel listening for all events.
 
 **Since:** 21
 
@@ -280,7 +310,12 @@ observer.off('callStateChangeEx');
 function off(type: 'simStateChange', callback?: Callback<SimStateData>): void
 ```
 
-Cancel callback when the sim state is updated.
+Unregisters the observer for SIM card status change events. This API uses an asynchronous callback to return the result.
+
+> **NOTE：**
+> 
+> You can pass the callback of the **on** function if you want to cancel listening for a certain type of event. If
+> you do not pass the callback, you will cancel listening for all events.
 
 **Since:** 7
 
@@ -324,7 +359,12 @@ observer.off('simStateChange');
 function off(type: 'iccAccountInfoChange', callback?: Callback<void>): void
 ```
 
-Cancel to receive an ICC account change.
+Unregisters the observer for account information change events of the SIM card. This API uses an asynchronous callback to return the result.
+
+> **NOTE：**
+> 
+> You can pass the callback of the **on** function if you want to cancel listening for a certain type of event. If
+> you do not pass the callback, you will cancel listening for all events.
 
 **Since:** 10
 

@@ -12,9 +12,7 @@ import { sms } from '@kit.TelephonyKit';
 function sendShortMessage(options: SendMessageOptions, callback: AsyncCallback<void>): void
 ```
 
-Sends a text or data SMS message.
-
-&lt;p&gt;This method checks whether the length of an SMS message exceeds the maximum length. If the maximum length is exceeded, the SMS message is split into multiple parts and sent separately.
+Sends an SMS message. This API uses an asynchronous callback to return the result.
 
 **Since:** 10
 
@@ -30,8 +28,8 @@ Sends a text or data SMS message.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | SendMessageOptions | Yes | Indicates the parameters and callback for sending the SMS message. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | The callback of sendShortMessage. |
+| options | SendMessageOptions | Yes | Options (including the callback) for sending SMS messages. For details, see [SendMessageOptions](arkts-telephony-sms-sendmessageoptions-i.md#SendMessageOptions). |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
 
@@ -77,9 +75,7 @@ sms.sendShortMessage(options, (err: BusinessError) => {
 function sendShortMessage(options: SendMessageOptions): Promise<void>
 ```
 
-Sends a text or data SMS message.
-
-&lt;p&gt;This method checks whether the length of an SMS message exceeds the maximum length. If the maximum length is exceeded, the SMS message is split into multiple parts and sent separately.
+Sends an SMS message. This API uses a promise to return the result.
 
 **Since:** 10
 
@@ -95,13 +91,13 @@ Sends a text or data SMS message.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | SendMessageOptions | Yes | Indicates the parameters and callback for sending the SMS message. |
+| options | SendMessageOptions | Yes | Options (including the callback) for sending SMS messages. For details, see [SendMessageOptions](arkts-telephony-sms-sendmessageoptions-i.md#SendMessageOptions). |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | The promise returned by the sendShortMessage. |
+| Promise&lt;void&gt; | Promise used to return the result. |
 
 **Error codes:**
 

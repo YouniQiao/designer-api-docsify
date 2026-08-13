@@ -12,9 +12,7 @@ import { call } from '@kit.TelephonyKit';
 function getCallStateSync(): CallState
 ```
 
-Obtains the call state.
-
-If an incoming call is ringing or waiting, the system returns {@code CallState#CALL_STATE_RINGING}.If at least one call is in the active, hold, or dialing state, the system returns{@code CallState#CALL_STATE_OFFHOOK}. In other cases, the system returns {@code CallState#CALL_STATE_IDLE}.
+Obtains the call status.
 
 **Since:** 10
 
@@ -28,7 +26,7 @@ If an incoming call is ringing or waiting, the system returns {@code CallState#C
 
 | Type | Description |
 | --- | --- |
-| CallState | Returns the call state. |
+| CallState | Promise used to return the result. |
 
 ## Examples
 

@@ -54,7 +54,7 @@ constructor(attachment: Optional<AttachmentType>)
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| attachment | [Optional](../arkts-components/arkts-arkui-optional-t.md)&lt;[AttachmentType](arkts-arkui-attachmenttype-t.md)&gt; | 是 |
+| [attachment](../../apis-telephony-kit/arkts-apis/arkts-telephony-sms-mmsinformation-i-sys.md) | [Optional](../arkts-components/arkts-arkui-optional-t.md)&lt;[AttachmentType](arkts-arkui-attachmenttype-t.md)&gt; | 是 |
 
 ## colorFilter
 

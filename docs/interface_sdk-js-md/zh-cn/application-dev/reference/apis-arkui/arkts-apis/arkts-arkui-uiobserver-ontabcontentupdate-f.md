@@ -22,7 +22,7 @@ export function onTabContentUpdate(options: ObserverOptions, callback: Callback<
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | [ObserverOptions](arkts-arkui-uiobserver-observeroptions-i.md) | 是 | 指定监听的Tabs组件的id。 |
+| options | ObserverOptions | 是 | 指定监听的Tabs组件的id。 |
 | callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[TabContentInfo](arkts-arkui-uiobserver-tabcontentinfo-i.md)&gt; | 是 | 回调函数。携带TabContentInfo，返回TabContent页面切换事件的信息。 |
 
 

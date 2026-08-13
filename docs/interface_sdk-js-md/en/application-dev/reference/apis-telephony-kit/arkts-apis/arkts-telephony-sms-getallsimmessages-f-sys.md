@@ -12,7 +12,7 @@ import { sms } from '@kit.TelephonyKit';
 function getAllSimMessages(slotId: int, callback: AsyncCallback<Array<SimShortMessage>>): void
 ```
 
-Get all SMS records in SIM.
+Obtains all SIM card messages. This API uses an asynchronous callback to return the result.
 
 **Since:** 7
 
@@ -30,8 +30,8 @@ Get all SMS records in SIM.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| slotId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Indicates the card slot index number, ranging from 0 to the maximum card slot index number supported by the device. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Array&lt;[SimShortMessage](arkts-telephony-sms-simshortmessage-i-sys.md)&gt;&gt; | Yes | Indicates the callback for getting a {@code SimShortMessage} object. |
+| slotId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | SIM card slot ID. &lt;br&gt;- **0**: card slot 1 &lt;br&gt;- **1**: card slot 2 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Array&lt;[SimShortMessage](arkts-telephony-sms-simshortmessage-i-sys.md)&gt;&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
 
@@ -64,7 +64,7 @@ sms.getAllSimMessages(slotId, (err: BusinessError, data: sms.SimShortMessage[]) 
 function getAllSimMessages(slotId: int): Promise<Array<SimShortMessage>>
 ```
 
-Get all SMS records in SIM.
+Obtains all SIM card messages. This API uses a promise to return the result.
 
 **Since:** 7
 
@@ -82,13 +82,13 @@ Get all SMS records in SIM.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| slotId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Indicates the card slot index number, ranging from 0 to the maximum card slot index number supported by the device. |
+| slotId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | SIM card slot ID. &lt;br&gt;- **0**: card slot 1 &lt;br&gt;- **1**: card slot 2 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;[SimShortMessage](arkts-telephony-sms-simshortmessage-i-sys.md)&gt;&gt; | Returns a { |
+| Promise&lt;Array&lt;[SimShortMessage](arkts-telephony-sms-simshortmessage-i-sys.md)&gt;&gt; | Promise used to return the result. |
 
 **Error codes:**
 

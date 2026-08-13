@@ -1,6 +1,6 @@
 # DialType (System API)
 
-Indicates the types of the call to be made.
+Enumerates dialup types.
 
 **Since:** 8
 
@@ -18,7 +18,7 @@ Indicates the types of the call to be made.
 DIAL_CARRIER_TYPE = 0
 ```
 
-Indicates this is a carrier call.
+Carrier.
 
 **Since:** 8
 
@@ -36,7 +36,7 @@ Indicates this is a carrier call.
 DIAL_VOICE_MAIL_TYPE = 1
 ```
 
-Indicates this is a call to play voice mail.
+Voice mail.
 
 **Since:** 8
 
@@ -54,7 +54,7 @@ Indicates this is a call to play voice mail.
 DIAL_OTT_TYPE = 2
 ```
 
-Indicates this is an OTT call.
+OTT.
 
 **Since:** 8
 
@@ -72,7 +72,7 @@ Indicates this is an OTT call.
 DIAL_XCALL_TYPE = 3
 ```
 
-Indicates this is a xcall.
+X-Call.
 
 **Since:** 26.0.0
 

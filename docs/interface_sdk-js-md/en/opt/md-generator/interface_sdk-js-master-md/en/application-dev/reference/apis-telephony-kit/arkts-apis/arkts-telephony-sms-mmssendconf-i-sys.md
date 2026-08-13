@@ -22,7 +22,7 @@ import { sms } from '@kit.TelephonyKit';
 messageId?: string
 ```
 
-Indicates the message ID for the MMS message sending configuration.
+Message ID.
 
 **Type:** string
 
@@ -40,7 +40,7 @@ Indicates the message ID for the MMS message sending configuration.
 responseState: number
 ```
 
-Indicates the response status for the MMS message sending configuration.
+Response status.
 
 **Type:** number
 
@@ -58,7 +58,7 @@ Indicates the response status for the MMS message sending configuration.
 transactionId: string
 ```
 
-Indicates the transaction ID for the MMS message sending configuration.
+Transaction ID.
 
 **Type:** string
 
@@ -76,7 +76,7 @@ Indicates the transaction ID for the MMS message sending configuration.
 version: MmsVersionType
 ```
 
-Indicates the version for the MMS message sending configuration.
+Version.
 
 **Type:** [MmsVersionType](arkts-telephony-sms-mmsversiontype-e-sys.md)
 

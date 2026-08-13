@@ -12,7 +12,7 @@ import { call } from '@kit.TelephonyKit';
 function joinConference(mainCallId: number, callNumberList: Array<string>, callback: AsyncCallback<void>): void
 ```
 
-Join the conference call.
+Joins a conference call. This API uses an asynchronous callback to return the result.
 
 **Since:** 8
 
@@ -65,7 +65,7 @@ call.joinConference(1, callNumberList, (err: BusinessError) => {
 function joinConference(mainCallId: number, callNumberList: Array<string>): Promise<void>
 ```
 
-Join the conference call.
+Joins a conference call. This API uses a promise to return the result.
 
 **Since:** 8
 

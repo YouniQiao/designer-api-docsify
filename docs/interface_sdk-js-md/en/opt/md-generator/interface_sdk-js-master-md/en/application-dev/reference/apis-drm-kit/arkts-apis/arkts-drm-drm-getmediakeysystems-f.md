@@ -12,9 +12,9 @@ import { drm } from '@kit.DrmKit';
 function getMediaKeySystems(): MediaKeySystemDescription[]
 ```
 
-Get all media key systems supported.
+Obtains the list of plugins supported by the device.
 
-**Since:** 14
+**Since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
 

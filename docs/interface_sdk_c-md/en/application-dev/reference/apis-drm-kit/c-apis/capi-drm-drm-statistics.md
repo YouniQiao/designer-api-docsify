@@ -6,7 +6,7 @@ typedef struct DRM_Statistics {...} DRM_Statistics
 
 ## Overview
 
-Statistics of MediaKeySystem.
+The struct describes the metrics for a media key system.
 
 **Since**: 11
 

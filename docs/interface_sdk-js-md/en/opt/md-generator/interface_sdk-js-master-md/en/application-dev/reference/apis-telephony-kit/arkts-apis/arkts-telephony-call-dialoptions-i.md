@@ -1,6 +1,6 @@
 # DialOptions
 
-Indicates the options of placing a call.
+Provides an option for determining whether a call is a video call.
 
 **Since:** 6
 
@@ -20,7 +20,10 @@ import { call } from '@kit.TelephonyKit';
 extras?: boolean
 ```
 
-Indicates whether the call to be made is a video call. The value {@code false} indicates a voice call.
+Whether the call is a video call.
+
+- **true**: video call  
+- **false** (default): voice call
 
 **Type:** boolean
 

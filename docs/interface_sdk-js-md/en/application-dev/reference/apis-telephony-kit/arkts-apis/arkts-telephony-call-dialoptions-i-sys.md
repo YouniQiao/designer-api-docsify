@@ -1,6 +1,6 @@
 # DialOptions
 
-Indicates the options of placing a call.
+Provides an option for determining whether a call is a video call.
 
 **Since:** 6
 
@@ -22,7 +22,10 @@ import { call } from '@kit.TelephonyKit';
 accountId?: int
 ```
 
-Indicates the card slot index number, ranging from 0 to the maximum card slot index number supported by the device.
+Account ID.
+
+- **0**: card slot 1.  
+- **1**: card slot 2.<br
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -42,7 +45,7 @@ Indicates the card slot index number, ranging from 0 to the maximum card slot in
 dialScene?: DialScene
 ```
 
-Indicates the scenario of the call to be made.
+Dialup scenario. This is a system API.
 
 **Type:** [DialScene](arkts-telephony-call-dialscene-e-sys.md)
 
@@ -62,7 +65,7 @@ Indicates the scenario of the call to be made.
 dialType?: DialType
 ```
 
-Indicates the type of the call to be made.
+Dialup type. This is a system API.
 
 **Type:** [DialType](arkts-telephony-call-dialtype-e-sys.md)
 
@@ -82,7 +85,7 @@ Indicates the type of the call to be made.
 videoState?: VideoStateType
 ```
 
-Indicates the type of Video state.
+Video state type. This is a system API.
 
 **Type:** [VideoStateType](arkts-telephony-call-videostatetype-e-sys.md)
 

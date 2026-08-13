@@ -23,7 +23,7 @@ Set the SIM card number in the specified slot.
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | slotId | number | 是 |
-| [teleNumber](arkts-telephony-sim-diallingnumbersinfo-i-sys.md) | string | 是 |
+| teleNumber | string | 是 |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 |
 
 **错误码：**
@@ -75,7 +75,7 @@ Set the SIM card number in the specified slot.
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | slotId | number | 是 |
-| [teleNumber](arkts-telephony-sim-diallingnumbersinfo-i-sys.md) | string | 是 |
+| teleNumber | string | 是 |
 
 **返回值：**
 

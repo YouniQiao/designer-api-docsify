@@ -1,6 +1,6 @@
 # MmsNotificationInd (System API)
 
-Defines an MMS notification indication.
+Defines an MMS notification index.
 
 **Since:** 8
 
@@ -22,7 +22,7 @@ import { sms } from '@kit.TelephonyKit';
 contentClass?: number
 ```
 
-Indicates the content class for the MMS notification indication.
+Content class.
 
 **Type:** number
 
@@ -40,7 +40,7 @@ Indicates the content class for the MMS notification indication.
 contentLocation: string
 ```
 
-Indicates the content location for the MMS notification indication.
+Content location.
 
 **Type:** string
 
@@ -58,7 +58,7 @@ Indicates the content location for the MMS notification indication.
 deliveryReport?: number
 ```
 
-Indicates the status report for the MMS notification indication.
+Status report.
 
 **Type:** number
 
@@ -76,7 +76,7 @@ Indicates the status report for the MMS notification indication.
 expiry: number
 ```
 
-Indicates the expiration for the MMS notification indication.
+Expiration.
 
 **Type:** number
 
@@ -94,7 +94,7 @@ Indicates the expiration for the MMS notification indication.
 from?: MmsAddress
 ```
 
-Indicates the source address for the MMS notification indication.
+Source address.
 
 **Type:** [MmsAddress](arkts-telephony-sms-mmsaddress-i-sys.md)
 
@@ -112,7 +112,7 @@ Indicates the source address for the MMS notification indication.
 messageClass: number
 ```
 
-Indicates the message class for the MMS notification indication.
+Message class.
 
 **Type:** number
 
@@ -130,7 +130,7 @@ Indicates the message class for the MMS notification indication.
 messageSize: number
 ```
 
-Indicates the message size for the MMS notification indication.
+Message size.
 
 **Type:** number
 
@@ -148,7 +148,7 @@ Indicates the message size for the MMS notification indication.
 subject?: string
 ```
 
-Indicates the subject for the MMS notification indication.
+Subject.
 
 **Type:** string
 
@@ -166,7 +166,7 @@ Indicates the subject for the MMS notification indication.
 transactionId: string
 ```
 
-Indicates the transaction ID for the MMS notification indication.
+Transaction ID.
 
 **Type:** string
 
@@ -184,7 +184,7 @@ Indicates the transaction ID for the MMS notification indication.
 version: MmsVersionType
 ```
 
-Indicates the version for the MMS notification indication.
+Version.
 
 **Type:** [MmsVersionType](arkts-telephony-sms-mmsversiontype-e-sys.md)
 

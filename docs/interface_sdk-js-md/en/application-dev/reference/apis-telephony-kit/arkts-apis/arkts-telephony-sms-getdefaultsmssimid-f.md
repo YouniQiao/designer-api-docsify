@@ -12,7 +12,7 @@ import { sms } from '@kit.TelephonyKit';
 function getDefaultSmsSimId(callback: AsyncCallback<int>): void
 ```
 
-Obtains the default SIM ID for sending SMS messages.
+Obtains the default ID of the SIM card used to send SMS messages. This API uses an asynchronous callback to return the result.
 
 **Since:** 10
 
@@ -26,7 +26,7 @@ Obtains the default SIM ID for sending SMS messages.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | ArkTS-Dyn: [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;number&gt;  <br>ArkTS-Sta：[AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;int&gt; | Yes | Returns the SIM ID of the default sms sim and SIM ID will increase from 1. |
+| callback | ArkTS-Dyn: [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;number&gt;  <br>ArkTS-Sta：[AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;int&gt; | Yes | Callback used to return the result. &lt;br&gt;The return value is bound to the SIM card and increases from 1. &lt;br&gt;The return value is **-1** if no SIM card is detected. |
 
 **Error codes:**
 
@@ -58,7 +58,7 @@ sms.getDefaultSmsSimId((err: BusinessError, data: number) => {
 function getDefaultSmsSimId(): Promise<int>
 ```
 
-Obtains the default SIM ID for sending SMS messages.
+Obtains the default ID of the SIM card used to send SMS messages. This API uses a promise to return the result.
 
 **Since:** 10
 
@@ -72,7 +72,7 @@ Obtains the default SIM ID for sending SMS messages.
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: Promise&lt;number&gt;  <br>ArkTS-Sta：Promise&lt;int&gt; | Returns the SIM ID of the default sms sim and SIM ID will increase from 1. |
+| ArkTS-Dyn: Promise&lt;number&gt;  <br>ArkTS-Sta：Promise&lt;int&gt; | Promise used to return the result. &lt;br&gt;The return value is bound to the SIM card and increases from 1. &lt;br&gt;The return value is **-1** if no SIM card is detected. |
 
 **Error codes:**
 

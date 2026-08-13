@@ -34,7 +34,7 @@ state: CallState
 
 当前通话状态。
 
-**类型：** [CallState](arkts-avsession-avsession-callstate-e.md)
+**类型：** CallState
 
 **起始版本：** 11
 

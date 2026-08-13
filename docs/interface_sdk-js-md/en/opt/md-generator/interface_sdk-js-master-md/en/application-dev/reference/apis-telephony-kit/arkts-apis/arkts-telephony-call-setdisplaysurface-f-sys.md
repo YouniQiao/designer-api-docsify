@@ -12,7 +12,7 @@ import { call } from '@kit.TelephonyKit';
 function setDisplaySurface(callId: number, surfaceId: string): Promise<void>
 ```
 
-Set display surface when video call.
+Sets the remote display window. This API uses a promise to return the result.
 
 **Since:** 11
 

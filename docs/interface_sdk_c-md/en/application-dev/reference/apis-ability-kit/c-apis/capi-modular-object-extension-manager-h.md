@@ -349,7 +349,7 @@ Connect to a modular object extension ability.
 | Parameter | Description |
 | -- | -- |
 | [AbilityBase_Want](capi-abilitybase-abilitybase-want.md) *want | Indicates the modular object extension ability to connect.For details, see [AbilityBase_Want](capi-abilitybase-abilitybase-want.md). |
-| OH_AbilityRuntime_ConnectOptions *connectOptions | Indicates the connection options. |
+| [OH_AbilityRuntime_ConnectOptions](capi-abilityruntime-oh-abilityruntime-connectoptions.md) *connectOptions | Indicates the connection options. |
 | int64_t *connectionId | Indicates the connection id that is a output param. |
 
 **Returns**:

@@ -1,6 +1,6 @@
 # CCallState
 
-Indicates the states of Carrier Call.
+Carrier call state code.
 
 **Since:** 23
 
@@ -14,7 +14,7 @@ Indicates the states of Carrier Call.
 CCALL_STATE_UNKNOWN = -1
 ```
 
-Indicates the call is unknown.
+The call status fails to be obtained and is unknown.
 
 **Since:** 23
 
@@ -28,7 +28,7 @@ Indicates the call is unknown.
 CCALL_STATE_ACTIVE = 0
 ```
 
-Indicates the call is active.
+The call is connected.
 
 **Since:** 23
 
@@ -42,7 +42,7 @@ Indicates the call is active.
 CCALL_STATE_HOLDING = 1
 ```
 
-Indicates the call is holding.
+The call is on hold.
 
 **Since:** 23
 
@@ -56,7 +56,7 @@ Indicates the call is holding.
 CCALL_STATE_DIALING = 2
 ```
 
-Indicates the call is dialing.
+The outgoing call is in the dialing process, and the peer end has not received the ringing.
 
 **Since:** 23
 
@@ -70,7 +70,7 @@ Indicates the call is dialing.
 CCALL_STATE_ALERTING = 3
 ```
 
-Indicates the call is alerting.
+The outgoing call is in the ringing process, and the peer end is ringing.
 
 **Since:** 23
 
@@ -84,7 +84,7 @@ Indicates the call is alerting.
 CCALL_STATE_INCOMING = 4
 ```
 
-Indicates the call is incoming.
+Indicates that an incoming call is received.
 
 **Since:** 23
 
@@ -98,7 +98,7 @@ Indicates the call is incoming.
 CCALL_STATE_WAITING = 5
 ```
 
-Indicates the call is waiting.
+Indicates that another incoming call is received when there is an ongoing call in the same card slot.
 
 **Since:** 23
 
@@ -112,7 +112,7 @@ Indicates the call is waiting.
 CCALL_STATE_DISCONNECTED = 6
 ```
 
-Indicates the call is disconnected.
+Indicates that the call has been released.
 
 **Since:** 23
 
@@ -126,7 +126,7 @@ Indicates the call is disconnected.
 CCALL_STATE_DISCONNECTING = 7
 ```
 
-Indicates the call is disconnecting.
+Indicates that the call is being released.
 
 **Since:** 23
 
@@ -140,7 +140,7 @@ Indicates the call is disconnecting.
 CCALL_STATE_IDLE = 8
 ```
 
-Indicates the call is idle.
+No call is in progress.
 
 **Since:** 23
 
@@ -154,7 +154,7 @@ Indicates the call is idle.
 CCALL_STATE_ANSWERED = 9
 ```
 
-Indicates the call is answered.
+The incoming call is answered.
 
 **Since:** 23
 

@@ -22,7 +22,7 @@ import { sms } from '@kit.TelephonyKit';
 address: string
 ```
 
-Indicates the network address for the MMSC address.
+Network address.
 
 **Type:** string
 
@@ -40,7 +40,7 @@ Indicates the network address for the MMSC address.
 charset: MmsCharSets
 ```
 
-Indicates the character set for the MMSC address.
+Character set.
 
 **Type:** [MmsCharSets](arkts-telephony-sms-mmscharsets-e-sys.md)
 

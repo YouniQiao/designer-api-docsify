@@ -1,6 +1,6 @@
 # CallStateInfo
 
-Indicates call state and number.
+Defines information about the call status.
 
 **Since:** 11
 
@@ -20,7 +20,7 @@ import { observer } from '@kit.TelephonyKit';
 number: string
 ```
 
-Indicates call number.
+Phone number.
 
 **Type:** string
 
@@ -36,7 +36,7 @@ Indicates call number.
 state: CallState
 ```
 
-Indicates call state.
+Call type.
 
 **Type:** CallState
 

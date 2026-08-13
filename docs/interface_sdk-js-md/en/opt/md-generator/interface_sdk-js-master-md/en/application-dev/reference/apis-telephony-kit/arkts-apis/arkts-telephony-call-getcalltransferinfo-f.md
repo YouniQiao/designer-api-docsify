@@ -12,7 +12,7 @@ import { call } from '@kit.TelephonyKit';
 function getCallTransferInfo(type: CallTransferType, number: string): Promise<CallTransferResult>
 ```
 
-Obtains call transfer information with the phone number.
+Obtains call transfer information with the phone number. This API uses a promise to return the result.
 
 **Since:** 26.0.0
 

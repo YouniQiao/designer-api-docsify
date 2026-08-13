@@ -12,7 +12,7 @@ import { call } from '@kit.TelephonyKit';
 function setVoNRState(slotId: number, state: VoNRState, callback: AsyncCallback<void>): void
 ```
 
-Set switch state for voice over NR.
+Sets the status of the VoNR switch. This API uses an asynchronous callback to return the result.
 
 **Since:** 10
 
@@ -67,7 +67,7 @@ call.setVoNRState(slotId, state, (err: BusinessError) => {
 function setVoNRState(slotId: number, state: VoNRState): Promise<void>
 ```
 
-Set switch state for voice over NR.
+Sets the status of the VoNR switch. This API uses a promise to return the result.
 
 **Since:** 10
 

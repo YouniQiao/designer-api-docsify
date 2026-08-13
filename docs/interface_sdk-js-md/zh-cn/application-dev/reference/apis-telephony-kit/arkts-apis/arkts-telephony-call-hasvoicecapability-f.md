@@ -1,0 +1,24 @@
+# hasVoiceCapability
+
+## hasVoiceCapability
+
+```TypeScript
+function hasVoiceCapability(): boolean
+```
+
+检查当前设备是否具备语音通话能力。
+
+**起始版本：** 7
+
+**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
+
+<!--Device-call-function hasVoiceCapability(): boolean--><!--Device-call-function hasVoiceCapability(): boolean-End-->
+
+**系统能力：** SystemCapability.Telephony.CallManager
+
+**返回值：**
+
+| 类型 | 说明 |
+| --- | --- |
+| boolean | 返回true表示设备具备语音通话能力，返回false表示设备不具备语音通话能力。 |
+

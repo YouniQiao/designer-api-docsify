@@ -305,7 +305,7 @@ Adds a gesture to a UI component.
 
 | Parameter | Description |
 | -- | -- |
-| ArkUI_NodeHandle node | Indicates the UI component to which you want to add the gesture. |
+| [ArkUI_NodeHandle](capi-arkui-nativemodule-arkui-node8h.md) node | Indicates the UI component to which you want to add the gesture. |
 |  [ArkUI_GestureRecognizer](capi-arkui-nativemodule-arkui-gesturerecognizer.md)* recognizer | Indicates the gesture to be added to the UI component. |
 |  [ArkUI_GesturePriority](capi-native-gesture-h.md#arkui_gesturepriority) mode | Indicates the gesture event mode. Available options are <b>NORMAL_GESTURE</b>,<b>PARALLEL_GESTURE</b>, and <b>PRIORITY_GESTURE</b>. |
 |  [ArkUI_GestureMask](capi-native-gesture-h.md#arkui_gesturemask) mask | Indicates the gesture masking mode. |
@@ -330,7 +330,7 @@ Removes a gesture from a node.
 
 | Parameter | Description |
 | -- | -- |
-| ArkUI_NodeHandle node | Indicates the node from which you want to remove the gesture. |
+| [ArkUI_NodeHandle](capi-arkui-nativemodule-arkui-node8h.md) node | Indicates the node from which you want to remove the gesture. |
 |  [ArkUI_GestureRecognizer](capi-arkui-nativemodule-arkui-gesturerecognizer.md)* recognizer | Indicates the gesture to be removed. |
 
 **Returns**:

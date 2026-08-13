@@ -16,7 +16,7 @@ Enumerates SMS encoding schemes.
 SMS_ENCODING_UNKNOWN = 0
 ```
 
-Indicates an unknown encoding schemes.
+Unknown code.
 
 **Since:** 8
 
@@ -29,14 +29,14 @@ Indicates an unknown encoding schemes.
 ## SMS_ENCODING_7BIT
 
 ```TypeScript
-SMS_ENCODING_7BIT
+SMS_ENCODING_7BIT = 1
 ```
 
-Indicates that the encoding schemes is 7-digit.
+7-digit code.
 
 **Since:** 8
 
-<!--Device-SmsEncodingScheme-SMS_ENCODING_7BIT--><!--Device-SmsEncodingScheme-SMS_ENCODING_7BIT-End-->
+<!--Device-SmsEncodingScheme-SMS_ENCODING_7BIT = 1--><!--Device-SmsEncodingScheme-SMS_ENCODING_7BIT = 1-End-->
 
 **System capability:** SystemCapability.Telephony.SmsMms
 
@@ -45,14 +45,14 @@ Indicates that the encoding schemes is 7-digit.
 ## SMS_ENCODING_8BIT
 
 ```TypeScript
-SMS_ENCODING_8BIT
+SMS_ENCODING_8BIT = 2
 ```
 
-Indicates that the encoding schemes is 8-digit.
+8-digit code.
 
 **Since:** 8
 
-<!--Device-SmsEncodingScheme-SMS_ENCODING_8BIT--><!--Device-SmsEncodingScheme-SMS_ENCODING_8BIT-End-->
+<!--Device-SmsEncodingScheme-SMS_ENCODING_8BIT = 2--><!--Device-SmsEncodingScheme-SMS_ENCODING_8BIT = 2-End-->
 
 **System capability:** SystemCapability.Telephony.SmsMms
 
@@ -61,14 +61,14 @@ Indicates that the encoding schemes is 8-digit.
 ## SMS_ENCODING_16BIT
 
 ```TypeScript
-SMS_ENCODING_16BIT
+SMS_ENCODING_16BIT = 3
 ```
 
-Indicates that the encoding schemes is 16-digit.
+16-digit code.
 
 **Since:** 8
 
-<!--Device-SmsEncodingScheme-SMS_ENCODING_16BIT--><!--Device-SmsEncodingScheme-SMS_ENCODING_16BIT-End-->
+<!--Device-SmsEncodingScheme-SMS_ENCODING_16BIT = 3--><!--Device-SmsEncodingScheme-SMS_ENCODING_16BIT = 3-End-->
 
 **System capability:** SystemCapability.Telephony.SmsMms
 

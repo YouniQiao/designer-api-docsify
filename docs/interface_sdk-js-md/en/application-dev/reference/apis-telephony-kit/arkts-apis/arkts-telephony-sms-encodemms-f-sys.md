@@ -12,7 +12,7 @@ import { sms } from '@kit.TelephonyKit';
 function encodeMms(mms: MmsInformation, callback: AsyncCallback<Array<int>>): void
 ```
 
-Encode the message content.
+MMS message code. This API uses an asynchronous callback to return the result.
 
 **Since:** 8
 
@@ -28,8 +28,8 @@ Encode the message content.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| mms | [MmsInformation](arkts-telephony-sms-mmsinformation-i-sys.md) | Yes | Indicates MMS messages. |
-| callback | ArkTS-Dyn: [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Array&lt;number&gt;&gt;  <br>ArkTS-Sta：[AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Array&lt;int&gt;&gt; | Yes | Indicates the callback for getting the result of MMS encoding. |
+| mms | [MmsInformation](arkts-telephony-sms-mmsinformation-i-sys.md) | Yes | MMS message information. |
+| callback | ArkTS-Dyn: [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Array&lt;number&gt;&gt;  <br>ArkTS-Sta：[AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Array&lt;int&gt;&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
 
@@ -69,7 +69,7 @@ sms.encodeMms(mmsInformation, (err: BusinessError, data: number[]) => {
 function encodeMms(mms: MmsInformation): Promise<Array<int>>
 ```
 
-Encode the message content.
+MMS message code. This API uses a promise to return the result.
 
 **Since:** 8
 
@@ -85,13 +85,13 @@ Encode the message content.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| mms | [MmsInformation](arkts-telephony-sms-mmsinformation-i-sys.md) | Yes | Indicates MMS messages. |
+| mms | [MmsInformation](arkts-telephony-sms-mmsinformation-i-sys.md) | Yes | MMS message information. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: Promise&lt;Array&lt;number&gt;&gt;  <br>ArkTS-Sta：Promise&lt;Array&lt;int&gt;&gt; | Returns the result of MMS encoding. |
+| ArkTS-Dyn: Promise&lt;Array&lt;number&gt;&gt;  <br>ArkTS-Sta：Promise&lt;Array&lt;int&gt;&gt; | Promise used to return the result. |
 
 **Error codes:**
 

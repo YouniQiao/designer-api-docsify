@@ -1,6 +1,6 @@
 # VideoRequestResultType (System API)
 
-Indicates the type of video request result.
+Enumerates video call upgrade or downgrade request types.
 
 **Since:** 11
 
@@ -16,7 +16,7 @@ Indicates the type of video request result.
 TYPE_REQUEST_SUCCESS = 0
 ```
 
-Indicates the request was successful.
+Success.
 
 **Since:** 11
 
@@ -32,7 +32,7 @@ Indicates the request was successful.
 TYPE_REQUEST_FAILURE = 1
 ```
 
-Indicates the request failed.
+Failed.
 
 **Since:** 11
 
@@ -48,7 +48,7 @@ Indicates the request failed.
 TYPE_REQUEST_INVALID = 2
 ```
 
-Indicates the request ignored due to invalid parameters.
+Invalid request.
 
 **Since:** 11
 
@@ -64,7 +64,7 @@ Indicates the request ignored due to invalid parameters.
 TYPE_REQUEST_TIMED_OUT = 3
 ```
 
-Indicates the request timed out.
+Request timeout.
 
 **Since:** 11
 
@@ -80,7 +80,7 @@ Indicates the request timed out.
 TYPE_REQUEST_REJECTED_BY_REMOTE = 4
 ```
 
-Indicates the request rejected by remote.
+Request denied.
 
 **Since:** 11
 
@@ -96,7 +96,7 @@ Indicates the request rejected by remote.
 TYPE_REQUEST_UPGRADE_CANCELED = 5
 ```
 
-Indicates the upgrade request canceled.
+Upgrade request canceled.
 
 **Since:** 11
 
@@ -112,7 +112,7 @@ Indicates the upgrade request canceled.
 TYPE_DOWNGRADE_RTP_OR_RTCP_TIMEOUT = 100
 ```
 
-Indicates the ImsCall Mode downgrade RTP time out.
+RTP or RTCP downgrade timeout.
 
 **Since:** 11
 
@@ -128,7 +128,7 @@ Indicates the ImsCall Mode downgrade RTP time out.
 TYPE_DOWNGRADE_RTP_AND_RTCP_TIMEOUT = 101
 ```
 
-Indicates the ImsCall Mode downgrade RTP and RTCP time out.
+RTP and RTCP downgrade timeout.
 
 **Since:** 11
 

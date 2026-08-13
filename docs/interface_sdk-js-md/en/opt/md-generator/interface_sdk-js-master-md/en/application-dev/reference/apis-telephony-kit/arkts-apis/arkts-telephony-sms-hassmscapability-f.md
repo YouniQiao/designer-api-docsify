@@ -12,7 +12,7 @@ import { sms } from '@kit.TelephonyKit';
 function hasSmsCapability(): boolean
 ```
 
-Returns whether a device is capable of sending and receiving SMS messages.
+Checks whether the current device can send and receive SMS messages. This API works in synchronous mode.
 
 **Since:** 7
 

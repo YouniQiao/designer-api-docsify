@@ -1,8 +1,9 @@
 # MediaKeySystem
 
-Manages and record MediaKeySessions. Before calling an MediaKeySystem method, we must use getMediaKeySystem to get a MediaKeySystem instance, then we can call functions.
+MediaKeySystem manages MediaKeySystem instances, handles device certificate (DRM certificate) requests and processing, creates sessions, manages offline media keys, obtains DRM metrics, and obtain device configurations. Before calling any API in MediaKeySystem, you must use   
+[createMediaKeySystem](arkts-drm-drm-createmediakeysystem-f.md#createMediaKeySystem) to create a MediaKeySystem instance.
 
-**Since:** 14
+**Since:** 11
 
 <!--Device-drm-interface MediaKeySystem--><!--Device-drm-interface MediaKeySystem-End-->
 
@@ -20,9 +21,9 @@ import { drm } from '@kit.DrmKit';
 clearOfflineMediaKeys(mediaKeyId: Uint8Array): void
 ```
 
-Remove media keys corresponding to the mediaKeyId.
+Clears offline media keys with the specified IDs.
 
-**Since:** 14
+**Since:** 11
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
 
@@ -50,9 +51,9 @@ Remove media keys corresponding to the mediaKeyId.
 createMediaKeySession(level: ContentProtectionLevel): MediaKeySession
 ```
 
-Create a MediaKeySession instance with level.
+Creates a MediaKeySession instance with the specified content protection level.
 
-**Since:** 14
+**Since:** 11
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
 
@@ -87,9 +88,9 @@ Create a MediaKeySession instance with level.
 createMediaKeySession(): MediaKeySession
 ```
 
-Create a MediaKeySession instance.
+Creates a MediaKeySession instance with the default content protection level.
 
-**Since:** 14
+**Since:** 11
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
 
@@ -117,9 +118,9 @@ Create a MediaKeySession instance.
 destroy(): void
 ```
 
-Release the resource before the MediaKeySystem gonna be unused.
+Destroys this MediaKeySystem instance.
 
-**Since:** 14
+**Since:** 11
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
 
@@ -140,9 +141,9 @@ Release the resource before the MediaKeySystem gonna be unused.
 generateKeySystemRequest(): Promise<ProvisionRequest>
 ```
 
-Generate a media key system provision request.
+Generates a request to obtain a device certificate for the MediaKeySystem. This API uses a promise to return the result.
 
-**Since:** 14
+**Since:** 11
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
 
@@ -169,9 +170,9 @@ Generate a media key system provision request.
 getCertificateStatus(): CertificateStatus
 ```
 
-Get certificate status of the MediaKeySystem.
+Obtains the status of the device certificate.
 
-**Since:** 14
+**Since:** 11
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
 
@@ -198,9 +199,9 @@ Get certificate status of the MediaKeySystem.
 getConfigurationByteArray(configName: string): Uint8Array
 ```
 
-Get the specified configuration.
+Obtains the value of a configuration item in the form of a byte array.
 
-**Since:** 14
+**Since:** 11
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
 
@@ -234,9 +235,9 @@ Get the specified configuration.
 getConfigurationString(configName: string): string
 ```
 
-Get the specified configuration.
+Obtains the value of a configuration item in the form of a string.
 
-**Since:** 14
+**Since:** 11
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
 
@@ -270,9 +271,9 @@ Get the specified configuration.
 getMaxContentProtectionLevel(): ContentProtectionLevel
 ```
 
-Get max content protection level the device supports.
+Obtains the maximum content protection level supported by the current DRM solution.
 
-**Since:** 14
+**Since:** 11
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
 
@@ -299,9 +300,9 @@ Get max content protection level the device supports.
 getOfflineMediaKeyIds(): Uint8Array[]
 ```
 
-Get the list of offline MediaKeyIds.
+Obtains the IDs of offline media keys.
 
-**Since:** 14
+**Since:** 11
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
 
@@ -328,9 +329,9 @@ Get the list of offline MediaKeyIds.
 getOfflineMediaKeyStatus(mediaKeyId: Uint8Array): OfflineMediaKeyStatus
 ```
 
-Get offline media key status corresponding to the mediaKeyId.
+Obtains the status of offline media keys with the specified IDs.
 
-**Since:** 14
+**Since:** 11
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
 
@@ -364,9 +365,9 @@ Get offline media key status corresponding to the mediaKeyId.
 getStatistics(): StatisticKeyValue[]
 ```
 
-Get performance statistics information.That includes currentSessionNum, version, decryptNumber,and errorDecryptNumber.
+Obtains the DRM metrics, including the number of active sessions, plugin version details, the maximum decryption time for each session (over three attempts), the total count of decryption operations, and the number of decryption failures.
 
-**Since:** 14
+**Since:** 11
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
 
@@ -393,9 +394,9 @@ Get performance statistics information.That includes currentSessionNum, version,
 off(type: 'keySystemRequired', callback?: (eventInfo: EventInfo) => void): void
 ```
 
-Unregister keySystemRequired events.
+Unsubscribes from events indicating that the application requests a device certificate. This API uses an asynchronous callback to return the result.
 
-**Since:** 14
+**Since:** 11
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
 
@@ -423,9 +424,9 @@ Unregister keySystemRequired events.
 on(type: 'keySystemRequired', callback: (eventInfo: EventInfo) => void): void
 ```
 
-Register keySystemRequired events.
+Subscribes to events indicating that the application requests a device certificate. This API uses an asynchronous callback to return the result.
 
-**Since:** 14
+**Since:** 11
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
 
@@ -453,9 +454,9 @@ Register keySystemRequired events.
 processKeySystemResponse(response: Uint8Array): Promise<void>
 ```
 
-Process the response corresponding the key system request obtained by the application.
+Processes the response to a previously generated device certificate request. This API uses a promise to return the result.
 
-**Since:** 14
+**Since:** 11
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
 
@@ -489,9 +490,9 @@ Process the response corresponding the key system request obtained by the applic
 setConfigurationByteArray(configName: string, value: Uint8Array): void
 ```
 
-Set the specified configuration.
+Sets a configuration item in the form of a byte array.
 
-**Since:** 14
+**Since:** 11
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
 
@@ -520,9 +521,9 @@ Set the specified configuration.
 setConfigurationString(configName: string, value: string): void
 ```
 
-Set the specified configuration.
+Sets a configuration item in the form of a string.
 
-**Since:** 14
+**Since:** 11
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
 

@@ -12,7 +12,7 @@ import { call } from '@kit.TelephonyKit';
 function isNewCallAllowed(callback: AsyncCallback<boolean>): void
 ```
 
-Judge whether to allow another new call.
+Checks whether a new call is allowed. This API uses an asynchronous callback to return the result.
 
 **Since:** 8
 
@@ -28,7 +28,7 @@ Judge whether to allow another new call.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;boolean&gt; | Yes | The callback of isNewCallAllowed. Returns {@code true} if the device currently allows new calls; returns {@code false} otherwise. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;boolean&gt; | Yes | Callback function used to return the result. The value **true** indicates that the call is allowed, and the value **false** indicates the opposite. |
 
 **Error codes:**
 
@@ -62,7 +62,7 @@ call.isNewCallAllowed((err: BusinessError, data: boolean) => {
 function isNewCallAllowed(): Promise<boolean>
 ```
 
-Judge whether to allow another new call.
+Checks whether a new call is allowed. This API uses a promise to return the result.
 
 **Since:** 8
 
@@ -78,7 +78,7 @@ Judge whether to allow another new call.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;boolean&gt; | Returns { |
+| Promise&lt;boolean&gt; | Promise used to return the result. The value **true** indicates that the call is allowed, and the value **false** indicates the opposite. |
 
 **Error codes:**
 

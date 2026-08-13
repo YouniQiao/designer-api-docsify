@@ -12,7 +12,7 @@ import { call } from '@kit.TelephonyKit';
 function answerCall(callId: int, callback: AsyncCallback<void>): void
 ```
 
-Answers the incoming call.
+Answers a call. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
 
@@ -30,8 +30,8 @@ Answers the incoming call.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Indicates the identifier of the call to answer. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | The callback of answerCall. |
+| callId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Call ID. You can obtain the value by subscribing to **callDetailsChange** events. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
 
@@ -66,7 +66,7 @@ call.answerCall(1, (err: BusinessError) => {
 function answerCall(callId?: int): Promise<void>
 ```
 
-Answers the incoming call.
+Answers a call. This API uses a promise to return the result.
 
 **Since:** 9
 
@@ -84,13 +84,13 @@ Answers the incoming call.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | No | Indicates the identifier of the call to answer. |
+| callId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | No | Call ID. You can obtain the value by subscribing to **callDetailsChange** events. This field is optional from API version 9. &lt;br&gt;If this field is not set, the latest ringing call will be connected. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | The promise returned by the answerCall. |
+| Promise&lt;void&gt; | Promise used to return the result. |
 
 **Error codes:**
 
@@ -123,7 +123,7 @@ call.answerCall(1).then(() => {
 function answerCall(videoState: VideoStateType, callId: int): Promise<void>
 ```
 
-Answers the incoming video call
+Answers a call. This API uses a promise to return the result.
 
 **Since:** 11
 
@@ -141,14 +141,14 @@ Answers the incoming video call
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| videoState | [VideoStateType](arkts-telephony-call-videostatetype-e-sys.md) | Yes | Indicates the answer the call with video or voice. |
-| callId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Indicates the identifier of the call to answer. |
+| videoState | [VideoStateType](arkts-telephony-call-videostatetype-e-sys.md) | Yes | Video state. |
+| callId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Call ID. You can obtain the value by subscribing to **callDetailsChange** events. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | The promise returned by the answerCall. |
+| Promise&lt;void&gt; | Promise used to return the result. |
 
 **Error codes:**
 

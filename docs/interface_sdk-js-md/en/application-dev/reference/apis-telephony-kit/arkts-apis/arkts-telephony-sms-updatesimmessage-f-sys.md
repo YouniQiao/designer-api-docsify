@@ -12,7 +12,7 @@ import { sms } from '@kit.TelephonyKit';
 function updateSimMessage(options: UpdateSimMessageOptions, callback: AsyncCallback<void>): void
 ```
 
-Update a SIM SMS of SIM card.
+Updates a SIM message. This API uses an asynchronous callback to return the result.
 
 **Since:** 7
 
@@ -30,8 +30,8 @@ Update a SIM SMS of SIM card.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [UpdateSimMessageOptions](arkts-telephony-sms-updatesimmessageoptions-i-sys.md) | Yes | Indicates update SIM message options. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | The callback of updateSimMessage. |
+| options | [UpdateSimMessageOptions](arkts-telephony-sms-updatesimmessageoptions-i-sys.md) | Yes | SIM message updating options. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
 
@@ -70,7 +70,7 @@ sms.updateSimMessage(updateSimMessageOptions, (err: BusinessError) => {
 function updateSimMessage(options: UpdateSimMessageOptions): Promise<void>
 ```
 
-Update a SIM SMS of SIM card.
+Updates a SIM message. This API uses a promise to return the result.
 
 **Since:** 7
 
@@ -88,13 +88,13 @@ Update a SIM SMS of SIM card.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [UpdateSimMessageOptions](arkts-telephony-sms-updatesimmessageoptions-i-sys.md) | Yes | Indicates update SIM message options. |
+| options | [UpdateSimMessageOptions](arkts-telephony-sms-updatesimmessageoptions-i-sys.md) | Yes | SIM message updating options. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | The promise returned by the updateSimMessage. |
+| Promise&lt;void&gt; | Promise used to return the result. |
 
 **Error codes:**
 

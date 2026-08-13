@@ -1,0 +1,28 @@
+# EmergencyNumberOptions
+
+判断是否是紧急电话号码的可选参数。
+
+**起始版本：** 7
+
+<!--Device-call-export interface EmergencyNumberOptions--><!--Device-call-export interface EmergencyNumberOptions-End-->
+
+**系统能力：** SystemCapability.Telephony.CallManager
+
+## slotId
+
+```TypeScript
+slotId?: number
+```
+
+卡槽ID：
+
+- 卡槽1：`0`。  
+- 卡槽2：`1`。
+
+**类型：** number
+
+**起始版本：** 7
+
+<!--Device-EmergencyNumberOptions-slotId?: int--><!--Device-EmergencyNumberOptions-slotId?: int-End-->
+
+**系统能力：** SystemCapability.Telephony.CallManager

@@ -22,7 +22,7 @@ import { sms } from '@kit.TelephonyKit';
 attachment?: Array<MmsAttachment>
 ```
 
-Indicates the attachment for the MMS message.
+Attachment.
 
 **Type:** Array&lt;[MmsAttachment](arkts-telephony-sms-mmsattachment-i-sys.md)&gt;
 
@@ -40,7 +40,7 @@ Indicates the attachment for the MMS message.
 messageType: MessageType
 ```
 
-Indicates the message type for the MMS message.
+Message type.
 
 **Type:** MessageType
 
@@ -58,7 +58,7 @@ Indicates the message type for the MMS message.
 mmsType: MmsSendReq | MmsSendConf | MmsNotificationInd | MmsRespInd | MmsRetrieveConf | MmsAcknowledgeInd | MmsDeliveryInd | MmsReadOrigInd | MmsReadRecInd
 ```
 
-Indicates the PDU header type for the MMS message.
+PDU header type.
 
 **Type:** [MmsSendReq](arkts-telephony-sms-mmssendreq-i-sys.md) \| [MmsSendConf](arkts-telephony-sms-mmssendconf-i-sys.md) \| [MmsNotificationInd](arkts-telephony-sms-mmsnotificationind-i-sys.md) \| [MmsRespInd](arkts-telephony-sms-mmsrespind-i-sys.md) \| [MmsRetrieveConf](arkts-telephony-sms-mmsretrieveconf-i-sys.md) \| [MmsAcknowledgeInd](arkts-telephony-sms-mmsacknowledgeind-i-sys.md) \| [MmsDeliveryInd](arkts-telephony-sms-mmsdeliveryind-i-sys.md) \| [MmsReadOrigInd](arkts-telephony-sms-mmsreadorigind-i-sys.md) \| [MmsReadRecInd](arkts-telephony-sms-mmsreadrecind-i-sys.md)
 

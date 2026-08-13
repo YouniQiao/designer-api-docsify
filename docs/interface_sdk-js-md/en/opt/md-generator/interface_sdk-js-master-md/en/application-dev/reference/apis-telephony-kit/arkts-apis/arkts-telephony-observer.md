@@ -1,6 +1,6 @@
-# @ohos.telephony.observer
+# @ohos.telephony.observer(Telephony Status Observer)
 
-Monitors telephony state updates of a device, including updates of the network state,signal strength, call state, the data link connection state and others.
+The **observer** module provides event subscription management functions. You can register or unregister an observer that listens for the following events: network status change, signal status change, call status change, cellular data connection status, uplink and downlink data flow status of cellular data services, and SIM status change.
 
 **Since:** 6
 

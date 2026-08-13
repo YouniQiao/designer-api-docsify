@@ -1,6 +1,6 @@
 # XCallType (System API)
 
-Indicates the type of the XCall.
+Enumerates X-Call types.
 
 **Since:** 26.0.0
 
@@ -16,7 +16,7 @@ Indicates the type of the XCall.
 XCALL_ECALL_TYPE = 0
 ```
 
-Indicates the xcall is Ecall.
+E-Call.
 
 **Since:** 26.0.0
 
@@ -32,7 +32,7 @@ Indicates the xcall is Ecall.
 XCALL_BCALL_TYPE = 1
 ```
 
-Indicates the xcall is Bcall.
+B-Call.
 
 **Since:** 26.0.0
 
@@ -48,7 +48,7 @@ Indicates the xcall is Bcall.
 XCALL_ICALL_TYPE = 2
 ```
 
-Indicates the xcall is Icall.
+I-Call.
 
 **Since:** 26.0.0
 

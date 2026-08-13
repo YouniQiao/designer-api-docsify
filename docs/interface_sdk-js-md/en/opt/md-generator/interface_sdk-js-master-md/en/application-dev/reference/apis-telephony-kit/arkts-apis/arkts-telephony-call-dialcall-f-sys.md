@@ -12,7 +12,7 @@ import { call } from '@kit.TelephonyKit';
 function dialCall(phoneNumber: string, options: DialCallOptions, callback: AsyncCallback<void>): void
 ```
 
-Makes a call.
+Initiates a call. You can set call options as needed. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
 
@@ -73,7 +73,7 @@ call.dialCall("138xxxxxxxx", dialCallOptions, (err: BusinessError) => {
 function dialCall(phoneNumber: string, options?: DialCallOptions): Promise<void>
 ```
 
-Makes a call.
+Initiates a call. You can set call options as needed. This API uses a promise to return the result.
 
 **Since:** 9
 
@@ -137,7 +137,7 @@ call.dialCall("138xxxxxxxx", dialCallOptions).then(() => {
 function dialCall(phoneNumber: string, callback: AsyncCallback<void>): void
 ```
 
-Makes a call.
+Initiates a call. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
 

@@ -1,6 +1,6 @@
 # DeviceDirection (System API)
 
-Indicates the type of device direction.
+Enumerates device directions in a video call.
 
 **Since:** 11
 
@@ -16,7 +16,7 @@ Indicates the type of device direction.
 DEVICE_DIRECTION_0 = 0
 ```
 
-Indicates the device direction is 0 degree.
+0-degree direction.
 
 **Since:** 11
 
@@ -32,7 +32,7 @@ Indicates the device direction is 0 degree.
 DEVICE_DIRECTION_90 = 90
 ```
 
-Indicates the device direction is 90 degree.
+90-degree direction.
 
 **Since:** 11
 
@@ -48,7 +48,7 @@ Indicates the device direction is 90 degree.
 DEVICE_DIRECTION_180 = 180
 ```
 
-Indicates the device direction is 180 degree.
+180-degree direction.
 
 **Since:** 11
 
@@ -64,7 +64,7 @@ Indicates the device direction is 180 degree.
 DEVICE_DIRECTION_270 = 270
 ```
 
-Indicates the device direction is 270 degree.
+270-degree direction.
 
 **Since:** 11
 

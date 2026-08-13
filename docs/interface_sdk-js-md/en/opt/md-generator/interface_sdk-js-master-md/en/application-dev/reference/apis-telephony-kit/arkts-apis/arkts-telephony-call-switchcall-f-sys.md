@@ -12,7 +12,7 @@ import { call } from '@kit.TelephonyKit';
 function switchCall(callId: number, callback: AsyncCallback<void>): void
 ```
 
-Switch call.
+Switches a call. This API uses an asynchronous callback to return the result.
 
 **Since:** 7
 
@@ -64,7 +64,7 @@ call.switchCall(1, (err: BusinessError) => {
 function switchCall(callId: number): Promise<void>
 ```
 
-Switch call.
+Switches a call. This API uses a promise to return the result.
 
 **Since:** 7
 

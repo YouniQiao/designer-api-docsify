@@ -4,7 +4,7 @@
 type DataFlowType = data.DataFlowType
 ```
 
-Describes the cellular data flow type.
+Defines the cellular data flow type.
 
 **Since:** 6
 

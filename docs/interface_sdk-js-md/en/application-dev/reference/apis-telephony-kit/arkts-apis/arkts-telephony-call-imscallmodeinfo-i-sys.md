@@ -1,6 +1,6 @@
 # ImsCallModeInfo (System API)
 
-Indicates the ims call mode info of a video call.
+Defines the video call mode information.
 
 **Since:** 11
 
@@ -24,7 +24,7 @@ import { call } from '@kit.TelephonyKit';
 callId: int
 ```
 
-Indicates the id of call.
+Call ID.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -44,7 +44,7 @@ Indicates the id of call.
 imsCallMode: ImsCallMode
 ```
 
-Indicates the ImsCallMode of call.
+Video call mode.
 
 **Type:** [ImsCallMode](arkts-telephony-call-imscallmode-e-sys.md)
 
@@ -64,7 +64,7 @@ Indicates the ImsCallMode of call.
 isRequestInfo: boolean
 ```
 
-Indicates if this is a request which received from remote,
+Whether the information is request information.
 
 **Type:** boolean
 
@@ -84,7 +84,7 @@ Indicates if this is a request which received from remote,
 result: VideoRequestResultType
 ```
 
-Indicates the request result.
+Call ending message.
 
 **Type:** [VideoRequestResultType](arkts-telephony-call-videorequestresulttype-e-sys.md)
 

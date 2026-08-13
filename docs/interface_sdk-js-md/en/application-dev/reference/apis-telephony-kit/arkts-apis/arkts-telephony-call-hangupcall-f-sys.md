@@ -12,7 +12,7 @@ import { call } from '@kit.TelephonyKit';
 function hangUpCall(callId: int, callback: AsyncCallback<void>): void
 ```
 
-Hang up the foreground call.
+Ends a call. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
 
@@ -30,8 +30,8 @@ Hang up the foreground call.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Indicates the identifier of the call to hangup. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | The callback of hangUpCall. |
+| callId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Call ID. You can obtain the value by subscribing to **callDetailsChange** events. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
 
@@ -66,7 +66,7 @@ call.hangUpCall(1, (err: BusinessError) => {
 function hangUpCall(callId?: int): Promise<void>
 ```
 
-Hang up the foreground call.
+Ends a call. This API uses a promise to return the result.
 
 **Since:** 9
 
@@ -84,13 +84,13 @@ Hang up the foreground call.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | No | Indicates the identifier of the call to hangup. |
+| callId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | No | Call ID. You can obtain the value by subscribing to **callDetailsChange** events. This field is optional from API version 9. &lt;br&gt;If this field is not set, the latest ongoing, dialed, or connected call will be ended. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | The promise returned by the hangUpCall. |
+| Promise&lt;void&gt; | Promise used to return the result. |
 
 **Error codes:**
 

@@ -1,0 +1,186 @@
+# dialCall（系统接口）
+
+## dialCall
+
+```TypeScript
+function dialCall(phoneNumber: string, options: DialCallOptions, callback: AsyncCallback<void>): void
+```
+
+拨打电话，可设置通话参数。使用callback异步回调。
+
+**起始版本：** 9
+
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+
+**需要权限：** ohos.permission.PLACE_CALL
+
+<!--Device-call-function dialCall(phoneNumber: string, options: DialCallOptions, callback: AsyncCallback<void>): void--><!--Device-call-function dialCall(phoneNumber: string, options: DialCallOptions, callback: AsyncCallback<void>): void-End-->
+
+**系统能力：** SystemCapability.Telephony.CallManager
+
+**系统接口：** 此接口为系统接口。
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| phoneNumber | string | 是 | 电话号码。 |
+| options | [DialCallOptions](arkts-telephony-call-dialcalloptions-i-sys.md) | 是 | 通话参数，携带呼叫的其他配置信息。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 以callback形式异步返回拨打电话的结果。 |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameters types; |
+| 8300006 | Network not in service. |
+| [201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [8300999](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-telephony-kit/errorcode-telephony.md#8300999-内部错误) | Unknown error code. |
+| [202](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) | Non-system applications use system APIs. |
+| 8300005 | Airplane mode is on. |
+| [8300002](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-telephony-kit/errorcode-telephony.md#8300002-服务连接失败) | Operation failed. Cannot connect to service. |
+| [8300003](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-telephony-kit/errorcode-telephony.md#8300003-系统内部错误) | System internal error. |
+| [8300001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-telephony-kit/errorcode-telephony.md#8300001-输入参数不在处理范围内) | Invalid parameter value. |
+
+## 示例
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let dialCallOptions: call.DialCallOptions = {
+    accountId: 0,
+    videoState: 0,
+    dialScene: 0,
+    dialType: 0
+}
+call.dialCall("138xxxxxxxx", dialCallOptions, (err: BusinessError) => {
+    if (err) {
+        console.error(`dialCall fail, err->${JSON.stringify(err)}`);
+    } else {
+        console.info(`dialCall success.`);
+    }
+});
+```
+
+
+## dialCall
+
+```TypeScript
+function dialCall(phoneNumber: string, options?: DialCallOptions): Promise<void>
+```
+
+拨打电话，可设置通话参数。使用Promise异步回调。
+
+**起始版本：** 9
+
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+
+**需要权限：** ohos.permission.PLACE_CALL
+
+<!--Device-call-function dialCall(phoneNumber: string, options?: DialCallOptions): Promise<void>--><!--Device-call-function dialCall(phoneNumber: string, options?: DialCallOptions): Promise<void>-End-->
+
+**系统能力：** SystemCapability.Telephony.CallManager
+
+**系统接口：** 此接口为系统接口。
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| phoneNumber | string | 是 | 电话号码。 |
+| options | [DialCallOptions](arkts-telephony-call-dialcalloptions-i-sys.md) | 否 | 通话参数，携带呼叫的其他配置信息。&lt;br/&gt;不填该参数则默认使用如下配置，参考 [DialCallOptions](arkts-telephony-call-dialcalloptions-i-sys.md#DialCallOptions)。&lt;br/&gt;- 帐户Id：卡槽1。 &lt;br/&gt;- 音视频类型：语音通话。 &lt;br/&gt;- 拨号场景：普通呼叫。 &lt;br/&gt;- 拨号类 型：运营商通话。 |
+
+**返回值：**
+
+| 类型 | 说明 |
+| --- | --- |
+| Promise&lt;void&gt; | 以Promise形式异步返回拨号结果。 |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameters types; |
+| 8300006 | Network not in service. |
+| [201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [8300999](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-telephony-kit/errorcode-telephony.md#8300999-内部错误) | Unknown error code. |
+| [202](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) | Non-system applications use system APIs. |
+| 8300005 | Airplane mode is on. |
+| [8300002](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-telephony-kit/errorcode-telephony.md#8300002-服务连接失败) | Operation failed. Cannot connect to service. |
+| [8300003](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-telephony-kit/errorcode-telephony.md#8300003-系统内部错误) | System internal error. |
+| [8300001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-telephony-kit/errorcode-telephony.md#8300001-输入参数不在处理范围内) | Invalid parameter value. |
+
+## 示例
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let dialCallOptions: call.DialCallOptions = {
+    accountId: 0,
+    videoState: 0,
+    dialScene: 0,
+    dialType: 0
+}
+call.dialCall("138xxxxxxxx", dialCallOptions).then(() => {
+    console.info(`dialCall success.`);
+}).catch((err: BusinessError) => {
+    console.error(`dialCall fail, promise: err->${JSON.stringify(err)}`);
+});
+```
+
+
+## dialCall
+
+```TypeScript
+function dialCall(phoneNumber: string, callback: AsyncCallback<void>): void
+```
+
+拨打电话。使用callback异步回调。
+
+**起始版本：** 9
+
+**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+
+**需要权限：** ohos.permission.PLACE_CALL
+
+<!--Device-call-function dialCall(phoneNumber: string, callback: AsyncCallback<void>): void--><!--Device-call-function dialCall(phoneNumber: string, callback: AsyncCallback<void>): void-End-->
+
+**系统能力：** SystemCapability.Telephony.CallManager
+
+**系统接口：** 此接口为系统接口。
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| phoneNumber | string | 是 | 电话号码。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 以callback形式异步返回拨打电话的结果。 |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameters types; |
+| 8300006 | Network not in service. |
+| [201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [8300999](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-telephony-kit/errorcode-telephony.md#8300999-内部错误) | Unknown error code. |
+| [202](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) | Non-system applications use system APIs. |
+| 8300005 | Airplane mode is on. |
+| [8300002](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-telephony-kit/errorcode-telephony.md#8300002-服务连接失败) | Operation failed. Cannot connect to service. |
+| [8300003](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-telephony-kit/errorcode-telephony.md#8300003-系统内部错误) | System internal error. |
+| [8300001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-telephony-kit/errorcode-telephony.md#8300001-输入参数不在处理范围内) | Invalid parameter value. |
+
+## 示例
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+call.dialCall("138xxxxxxxx", (err: BusinessError) => {
+    if (err) {
+        console.error(`dialCall fail, err->${JSON.stringify(err)}`);
+    } else {
+        console.info(`dialCall success.`);
+    }
+});
+```
+

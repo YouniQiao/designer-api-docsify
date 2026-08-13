@@ -1,6 +1,6 @@
 # VideoStateType (System API)
 
-Indicates the type of video state.
+Video state type.
 
 **Since:** 7
 
@@ -18,7 +18,7 @@ Indicates the type of video state.
 TYPE_VOICE = 0
 ```
 
-Indicates the call is in voice state.
+Voice state.
 
 **Since:** 7
 
@@ -36,7 +36,7 @@ Indicates the call is in voice state.
 TYPE_VIDEO = 1
 ```
 
-Indicates the call is in video state.
+Video state.
 
 **Since:** 7
 
@@ -58,7 +58,7 @@ Indicates the call is in video state.
 TYPE_VIDEO_SEND_ONLY = 1
 ```
 
-Indicates the call is in send only video state.
+Data sending only during a video call.
 
 **Since:** 11
 
@@ -76,7 +76,7 @@ Indicates the call is in send only video state.
 TYPE_VIDEO_RECEIVE_ONLY = 2
 ```
 
-Indicates the call is in receive only video state.
+Data receiving only during a video call.
 
 **Since:** 11
 
@@ -94,7 +94,7 @@ Indicates the call is in receive only video state.
 TYPE_VIDEO_BIDIRECTIONAL = 3
 ```
 
-Indicates the call is in send and receive video state.
+Data receiving/sending status during a video call.
 
 **Since:** 11
 

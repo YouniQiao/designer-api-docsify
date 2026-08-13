@@ -6,7 +6,7 @@ typedef struct OH_MediaKeySession_Callback {...} OH_MediaKeySession_Callback
 
 ## Overview
 
-MediaKeySession_Callback struct, used to listen event like key expired and key change etc..
+The OH_MediaKeySession_Callback struct describes the callbacks for media key session events such as keyexpiration and key changes. It provides a MediaKeySession instance, making it suitable for multi-session decryptionscenarios.
 
 **Since**: 12
 
@@ -20,7 +20,7 @@ MediaKeySession_Callback struct, used to listen event like key expired and key c
 
 | Name | Description |
 | -- | -- |
-| [OH_MediaKeySession_EventCallback](capi-native-mediakeysession-h.md#oh_mediakeysession_eventcallback) eventCallback | Normal event callback like key expired etc.. |
-| [OH_MediaKeySession_KeyChangeCallback](capi-native-mediakeysession-h.md#oh_mediakeysession_keychangecallback) keyChangeCallback | Key change callback for keys change event. |
+| [OH_MediaKeySession_EventCallback](capi-native-mediakeysession-h.md#oh_mediakeysession_eventcallback) eventCallback | Callback for standard events, such as key expiration. |
+| [OH_MediaKeySession_KeyChangeCallback](capi-native-mediakeysession-h.md#oh_mediakeysession_keychangecallback) keyChangeCallback | Callback for media key change events. |
 
 

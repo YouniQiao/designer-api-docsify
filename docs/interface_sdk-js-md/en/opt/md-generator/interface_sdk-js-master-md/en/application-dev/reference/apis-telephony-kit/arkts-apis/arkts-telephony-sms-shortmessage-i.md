@@ -20,7 +20,12 @@ import { sms } from '@kit.TelephonyKit';
 hasReplyPath: boolean
 ```
 
-Indicates whether the received SMS contains "TP-Reply-Path".
+Whether the received SMS contains **TP-Reply-Path**. The default value is **false**.
+
+- **true**: yes  
+- **false**: no
+
+**TP-Reply-Path**: The device returns a response based on the SMSC that sends the SMS message.
 
 **Type:** boolean
 
@@ -36,7 +41,12 @@ Indicates whether the received SMS contains "TP-Reply-Path".
 isReplaceMessage: boolean
 ```
 
-Indicates whether the received SMS is a "replace short message".
+Whether the received SMS message is a **replace short message**. The default value is **false**.
+
+- **true**: yes  
+- **false**: no
+
+For details, see [3GPP TS 23.040 9.2.3.9](https://www.3gpp.org/ftp/specs/archive/23_series/23.040).
 
 **Type:** boolean
 
@@ -52,7 +62,12 @@ Indicates whether the received SMS is a "replace short message".
 isSmsStatusReportMessage: boolean
 ```
 
-Indicates whether the current message is SMS-STATUS-REPORT.
+Whether the received SMS message is an SMS delivery report. The default value is **false**.
+
+- **true**: yes  
+- **false**: no
+
+SMS delivery report: a message sent from the SMSC to show the current status of the SMS message you delivered.
 
 **Type:** boolean
 
@@ -68,7 +83,7 @@ Indicates whether the current message is SMS-STATUS-REPORT.
 messageClass: ShortMessageClass
 ```
 
-Indicates the SMS type.
+Enumerates SMS message types.
 
 **Type:** [ShortMessageClass](arkts-telephony-sms-shortmessageclass-e.md)
 
@@ -84,7 +99,7 @@ Indicates the SMS type.
 pdu: Array<number>
 ```
 
-Indicates Protocol Data Units (PDUs) from an SMS message.
+PDU in the SMS message.
 
 **Type:** Array&lt;number&gt;
 
@@ -100,7 +115,7 @@ Indicates Protocol Data Units (PDUs) from an SMS message.
 protocolId: number
 ```
 
-Indicates the protocol identifier.
+Protocol identifier used for delivering the SMS message.
 
 **Type:** number
 
@@ -116,7 +131,7 @@ Indicates the protocol identifier.
 scAddress: string
 ```
 
-Indicates the short message service center (SMSC) address.
+SMSC address.
 
 **Type:** string
 
@@ -132,7 +147,7 @@ Indicates the short message service center (SMSC) address.
 scTimestamp: number
 ```
 
-Indicates the SMSC timestamp.
+SMSC timestamp.
 
 **Type:** number
 
@@ -148,7 +163,7 @@ Indicates the SMSC timestamp.
 status: number
 ```
 
-Indicates the SMS message status from the SMS-STATUS-REPORT message sent by the Short Message Service Center (SMSC).
+SMS message status sent by the SMSC in the **SMS-STATUS-REPORT** message.
 
 **Type:** number
 
@@ -164,7 +179,7 @@ Indicates the SMS message status from the SMS-STATUS-REPORT message sent by the 
 visibleMessageBody: string
 ```
 
-Indicates the SMS message body.
+SMS message body.
 
 **Type:** string
 
@@ -180,7 +195,7 @@ Indicates the SMS message body.
 visibleRawAddress: string
 ```
 
-Indicates the address of the sender, which is to be displayed on the UI.
+Sender address.
 
 **Type:** string
 

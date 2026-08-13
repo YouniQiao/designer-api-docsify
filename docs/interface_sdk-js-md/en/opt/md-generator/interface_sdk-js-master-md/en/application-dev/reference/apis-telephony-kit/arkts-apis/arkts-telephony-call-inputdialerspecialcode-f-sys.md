@@ -12,7 +12,7 @@ import { call } from '@kit.TelephonyKit';
 function inputDialerSpecialCode(inputCode: string, callback: AsyncCallback<void>): void
 ```
 
-Enters the special code on the keypad.
+Performs a secret code broadcast. This API uses an asynchronous callback to return the result.
 
 **Since:** 10
 
@@ -63,7 +63,7 @@ call.inputDialerSpecialCode('*#*#2846579#*#*', (err: BusinessError) => {
 function inputDialerSpecialCode(inputCode: string): Promise<void>
 ```
 
-Enters the special code on the keypad.
+Performs a secret code broadcast. This API uses a promise to return the result.
 
 **Since:** 10
 

@@ -12,7 +12,7 @@ import { call } from '@kit.TelephonyKit';
 function setMuted(callback: AsyncCallback<void>): void
 ```
 
-Set mute during a call.
+Sets call muting. This API uses an asynchronous callback to return the result.
 
 **Since:** 8
 
@@ -28,7 +28,7 @@ Set mute during a call.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | The callback of setMuted. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
 
@@ -62,7 +62,7 @@ call.setMuted((err: BusinessError) => {
 function setMuted(): Promise<void>
 ```
 
-Set mute during a call.
+Sets call muting. This API uses a promise to return the result.
 
 **Since:** 8
 
@@ -78,7 +78,7 @@ Set mute during a call.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | The promise returned by the setMuted. |
+| Promise&lt;void&gt; | Promise used to return the result. |
 
 **Error codes:**
 

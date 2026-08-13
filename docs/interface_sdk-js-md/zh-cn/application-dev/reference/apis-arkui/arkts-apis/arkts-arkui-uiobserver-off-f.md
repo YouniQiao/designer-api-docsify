@@ -82,7 +82,7 @@ Removes a callback function that was previously registered with `on()`.
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'scrollEvent' | 是 | The type of event to remove the listener for. Must be 'scrollEvent'. |
-| options | [ObserverOptions](arkts-arkui-uiobserver-observeroptions-i.md) | 是 | The options object. |
+| options | ObserverOptions | 是 | The options object. |
 | callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ScrollEventInfo](arkts-arkui-uiobserver-scrolleventinfo-i.md)&gt; | 否 | The callback function to remove. If not provided, all callbacks for the given event type and scroll ID will be removed. |
 
 
@@ -255,7 +255,7 @@ export function off(type: 'tabContentUpdate', options: ObserverOptions, callback
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'tabContentUpdate' | 是 | 监听事件，固定为'tabContentUpdate'，即TabContent页面的切换事件。 |
-| options | [ObserverOptions](arkts-arkui-uiobserver-observeroptions-i.md) | 是 | 指定监听的Tabs组件的id。 |
+| options | ObserverOptions | 是 | 指定监听的Tabs组件的id。 |
 | callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[TabContentInfo](arkts-arkui-uiobserver-tabcontentinfo-i.md)&gt; | 否 | 需要被注销的回调函数。 |
 
 

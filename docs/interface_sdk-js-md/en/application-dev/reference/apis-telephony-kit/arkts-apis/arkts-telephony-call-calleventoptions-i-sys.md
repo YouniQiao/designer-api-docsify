@@ -1,6 +1,6 @@
 # CallEventOptions (System API)
 
-Indicates the options of call event.
+Defines the call event options.
 
 **Since:** 8
 
@@ -24,7 +24,7 @@ import { call } from '@kit.TelephonyKit';
 eventId: CallAbilityEventId
 ```
 
-Indicates the event ID of call ability.
+Enumerates call ability event IDs.
 
 **Type:** [CallAbilityEventId](arkts-telephony-call-callabilityeventid-e-sys.md)
 

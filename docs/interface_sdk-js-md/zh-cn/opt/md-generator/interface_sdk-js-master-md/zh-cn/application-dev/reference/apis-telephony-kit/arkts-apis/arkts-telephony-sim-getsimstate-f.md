@@ -19,7 +19,7 @@ Obtains the state of the SIM card in a specified slot.
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | slotId | number | 是 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[SimState](arkts-telephony-sim-simstate-e.md)&gt; | 是 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;SimState&gt; | 是 |
 
 **错误码：**
 
@@ -67,7 +67,7 @@ Obtains the state of the SIM card in a specified slot.
 
 | 类型 |
 | --- |
-| Promise&lt;[SimState](arkts-telephony-sim-simstate-e.md)&gt; |
+| Promise & lt;SimState & gt; |
 
 **错误码：**
 

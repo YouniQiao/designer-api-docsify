@@ -1,6 +1,6 @@
 # CCallStateInfo
 
-Indicates carrier call state and number.
+Defines information about the call status.
 
 **Since:** 23
 
@@ -20,7 +20,7 @@ import { observer } from '@kit.TelephonyKit';
 state: CCallState
 ```
 
-Indicates carrier call state.
+Call type.
 
 **Type:** CCallState
 
@@ -36,7 +36,7 @@ Indicates carrier call state.
 teleNumber: string
 ```
 
-Indicates carrier call number.
+Phone number.
 
 **Type:** string
 

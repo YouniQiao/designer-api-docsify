@@ -1,6 +1,6 @@
 # SimStateData
 
-Indicates SIM card type and status.
+Enumerates SIM card types and states.
 
 **Since:** 7
 
@@ -20,7 +20,7 @@ import { observer } from '@kit.TelephonyKit';
 reason: LockReason
 ```
 
-Indicates the SIM card lock type.
+SIM card lock type.
 
 **Type:** [LockReason](arkts-telephony-observer-lockreason-e.md)
 
@@ -36,7 +36,7 @@ Indicates the SIM card lock type.
 state: SimState
 ```
 
-Indicates the SIM card states.
+SIM card state.
 
 **Type:** SimState
 
@@ -52,7 +52,7 @@ Indicates the SIM card states.
 type: CardType
 ```
 
-Indicates the SIM card type.
+SIM card type.
 
 **Type:** CardType
 

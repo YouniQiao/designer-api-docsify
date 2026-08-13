@@ -12,7 +12,7 @@ import { observer } from '@kit.TelephonyKit';
 function offCCallStateChange(callback?: Callback<CCallStateInfo>): void
 ```
 
-Unsubscribes from the callback for listening to the carrier call state.
+Cancels the listening on the carrier call status and obtaining of the call number by a third-party application.This method uses an asynchronous callback to return the result.
 
 **Since:** 23
 

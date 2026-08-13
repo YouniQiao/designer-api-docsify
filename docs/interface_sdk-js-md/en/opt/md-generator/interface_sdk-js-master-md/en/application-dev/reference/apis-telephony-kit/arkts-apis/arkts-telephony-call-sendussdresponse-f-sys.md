@@ -12,7 +12,7 @@ import { call } from '@kit.TelephonyKit';
 function sendUssdResponse(slotId: number, content: string): void
 ```
 
-Send ussd response.
+Sends a response to the Unstructured Supplementary Service Data (USSD) service to the carrier.
 
 **Since:** 26.0.0
 

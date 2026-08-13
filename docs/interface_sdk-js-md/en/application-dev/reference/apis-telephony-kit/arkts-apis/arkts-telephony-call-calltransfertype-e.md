@@ -1,6 +1,6 @@
 # CallTransferType
 
-Indicates the type of call transfer.
+Enumerates call transfer types.
 
 **Since:** 26.0.0
 
@@ -16,7 +16,7 @@ Indicates the type of call transfer.
 TRANSFER_TYPE_UNCONDITIONAL = 0
 ```
 
-Indicates unconditional transfer of a call.
+Call forwarding unconditional.
 
 **Since:** 26.0.0
 
@@ -32,7 +32,7 @@ Indicates unconditional transfer of a call.
 TRANSFER_TYPE_BUSY = 1
 ```
 
-Indicates transfer the call when busy.
+Call forwarding busy.
 
 **Since:** 26.0.0
 
@@ -48,7 +48,7 @@ Indicates transfer the call when busy.
 TRANSFER_TYPE_NO_REPLY = 2
 ```
 
-Indicates transfer the call when no reply.
+Call forwarding on no reply.
 
 **Since:** 26.0.0
 
@@ -64,7 +64,7 @@ Indicates transfer the call when no reply.
 TRANSFER_TYPE_NOT_REACHABLE = 3
 ```
 
-Indicates transfer the call when unreachable.
+Call forwarding on no user not reachable.
 
 **Since:** 26.0.0
 

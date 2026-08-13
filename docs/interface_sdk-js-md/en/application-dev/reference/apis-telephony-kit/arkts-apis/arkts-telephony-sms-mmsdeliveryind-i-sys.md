@@ -1,6 +1,6 @@
 # MmsDeliveryInd (System API)
 
-Defines an MMS message delivery indication.
+Defines an MMS message delivery index.
 
 **Since:** 8
 
@@ -24,7 +24,7 @@ import { sms } from '@kit.TelephonyKit';
 date: long
 ```
 
-Indicates the date for the MMS message delivery indication.
+Date.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
@@ -44,7 +44,7 @@ Indicates the date for the MMS message delivery indication.
 messageId: string
 ```
 
-Indicates the message ID for the MMS message delivery indication.
+Message ID.
 
 **Type:** string
 
@@ -64,7 +64,7 @@ Indicates the message ID for the MMS message delivery indication.
 status: int
 ```
 
-Indicates the status for the MMS message delivery indication.
+Status.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -84,7 +84,7 @@ Indicates the status for the MMS message delivery indication.
 to: Array<MmsAddress>
 ```
 
-Indicates the destination address for the MMS message delivery indication.
+Destination address.
 
 **Type:** Array&lt;[MmsAddress](arkts-telephony-sms-mmsaddress-i-sys.md)&gt;
 
@@ -104,7 +104,7 @@ Indicates the destination address for the MMS message delivery indication.
 version: MmsVersionType
 ```
 
-Indicates the version for the MMS message delivery indication.
+Version.
 
 **Type:** [MmsVersionType](arkts-telephony-sms-mmsversiontype-e-sys.md)
 

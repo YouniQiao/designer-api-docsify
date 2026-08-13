@@ -12,7 +12,7 @@ import { call } from '@kit.TelephonyKit';
 function hangUpCall(callId: number, callback: AsyncCallback<void>): void
 ```
 
-Hang up the foreground call.
+Ends a call. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
 
@@ -64,7 +64,7 @@ call.hangUpCall(1, (err: BusinessError) => {
 function hangUpCall(callId?: number): Promise<void>
 ```
 
-Hang up the foreground call.
+Ends a call. This API uses a promise to return the result.
 
 **Since:** 9
 

@@ -16,7 +16,7 @@ Enumerates MMS message priorities.
 MMS_LOW = 128
 ```
 
-Indicates low priority.
+Low priority.
 
 **Since:** 8
 
@@ -29,14 +29,14 @@ Indicates low priority.
 ## MMS_NORMAL
 
 ```TypeScript
-MMS_NORMAL
+MMS_NORMAL = 129
 ```
 
-Indicates normal priority.
+Normal priority.
 
 **Since:** 8
 
-<!--Device-MmsPriorityType-MMS_NORMAL--><!--Device-MmsPriorityType-MMS_NORMAL-End-->
+<!--Device-MmsPriorityType-MMS_NORMAL = 129--><!--Device-MmsPriorityType-MMS_NORMAL = 129-End-->
 
 **System capability:** SystemCapability.Telephony.SmsMms
 
@@ -45,14 +45,14 @@ Indicates normal priority.
 ## MMS_HIGH
 
 ```TypeScript
-MMS_HIGH
+MMS_HIGH = 130
 ```
 
-Indicates high priority.
+High priority.
 
 **Since:** 8
 
-<!--Device-MmsPriorityType-MMS_HIGH--><!--Device-MmsPriorityType-MMS_HIGH-End-->
+<!--Device-MmsPriorityType-MMS_HIGH = 130--><!--Device-MmsPriorityType-MMS_HIGH = 130-End-->
 
 **System capability:** SystemCapability.Telephony.SmsMms
 

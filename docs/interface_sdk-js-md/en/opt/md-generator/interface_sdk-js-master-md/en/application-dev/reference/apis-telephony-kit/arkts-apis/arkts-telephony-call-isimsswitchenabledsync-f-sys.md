@@ -12,7 +12,7 @@ import { call } from '@kit.TelephonyKit';
 function isImsSwitchEnabledSync(slotId: number): boolean
 ```
 
-Judge whether the Ims switch is enabled.
+Checks whether the IMS service is enabled. This API returns the result synchronously.
 
 **Since:** 12
 

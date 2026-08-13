@@ -12,9 +12,7 @@ import { sms } from '@kit.TelephonyKit';
 function splitMessage(content: string, callback: AsyncCallback<Array<string>>): void
 ```
 
-Splits a long SMS message into multiple fragments.
-
-&lt;p&gt;If the length of an SMS message exceeds the maximum length allowed (140 bytes),the SMS message is split into multiple segments for processing.
+Splits an SMS message into multiple segments. This API uses an asynchronous callback to return the result.
 
 **Since:** 8
 
@@ -32,8 +30,8 @@ Splits a long SMS message into multiple fragments.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| content | string | Yes | Indicates the short message content, which cannot be {@code null}. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Array&lt;string&gt;&gt; | Yes | Indicates the callback for getting a list of split segments, which can be combined into a complete SMS message; Returns an empty string if no permission is granted or the short message content is {@code null}. |
+| content | string | Yes | SMS message content. The value cannot be null. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Array&lt;string&gt;&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
 
@@ -66,9 +64,7 @@ sms.splitMessage(content, (err: BusinessError, data: string[]) => {
 function splitMessage(content: string): Promise<Array<string>>
 ```
 
-Splits a long SMS message into multiple fragments.
-
-&lt;p&gt;If the length of an SMS message exceeds the maximum length allowed (140 bytes),the SMS message is split into multiple segments for processing.
+Splits an SMS message into multiple segments. This API uses a promise to return the result.
 
 **Since:** 8
 
@@ -86,13 +82,13 @@ Splits a long SMS message into multiple fragments.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| content | string | Yes | Indicates the short message content, which cannot be {@code null}. |
+| content | string | Yes | SMS message content. The value cannot be null. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;string&gt;&gt; | Returns a list of split segments, which can be combined into a complete SMS message; Returns an empty string if no permission is granted or the short message content is { |
+| Promise&lt;Array&lt;string&gt;&gt; | Promise used to return the result. |
 
 **Error codes:**
 

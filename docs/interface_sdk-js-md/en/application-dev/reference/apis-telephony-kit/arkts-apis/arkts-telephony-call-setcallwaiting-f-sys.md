@@ -12,7 +12,7 @@ import { call } from '@kit.TelephonyKit';
 function setCallWaiting(slotId: int, activate: boolean, callback: AsyncCallback<void>): void
 ```
 
-Set call waiting.
+Specifies whether to enable the call waiting service. This API uses an asynchronous callback to return the result.
 
 **Since:** 7
 
@@ -30,9 +30,9 @@ Set call waiting.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| slotId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Indicates the card slot index number, ranging from 0 to the maximum card slot index number supported by the device. |
-| activate | boolean | Yes | Indicates whether to activate or call wait. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | The callback of setCallWaiting. |
+| slotId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Card slot ID. &lt;br&gt;- **0**: card slot 1. &lt;br&gt;- **1**: card slot 2. |
+| activate | boolean | Yes | Whether to enable call waiting. &lt;br&gt;- **false**: Disable call waiting. &lt;br&gt;- **true**: Enable call waiting. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
 
@@ -67,7 +67,7 @@ call.setCallWaiting(0, true, (err: BusinessError) => {
 function setCallWaiting(slotId: int, activate: boolean): Promise<void>
 ```
 
-Set call waiting.
+Specifies whether to enable the call waiting service. This API uses a promise to return the result.
 
 **Since:** 7
 
@@ -85,14 +85,14 @@ Set call waiting.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| slotId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Indicates the card slot index number, ranging from 0 to the maximum card slot index number supported by the device. |
-| activate | boolean | Yes | Indicates whether to activate or call wait. |
+| slotId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Card slot ID. &lt;br&gt;- **0**: card slot 1. &lt;br&gt;- **1**: card slot 2. |
+| activate | boolean | Yes | Whether to enable call waiting. &lt;br&gt;- **false**: Disable call waiting. &lt;br&gt;- **true**: Enable call waiting. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | The promise returned by the setCallWaiting. |
+| Promise&lt;void&gt; | Promise used to return the result. |
 
 **Error codes:**
 

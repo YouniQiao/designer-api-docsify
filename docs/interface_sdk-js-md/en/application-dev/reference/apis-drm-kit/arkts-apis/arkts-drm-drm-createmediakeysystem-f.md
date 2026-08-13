@@ -14,9 +14,9 @@ function createMediaKeySystem(name: string): MediaKeySystem
 
 Creates a MediaKeySystem instance.
 
-**Since:** 14
+**Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn only, since version 14.
+**ArkTS mode:** ArkTS-Dyn only, since version 11.
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
 
@@ -28,13 +28,13 @@ Creates a MediaKeySystem instance.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| name | string | Yes | Used to point a Digital Right Management solution. |
+| name | string | Yes | DRM solution name, for example, **"com.clearplay.drm"**. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [MediaKeySystem](arkts-drm-drm-mediakeysystem-i.md) | The MediaKeySystem instance. |
+| [MediaKeySystem](arkts-drm-drm-mediakeysystem-i.md) | MediaKeySystem instance. |
 
 **Error codes:**
 

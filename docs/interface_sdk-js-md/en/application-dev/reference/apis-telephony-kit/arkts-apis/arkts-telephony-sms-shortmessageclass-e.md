@@ -13,80 +13,80 @@ Enumerates SMS message types.
 ## UNKNOWN
 
 ```TypeScript
-UNKNOWN
+UNKNOWN = 0
 ```
 
-Indicates an unknown type.
+Unknown type.
 
 **Since:** 6
 
 **ArkTS mode:** ArkTS-Dyn since version 6; ArkTS-Sta since version 23.
 
-<!--Device-ShortMessageClass-UNKNOWN--><!--Device-ShortMessageClass-UNKNOWN-End-->
+<!--Device-ShortMessageClass-UNKNOWN = 0--><!--Device-ShortMessageClass-UNKNOWN = 0-End-->
 
 **System capability:** SystemCapability.Telephony.SmsMms
 
 ## INSTANT_MESSAGE
 
 ```TypeScript
-INSTANT_MESSAGE
+INSTANT_MESSAGE = 1
 ```
 
-Indicates an instant message, which is displayed immediately after being received.
+Instant message, which is displayed immediately after being received.
 
 **Since:** 6
 
 **ArkTS mode:** ArkTS-Dyn since version 6; ArkTS-Sta since version 23.
 
-<!--Device-ShortMessageClass-INSTANT_MESSAGE--><!--Device-ShortMessageClass-INSTANT_MESSAGE-End-->
+<!--Device-ShortMessageClass-INSTANT_MESSAGE = 1--><!--Device-ShortMessageClass-INSTANT_MESSAGE = 1-End-->
 
 **System capability:** SystemCapability.Telephony.SmsMms
 
 ## OPTIONAL_MESSAGE
 
 ```TypeScript
-OPTIONAL_MESSAGE
+OPTIONAL_MESSAGE = 2
 ```
 
-Indicates an SMS message that can be stored on the device or SIM card based on the storage status.
+Message stored in the device or SIM card.
 
 **Since:** 6
 
 **ArkTS mode:** ArkTS-Dyn since version 6; ArkTS-Sta since version 23.
 
-<!--Device-ShortMessageClass-OPTIONAL_MESSAGE--><!--Device-ShortMessageClass-OPTIONAL_MESSAGE-End-->
+<!--Device-ShortMessageClass-OPTIONAL_MESSAGE = 2--><!--Device-ShortMessageClass-OPTIONAL_MESSAGE = 2-End-->
 
 **System capability:** SystemCapability.Telephony.SmsMms
 
 ## SIM_MESSAGE
 
 ```TypeScript
-SIM_MESSAGE
+SIM_MESSAGE = 3
 ```
 
-Indicates an SMS message containing SIM card information, which is to be stored in a SIM card.
+Message containing SIM card information, which is to be stored in the SIM card.
 
 **Since:** 6
 
 **ArkTS mode:** ArkTS-Dyn since version 6; ArkTS-Sta since version 23.
 
-<!--Device-ShortMessageClass-SIM_MESSAGE--><!--Device-ShortMessageClass-SIM_MESSAGE-End-->
+<!--Device-ShortMessageClass-SIM_MESSAGE = 3--><!--Device-ShortMessageClass-SIM_MESSAGE = 3-End-->
 
 **System capability:** SystemCapability.Telephony.SmsMms
 
 ## FORWARD_MESSAGE
 
 ```TypeScript
-FORWARD_MESSAGE
+FORWARD_MESSAGE = 4
 ```
 
-Indicates an SMS message to be forwarded to another device.
+Message to be forwarded to another device.
 
 **Since:** 6
 
 **ArkTS mode:** ArkTS-Dyn since version 6; ArkTS-Sta since version 23.
 
-<!--Device-ShortMessageClass-FORWARD_MESSAGE--><!--Device-ShortMessageClass-FORWARD_MESSAGE-End-->
+<!--Device-ShortMessageClass-FORWARD_MESSAGE = 4--><!--Device-ShortMessageClass-FORWARD_MESSAGE = 4-End-->
 
 **System capability:** SystemCapability.Telephony.SmsMms
 

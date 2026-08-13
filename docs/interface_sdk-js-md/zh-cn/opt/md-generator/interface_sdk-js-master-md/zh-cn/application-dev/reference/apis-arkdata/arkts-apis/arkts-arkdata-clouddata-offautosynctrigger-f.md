@@ -20,7 +20,7 @@ function offAutoSyncTrigger(observer?: Callback<AutoSyncTriggerInfo>): void
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| observer | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AutoSyncTriggerInfo](arkts-arkdata-clouddata-autosynctriggerinfo-i.md)&gt; | 否 |
+| [observer](../../apis-telephony-kit/arkts-apis/arkts-telephony-observer.md) | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AutoSyncTriggerInfo](arkts-arkdata-clouddata-autosynctriggerinfo-i.md)&gt; | 否 |
 
 **错误码：**
 

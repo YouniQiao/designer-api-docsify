@@ -12,7 +12,7 @@ import { sms } from '@kit.TelephonyKit';
 function downloadMms(context: Context, mmsParams: MmsParams, callback: AsyncCallback<void>): void
 ```
 
-Downloads an MMS message.
+Downloads an MMS message. This API uses an asynchronous callback to return the result.
 
 **Since:** 11
 
@@ -133,7 +133,7 @@ class EntryAbility extends UIAbility {
 function downloadMms(context: Context, mmsParams: MmsParams): Promise<void>
 ```
 
-Downloads an MMS message.
+Downloads an MMS message. This API uses a promise to return the result.
 
 **Since:** 11
 

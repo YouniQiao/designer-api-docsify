@@ -1,10 +1,10 @@
 # MediaKeyRequestType
 
-Enumerates media key request types.
+Enumerates the types of media key requests.
 
-**Since:** 12
+**Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 <!--Device-drm-enum MediaKeyRequestType--><!--Device-drm-enum MediaKeyRequestType-End-->
 
@@ -16,11 +16,11 @@ Enumerates media key request types.
 MEDIA_KEY_REQUEST_TYPE_UNKNOWN = 0
 ```
 
-Media key request type unknown.
+Unknown type.
 
-**Since:** 12
+**Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -34,11 +34,11 @@ Media key request type unknown.
 MEDIA_KEY_REQUEST_TYPE_INITIAL = 1
 ```
 
-Media key request type initial.
+Initial request.
 
-**Since:** 12
+**Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -52,11 +52,11 @@ Media key request type initial.
 MEDIA_KEY_REQUEST_TYPE_RENEWAL = 2
 ```
 
-Media key request type renewal.
+Renewal request.
 
-**Since:** 12
+**Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -70,11 +70,11 @@ Media key request type renewal.
 MEDIA_KEY_REQUEST_TYPE_RELEASE = 3
 ```
 
-Media key request type release.
+Release request.
 
-**Since:** 12
+**Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -88,11 +88,11 @@ Media key request type release.
 MEDIA_KEY_REQUEST_TYPE_NONE = 4
 ```
 
-Media key request type none.
+No request.
 
-**Since:** 12
+**Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -106,11 +106,11 @@ Media key request type none.
 MEDIA_KEY_REQUEST_TYPE_UPDATE = 5
 ```
 
-Media key request type update.
+Update request.
 
-**Since:** 12
+**Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

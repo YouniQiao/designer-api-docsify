@@ -12,7 +12,7 @@ import { call } from '@kit.TelephonyKit';
 function separateConference(callId: number, callback: AsyncCallback<void>): void
 ```
 
-Split conference call.
+Separates calls from a conference call. This API uses an asynchronous callback to return the result.
 
 **Since:** 11
 
@@ -65,7 +65,7 @@ call.separateConference(1, (err: BusinessError) => {
 function separateConference(callId: number): Promise<void>
 ```
 
-Split conference call.
+Separates calls from a conference call. This API uses a promise to return the result.
 
 **Since:** 11
 

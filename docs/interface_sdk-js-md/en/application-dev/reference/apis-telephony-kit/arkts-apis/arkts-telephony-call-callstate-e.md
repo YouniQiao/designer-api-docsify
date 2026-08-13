@@ -1,6 +1,6 @@
 # CallState
 
-Indicates the states of call.
+Enumerates call states.
 
 **Since:** 6
 
@@ -16,7 +16,7 @@ Indicates the states of call.
 CALL_STATE_UNKNOWN = -1
 ```
 
-Indicates an invalid state, which is used when the call state fails to be obtained.
+The call status fails to be obtained and is unknown.
 
 **Since:** 6
 
@@ -32,7 +32,7 @@ Indicates an invalid state, which is used when the call state fails to be obtain
 CALL_STATE_IDLE = 0
 ```
 
-Indicates that there is no ongoing call.
+No call is in progress.
 
 **Since:** 6
 
@@ -48,7 +48,7 @@ Indicates that there is no ongoing call.
 CALL_STATE_RINGING = 1
 ```
 
-Indicates that an incoming call is ringing or waiting.
+The call is in the ringing or waiting state.
 
 **Since:** 6
 
@@ -64,7 +64,7 @@ Indicates that an incoming call is ringing or waiting.
 CALL_STATE_OFFHOOK = 2
 ```
 
-Indicates that a least one call is in the dialing, active, or hold state, and there is no new incoming call ringing or waiting.
+At least one call is in dialing, active, or on hold, and no new incoming call is ringing or waiting.
 
 **Since:** 6
 
@@ -80,7 +80,7 @@ Indicates that a least one call is in the dialing, active, or hold state, and th
 CALL_STATE_ANSWERED = 3
 ```
 
-Indicates that call is answered
+The incoming call is answered.
 
 **Since:** 11
 

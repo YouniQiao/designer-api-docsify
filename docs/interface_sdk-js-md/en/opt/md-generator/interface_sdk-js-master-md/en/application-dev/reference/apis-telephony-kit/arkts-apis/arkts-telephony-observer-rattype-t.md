@@ -4,7 +4,7 @@
 type RatType = radio.RadioTechnology
 ```
 
-Describes the radio access technology.
+Enumerates the radio access technologies.
 
 **Since:** 6
 

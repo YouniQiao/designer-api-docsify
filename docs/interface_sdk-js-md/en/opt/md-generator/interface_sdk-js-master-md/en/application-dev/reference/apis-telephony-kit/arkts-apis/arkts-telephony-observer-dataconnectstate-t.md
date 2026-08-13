@@ -4,7 +4,7 @@
 type DataConnectState = data.DataConnectState
 ```
 
-Describes the cellular data link connection state.
+Describes the connection status of a cellular data link.
 
 **Since:** 6
 

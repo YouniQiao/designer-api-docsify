@@ -12,7 +12,7 @@ import { call } from '@kit.TelephonyKit';
 function setMuted(callback: AsyncCallback<void>): void
 ```
 
-Set mute during a call.
+Sets call muting. This API uses an asynchronous callback to return the result.
 
 **Since:** 8
 
@@ -60,7 +60,7 @@ call.setMuted((err: BusinessError) => {
 function setMuted(): Promise<void>
 ```
 
-Set mute during a call.
+Sets call muting. This API uses a promise to return the result.
 
 **Since:** 8
 

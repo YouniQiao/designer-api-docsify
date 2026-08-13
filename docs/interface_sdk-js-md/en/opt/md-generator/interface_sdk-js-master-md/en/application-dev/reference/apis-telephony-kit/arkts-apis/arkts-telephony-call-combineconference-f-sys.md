@@ -12,7 +12,7 @@ import { call } from '@kit.TelephonyKit';
 function combineConference(callId: number, callback: AsyncCallback<void>): void
 ```
 
-Merge calls, merge two calls into conference calls.
+Combines two calls into a conference call. This API uses an asynchronous callback to return the result.
 
 **Since:** 11
 
@@ -62,7 +62,7 @@ call.combineConference(1, (err: BusinessError) => {
 function combineConference(callId: number): Promise<void>
 ```
 
-Merge calls, merge two calls into conference calls.
+Combines two calls into a conference call. This API uses a promise to return the result.
 
 **Since:** 11
 

@@ -23,7 +23,7 @@ function on(type: 'abilityForegroundState', observer: AbilityForegroundStateObse
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | type | 'abilityForegroundState' | 是 |
-| observer | [AbilityForegroundStateObserver](arkts-ability-abilitymanager-abilityforegroundstateobserver-t-sys.md) | 是 |
+| [observer](../../apis-telephony-kit/arkts-apis/arkts-telephony-observer.md) | [AbilityForegroundStateObserver](arkts-ability-abilitymanager-abilityforegroundstateobserver-t-sys.md) | 是 |
 
 **错误码：**
 

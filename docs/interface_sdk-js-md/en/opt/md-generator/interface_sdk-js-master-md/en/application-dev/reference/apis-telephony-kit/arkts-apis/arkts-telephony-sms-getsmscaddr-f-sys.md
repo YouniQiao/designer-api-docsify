@@ -12,7 +12,7 @@ import { sms } from '@kit.TelephonyKit';
 function getSmscAddr(slotId: number, callback: AsyncCallback<string>): void
 ```
 
-Obtains the SMSC address based on a specified slot ID.
+Obtains the SMSC address. This API uses an asynchronous callback to return the result.
 
 **Since:** 7
 
@@ -62,7 +62,7 @@ sms.getSmscAddr(slotId, (err: BusinessError, data: string) => {
 function getSmscAddr(slotId: number): Promise<string>
 ```
 
-Obtains the SMSC address based on a specified slot ID.
+Obtains the SMSC address. This API uses a promise to return the result.
 
 **Since:** 7
 

@@ -12,7 +12,7 @@ import { sms } from '@kit.TelephonyKit';
 function getImsShortMessageFormat(callback: AsyncCallback<string>): void
 ```
 
-Gets SMS format supported on IMS. SMS over IMS format is either 3GPP or 3GPP2.
+Obtains the SMS format supported by the IMS, for example, **3gpp**, **3gpp2**, or **unknown**. This API uses an asynchronous callback to return the result.
 
 **Since:** 8
 
@@ -28,7 +28,7 @@ Gets SMS format supported on IMS. SMS over IMS format is either 3GPP or 3GPP2.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;string&gt; | Yes | Indicates the callback for getting format, 3gpp, 3gpp2 or unknown. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;string&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
 
@@ -59,7 +59,7 @@ sms.getImsShortMessageFormat((err: BusinessError, data: string) => {
 function getImsShortMessageFormat(): Promise<string>
 ```
 
-Gets SMS format supported on IMS. SMS over IMS format is either 3GPP or 3GPP2.
+Obtains the SMS format supported by the IMS, for example, **3gpp**, **3gpp2**, or **unknown**. This API uses a promise to return the result.
 
 **Since:** 8
 
@@ -75,7 +75,7 @@ Gets SMS format supported on IMS. SMS over IMS format is either 3GPP or 3GPP2.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;string&gt; | Returns format, 3gpp, 3gpp2 or unknown. |
+| Promise&lt;string&gt; | Promise used to return the result. |
 
 **Error codes:**
 

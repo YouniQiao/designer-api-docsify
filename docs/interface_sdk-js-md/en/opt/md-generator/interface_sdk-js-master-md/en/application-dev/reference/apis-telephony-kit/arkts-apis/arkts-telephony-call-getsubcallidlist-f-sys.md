@@ -12,7 +12,7 @@ import { call } from '@kit.TelephonyKit';
 function getSubCallIdList(callId: number, callback: AsyncCallback<Array<string>>): void
 ```
 
-Get the list of sub-call Ids.
+Obtains the list of subcall IDs. This API uses an asynchronous callback to return the result.
 
 **Since:** 7
 
@@ -61,7 +61,7 @@ call.getSubCallIdList(1, (err: BusinessError, data: Array<string>) => {
 function getSubCallIdList(callId: number): Promise<Array<string>>
 ```
 
-Get the list of sub-call Ids.
+Obtains the list of subcall IDs. This API uses a promise to return the result.
 
 **Since:** 7
 

@@ -26,7 +26,7 @@ Obtains the state of the SIM card in a specified slot.
 
 | 类型 | 说明 |
 | --- | --- |
-| [SimState](arkts-telephony-sim-simstate-e.md) | Returns one of the following SIM card states: &lt;ul&gt; &lt;li&gt;{ |
+| SimState | Returns one of the following SIM card states: &lt;ul&gt; &lt;li&gt;{ |
 
 ## 示例
 

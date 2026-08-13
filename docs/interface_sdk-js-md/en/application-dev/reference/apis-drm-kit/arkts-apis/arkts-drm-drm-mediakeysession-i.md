@@ -1,10 +1,11 @@
 # MediaKeySession
 
-Provide functions and keep a decrypt module. Before calling an MediaKeySession method, we must use MediaKeySystem's createMediaKeySession to get a MediaKeySession instance.
+MediaKeySession implements media key management. Before calling any API in MediaKeySession, you must use   
+[createMediaKeySession](arkts-drm-drm-mediakeysystem-i.md#createMediaKeySession-1)to create a MediaKeySession instance.
 
-**Since:** 12
+**Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 <!--Device-drm-interface MediaKeySession--><!--Device-drm-interface MediaKeySession-End-->
 
@@ -22,11 +23,11 @@ import { drm } from '@kit.DrmKit';
 checkMediaKeyStatus(): MediaKeyStatus[]
 ```
 
-Check the media key status
+Checks the status of the media keys in use.
 
-**Since:** 12
+**Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -38,7 +39,7 @@ Check the media key status
 
 | Type | Description |
 | --- | --- |
-| [MediaKeyStatus](arkts-drm-drm-mediakeystatus-i.md)[] | A list of media key status description pairs. |
+| [MediaKeyStatus](arkts-drm-drm-mediakeystatus-i.md)[] | Media key status. |
 
 **Error codes:**
 
@@ -53,11 +54,11 @@ Check the media key status
 clearMediaKeys(): void
 ```
 
-Remove media key.
+Clears the media keys in use.
 
-**Since:** 12
+**Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -78,11 +79,11 @@ Remove media key.
 destroy(): void
 ```
 
-Release the resource before the session gonna be unused.
+Destroys this MediaKeySession instance.
 
-**Since:** 12
+**Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -109,11 +110,11 @@ ArkTS-Sta:
 generateMediaKeyRequest(mimeType: string, initData: Uint8Array, mediaKeyType: int, options?: OptionsData[]): Promise<MediaKeyRequest>
 ```
 
-Generate the media key request.
+Generates a media key request. This API uses a promise to return the result.
 
-**Since:** 12
+**Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -125,16 +126,16 @@ Generate the media key request.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| mimeType | string | Yes | Media type. |
-| initData | Uint8Array | Yes | PSSH info. |
-| mediaKeyType | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Offline or online. |
-| options | [OptionsData](arkts-drm-drm-optionsdata-i.md)[] | No | Optional data the application set to drm framework. |
+| mimeType | string | Yes | MIME type. The supported DRM solution names can be obtained by calling [isMediaKeySystemSupported](arkts-drm-drm-ismediakeysystemsupported-f.md#isMediaKeySystemSupported-1) . |
+| initData | Uint8Array | Yes | Initial data. |
+| mediaKeyType | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Type of the media key. The value **0** means an online media key, and **1** means an offline media key. |
+| options | [OptionsData](arkts-drm-drm-optionsdata-i.md)[] | No | Optional data. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;[MediaKeyRequest](arkts-drm-drm-mediakeyrequest-i.md)&gt; | Promise with MediaKeyRequest used to return the result. |
+| Promise&lt;[MediaKeyRequest](arkts-drm-drm-mediakeyrequest-i.md)&gt; | Promise used to return the media key request generated. |
 
 **Error codes:**
 
@@ -150,11 +151,11 @@ Generate the media key request.
 generateOfflineReleaseRequest(mediaKeyId: Uint8Array): Promise<Uint8Array>
 ```
 
-Generate offline media key request.
+Generates a request to release offline media keys. This API uses a promise to return the result.
 
-**Since:** 12
+**Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -166,13 +167,13 @@ Generate offline media key request.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| mediaKeyId | Uint8Array | Yes | The mediaKeyId specifies which media content's media key request should be generated. |
+| mediaKeyId | Uint8Array | Yes | Array of offline media key IDs. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Uint8Array&gt; | Promise with media key request in Uint8Array used to return the result. |
+| Promise&lt;Uint8Array&gt; | Promise used to return the request generated if the DRM solution on the device supports the release of offline media keys. |
 
 **Error codes:**
 
@@ -188,11 +189,11 @@ Generate offline media key request.
 getContentProtectionLevel(): ContentProtectionLevel
 ```
 
-Get content protection level.
+Obtains the content protection level of this media key session.
 
-**Since:** 12
+**Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -204,7 +205,7 @@ Get content protection level.
 
 | Type | Description |
 | --- | --- |
-| [ContentProtectionLevel](arkts-drm-drm-contentprotectionlevel-e.md) | MediaKeySession content protection level. |
+| [ContentProtectionLevel](arkts-drm-drm-contentprotectionlevel-e.md) | Content protection level. |
 
 **Error codes:**
 
@@ -219,11 +220,11 @@ Get content protection level.
 off(type: 'keyRequired', callback?: (eventInfo: EventInfo) => void): void
 ```
 
-Unregister keyRequired event.
+Unsubscribes from events indicating that the application requests a media key. This API uses an asynchronous callback to return the result.
 
-**Since:** 12
+**Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
+**ArkTS mode:** ArkTS-Dyn only, since version 11.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -235,8 +236,8 @@ Unregister keyRequired event.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'keyRequired' | Yes | Type of the drm event to listen for. |
-| callback | (eventInfo: EventInfo) =&gt; void | No | used to listen for the key required event. |
+| type | 'keyRequired' | Yes | Event type. The value is fixed at **'keyRequired'**. |
+| callback | (eventInfo: EventInfo) =&gt; void | No | Callback used to return the event information. |
 
 **Error codes:**
 
@@ -251,11 +252,11 @@ Unregister keyRequired event.
 off(type: 'keyExpired', callback?: (eventInfo: EventInfo) => void): void
 ```
 
-Unregister keyExpired event.
+Unsubscribes from events indicating that a media key expires. This API uses an asynchronous callback to return the result.
 
-**Since:** 12
+**Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
+**ArkTS mode:** ArkTS-Dyn only, since version 11.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -267,8 +268,8 @@ Unregister keyExpired event.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'keyExpired' | Yes | Type of the drm event to listen for. |
-| callback | (eventInfo: EventInfo) =&gt; void | No | Used to listen for the key required event. |
+| type | 'keyExpired' | Yes | Event type. The value is fixed at **'keyExpired'**. |
+| callback | (eventInfo: EventInfo) =&gt; void | No | Callback used to return the event information. |
 
 **Error codes:**
 
@@ -283,11 +284,11 @@ Unregister keyExpired event.
 off(type: 'vendorDefined', callback?: (eventInfo: EventInfo) => void): void
 ```
 
-Unregister vendorDefined event.
+Unsubscribes from vendor-defined events. This API uses an asynchronous callback to return the result.
 
-**Since:** 12
+**Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
+**ArkTS mode:** ArkTS-Dyn only, since version 11.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -299,8 +300,8 @@ Unregister vendorDefined event.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'vendorDefined' | Yes | Type of the drm event to listen for. |
-| callback | (eventInfo: EventInfo) =&gt; void | No | Used to listen for the vendor defined event. |
+| type | 'vendorDefined' | Yes | Event type. The value is fixed at **'vendorDefined'**. |
+| callback | (eventInfo: EventInfo) =&gt; void | No | Callback used to return the event information. |
 
 **Error codes:**
 
@@ -315,11 +316,11 @@ Unregister vendorDefined event.
 off(type: 'expirationUpdate', callback?: (eventInfo: EventInfo) => void): void
 ```
 
-Unregister expirationUpdate event.
+Unsubscribes from events indicating that a media key is updated upon expiry. This API uses an asynchronous callback to return the result.
 
-**Since:** 12
+**Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
+**ArkTS mode:** ArkTS-Dyn only, since version 11.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -331,8 +332,8 @@ Unregister expirationUpdate event.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'expirationUpdate' | Yes | Type of the drm event to listen for. |
-| callback | (eventInfo: EventInfo) =&gt; void | No | Used to listen for expiration update event. |
+| type | 'expirationUpdate' | Yes | Event type. The value is fixed at **'expirationUpdate'**. |
+| callback | (eventInfo: EventInfo) =&gt; void | No | Callback used to return the event information. |
 
 **Error codes:**
 
@@ -347,11 +348,11 @@ Unregister expirationUpdate event.
 off(type: 'keysChange', callback?: (keyInfo: KeysInfo[], newKeyAvailable: boolean) => void): void
 ```
 
-Unregister keysChange event.
+Unsubscribes from events indicating that a media key changes. This API uses an asynchronous callback to return the result.
 
-**Since:** 12
+**Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
+**ArkTS mode:** ArkTS-Dyn only, since version 11.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -363,8 +364,8 @@ Unregister keysChange event.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'keysChange' | Yes | Type of the drm event to listen for. |
-| callback | (keyInfo: KeysInfo[], newKeyAvailable: boolean) =&gt; void | No | Used to listen for keys change event. |
+| type | 'keysChange' | Yes | Event type. The value is fixed at **'keysChange'**. |
+| callback | (keyInfo: KeysInfo[], newKeyAvailable: boolean) =&gt; void | No | Callback used to return the event information, including a list of key IDs, descriptions of their statuses, and whether each key is available. |
 
 **Error codes:**
 
@@ -519,11 +520,11 @@ Unregister vendorDefined event.
 on(type: 'keyRequired', callback: (eventInfo: EventInfo) => void): void
 ```
 
-Register keyRequired event.
+Subscribes to events indicating that the application requests a media key. This API uses an asynchronous callback to return the result.
 
-**Since:** 12
+**Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
+**ArkTS mode:** ArkTS-Dyn only, since version 11.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -535,8 +536,8 @@ Register keyRequired event.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'keyRequired' | Yes | Type of the drm event to listen for. |
-| callback | (eventInfo: EventInfo) =&gt; void | Yes | used to listen for the key required event. |
+| type | 'keyRequired' | Yes | Event type. The value is fixed at **'keyRequired'**, which is triggered when the application requires a media key. |
+| callback | (eventInfo: EventInfo) =&gt; void | Yes | Callback used to return the event information. |
 
 **Error codes:**
 
@@ -551,11 +552,11 @@ Register keyRequired event.
 on(type: 'keyExpired', callback: (eventInfo: EventInfo) => void): void
 ```
 
-Register keyExpired event.
+Subscribes to events indicating that a media key expires. This API uses an asynchronous callback to return the result.
 
-**Since:** 12
+**Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
+**ArkTS mode:** ArkTS-Dyn only, since version 11.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -567,8 +568,8 @@ Register keyExpired event.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'keyExpired' | Yes | Type of the drm event to listen for. |
-| callback | (eventInfo: EventInfo) =&gt; void | Yes | Used to listen for the key required event. |
+| type | 'keyExpired' | Yes | Event type. The value is fixed at **'keyExpired'**, which is triggered when a media key expires. |
+| callback | (eventInfo: EventInfo) =&gt; void | Yes | Callback used to return the event information. |
 
 **Error codes:**
 
@@ -583,11 +584,11 @@ Register keyExpired event.
 on(type: 'vendorDefined', callback: (eventInfo: EventInfo) => void): void
 ```
 
-Register vendorDefined event.
+Subscribes to vendor-defined events. This API uses an asynchronous callback to return the result.
 
-**Since:** 12
+**Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
+**ArkTS mode:** ArkTS-Dyn only, since version 11.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -599,8 +600,8 @@ Register vendorDefined event.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'vendorDefined' | Yes | Type of the drm event to listen for. |
-| callback | (eventInfo: EventInfo) =&gt; void | Yes | Used to listen for the vendor defined event. |
+| type | 'vendorDefined' | Yes | Event type. The value is fixed at **'vendorDefined'**, which is triggered when a vendor-defined event occurs. |
+| callback | (eventInfo: EventInfo) =&gt; void | Yes | Callback used to return the event information. |
 
 **Error codes:**
 
@@ -615,11 +616,11 @@ Register vendorDefined event.
 on(type: 'expirationUpdate', callback: (eventInfo: EventInfo) => void): void
 ```
 
-Register expirationUpdate event.
+Subscribes to events indicating that a media key is updated upon expiry. This API uses an asynchronous callback to return the result.
 
-**Since:** 12
+**Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
+**ArkTS mode:** ArkTS-Dyn only, since version 11.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -631,8 +632,8 @@ Register expirationUpdate event.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'expirationUpdate' | Yes | Type of the drm event to listen for. |
-| callback | (eventInfo: EventInfo) =&gt; void | Yes | Used to listen for expiration update event. |
+| type | 'expirationUpdate' | Yes | Event type. The value is fixed at **'expirationUpdate'**, which is triggered when a media key is updated upon expiry. |
+| callback | (eventInfo: EventInfo) =&gt; void | Yes | Callback used to return the event information. |
 
 **Error codes:**
 
@@ -647,11 +648,11 @@ Register expirationUpdate event.
 on(type: 'keysChange', callback: (keyInfo: KeysInfo[], newKeyAvailable: boolean) => void): void
 ```
 
-Register keysChange event.
+Subscribes to events indicating that a media key changes. This API uses an asynchronous callback to return the result.
 
-**Since:** 12
+**Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
+**ArkTS mode:** ArkTS-Dyn only, since version 11.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -663,8 +664,8 @@ Register keysChange event.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'keysChange' | Yes | Type of the drm event to listen for. |
-| callback | (keyInfo: KeysInfo[], newKeyAvailable: boolean) =&gt; void | Yes | Used to listen for keys change event. |
+| type | 'keysChange' | Yes | Event type. The value is fixed at **'keysChange'**, which is triggered when a media key changes. |
+| callback | (keyInfo: KeysInfo[], newKeyAvailable: boolean) =&gt; void | Yes | Callback used to return the event information, including a list of key IDs, descriptions of their statuses, and whether each key is available. |
 
 **Error codes:**
 
@@ -819,11 +820,11 @@ Register vendorDefined event.
 processMediaKeyResponse(response: Uint8Array): Promise<Uint8Array>
 ```
 
-Process the response corresponding to the media key request obtained by the application.
+Processes a media key response. This API uses a promise to return the result.
 
-**Since:** 12
+**Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -835,13 +836,13 @@ Process the response corresponding to the media key request obtained by the appl
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| response | Uint8Array | Yes | The response. |
+| response | Uint8Array | Yes | Media key response. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Uint8Array&gt; | Promise with media key identifier in Uint8Array used to return the result. |
+| Promise&lt;Uint8Array&gt; | Promise used to return an array of media key IDs. |
 
 **Error codes:**
 
@@ -857,11 +858,11 @@ Process the response corresponding to the media key request obtained by the appl
 processOfflineReleaseResponse(mediaKeyId: Uint8Array, response: Uint8Array): Promise<void>
 ```
 
-Process offline media key response.
+Processes a response to a request for releasing offline media keys. This API uses a promise to return the result.
 
-**Since:** 12
+**Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -873,14 +874,14 @@ Process offline media key response.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| mediaKeyId | Uint8Array | Yes | The mediaKeyId specifies which media content's media key it is. |
-| response | Uint8Array | Yes | The offline media key. |
+| mediaKeyId | Uint8Array | Yes | Array of offline media key IDs. |
+| response | Uint8Array | Yes | Response to the request for releasing offline media keys. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise used to return the result. |
+| Promise&lt;void&gt; | Promise used to return the result if the DRM solution on the device supports the release of offline media keys. |
 
 **Error codes:**
 
@@ -896,11 +897,11 @@ Process offline media key response.
 requireSecureDecoderModule(mimeType: string): boolean
 ```
 
-Whether the encrypted content require a secure decoder or not.
+Checks whether secure decoding is required.
 
-**Since:** 12
+**Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -912,13 +913,13 @@ Whether the encrypted content require a secure decoder or not.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| mimeType | string | Yes | The media type. |
+| mimeType | string | Yes | MIME type. The supported MIME types depend on the DRM solution and can be obtained by calling [isMediaKeySystemSupported](arkts-drm-drm-ismediakeysystemsupported-f.md#isMediaKeySystemSupported-1) . |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | Whether secure decoder is required. |
+| boolean | Check result for whether secure decoding is required. **true** if required, **false** otherwise. |
 
 **Error codes:**
 
@@ -934,11 +935,11 @@ Whether the encrypted content require a secure decoder or not.
 restoreOfflineMediaKeys(mediaKeyId: Uint8Array): Promise<void>
 ```
 
-Restore offline media key.
+Restores offline media keys. This API uses a promise to return the result.
 
-**Since:** 12
+**Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -950,13 +951,13 @@ Restore offline media key.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| mediaKeyId | Uint8Array | Yes | The mediaKeyId specifies which media key should be restore. |
+| mediaKeyId | Uint8Array | Yes | Array of offline media key IDs. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise used to return the result. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 

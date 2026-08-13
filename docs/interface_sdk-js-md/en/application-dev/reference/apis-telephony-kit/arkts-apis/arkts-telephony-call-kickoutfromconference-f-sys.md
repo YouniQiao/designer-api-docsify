@@ -12,7 +12,7 @@ import { call } from '@kit.TelephonyKit';
 function kickOutFromConference(callId: int, callback: AsyncCallback<void>): void
 ```
 
-Kick out call from the conference call.
+Removes a specified call from a conference call. This API uses an asynchronous callback to return the result.
 
 **Since:** 10
 
@@ -30,8 +30,8 @@ Kick out call from the conference call.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Indicates the identifier of the call which kick out. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | The callback of kickOutFromConference. |
+| callId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Call ID. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
 
@@ -66,7 +66,7 @@ call.kickOutFromConference(1, (err: BusinessError) => {
 function kickOutFromConference(callId: int): Promise<void>
 ```
 
-Kick out call from the conference call.
+Removes a specified call from a conference call. This API uses a promise to return the result.
 
 **Since:** 10
 
@@ -84,13 +84,13 @@ Kick out call from the conference call.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Indicates the identifier of the call which kick out. |
+| callId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Call ID. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | The promise returned by the kickOutFromConference. |
+| Promise&lt;void&gt; | Promise used to return the result. |
 
 **Error codes:**
 

@@ -22,7 +22,7 @@ import { sms } from '@kit.TelephonyKit';
 charset?: MmsCharSets
 ```
 
-Indicates the character set for the attachment.
+Character set.
 
 **Type:** [MmsCharSets](arkts-telephony-sms-mmscharsets-e-sys.md)
 
@@ -40,7 +40,7 @@ Indicates the character set for the attachment.
 contentDisposition: DispositionType
 ```
 
-Indicates the content disposition for the attachment.
+Content disposition.
 
 **Type:** [DispositionType](arkts-telephony-sms-dispositiontype-e-sys.md)
 
@@ -58,7 +58,7 @@ Indicates the content disposition for the attachment.
 contentId: string
 ```
 
-Indicates the content ID for the attachment.
+Content ID.
 
 **Type:** string
 
@@ -76,7 +76,7 @@ Indicates the content ID for the attachment.
 contentLocation: string
 ```
 
-Indicates the content location.
+Content location.
 
 **Type:** string
 
@@ -94,7 +94,7 @@ Indicates the content location.
 contentTransferEncoding: string
 ```
 
-Indicates the encoding for content transfer.
+Encoding for content transfer.
 
 **Type:** string
 
@@ -112,7 +112,7 @@ Indicates the encoding for content transfer.
 contentType: string
 ```
 
-Indicates the content type for the attachment.
+Content type.
 
 **Type:** string
 
@@ -130,7 +130,7 @@ Indicates the content type for the attachment.
 fileName?: string
 ```
 
-Indicates the file name for the attachment.
+File name.
 
 **Type:** string
 
@@ -148,7 +148,7 @@ Indicates the file name for the attachment.
 inBuff?: Array<number>
 ```
 
-Indicates whether the message is in the buffer.
+Whether the message is in the buffer.
 
 **Type:** Array&lt;number&gt;
 
@@ -166,7 +166,7 @@ Indicates whether the message is in the buffer.
 isSmil: boolean
 ```
 
-Indicates whether the synchronized multimedia integration language is used.
+Whether the synchronized multimedia integration language is used.
 
 **Type:** boolean
 
@@ -184,7 +184,7 @@ Indicates whether the synchronized multimedia integration language is used.
 path?: string
 ```
 
-Indicates the path for the attachment.
+Path.
 
 **Type:** string
 

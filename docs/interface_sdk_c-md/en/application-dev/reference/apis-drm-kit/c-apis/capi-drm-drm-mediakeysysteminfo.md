@@ -6,7 +6,7 @@ typedef struct DRM_MediaKeySystemInfo {...} DRM_MediaKeySystemInfo
 
 ## Overview
 
-MediaKeySystemInfo used for player to get media key system info from media source.
+The struct describes the DRM information for encrypted content.
 
 **Since**: 11
 

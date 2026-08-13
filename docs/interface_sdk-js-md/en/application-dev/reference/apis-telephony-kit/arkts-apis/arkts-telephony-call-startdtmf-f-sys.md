@@ -12,7 +12,7 @@ import { call } from '@kit.TelephonyKit';
 function startDTMF(callId: int, character: string, callback: AsyncCallback<void>): void
 ```
 
-Start DTMF(Dual Tone Multi Frequency).
+Starts playing DTMF tones. This API uses an asynchronous callback to return the result.
 
 **Since:** 7
 
@@ -30,9 +30,9 @@ Start DTMF(Dual Tone Multi Frequency).
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Indicates the identifier of the call. |
-| character | string | Yes | Indicates the characters sent. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | The callback of startDTMF. |
+| callId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Call ID. |
+| character | string | Yes | DTMF string. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
 
@@ -67,7 +67,7 @@ call.startDTMF(1, "0", (err: BusinessError) => {
 function startDTMF(callId: int, character: string): Promise<void>
 ```
 
-Start DTMF(Dual Tone Multi Frequency).
+Starts playing DTMF tones. This API uses a promise to return the result.
 
 **Since:** 7
 
@@ -85,14 +85,14 @@ Start DTMF(Dual Tone Multi Frequency).
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Indicates the identifier of the call. |
-| character | string | Yes | Indicates the characters sent. |
+| callId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Call ID. |
+| character | string | Yes | DTMF string. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | The promise returned by the startDTMF. |
+| Promise&lt;void&gt; | Promise used to return the result. |
 
 **Error codes:**
 

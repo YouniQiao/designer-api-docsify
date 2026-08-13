@@ -12,7 +12,7 @@ import { call } from '@kit.TelephonyKit';
 function setDisplaySurface(callId: int, surfaceId: string): Promise<void>
 ```
 
-Set display surface when video call.
+Sets the remote display window. This API uses a promise to return the result.
 
 **Since:** 11
 
@@ -30,14 +30,14 @@ Set display surface when video call.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Indicates the identifier of the call. |
-| surfaceId | string | Yes | Indicates the identifier of the display surface id. |
+| callId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Call ID. You can obtain the value by subscribing to **callDetailsChange** events. |
+| surfaceId | string | Yes | Display window ID. For details about how to obtain **surfaceId**, see [getXComponentSurfaceId](XComponentController#getXComponentSurfaceId). |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | The promise returned by the setDisplayWindow. |
+| Promise&lt;void&gt; | Promise used to return the result. |
 
 **Error codes:**
 

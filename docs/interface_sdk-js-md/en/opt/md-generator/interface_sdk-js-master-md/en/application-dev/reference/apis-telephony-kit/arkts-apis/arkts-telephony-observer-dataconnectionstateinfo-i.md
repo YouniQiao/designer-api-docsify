@@ -1,6 +1,6 @@
 # DataConnectionStateInfo
 
-Indicates cellular data connect state and technology type.
+Defines information about the data connection status.
 
 **Since:** 11
 
@@ -20,7 +20,7 @@ import { observer } from '@kit.TelephonyKit';
 network: RatType
 ```
 
-Indicates technology type.
+Network type.
 
 **Type:** [RatType](arkts-telephony-observer-rattype-t.md)
 
@@ -36,7 +36,7 @@ Indicates technology type.
 state: DataConnectState
 ```
 
-Indicates cellular data connect state.
+Data connection status.
 
 **Type:** DataConnectState
 

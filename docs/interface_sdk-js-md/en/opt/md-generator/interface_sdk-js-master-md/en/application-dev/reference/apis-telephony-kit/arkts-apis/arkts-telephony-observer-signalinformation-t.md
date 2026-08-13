@@ -4,7 +4,7 @@
 type SignalInformation = radio.SignalInformation
 ```
 
-Describes the signal strength information.
+Defines the signal strength.
 
 **Since:** 6
 

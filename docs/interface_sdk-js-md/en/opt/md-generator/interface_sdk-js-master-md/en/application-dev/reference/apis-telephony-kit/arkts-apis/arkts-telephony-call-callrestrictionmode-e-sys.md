@@ -1,6 +1,6 @@
 # CallRestrictionMode (System API)
 
-Indicates the mode of call restriction.
+Enumerates call restriction modes.
 
 **Since:** 8
 
@@ -16,7 +16,7 @@ Indicates the mode of call restriction.
 RESTRICTION_MODE_DEACTIVATION = 0
 ```
 
-Indicates call restriction is deactivated.
+Call restriction deactivated.
 
 **Since:** 8
 
@@ -32,7 +32,7 @@ Indicates call restriction is deactivated.
 RESTRICTION_MODE_ACTIVATION = 1
 ```
 
-Indicates call restriction is activated.
+Call restriction activated.
 
 **Since:** 8
 

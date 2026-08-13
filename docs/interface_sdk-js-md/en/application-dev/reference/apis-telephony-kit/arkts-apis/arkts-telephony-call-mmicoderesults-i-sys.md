@@ -1,6 +1,6 @@
 # MmiCodeResults (System API)
 
-Indicates the MMI code result.
+Defines the MMI code result.
 
 **Since:** 9
 
@@ -24,7 +24,7 @@ import { call } from '@kit.TelephonyKit';
 message: string
 ```
 
-Indicates the message of MMI code.
+MMI code message.
 
 **Type:** string
 
@@ -44,7 +44,7 @@ Indicates the message of MMI code.
 result: MmiCodeResult
 ```
 
-Indicates the result of MMI code.
+Defines the MMI code result.
 
 **Type:** [MmiCodeResult](arkts-telephony-call-mmicoderesult-e-sys.md)
 

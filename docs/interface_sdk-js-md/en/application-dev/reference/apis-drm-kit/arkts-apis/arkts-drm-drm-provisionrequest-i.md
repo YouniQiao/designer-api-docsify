@@ -1,10 +1,10 @@
 # ProvisionRequest
 
-Provides the drm provision request definitions.
+Defines a device certificate provisioning request.
 
-**Since:** 14
+**Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 <!--Device-drm-interface ProvisionRequest--><!--Device-drm-interface ProvisionRequest-End-->
 
@@ -22,13 +22,13 @@ import { drm } from '@kit.DrmKit';
 data: Uint8Array
 ```
 
-Provision request data sent to provision server.
+Binary data of the provisioning request.
 
 **Type:** Uint8Array
 
-**Since:** 14
+**Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
 
@@ -42,13 +42,13 @@ Provision request data sent to provision server.
 defaultURL: string
 ```
 
-Provision server URL.
+URL of the device certificate provisioning server.
 
 **Type:** string
 
-**Since:** 14
+**Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
 

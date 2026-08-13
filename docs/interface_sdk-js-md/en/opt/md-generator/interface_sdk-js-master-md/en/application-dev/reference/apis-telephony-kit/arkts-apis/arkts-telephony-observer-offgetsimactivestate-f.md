@@ -12,7 +12,9 @@ import { observer } from '@kit.TelephonyKit';
 function offGetSimActiveState(callback?: Callback<boolean>): void
 ```
 
-Cancel callback when the sim active state is updated.
+Unregisters an observer for SIM card activation state changes. This API uses an asynchronous callback to return the execution result.
+
+**Required permission**: ohos.permission.GET_TELEPHONY_STATE
 
 **Since:** 23
 

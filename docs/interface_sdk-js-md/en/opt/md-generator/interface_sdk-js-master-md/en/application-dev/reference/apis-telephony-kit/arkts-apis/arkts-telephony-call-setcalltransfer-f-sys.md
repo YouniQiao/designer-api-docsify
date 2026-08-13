@@ -12,7 +12,7 @@ import { call } from '@kit.TelephonyKit';
 function setCallTransfer(slotId: number, info: CallTransferInfo, callback: AsyncCallback<void>): void
 ```
 
-Set call forwarding information.
+Sets call transfer information. This API uses an asynchronous callback to return the result.
 
 **Since:** 8
 
@@ -70,7 +70,7 @@ call.setCallTransfer(0, callTransferInfo, (err: BusinessError) => {
 function setCallTransfer(slotId: number, info: CallTransferInfo): Promise<void>
 ```
 
-Set call forwarding information.
+Sets call transfer information. This API uses a promise to return the result.
 
 **Since:** 8
 

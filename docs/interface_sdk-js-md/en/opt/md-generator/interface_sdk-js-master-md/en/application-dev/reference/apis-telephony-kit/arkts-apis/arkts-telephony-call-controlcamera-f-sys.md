@@ -12,7 +12,7 @@ import { call } from '@kit.TelephonyKit';
 function controlCamera(callId: number, cameraId: string): Promise<void>
 ```
 
-Control camera to open/close/switch camera by cameraId when video call.
+Uses the specified camera to make a video call. If **cameraId** is left empty, the camera is disabled. This API uses a promise to return the result.
 
 **Since:** 11
 

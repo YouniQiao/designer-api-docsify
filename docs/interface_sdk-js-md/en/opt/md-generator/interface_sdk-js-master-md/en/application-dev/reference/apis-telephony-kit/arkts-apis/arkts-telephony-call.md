@@ -1,8 +1,11 @@
-# @ohos.telephony.call
+# @ohos.telephony.call(Call)
 
-Provides methods related to call management.
+The **call** module provides call management functions, including making calls, redirecting to the dial screen,obtaining the call status, and formatting phone numbers.
 
-**Since:** 11
+To subscribe to call status changes, use  
+[`observer.on('callStateChange')`](@ohos.telephony.observer:observer.on(type: 'callStateChange', callback: Callback&lt;CallStateInfo&gt;)).
+
+**Since:** 6
 
 <!--Device-unnamed-declare namespace call--><!--Device-unnamed-declare namespace call-End-->
 

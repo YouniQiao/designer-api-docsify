@@ -18,7 +18,7 @@ Enumerates report types.
 MMS_YES = 128
 ```
 
-Indicates that a report is required.
+YES
 
 **Since:** 8
 
@@ -33,16 +33,16 @@ Indicates that a report is required.
 ## MMS_NO
 
 ```TypeScript
-MMS_NO
+MMS_NO = 129
 ```
 
-Indicates that a report is not required.
+NO
 
 **Since:** 8
 
 **ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
-<!--Device-ReportType-MMS_NO--><!--Device-ReportType-MMS_NO-End-->
+<!--Device-ReportType-MMS_NO = 129--><!--Device-ReportType-MMS_NO = 129-End-->
 
 **System capability:** SystemCapability.Telephony.SmsMms
 

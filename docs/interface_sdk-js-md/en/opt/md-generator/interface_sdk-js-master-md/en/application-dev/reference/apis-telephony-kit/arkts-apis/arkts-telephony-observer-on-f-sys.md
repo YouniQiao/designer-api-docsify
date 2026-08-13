@@ -12,7 +12,7 @@ import { observer } from '@kit.TelephonyKit';
 function on(type: 'cellInfoChange', callback: Callback<Array<CellInformation>>): void
 ```
 
-Callback when the cell information corresponding to the default sim card is updated.
+Registers an observer for cell information change events. This API uses an asynchronous callback to return the result.
 
 **Since:** 8
 
@@ -60,9 +60,9 @@ observer.on('cellInfoChange', (data: Array<radio.CellInformation>) => {
 function on(type: 'cellInfoChange', options: ObserverOptions, callback: Callback<Array<CellInformation>>): void
 ```
 
-Callback when the cell information corresponding to a monitored {@code slotId} is updated.
+Registers an observer for signal status change events of the SIM card in the specified slot. This API uses an asynchronous callback to return the execution result.
 
-**Since:** 11
+**Since:** 8
 
 **Required permissions:** ohos.permission.LOCATION and ohos.permission.APPROXIMATELY_LOCATION
 

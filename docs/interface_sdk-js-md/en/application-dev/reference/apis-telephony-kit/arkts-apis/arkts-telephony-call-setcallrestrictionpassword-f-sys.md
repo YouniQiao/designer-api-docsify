@@ -12,7 +12,7 @@ import { call } from '@kit.TelephonyKit';
 function setCallRestrictionPassword(slotId: int, oldPassword: string, newPassword: string, callback: AsyncCallback<void>): void
 ```
 
-Set call barring password.
+Changes the call barring password. This API uses an asynchronous callback to return the result.
 
 **Since:** 10
 
@@ -30,10 +30,10 @@ Set call barring password.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| slotId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Indicates the card slot index number, ranging from 0 to the maximum card slot index number supported by the device. |
-| oldPassword | string | Yes | Indicates the call restriction old password. |
-| newPassword | string | Yes | Indicates the call restriction new password. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | The callback of setCallRestrictionPassword. |
+| slotId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Card slot ID. &lt;br&gt;- **0**: card slot 1. &lt;br&gt;- **1**: card slot 2. |
+| oldPassword | string | Yes | Old password for call barring. |
+| newPassword | string | Yes | New password for call barring. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
 
@@ -68,7 +68,7 @@ call.setCallRestrictionPassword(0, "123456", "654321", (err: BusinessError) => {
 function setCallRestrictionPassword(slotId: int, oldPassword: string, newPassword: string): Promise<void>
 ```
 
-Set call barring password.
+Changes the call barring password. This API uses a promise to return the result.
 
 **Since:** 10
 
@@ -86,15 +86,15 @@ Set call barring password.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| slotId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Indicates the card slot index number, ranging from 0 to the maximum card slot index number supported by the device. |
-| oldPassword | string | Yes | Indicates the call restriction old password. |
-| newPassword | string | Yes | Indicates the call restriction new password. |
+| slotId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Card slot ID. &lt;br&gt;- **0**: card slot 1. &lt;br&gt;- **1**: card slot 2. |
+| oldPassword | string | Yes | Old password for call barring. |
+| newPassword | string | Yes | New password for call barring. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | The promise returned by the setCallRestrictionPassword. |
+| Promise&lt;void&gt; | Promise used to return the result. |
 
 **Error codes:**
 

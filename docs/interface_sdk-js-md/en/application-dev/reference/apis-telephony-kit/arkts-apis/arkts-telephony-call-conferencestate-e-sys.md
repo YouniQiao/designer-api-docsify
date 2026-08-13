@@ -1,6 +1,6 @@
 # ConferenceState (System API)
 
-Indicates the state of conference call.
+Enumerates conference states.
 
 **Since:** 7
 
@@ -18,7 +18,7 @@ Indicates the state of conference call.
 TEL_CONFERENCE_IDLE = 0
 ```
 
-Indicates the state is idle.
+Idle state.
 
 **Since:** 7
 
@@ -36,7 +36,7 @@ Indicates the state is idle.
 TEL_CONFERENCE_ACTIVE = 1
 ```
 
-Indicates the state is active.
+Active state.
 
 **Since:** 7
 
@@ -54,7 +54,7 @@ Indicates the state is active.
 TEL_CONFERENCE_DISCONNECTING = 2
 ```
 
-Indicates the state is disconnecting.
+Disconnecting state.
 
 **Since:** 7
 
@@ -72,7 +72,7 @@ Indicates the state is disconnecting.
 TEL_CONFERENCE_DISCONNECTED = 3
 ```
 
-Indicates the state is disconnected.
+Disconnected state.
 
 **Since:** 7
 

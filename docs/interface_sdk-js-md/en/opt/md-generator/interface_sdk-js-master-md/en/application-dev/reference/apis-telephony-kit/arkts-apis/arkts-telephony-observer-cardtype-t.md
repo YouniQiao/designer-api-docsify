@@ -4,7 +4,7 @@
 type CardType = sim.CardType
 ```
 
-Indicates the SIM card types.
+Enumerates SIM card types.
 
 **Since:** 6
 

@@ -12,9 +12,7 @@ import { call } from '@kit.TelephonyKit';
 function muteRinger(callback: AsyncCallback<void>): void
 ```
 
-Stops the ringtone.
-
-If an incoming call is ringing, the phone stops ringing. Otherwise, this method does not function.
+Mutes the ringtone while it is playing. It does not work if the ringtone has been muted. This API uses an asynchronous callback to return the result.
 
 **Since:** 8
 
@@ -32,7 +30,7 @@ If an incoming call is ringing, the phone stops ringing. Otherwise, this method 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | The callback of muteRinger. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
 
@@ -67,9 +65,7 @@ call.muteRinger((err: BusinessError) => {
 function muteRinger(): Promise<void>
 ```
 
-Stops the ringtone.
-
-If an incoming call is ringing, the phone stops ringing. Otherwise, this method does not function.
+Mutes the ringtone while it is playing. It does not work if the ringtone has been muted. This API uses a promise to return the result.
 
 **Since:** 8
 
@@ -87,7 +83,7 @@ If an incoming call is ringing, the phone stops ringing. Otherwise, this method 
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | The promise returned by the muteRinger. |
+| Promise&lt;void&gt; | Promise used to return the result. |
 
 **Error codes:**
 

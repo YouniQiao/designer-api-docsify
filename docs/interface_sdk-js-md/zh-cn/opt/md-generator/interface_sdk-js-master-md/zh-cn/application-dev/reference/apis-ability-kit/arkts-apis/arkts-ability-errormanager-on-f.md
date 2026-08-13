@@ -23,7 +23,7 @@ function on(type: 'error', observer: ErrorObserver): number
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | type | 'error' | 是 |
-| observer | [ErrorObserver](arkts-ability-errormanager-errorobserver-t.md) | 是 |
+| [observer](../../apis-telephony-kit/arkts-apis/arkts-telephony-observer.md) | [ErrorObserver](arkts-ability-errormanager-errorobserver-t.md) | 是 |
 
 **返回值：**
 
@@ -92,7 +92,7 @@ function on(type: 'loopObserver', timeout: number, observer: LoopObserver): void
 | --- | --- | --- |
 | type | 'loopObserver' | 是 |
 | timeout | number | 是 |
-| observer | [LoopObserver](arkts-ability-errormanager-loopobserver-t.md) | 是 |
+| [observer](../../apis-telephony-kit/arkts-apis/arkts-telephony-observer.md) | [LoopObserver](arkts-ability-errormanager-loopobserver-t.md) | 是 |
 
 **错误码：**
 
@@ -145,7 +145,7 @@ function on(type: 'unhandledRejection', observer: UnhandledRejectionObserver): v
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | type | 'unhandledRejection' | 是 |
-| observer | [UnhandledRejectionObserver](arkts-ability-errormanager-unhandledrejectionobserver-t.md) | 是 |
+| [observer](../../apis-telephony-kit/arkts-apis/arkts-telephony-observer.md) | [UnhandledRejectionObserver](arkts-ability-errormanager-unhandledrejectionobserver-t.md) | 是 |
 
 **错误码：**
 
@@ -199,7 +199,7 @@ function on(type: 'globalUnhandledRejectionDetected', observer: GlobalObserver):
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | type | 'globalUnhandledRejectionDetected' | 是 |
-| observer | [GlobalObserver](arkts-ability-errormanager-globalobserver-t.md) | 是 |
+| [observer](../../apis-telephony-kit/arkts-apis/arkts-telephony-observer.md) | [GlobalObserver](arkts-ability-errormanager-globalobserver-t.md) | 是 |
 
 **错误码：**
 
@@ -261,7 +261,7 @@ function on(type: 'freeze', observer: FreezeObserver): void
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | type | 'freeze' | 是 |
-| observer | [FreezeObserver](arkts-ability-errormanager-freezeobserver-t.md) | 是 |
+| [observer](../../apis-telephony-kit/arkts-apis/arkts-telephony-observer.md) | [FreezeObserver](arkts-ability-errormanager-freezeobserver-t.md) | 是 |
 
 **错误码：**
 
@@ -309,7 +309,7 @@ function on(type: 'globalErrorOccurred', observer: GlobalObserver): void
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | type | 'globalErrorOccurred' | 是 |
-| observer | [GlobalObserver](arkts-ability-errormanager-globalobserver-t.md) | 是 |
+| [observer](../../apis-telephony-kit/arkts-apis/arkts-telephony-observer.md) | [GlobalObserver](arkts-ability-errormanager-globalobserver-t.md) | 是 |
 
 **错误码：**
 

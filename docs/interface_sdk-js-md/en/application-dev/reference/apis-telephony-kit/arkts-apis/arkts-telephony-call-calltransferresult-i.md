@@ -1,6 +1,6 @@
 # CallTransferResult
 
-Indicates the result of call transfer.
+Defines the call transfer result.
 
 **Since:** 26.0.0
 
@@ -22,7 +22,7 @@ import { call } from '@kit.TelephonyKit';
 endHour: int
 ```
 
-Indicates the end time hours of call forwarding.
+Hour in the end time.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -40,7 +40,7 @@ Indicates the end time hours of call forwarding.
 endMinute: int
 ```
 
-Indicates the end time minutes of call forwarding.
+Minute in the end time.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -58,7 +58,7 @@ Indicates the end time minutes of call forwarding.
 number: string
 ```
 
-Indicates the phone number of call forwarding.
+Call transfer number.
 
 **Type:** string
 
@@ -76,7 +76,7 @@ Indicates the phone number of call forwarding.
 startHour: int
 ```
 
-Indicates the start time hours of call forwarding.
+Hour in the start time.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -94,7 +94,7 @@ Indicates the start time hours of call forwarding.
 startMinute: int
 ```
 
-Indicates the start time minutes of call forwarding.
+Minute in the start time.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -112,7 +112,7 @@ Indicates the start time minutes of call forwarding.
 status: TransferStatus
 ```
 
-Indicates the status of call forwarding.
+Enumerates call transfer states.
 
 **Type:** TransferStatus
 

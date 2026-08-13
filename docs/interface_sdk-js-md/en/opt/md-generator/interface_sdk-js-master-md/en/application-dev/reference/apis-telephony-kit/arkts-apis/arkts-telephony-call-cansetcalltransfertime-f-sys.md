@@ -12,9 +12,7 @@ import { call } from '@kit.TelephonyKit';
 function canSetCallTransferTime(slotId: number, callback: AsyncCallback<boolean>): void
 ```
 
-Checks whether can set call transfer time.
-
-The system checks whether IP multimedia subsystem domain (IMS) can set call transfer time.
+Checks whether the call forwarding time can be set. This API uses an asynchronous callback to return the result.
 
 **Since:** 10
 
@@ -67,9 +65,7 @@ call.canSetCallTransferTime(slotId, (err: BusinessError, data: boolean) => {
 function canSetCallTransferTime(slotId: number): Promise<boolean>
 ```
 
-Checks whether can set call transfer time.
-
-The system checks whether IP multimedia subsystem domain (IMS) can set call transfer time.
+Checks whether the call forwarding time can be set. This API uses a promise to return the result.
 
 **Since:** 10
 

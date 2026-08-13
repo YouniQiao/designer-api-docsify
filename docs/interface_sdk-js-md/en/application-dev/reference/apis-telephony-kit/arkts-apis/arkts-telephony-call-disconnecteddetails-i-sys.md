@@ -1,6 +1,6 @@
 # DisconnectedDetails (System API)
 
-Indicates the cause of a call disconnection.
+Defines the call disconnection cause.
 
 **Since:** 9
 
@@ -24,7 +24,7 @@ import { call } from '@kit.TelephonyKit';
 message: string
 ```
 
-Indicates the message for ending the call.
+Call ending message.
 
 **Type:** string
 
@@ -44,7 +44,7 @@ Indicates the message for ending the call.
 reason: DisconnectedReason
 ```
 
-Indicates the reason for ending the call.
+Defines the call disconnection cause.
 
 **Type:** DisconnectedReason
 

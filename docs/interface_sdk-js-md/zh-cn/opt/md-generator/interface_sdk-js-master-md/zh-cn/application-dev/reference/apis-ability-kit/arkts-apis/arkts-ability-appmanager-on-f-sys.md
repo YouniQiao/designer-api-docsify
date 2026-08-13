@@ -23,7 +23,7 @@ function on(type: 'applicationState', observer: ApplicationStateObserver, filter
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | type | 'applicationState' | 是 |
-| observer | [ApplicationStateObserver](arkts-ability-applicationstateobserver-c.md) | 是 |
+| [observer](../../apis-telephony-kit/arkts-apis/arkts-telephony-observer.md) | [ApplicationStateObserver](arkts-ability-applicationstateobserver-c.md) | 是 |
 | filter | [AppStateFilter](arkts-ability-appmanager-appstatefilter-i-sys.md) | 是 |
 
 **返回值：**
@@ -116,7 +116,7 @@ function on(type: 'appForegroundState', observer: AppForegroundStateObserver): v
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | type | 'appForegroundState' | 是 |
-| observer | [AppForegroundStateObserver](arkts-ability-appforegroundstateobserver-i-sys.md) | 是 |
+| [observer](../../apis-telephony-kit/arkts-apis/arkts-telephony-observer.md) | [AppForegroundStateObserver](arkts-ability-appforegroundstateobserver-i-sys.md) | 是 |
 
 **错误码：**
 
@@ -172,7 +172,7 @@ function on(type: 'abilityFirstFrameState', observer: AbilityFirstFrameStateObse
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | type | 'abilityFirstFrameState' | 是 |
-| observer | [AbilityFirstFrameStateObserver](arkts-ability-appmanager-abilityfirstframestateobserver-t-sys.md) | 是 |
+| [observer](../../apis-telephony-kit/arkts-apis/arkts-telephony-observer.md) | [AbilityFirstFrameStateObserver](arkts-ability-appmanager-abilityfirstframestateobserver-t-sys.md) | 是 |
 | bundleName | string | 否 |
 
 **错误码：**

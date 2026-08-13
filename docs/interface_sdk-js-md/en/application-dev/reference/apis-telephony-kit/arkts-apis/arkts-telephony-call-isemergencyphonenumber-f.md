@@ -12,7 +12,7 @@ import { call } from '@kit.TelephonyKit';
 function isEmergencyPhoneNumber(phoneNumber: string, options: EmergencyNumberOptions, callback: AsyncCallback<boolean>): void
 ```
 
-Checks whether a phone number is on the emergency number list.
+Checks whether the called number is an emergency number based on the phone number. This API uses an asynchronous callback to return the result.
 
 **Since:** 7
 
@@ -26,9 +26,9 @@ Checks whether a phone number is on the emergency number list.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| phoneNumber | string | Yes | Indicates the phone number to check. |
-| options | [EmergencyNumberOptions](arkts-telephony-call-emergencynumberoptions-i.md) | Yes | Indicates the additional information for emergency numbers. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;boolean&gt; | Yes | Indicates the callback for isEmergencyPhoneNumber. Returns {@code true} if the phone number is on the emergency number list. Returns {@code false} otherwise. |
+| phoneNumber | string | Yes | Phone number. |
+| options | [EmergencyNumberOptions](arkts-telephony-call-emergencynumberoptions-i.md) | Yes | Emergency number options. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;boolean&gt; | Yes | Callback used to return the result. The value **true** indicates that the called number is an emergency number, and the value **false** indicates the opposite. |
 
 **Error codes:**
 
@@ -62,7 +62,7 @@ call.isEmergencyPhoneNumber("112", options, (err: BusinessError, data: boolean) 
 function isEmergencyPhoneNumber(phoneNumber: string, options?: EmergencyNumberOptions): Promise<boolean>
 ```
 
-Checks whether a phone number is on the emergency number list.
+Checks whether the called number is an emergency number based on the phone number. This API uses a promise to return the result.
 
 **Since:** 7
 
@@ -76,14 +76,14 @@ Checks whether a phone number is on the emergency number list.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| phoneNumber | string | Yes | Indicates the phone number to check. |
-| options | [EmergencyNumberOptions](arkts-telephony-call-emergencynumberoptions-i.md) | No | Indicates the additional information for emergency numbers. |
+| phoneNumber | string | Yes | Phone number. |
+| options | [EmergencyNumberOptions](arkts-telephony-call-emergencynumberoptions-i.md) | No | Emergency number options. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;boolean&gt; | Returns { |
+| Promise&lt;boolean&gt; | Promise used to return the result. The value **true** indicates that the called number is an emergency number, and the value **false** indicates the opposite. |
 
 **Error codes:**
 
@@ -115,7 +115,7 @@ call.isEmergencyPhoneNumber("138xxxxxxxx", options).then((data: boolean) => {
 function isEmergencyPhoneNumber(phoneNumber: string, callback: AsyncCallback<boolean>): void
 ```
 
-Checks whether a phone number is on the emergency number list.
+Checks whether the called number is an emergency number. This API uses an asynchronous callback to return the result.
 
 **Since:** 7
 
@@ -129,8 +129,8 @@ Checks whether a phone number is on the emergency number list.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| phoneNumber | string | Yes | Indicates the phone number to check. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;boolean&gt; | Yes | Indicates the callback for isEmergencyPhoneNumber. Returns {@code true} if the phone number is on the emergency number list. Returns {@code false} otherwise. |
+| phoneNumber | string | Yes | Phone number. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;boolean&gt; | Yes | Callback used to return the result. The value **true** indicates that the called number is an emergency number, and the value **false** indicates the opposite. |
 
 **Error codes:**
 

@@ -1,6 +1,6 @@
 # MmiCodeResult (System API)
 
-Indicates the MMI code result.
+Defines the MMI code result.
 
 **Since:** 9
 
@@ -16,7 +16,7 @@ Indicates the MMI code result.
 MMI_CODE_SUCCESS = 0
 ```
 
-Indicates the result of MMI code with successfully.
+Success.
 
 **Since:** 9
 
@@ -32,7 +32,7 @@ Indicates the result of MMI code with successfully.
 MMI_CODE_FAILED = 1
 ```
 
-Indicates the result of MMI code with failed.
+Failure.
 
 **Since:** 9
 

@@ -1,6 +1,6 @@
 # CallTransferSettingType (System API)
 
-Indicates the type of call transfer setting.
+Enumerates call transfer setting types.
 
 **Since:** 8
 
@@ -16,7 +16,7 @@ Indicates the type of call transfer setting.
 CALL_TRANSFER_DISABLE = 0
 ```
 
-Indicates disable the call transfer.
+Disabling of call transfer.
 
 **Since:** 8
 
@@ -32,7 +32,7 @@ Indicates disable the call transfer.
 CALL_TRANSFER_ENABLE = 1
 ```
 
-Indicates enable the call transfer.
+Enabling of call transfer.
 
 **Since:** 8
 
@@ -48,7 +48,7 @@ Indicates enable the call transfer.
 CALL_TRANSFER_REGISTRATION = 3
 ```
 
-Indicates register the call transfer.
+Registration of call transfer.
 
 **Since:** 8
 
@@ -64,7 +64,7 @@ Indicates register the call transfer.
 CALL_TRANSFER_ERASURE = 4
 ```
 
-Indicates erasure the call transfer.
+Erasing of call transfer.
 
 **Since:** 8
 

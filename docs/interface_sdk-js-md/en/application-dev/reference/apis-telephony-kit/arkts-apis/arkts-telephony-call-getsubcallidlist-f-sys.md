@@ -12,7 +12,7 @@ import { call } from '@kit.TelephonyKit';
 function getSubCallIdList(callId: int, callback: AsyncCallback<Array<string>>): void
 ```
 
-Get the list of sub-call Ids.
+Obtains the list of subcall IDs. This API uses an asynchronous callback to return the result.
 
 **Since:** 7
 
@@ -28,8 +28,8 @@ Get the list of sub-call Ids.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Indicates the identifier of the call. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Array&lt;string&gt;&gt; | Yes | Indicates the callback for getting the list of sub call ids. |
+| callId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Call ID. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Array&lt;string&gt;&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
 
@@ -63,7 +63,7 @@ call.getSubCallIdList(1, (err: BusinessError, data: Array<string>) => {
 function getSubCallIdList(callId: int): Promise<Array<string>>
 ```
 
-Get the list of sub-call Ids.
+Obtains the list of subcall IDs. This API uses a promise to return the result.
 
 **Since:** 7
 
@@ -79,13 +79,13 @@ Get the list of sub-call Ids.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Indicates the identifier of the call. |
+| callId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Call ID. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;string&gt;&gt; | Returns the list of sub call ids. |
+| Promise&lt;Array&lt;string&gt;&gt; | Promise used to return the result. |
 
 **Error codes:**
 

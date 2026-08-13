@@ -1,6 +1,6 @@
 # SendMessageOptions
 
-Provides the options (including callbacks) for sending an SMS message.
+Provides the options (including callbacks) for sending SMS messages. For example, you can specify the SMS message type by the optional parameter **content**.
 
 **Since:** 6
 
@@ -22,7 +22,7 @@ import { sms } from '@kit.TelephonyKit';
 content: string | Array<int>
 ```
 
-If the content is a string, this is a short message. If the content is a byte array, this is a data message.
+SMS message type. If the content is composed of character strings, the SMS message is a text message. If the content is composed of byte arrays, the SMS message is a data message.
 
 **Type:** ArkTS-Dyn: string \| Array&lt;number&gt;  <br>ArkTS-Sta：string \| Array&lt;int&gt;
 
@@ -40,7 +40,8 @@ If the content is a string, this is a short message. If the content is a byte ar
 deliveryCallback?: AsyncCallback<IDeliveryShortMessageCallback>
 ```
 
-Indicates the callback invoked after the SMS message is delivered.
+Callback used to return the SMS message delivery report. For details, see  
+[IDeliveryShortMessageCallback](arkts-telephony-sms-ideliveryshortmessagecallback-i.md#IDeliveryShortMessageCallback). This parameter is mandatory for sending an SMS message.
 
 **Type:** [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[IDeliveryShortMessageCallback](arkts-telephony-sms-ideliveryshortmessagecallback-i.md)&gt;
 
@@ -58,7 +59,7 @@ Indicates the callback invoked after the SMS message is delivered.
 destinationHost: string
 ```
 
-Indicates the address to which the SMS message is sent.
+Destination address of the SMS message.
 
 **Type:** string
 
@@ -76,7 +77,7 @@ Indicates the address to which the SMS message is sent.
 destinationPort?: int
 ```
 
-If send data message, destinationPort is mandatory. Otherwise is optional.
+Destination port of the SMS message. This field is mandatory only for a data message. Otherwise, it is optional.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -94,7 +95,8 @@ If send data message, destinationPort is mandatory. Otherwise is optional.
 sendCallback?: AsyncCallback<ISendShortMessageCallback>
 ```
 
-Indicates the callback invoked after the SMS message is sent.
+Callback used to return the SMS message sending result. For details, see  
+[ISendShortMessageCallback](arkts-telephony-sms-isendshortmessagecallback-i.md#ISendShortMessageCallback). This parameter is mandatory for sending an SMS message.
 
 **Type:** [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[ISendShortMessageCallback](arkts-telephony-sms-isendshortmessagecallback-i.md)&gt;
 
@@ -112,7 +114,7 @@ Indicates the callback invoked after the SMS message is sent.
 serviceCenter?: string
 ```
 
-Indicates the SMSC address. If the value is {@code null}, the default SMSC address of the SIM card.
+SMSC address. By default, the SMSC address in the SIM card is used.
 
 **Type:** string
 
@@ -130,7 +132,10 @@ Indicates the SMSC address. If the value is {@code null}, the default SMSC addre
 slotId: int
 ```
 
-Indicates the ID of the SIM card slot used for sending the SMS message.
+Slot ID of the SIM card used for sending SMS messages.
+
+- **0**: card slot 1.  
+- **1**: card slot 2
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 

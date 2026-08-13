@@ -26,7 +26,7 @@ Obtains the type of the SIM card inserted in a specified slot.
 
 | 类型 | 说明 |
 | --- | --- |
-| [CardType](arkts-telephony-sim-cardtype-e.md) | Returns the SIM card type. |
+| CardType | Returns the SIM card type. |
 
 ## 示例
 

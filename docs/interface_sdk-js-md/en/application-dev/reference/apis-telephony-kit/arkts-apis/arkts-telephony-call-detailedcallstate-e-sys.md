@@ -1,6 +1,6 @@
 # DetailedCallState (System API)
 
-Indicates the detailed state of call.
+Enumerates detailed call states.
 
 **Since:** 7
 
@@ -18,7 +18,7 @@ Indicates the detailed state of call.
 CALL_STATUS_ACTIVE = 0
 ```
 
-Indicates the call is active.
+Active state.
 
 **Since:** 7
 
@@ -36,7 +36,7 @@ Indicates the call is active.
 CALL_STATUS_HOLDING = 1
 ```
 
-Indicates the call is holding.
+Hold state.
 
 **Since:** 7
 
@@ -54,7 +54,7 @@ Indicates the call is holding.
 CALL_STATUS_DIALING = 2
 ```
 
-Indicates the call is dialing.
+Dialing state.
 
 **Since:** 7
 
@@ -72,7 +72,7 @@ Indicates the call is dialing.
 CALL_STATUS_ALERTING = 3
 ```
 
-Indicates the call is alerting.
+Alerting state.
 
 **Since:** 7
 
@@ -90,7 +90,7 @@ Indicates the call is alerting.
 CALL_STATUS_INCOMING = 4
 ```
 
-Indicates the call is incoming.
+Incoming state.
 
 **Since:** 7
 
@@ -108,7 +108,7 @@ Indicates the call is incoming.
 CALL_STATUS_WAITING = 5
 ```
 
-Indicates the call is waiting.
+Enumerates call waiting states.
 
 **Since:** 7
 
@@ -126,7 +126,7 @@ Indicates the call is waiting.
 CALL_STATUS_DISCONNECTED = 6
 ```
 
-Indicates the call is disconnected.
+Disconnected state.
 
 **Since:** 7
 
@@ -144,7 +144,7 @@ Indicates the call is disconnected.
 CALL_STATUS_DISCONNECTING = 7
 ```
 
-Indicates the call is disconnecting.
+Disconnecting state.
 
 **Since:** 7
 
@@ -162,7 +162,7 @@ Indicates the call is disconnecting.
 CALL_STATUS_IDLE = 8
 ```
 
-Indicates the call is idle.
+Idle state.
 
 **Since:** 7
 

@@ -12,7 +12,7 @@ import { sms } from '@kit.TelephonyKit';
 function addSimMessage(options: SimMessageOptions, callback: AsyncCallback<void>): void
 ```
 
-Add an SMS Message to SIM card.
+Adds a message to the SIM card. If the SIM card is full, an error is reported. This API uses an asynchronous callback to return the result.
 
 **Since:** 7
 
@@ -67,7 +67,7 @@ sms.addSimMessage(simMessageOptions, (err: BusinessError) => {
 function addSimMessage(options: SimMessageOptions): Promise<void>
 ```
 
-Add an SMS Message to SIM card.
+Adds a message to the SIM card. If the SIM card is full, an error is reported. This API uses a promise to return the result.
 
 **Since:** 7
 

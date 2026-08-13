@@ -4,7 +4,7 @@
 type NetworkState = radio.NetworkState
 ```
 
-Describes the network registration state.
+Defines the network status.
 
 **Since:** 6
 

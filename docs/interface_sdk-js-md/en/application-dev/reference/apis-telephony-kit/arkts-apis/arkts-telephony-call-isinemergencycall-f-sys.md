@@ -12,7 +12,7 @@ import { call } from '@kit.TelephonyKit';
 function isInEmergencyCall(callback: AsyncCallback<boolean>): void
 ```
 
-Judge whether the emergency call is in progress.
+Checks whether a call is an emergency call. This API uses an asynchronous callback to return the result.
 
 **Since:** 7
 
@@ -30,7 +30,7 @@ Judge whether the emergency call is in progress.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;boolean&gt; | Yes | The callback of isInEmergencyCall. Returns {@code true} if the call is in emergency; returns {@code false} otherwise. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;boolean&gt; | Yes | Callback function used to return the result. The value **true** indicates an emergency call, and the value **false** indicates a non-emergency call. |
 
 **Error codes:**
 
@@ -65,7 +65,7 @@ call.isInEmergencyCall((err: BusinessError, data: boolean) => {
 function isInEmergencyCall(): Promise<boolean>
 ```
 
-Judge whether the emergency call is in progress.
+Checks whether a call is an emergency call. This API uses a promise to return the result.
 
 **Since:** 7
 
@@ -83,7 +83,7 @@ Judge whether the emergency call is in progress.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;boolean&gt; | Returns { |
+| Promise&lt;boolean&gt; | Promise used to return the result. The value **true** indicates an emergency call, and the value false indicates a non-emergency call. |
 
 **Error codes:**
 

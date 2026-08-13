@@ -12,7 +12,7 @@ import { call } from '@kit.TelephonyKit';
 function setCallWaiting(slotId: number, activate: boolean, callback: AsyncCallback<void>): void
 ```
 
-Set call waiting.
+Specifies whether to enable the call waiting service. This API uses an asynchronous callback to return the result.
 
 **Since:** 7
 
@@ -65,7 +65,7 @@ call.setCallWaiting(0, true, (err: BusinessError) => {
 function setCallWaiting(slotId: number, activate: boolean): Promise<void>
 ```
 
-Set call waiting.
+Specifies whether to enable the call waiting service. This API uses a promise to return the result.
 
 **Since:** 7
 

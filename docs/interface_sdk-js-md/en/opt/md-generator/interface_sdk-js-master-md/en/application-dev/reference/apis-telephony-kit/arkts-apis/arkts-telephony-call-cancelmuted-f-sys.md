@@ -12,7 +12,7 @@ import { call } from '@kit.TelephonyKit';
 function cancelMuted(callback: AsyncCallback<void>): void
 ```
 
-Unmute during a call.
+Cancels call muting. This API uses an asynchronous callback to return the result.
 
 **Since:** 8
 
@@ -60,7 +60,7 @@ call.cancelMuted((err: BusinessError) => {
 function cancelMuted(): Promise<void>
 ```
 
-Unmute during a call.
+Cancels call muting. This API uses a promise to return the result.
 
 **Since:** 8
 

@@ -12,7 +12,9 @@ import { observer } from '@kit.TelephonyKit';
 function onGetSimActiveState(slotId: int, callback: Callback<boolean>): void
 ```
 
-Subscribe to sim active state change events using a callback-based approach as an asynchronous method.
+Registers an observer for SIM card activation state changes. This API uses an asynchronous callback to return the execution result.
+
+**Required permission**: ohos.permission.GET_TELEPHONY_STATE
 
 **Since:** 23
 
@@ -28,8 +30,8 @@ Subscribe to sim active state change events using a callback-based approach as a
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| slotId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Indicates the ID of the target card slot. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;boolean&gt; | Yes | Indicates the callback for sim active state |
+| slotId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Card slot ID. &lt;br&gt;- **0**: card slot 1. &lt;br&gt;- **1**: card slot 2. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;boolean&gt; | Yes | Callback function used to return whether the SIM card is activated. &lt;br&gt;- **true**: activated. &lt;br&gt;- **false**: not activated. |
 
 **Error codes:**
 

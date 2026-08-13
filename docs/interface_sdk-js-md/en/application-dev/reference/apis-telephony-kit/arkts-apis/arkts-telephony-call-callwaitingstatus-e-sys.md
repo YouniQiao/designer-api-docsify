@@ -1,6 +1,6 @@
 # CallWaitingStatus (System API)
 
-Indicates the status of call waiting.
+Enumerates call waiting states.
 
 **Since:** 7
 
@@ -18,7 +18,7 @@ Indicates the status of call waiting.
 CALL_WAITING_DISABLE = 0
 ```
 
-Indicates that call waiting is not enabled.
+Call waiting disabled.
 
 **Since:** 7
 
@@ -36,7 +36,7 @@ Indicates that call waiting is not enabled.
 CALL_WAITING_ENABLE = 1
 ```
 
-Indicates that call waiting is enabled.
+Call waiting enabled.
 
 **Since:** 7
 

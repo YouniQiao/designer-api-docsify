@@ -1,6 +1,6 @@
 # RanType (System API)
 
-Enumerates RAN type.
+RAN type.
 
 **Since:** 7
 
@@ -16,7 +16,7 @@ Enumerates RAN type.
 TYPE_GSM = 1
 ```
 
-Indicates GSM type.
+GSM
 
 **Since:** 7
 
@@ -32,7 +32,7 @@ Indicates GSM type.
 TYPE_CDMA = 2
 ```
 
-Indicates CDMA type.
+CMDA
 
 **Since:** 7
 

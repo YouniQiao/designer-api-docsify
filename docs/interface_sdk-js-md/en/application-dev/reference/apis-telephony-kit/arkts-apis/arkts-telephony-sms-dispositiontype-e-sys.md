@@ -18,7 +18,7 @@ Enumerates disposition types.
 FROM_DATA = 0
 ```
 
-Indicates the data source type.
+Data source.
 
 **Since:** 8
 
@@ -33,16 +33,16 @@ Indicates the data source type.
 ## ATTACHMENT
 
 ```TypeScript
-ATTACHMENT
+ATTACHMENT = 1
 ```
 
-Indicates the attachment type.
+Attachment.
 
 **Since:** 8
 
 **ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
-<!--Device-DispositionType-ATTACHMENT--><!--Device-DispositionType-ATTACHMENT-End-->
+<!--Device-DispositionType-ATTACHMENT = 1--><!--Device-DispositionType-ATTACHMENT = 1-End-->
 
 **System capability:** SystemCapability.Telephony.SmsMms
 
@@ -51,16 +51,16 @@ Indicates the attachment type.
 ## INLINE
 
 ```TypeScript
-INLINE
+INLINE = 2
 ```
 
-Indicates the inlining type.
+Inlining.
 
 **Since:** 8
 
 **ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
-<!--Device-DispositionType-INLINE--><!--Device-DispositionType-INLINE-End-->
+<!--Device-DispositionType-INLINE = 2--><!--Device-DispositionType-INLINE = 2-End-->
 
 **System capability:** SystemCapability.Telephony.SmsMms
 

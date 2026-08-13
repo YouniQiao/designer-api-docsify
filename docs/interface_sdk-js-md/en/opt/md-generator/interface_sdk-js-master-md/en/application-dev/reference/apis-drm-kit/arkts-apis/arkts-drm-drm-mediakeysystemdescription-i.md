@@ -1,8 +1,8 @@
 # MediaKeySystemDescription
 
-Name and UUID of DRM plugin.
+Defines the DRM plugin information.
 
-**Since:** 14
+**Since:** 12
 
 <!--Device-drm-interface MediaKeySystemDescription--><!--Device-drm-interface MediaKeySystemDescription-End-->
 
@@ -24,7 +24,7 @@ Name of DRM plugin.
 
 **Type:** string
 
-**Since:** 14
+**Since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
 
@@ -42,7 +42,7 @@ UUID supported by DRM plugin.
 
 **Type:** string
 
-**Since:** 14
+**Since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
 

@@ -12,7 +12,7 @@ import { call } from '@kit.TelephonyKit';
 function holdCall(callId: int, callback: AsyncCallback<void>): void
 ```
 
-Keep a call on hold.
+Holds a call based on the specified call ID. This API uses an asynchronous callback to return the result.
 
 **Since:** 7
 
@@ -30,8 +30,8 @@ Keep a call on hold.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Indicates the identifier of the call. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | The callback of holdCall. |
+| callId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Call ID. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
 
@@ -66,7 +66,7 @@ call.holdCall(1, (err: BusinessError) => {
 function holdCall(callId: int): Promise<void>
 ```
 
-Keep a call on hold.
+Holds a call based on the specified call ID. This API uses a promise to return the result.
 
 **Since:** 7
 
@@ -84,13 +84,13 @@ Keep a call on hold.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Indicates the identifier of the call. |
+| callId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Call ID. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | The promise returned by the holdCall. |
+| Promise&lt;void&gt; | Promise used to return the result. |
 
 **Error codes:**
 

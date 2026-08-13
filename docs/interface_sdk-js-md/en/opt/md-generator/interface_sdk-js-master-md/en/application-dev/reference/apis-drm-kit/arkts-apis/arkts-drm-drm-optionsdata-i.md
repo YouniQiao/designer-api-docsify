@@ -1,8 +1,8 @@
 # OptionsData
 
-Provides the drm media key request info optional data.
+Defines optional parameters for a device certificate request.
 
-**Since:** 12
+**Since:** 11
 
 <!--Device-drm-interface OptionsData--><!--Device-drm-interface OptionsData-End-->
 
@@ -20,11 +20,11 @@ import { drm } from '@kit.DrmKit';
 name: string
 ```
 
-App defined optional data name.
+Name of the optional parameter.
 
 **Type:** string
 
-**Since:** 12
+**Since:** 11
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -38,11 +38,11 @@ App defined optional data name.
 value: string
 ```
 
-App defined optional data value.
+Value of the optional parameter.
 
 **Type:** string
 
-**Since:** 12
+**Since:** 11
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

@@ -12,7 +12,9 @@ import { observer } from '@kit.TelephonyKit';
 function on(type: 'networkStateChange', callback: Callback<NetworkState>): void
 ```
 
-Callback when the network state corresponding to the default sim card is updated.
+Registers an observer for network status change events. This API uses an asynchronous callback to return the execution result.
+
+**Required permission**: ohos.permission.GET_NETWORK_INFO
 
 **Since:** 6
 
@@ -28,8 +30,8 @@ Callback when the network state corresponding to the default sim card is updated
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'networkStateChange' | Yes | Event type. Indicates the networkStateChange event to be subscribed to. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;NetworkState&gt; | Yes | Indicates the callback for getting an instance of the {@code NetworkState} class. |
+| type | 'networkStateChange' | Yes | Network status change event. This field has a fixed value of **networkStateChange**. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;NetworkState&gt; | Yes | Callback used to return the network status object. For details, see [NetworkState](arkts-telephony-radio-networkstate-i.md#NetworkState). |
 
 **Error codes:**
 
@@ -57,11 +59,13 @@ observer.on('networkStateChange', (data: observer.NetworkState) => {
 function on(type: 'networkStateChange', options: ObserverOptions, callback: Callback<NetworkState>): void
 ```
 
-Callback when the network state corresponding to the monitored {@code slotId} is updated.
+Registers an observer for network status change events of the SIM card in the specified slot. This API uses an asynchronous callback to return the execution result.
 
-**Since:** 11
+**Required permission**: ohos.permission.GET_NETWORK_INFO
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
+**Since:** 6
+
+**ArkTS mode:** ArkTS-Dyn only, since version 6.
 
 **Required permissions:** ohos.permission.GET_NETWORK_INFO
 
@@ -73,9 +77,9 @@ Callback when the network state corresponding to the monitored {@code slotId} is
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'networkStateChange' | Yes | Event type. Indicates the networkStateChange event to be subscribed to. |
-| options | ObserverOptions | Yes | Indicates the options for observer. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;NetworkState&gt; | Yes | Indicates the callback for getting an instance of the {@code NetworkState} class. |
+| type | 'networkStateChange' | Yes | Network status change event. This field has a fixed value of **networkStateChange**. |
+| options | ObserverOptions | Yes | Event subscription parameters. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;NetworkState&gt; | Yes | Callback used to return the network status object. For details, see [NetworkState](arkts-telephony-radio-networkstate-i.md#NetworkState). |
 
 **Error codes:**
 
@@ -106,7 +110,7 @@ observer.on('networkStateChange', options, (data: observer.NetworkState) => {
 function on(type: 'signalInfoChange', callback: Callback<Array<SignalInformation>>): void
 ```
 
-Callback when the signal strength corresponding to the default sim card is updated.
+Registers an observer for signal status change events. This API uses an asynchronous callback to return the execution result.
 
 **Since:** 6
 
@@ -120,8 +124,8 @@ Callback when the signal strength corresponding to the default sim card is updat
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'signalInfoChange' | Yes | Event type. Indicates the signalInfoChange event to be subscribed to. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;Array&lt;SignalInformation&gt;&gt; | Yes | Indicates the callback for getting an array of instances of the classes derived from [SignalInformation](arkts-telephony-observer-signalinformation-t.md#SignalInformation). |
+| type | 'signalInfoChange' | Yes | Signal status change event. This field has a fixed value of **signalInfoChange**. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;Array&lt;SignalInformation&gt;&gt; | Yes | Callback used to return the signal strength object. For details, see [SignalInformation](arkts-telephony-radio-signalinformation-i.md#SignalInformation). |
 
 **Error codes:**
 
@@ -150,11 +154,11 @@ observer.on('signalInfoChange', (data: Array<radio.SignalInformation>) => {
 function on(type: 'signalInfoChange', options: ObserverOptions, callback: Callback<Array<SignalInformation>>): void
 ```
 
-Callback when the signal strength corresponding to a monitored {@code slotId} is updated.
+Registers an observer for signal status change events of the SIM card in the specified slot. This API uses an asynchronous callback to return the execution result.
 
-**Since:** 11
+**Since:** 6
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
+**ArkTS mode:** ArkTS-Dyn only, since version 6.
 
 <!--Device-observer-function on(type: 'signalInfoChange', options: ObserverOptions, callback: Callback<Array<SignalInformation>>): void--><!--Device-observer-function on(type: 'signalInfoChange', options: ObserverOptions, callback: Callback<Array<SignalInformation>>): void-End-->
 
@@ -164,9 +168,9 @@ Callback when the signal strength corresponding to a monitored {@code slotId} is
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'signalInfoChange' | Yes | Event type. Indicates the signalInfoChange event to be subscribed to. |
-| options | ObserverOptions | Yes | Indicates the options for observer. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;Array&lt;SignalInformation&gt;&gt; | Yes | Indicates the callback for getting an array of instances of the classes derived from [SignalInformation](arkts-telephony-observer-signalinformation-t.md#SignalInformation). |
+| type | 'signalInfoChange' | Yes | Signal status change event. This field has a fixed value of **signalInfoChange**. |
+| options | ObserverOptions | Yes | Event subscription parameters. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;Array&lt;SignalInformation&gt;&gt; | Yes | Callback used to return the signal strength object. For details, see [SignalInformation](arkts-telephony-radio-signalinformation-i.md#SignalInformation). |
 
 **Error codes:**
 
@@ -198,11 +202,11 @@ observer.on('signalInfoChange', options, (data: Array<radio.SignalInformation>) 
 function on(type: 'cellularDataConnectionStateChange', callback: Callback<DataConnectionStateInfo>): void
 ```
 
-Callback when the cellular data link connection state corresponding to the default sim card is updated.
+Registers an observer for connection status change events of the cellular data link. This API uses an asynchronous callback to return the result.
 
-**Since:** 11
+**Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
+**ArkTS mode:** ArkTS-Dyn only, since version 7.
 
 <!--Device-observer-function on(type: 'cellularDataConnectionStateChange', callback: Callback<DataConnectionStateInfo>): void--><!--Device-observer-function on(type: 'cellularDataConnectionStateChange', callback: Callback<DataConnectionStateInfo>): void-End-->
 
@@ -212,8 +216,8 @@ Callback when the cellular data link connection state corresponding to the defau
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'cellularDataConnectionStateChange' | Yes | Event type. Indicates the cellularDataConnectionStateChange event to be subscribed to. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[DataConnectionStateInfo](arkts-telephony-observer-dataconnectionstateinfo-i.md)&gt; | Yes | Indicates the callback for getting the cellular data link connection state, and networkType Indicates the radio access technology for cellular data services. |
+| type | 'cellularDataConnectionStateChange' | Yes | Cellular data connection status event. This field has a fixed value of **cellularDataConnectionStateChange**. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[DataConnectionStateInfo](arkts-telephony-observer-dataconnectionstateinfo-i.md)&gt; | Yes | Callback function used to return the cellular data connection status information object. For details, see [DataConnectState](arkts-telephony-data-dataconnectstate-e.md#DataConnectState) of **data** and [RadioTechnology](arkts-telephony-radio-radiotechnology-e.md#RadioTechnology) of **radio**. |
 
 **Error codes:**
 
@@ -241,11 +245,11 @@ function on(type: 'cellularDataConnectionStateChange', options: ObserverOptions,
               callback: Callback<DataConnectionStateInfo>): void
 ```
 
-Callback when the cellular data link connection state corresponding to the monitored {@code slotId} is updated.
+Registers an observer for connection status change events of the cellular data link over the SIM card in the specified slot. This API uses an asynchronous callback to return the result.
 
-**Since:** 11
+**Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
+**ArkTS mode:** ArkTS-Dyn only, since version 7.
 
 <!--Device-observer-function on(type: 'cellularDataConnectionStateChange', options: ObserverOptions,              callback: Callback<DataConnectionStateInfo>): void--><!--Device-observer-function on(type: 'cellularDataConnectionStateChange', options: ObserverOptions,              callback: Callback<DataConnectionStateInfo>): void-End-->
 
@@ -255,9 +259,9 @@ Callback when the cellular data link connection state corresponding to the monit
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'cellularDataConnectionStateChange' | Yes | Event type. Indicates the cellularDataConnectionStateChange event to be subscribed to. |
-| options | ObserverOptions | Yes | Indicates the options for observer. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[DataConnectionStateInfo](arkts-telephony-observer-dataconnectionstateinfo-i.md)&gt; | Yes | Indicates the callback for getting the cellular data link connection state, and networkType Indicates the radio access technology for cellular data services. |
+| type | 'cellularDataConnectionStateChange' | Yes | Cellular data connection status event. This field has a fixed value of **cellularDataConnectionStateChange**. |
+| options | ObserverOptions | Yes | Event subscription parameters. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[DataConnectionStateInfo](arkts-telephony-observer-dataconnectionstateinfo-i.md)&gt; | Yes | Callback function used to return the cellular data connection status information object. For details, see [DataConnectState](arkts-telephony-data-dataconnectstate-e.md#DataConnectState) of **data** and [RadioTechnology](arkts-telephony-radio-radiotechnology-e.md#RadioTechnology) of **radio**. |
 
 **Error codes:**
 
@@ -287,7 +291,7 @@ observer.on('cellularDataConnectionStateChange', options, (data: observer.DataCo
 function on(type: 'cellularDataFlowChange', callback: Callback<DataFlowType>): void
 ```
 
-Callback when the uplink and downlink data flow state of cellular data services corresponding to the default sim card is updated.
+Registers an observer for the uplink and downlink data flow status change events of the cellular data service. This API uses an asynchronous callback to return the result.
 
 **Since:** 7
 
@@ -301,8 +305,8 @@ Callback when the uplink and downlink data flow state of cellular data services 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'cellularDataFlowChange' | Yes | Event type. Indicates the cellularDataFlowChange event to be subscribed to. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;DataFlowType&gt; | Yes | Indicates the callback for getting the cellular data flow state. |
+| type | 'cellularDataFlowChange' | Yes | Cellular data flow change event. This field has a fixed value of **cellularDataFlowChange**. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;DataFlowType&gt; | Yes | Callback function used to return the data flow status object. For details, see [DataFlowType](arkts-telephony-data-dataflowtype-e.md#DataFlowType) in **data**. |
 
 **Error codes:**
 
@@ -331,11 +335,11 @@ observer.on('cellularDataFlowChange', (data: data.DataFlowType) => {
 function on(type: 'cellularDataFlowChange', options: ObserverOptions, callback: Callback<DataFlowType>): void
 ```
 
-Callback when the uplink and downlink data flow state of cellular data services corresponding to the monitored {@code slotId} is updated.
+Registers an observer for the uplink and downlink data flow status change events of the cellular data service on the SIM card in the specified slot. This API uses an asynchronous callback to return the result.
 
-**Since:** 11
+**Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
+**ArkTS mode:** ArkTS-Dyn only, since version 7.
 
 <!--Device-observer-function on(type: 'cellularDataFlowChange', options: ObserverOptions, callback: Callback<DataFlowType>): void--><!--Device-observer-function on(type: 'cellularDataFlowChange', options: ObserverOptions, callback: Callback<DataFlowType>): void-End-->
 
@@ -345,9 +349,9 @@ Callback when the uplink and downlink data flow state of cellular data services 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'cellularDataFlowChange' | Yes | Event type. Indicates the cellularDataFlowChange event to be subscribed to. |
-| options | ObserverOptions | Yes | Indicates the options for observer. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;DataFlowType&gt; | Yes | Indicates the callback for getting the cellular data flow state. |
+| type | 'cellularDataFlowChange' | Yes | Cellular data flow change event. This field has a fixed value of **cellularDataFlowChange**. |
+| options | ObserverOptions | Yes | Event subscription parameters. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;DataFlowType&gt; | Yes | Callback function used to return the data flow status object. For details, see [DataFlowType](arkts-telephony-data-dataflowtype-e.md#DataFlowType) in **data**. |
 
 **Error codes:**
 
@@ -379,11 +383,11 @@ observer.on('cellularDataFlowChange', options, (data: data.DataFlowType) => {
 function on(type: 'callStateChange', callback: Callback<CallStateInfo>): void
 ```
 
-Callback when the call state corresponding to the default sim card is updated.
+Registers an observer for call status change events. This API uses an asynchronous callback to return the execution result.
 
-**Since:** 11
+**Since:** 6
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
+**ArkTS mode:** ArkTS-Dyn only, since version 6.
 
 <!--Device-observer-function on(type: 'callStateChange', callback: Callback<CallStateInfo>): void--><!--Device-observer-function on(type: 'callStateChange', callback: Callback<CallStateInfo>): void-End-->
 
@@ -393,8 +397,8 @@ Callback when the call state corresponding to the default sim card is updated.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'callStateChange' | Yes | Event type. Indicates the callStateChange event to be subscribed to. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[CallStateInfo](arkts-telephony-observer-callstateinfo-i.md)&gt; | Yes | Indicates the callback for getting the call state and the called number. |
+| type | 'callStateChange' | Yes | Call status change event. This field has a fixed value of **callStateChange**. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[CallStateInfo](arkts-telephony-observer-callstateinfo-i.md)&gt; | Yes | Callback function used to return the result, &lt;br&gt;which is the **CallStateInfo** object. In this object: &lt;br&gt;- Only **state** is accessible to third-party applications. - **number** is only accessible to system applications. |
 
 **Error codes:**
 
@@ -421,11 +425,11 @@ observer.on('callStateChange', (data: observer.CallStateInfo) => {
 function on(type: 'callStateChange', options: ObserverOptions, callback: Callback<CallStateInfo>): void
 ```
 
-Callback when the call state corresponding to the monitored {@code slotId} is updated.
+Registers an observer for call status change events. This API uses an asynchronous callback to return the execution result.
 
-**Since:** 11
+**Since:** 6
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
+**ArkTS mode:** ArkTS-Dyn only, since version 6.
 
 <!--Device-observer-function on(type: 'callStateChange', options: ObserverOptions, callback: Callback<CallStateInfo>): void--><!--Device-observer-function on(type: 'callStateChange', options: ObserverOptions, callback: Callback<CallStateInfo>): void-End-->
 
@@ -435,9 +439,9 @@ Callback when the call state corresponding to the monitored {@code slotId} is up
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'callStateChange' | Yes | Event type. Indicates the callStateChange event to be subscribed to. |
-| options | ObserverOptions | Yes | Indicates the options for observer. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[CallStateInfo](arkts-telephony-observer-callstateinfo-i.md)&gt; | Yes | Indicates the callback for getting the call state and the called number. |
+| type | 'callStateChange' | Yes | Call status change event. This field has a fixed value of **callStateChange**. |
+| options | ObserverOptions | Yes | Event subscription parameters. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[CallStateInfo](arkts-telephony-observer-callstateinfo-i.md)&gt; | Yes | Callback function used to return the call status information object. &lt;br&gt;The application can obtain the **CallStateInfo** object. In this object: &lt;br&gt;- Only **state** is accessible to third-party applications. - **number** is only accessible to system applications. |
 
 **Error codes:**
 
@@ -467,7 +471,7 @@ observer.on('callStateChange', options, (data: observer.CallStateInfo) => {
 function on(type: 'callStateChangeEx', callback: Callback<TelCallState>, options?: ObserverOptions): void
 ```
 
-Callback when the telCall state corresponding to the monitored {@code slotId} is updated.
+Registers an observer for extended call status change events. This API uses an asynchronous callback to return the execution result.
 
 **Since:** 21
 
@@ -481,9 +485,9 @@ Callback when the telCall state corresponding to the monitored {@code slotId} is
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'callStateChangeEx' | Yes | Event type. Indicates the callStateChangeEx event to be subscribed to. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;TelCallState&gt; | Yes | Indicates the callback for getting the telCall state. |
-| options | ObserverOptions | No | Indicates the options for observer. |
+| type | 'callStateChangeEx' | Yes | Extended call status change event. This field has a fixed value of **callStateChangeEx**. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;TelCallState&gt; | Yes | Callback function used to return the call status information object. &lt;br&gt;The application can obtain **TelCallState**. &lt;br&gt; |
+| options | ObserverOptions | No | Event subscription parameters. |
 
 **Error codes:**
 
@@ -517,7 +521,12 @@ observer.on('callStateChangeEx', callback);
 function on(type: 'simStateChange', callback: Callback<SimStateData>): void
 ```
 
-Callback when the sim state corresponding to the default sim card is updated.
+Registers an observer for SIM card status change events. This API uses an asynchronous callback to return the result.
+
+> **NOTE：**
+> 
+> The return result of this API does not contain the activation status of the SIM card. For details, see
+> [sim.isSimActive](arkts-telephony-sim-issimactive-f.md#isSimActive).
 
 **Since:** 7
 
@@ -531,8 +540,8 @@ Callback when the sim state corresponding to the default sim card is updated.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'simStateChange' | Yes | Event type. Indicates the simStateChange event to be subscribed to. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[SimStateData](arkts-telephony-observer-simstatedata-i.md)&gt; | Yes | Indicates the callback for getting the SimStateData object. including state Indicates the sim state, and reason Indicates the cause of the change. |
+| type | 'simStateChange' | Yes | SIM status change event. This field has a fixed value of **simStateChange**. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[SimStateData](arkts-telephony-observer-simstatedata-i.md)&gt; | Yes | Callback function used to return the SIM status data object. |
 
 **Error codes:**
 
@@ -559,11 +568,11 @@ observer.on('simStateChange', (data: observer.SimStateData) => {
 function on(type: 'simStateChange', options: ObserverOptions, callback: Callback<SimStateData>): void
 ```
 
-Callback when the sim state corresponding to the monitored {@code slotId} is updated.
+Registers an observer for status change events of the SIM card in the specified slot. This API uses an asynchronous callback to return the result.
 
-**Since:** 11
+**Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
+**ArkTS mode:** ArkTS-Dyn only, since version 7.
 
 <!--Device-observer-function on(type: 'simStateChange', options: ObserverOptions, callback: Callback<SimStateData>): void--><!--Device-observer-function on(type: 'simStateChange', options: ObserverOptions, callback: Callback<SimStateData>): void-End-->
 
@@ -573,9 +582,9 @@ Callback when the sim state corresponding to the monitored {@code slotId} is upd
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'simStateChange' | Yes | Event type. Indicates the simStateChange event to be subscribed to. |
-| options | ObserverOptions | Yes | Indicates the options for observer. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[SimStateData](arkts-telephony-observer-simstatedata-i.md)&gt; | Yes | Indicates the callback for getting the SimStateData object. |
+| type | 'simStateChange' | Yes | SIM status change event. This field has a fixed value of **simStateChange**. |
+| options | ObserverOptions | Yes | Event subscription parameters. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[SimStateData](arkts-telephony-observer-simstatedata-i.md)&gt; | Yes | Callback function used to return the SIM status data object. |
 
 **Error codes:**
 
@@ -605,7 +614,7 @@ observer.on('simStateChange', options, (data: observer.SimStateData) => {
 function on(type: 'iccAccountInfoChange', callback: Callback<void>): void
 ```
 
-Receives an ICC account change. This callback is invoked when the ICC account updates and the observer is added to monitor the updates.
+Registers an observer for account information change events of the SIM card. This API uses an asynchronous callback to return the result.
 
 **Since:** 10
 
@@ -619,8 +628,8 @@ Receives an ICC account change. This callback is invoked when the ICC account up
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'iccAccountInfoChange' | Yes | iccAccountInfoChange |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt; | Yes | including state Indicates the ICC account information, and reason Indicates the cause of the change. |
+| type | 'iccAccountInfoChange' | Yes | Account information change event. This field has a fixed value of **iccAccountInfoChange**. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the account is successfully changed, the value of **err** is **undefined**. Otherwise, the value is an error object. |
 
 **Error codes:**
 

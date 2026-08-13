@@ -21,7 +21,7 @@ Obtains the type of the SIM card installed in a specified slot.
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | slotId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 是 | Indicates the card slot index number, ranging from {@code 0} to the maximum card slot index number supported by the device. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[CardType](arkts-telephony-sim-cardtype-e.md)&gt; | 是 | Indicates the callback for getting the SIM card type. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;CardType&gt; | 是 | Indicates the callback for getting the SIM card type. |
 
 **错误码：**
 
@@ -72,7 +72,7 @@ Obtains the type of the SIM card installed in a specified slot.
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;[CardType](arkts-telephony-sim-cardtype-e.md)&gt; | Returns the SIM card type. |
+| Promise&lt;CardType&gt; | Returns the SIM card type. |
 
 **错误码：**
 

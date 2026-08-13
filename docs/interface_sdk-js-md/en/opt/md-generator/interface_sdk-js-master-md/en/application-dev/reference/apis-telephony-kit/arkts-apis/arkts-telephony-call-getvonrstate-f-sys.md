@@ -12,7 +12,7 @@ import { call } from '@kit.TelephonyKit';
 function getVoNRState(slotId: number, callback: AsyncCallback<VoNRState>): void
 ```
 
-Get switch state for voice over NR.
+Obtains the status of the VoNR switch. This API uses an asynchronous callback to return the result.
 
 **Since:** 10
 
@@ -65,7 +65,7 @@ call.getVoNRState(slotId, (err: BusinessError, data: call.VoNRState) => {
 function getVoNRState(slotId: number): Promise<VoNRState>
 ```
 
-Get switch state for voice over NR.
+Obtains the status of the VoNR switch. This API uses a promise to return the result.
 
 **Since:** 10
 

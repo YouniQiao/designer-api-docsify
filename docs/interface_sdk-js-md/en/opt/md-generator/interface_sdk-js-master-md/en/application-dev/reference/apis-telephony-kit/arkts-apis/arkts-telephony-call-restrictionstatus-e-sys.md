@@ -1,6 +1,6 @@
 # RestrictionStatus (System API)
 
-Indicates the status of call restriction.
+Enumerates call restriction states.
 
 **Since:** 8
 
@@ -16,7 +16,7 @@ Indicates the status of call restriction.
 RESTRICTION_DISABLE = 0
 ```
 
-Indicates that call barring is not enabled.
+Call restriction disabled.
 
 **Since:** 8
 
@@ -32,7 +32,7 @@ Indicates that call barring is not enabled.
 RESTRICTION_ENABLE = 1
 ```
 
-Indicates that call barring is enabled.
+Call restriction enabled.
 
 **Since:** 8
 

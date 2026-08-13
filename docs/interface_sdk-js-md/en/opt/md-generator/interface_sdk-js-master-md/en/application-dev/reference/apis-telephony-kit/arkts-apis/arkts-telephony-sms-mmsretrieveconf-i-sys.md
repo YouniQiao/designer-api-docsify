@@ -22,7 +22,7 @@ import { sms } from '@kit.TelephonyKit';
 cc?: Array<MmsAddress>
 ```
 
-Indicates the carbon copy address for the MMS message retrieval configuration.
+Carbon copy.
 
 **Type:** Array&lt;[MmsAddress](arkts-telephony-sms-mmsaddress-i-sys.md)&gt;
 
@@ -40,7 +40,7 @@ Indicates the carbon copy address for the MMS message retrieval configuration.
 contentType: string
 ```
 
-Indicates the content type for the MMS message retrieval configuration.
+Content type.
 
 **Type:** string
 
@@ -58,7 +58,7 @@ Indicates the content type for the MMS message retrieval configuration.
 date: number
 ```
 
-Indicates the date for the MMS message retrieval configuration.
+Date.
 
 **Type:** number
 
@@ -76,7 +76,7 @@ Indicates the date for the MMS message retrieval configuration.
 deliveryReport?: number
 ```
 
-Indicates the status report for the MMS message retrieval configuration.
+Status report.
 
 **Type:** number
 
@@ -94,7 +94,7 @@ Indicates the status report for the MMS message retrieval configuration.
 from?: MmsAddress
 ```
 
-Indicates the source address for the MMS message retrieval configuration.
+Source address.
 
 **Type:** [MmsAddress](arkts-telephony-sms-mmsaddress-i-sys.md)
 
@@ -112,7 +112,7 @@ Indicates the source address for the MMS message retrieval configuration.
 messageId: string
 ```
 
-Indicates the message ID for the MMS message retrieval configuration.
+Message ID.
 
 **Type:** string
 
@@ -130,7 +130,7 @@ Indicates the message ID for the MMS message retrieval configuration.
 priority?: MmsPriorityType
 ```
 
-Indicates the priority for the MMS message retrieval configuration.
+Priority.
 
 **Type:** [MmsPriorityType](arkts-telephony-sms-mmsprioritytype-e-sys.md)
 
@@ -148,7 +148,7 @@ Indicates the priority for the MMS message retrieval configuration.
 readReport?: number
 ```
 
-Indicates the read report for the MMS message retrieval configuration.
+Read report.
 
 **Type:** number
 
@@ -166,7 +166,7 @@ Indicates the read report for the MMS message retrieval configuration.
 retrieveStatus?: number
 ```
 
-Indicates the retrieval status for the MMS message retrieval configuration.
+Retrieval status.
 
 **Type:** number
 
@@ -184,7 +184,7 @@ Indicates the retrieval status for the MMS message retrieval configuration.
 retrieveText?: string
 ```
 
-Indicates the retrieval text for the MMS message retrieval configuration.
+Retrieval text.
 
 **Type:** string
 
@@ -202,7 +202,7 @@ Indicates the retrieval text for the MMS message retrieval configuration.
 subject?: string
 ```
 
-Indicates the subject for the MMS message retrieval configuration.
+Subject.
 
 **Type:** string
 
@@ -220,7 +220,7 @@ Indicates the subject for the MMS message retrieval configuration.
 to: Array<MmsAddress>
 ```
 
-Indicates the destination address for the MMS message retrieval configuration.
+Destination address.
 
 **Type:** Array&lt;[MmsAddress](arkts-telephony-sms-mmsaddress-i-sys.md)&gt;
 
@@ -238,7 +238,7 @@ Indicates the destination address for the MMS message retrieval configuration.
 transactionId: string
 ```
 
-Indicates the transaction ID for the MMS message retrieval configuration.
+Transaction ID.
 
 **Type:** string
 
@@ -256,7 +256,7 @@ Indicates the transaction ID for the MMS message retrieval configuration.
 version: MmsVersionType
 ```
 
-Indicates the version for the MMS message retrieval configuration.
+Version.
 
 **Type:** [MmsVersionType](arkts-telephony-sms-mmsversiontype-e-sys.md)
 

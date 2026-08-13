@@ -21,7 +21,7 @@ function on(type: 'applicationState', observer: ApplicationStateObserver): numbe
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | type | 'applicationState' | 是 |
-| observer | [ApplicationStateObserver](arkts-ability-applicationstateobserver-c.md) | 是 |
+| [observer](../../apis-telephony-kit/arkts-apis/arkts-telephony-observer.md) | [ApplicationStateObserver](arkts-ability-applicationstateobserver-c.md) | 是 |
 
 **返回值：**
 
@@ -99,7 +99,7 @@ function on(type: 'applicationState', observer: ApplicationStateObserver, bundle
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | type | 'applicationState' | 是 |
-| observer | [ApplicationStateObserver](arkts-ability-applicationstateobserver-c.md) | 是 |
+| [observer](../../apis-telephony-kit/arkts-apis/arkts-telephony-observer.md) | [ApplicationStateObserver](arkts-ability-applicationstateobserver-c.md) | 是 |
 | bundleNameList | Array & lt;string & gt; | 是 |
 
 **返回值：**

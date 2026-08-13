@@ -12,7 +12,7 @@ import { call } from '@kit.TelephonyKit';
 function getMainCallId(callId: number, callback: AsyncCallback<number>): void
 ```
 
-Get the main call Id.
+Obtains the main call ID. This API uses an asynchronous callback to return the result.
 
 **Since:** 7
 
@@ -61,7 +61,7 @@ call.getMainCallId(1, (err: BusinessError, data: number) => {
 function getMainCallId(callId: number): Promise<number>
 ```
 
-Get the main call Id.
+Obtains the main call ID. This API uses a promise to return the result.
 
 **Since:** 7
 

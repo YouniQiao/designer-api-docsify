@@ -12,7 +12,12 @@ import { call } from '@kit.TelephonyKit';
 function dial(phoneNumber: string, options: DialOptions, callback: AsyncCallback<boolean>): void
 ```
 
-Makes a call.
+Initiates a call. You can set call options as needed. This API uses an asynchronous callback to return the result.
+
+> **NOTE：**
+> 
+> This API is supported since API version 6 and deprecated since API version 9. The substitute API is available
+> only for system applications.
 
 **Since:** 6
 
@@ -32,9 +37,9 @@ Makes a call.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| phoneNumber | string | Yes | Indicates the called number. |
-| options | [DialOptions](arkts-telephony-call-dialoptions-i.md) | Yes | Indicates additional information carried in the call. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;boolean&gt; | Yes | Indicates the callback for getting the result of the call. Returns {@code true} if the call request is successful; returns {@code false} otherwise. Note that the value {@code true} indicates only the successful processing of the request; it does not mean that the call is or can be connected. |
+| phoneNumber | string | Yes | Phone number. |
+| options | [DialOptions](arkts-telephony-call-dialoptions-i.md) | Yes | Call option, which indicates whether the call is a voice call or video call. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;boolean&gt; | Yes | Callback used to return the result. The value **true** indicates that the operation is successful, and the value **false** indicates the opposite. |
 
 ## Examples
 
@@ -56,7 +61,12 @@ call.dial("138xxxxxxxx", dialOptions, (err: BusinessError, data: boolean) => {
 function dial(phoneNumber: string, options?: DialOptions): Promise<boolean>
 ```
 
-Makes a call.
+Initiates a call. You can set call options as needed. This API uses a promise to return the result.
+
+> **NOTE：**
+> 
+> This API is supported since API version 6 and deprecated since API version 9. The substitute API is available
+> only for system applications.
 
 **Since:** 6
 
@@ -76,14 +86,14 @@ Makes a call.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| phoneNumber | string | Yes | Indicates the called number. |
-| options | [DialOptions](arkts-telephony-call-dialoptions-i.md) | No | Indicates additional information carried in the call. |
+| phoneNumber | string | Yes | Phone number. |
+| options | [DialOptions](arkts-telephony-call-dialoptions-i.md) | No | Call option, which indicates whether the call is a voice call or video call. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;boolean&gt; | Returns the result of the call. Returns { |
+| Promise&lt;boolean&gt; | Promise used to return the result. The value **true** indicates that the operation is successful, and the value **false** indicates the opposite. |
 
 ## Examples
 
@@ -107,7 +117,12 @@ call.dial("138xxxxxxxx", dialOptions).then((data: boolean) => {
 function dial(phoneNumber: string, callback: AsyncCallback<boolean>): void
 ```
 
-Makes a call.
+Initiates a call. This API uses an asynchronous callback to return the result.
+
+> **NOTE：**
+> 
+> This API is supported since API version 6 and deprecated since API version 9. The substitute API is available
+> only for system applications.
 
 **Since:** 6
 
@@ -127,8 +142,8 @@ Makes a call.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| phoneNumber | string | Yes | Indicates the called number. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;boolean&gt; | Yes | Indicates the callback for getting the result of the call. Returns {@code true} if the call request is successful; returns {@code false} otherwise. Note that the value {@code true} indicates only the successful processing of the request; it does not mean that the call is or can be connected. |
+| phoneNumber | string | Yes | Phone number. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;boolean&gt; | Yes | Callback used to return the result. The value **true** indicates that the operation is successful, and the value **false** indicates the opposite. |
 
 ## Examples
 

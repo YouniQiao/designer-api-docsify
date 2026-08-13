@@ -1,8 +1,8 @@
 # MediaKeyRequest
 
-Provides the drm media key request definitions.
+Defines a media key request.
 
-**Since:** 12
+**Since:** 11
 
 <!--Device-drm-interface MediaKeyRequest--><!--Device-drm-interface MediaKeyRequest-End-->
 
@@ -20,11 +20,11 @@ import { drm } from '@kit.DrmKit';
 data: Uint8Array
 ```
 
-Media key request data sent to media key server.
+Binary data of the media key request.
 
 **Type:** Uint8Array
 
-**Since:** 12
+**Since:** 11
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -38,11 +38,11 @@ Media key request data sent to media key server.
 defaultURL: string
 ```
 
-Media key server URL.
+URL of the license server.
 
 **Type:** string
 
-**Since:** 12
+**Since:** 11
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -56,11 +56,11 @@ Media key server URL.
 mediaKeyRequestType: MediaKeyRequestType
 ```
 
-Media key request type.
+Type of the media key request.
 
 **Type:** [MediaKeyRequestType](arkts-drm-drm-mediakeyrequesttype-e.md)
 
-**Since:** 12
+**Since:** 11
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

@@ -1,8 +1,8 @@
 # MediaKeySystemInfo
 
-Used to indicate the media key system info of media source.
+Defines the DRM information for encrypted content.
 
-**Since:** 12
+**Since:** 11
 
 <!--Device-drm-interface MediaKeySystemInfo--><!--Device-drm-interface MediaKeySystemInfo-End-->
 
@@ -24,7 +24,7 @@ PSSH(protection scheme specific header) contain drm info.
 
 **Type:** Uint8Array
 
-**Since:** 12
+**Since:** 11
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -42,7 +42,7 @@ Drm system ID.
 
 **Type:** string
 
-**Since:** 12
+**Since:** 11
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

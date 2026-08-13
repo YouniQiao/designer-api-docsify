@@ -1,10 +1,10 @@
 # CertificateStatus
 
-Enumerates certificate status.
+Enumerates the statuses of device certificates.
 
-**Since:** 14
+**Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 <!--Device-drm-enum CertificateStatus--><!--Device-drm-enum CertificateStatus-End-->
 
@@ -16,11 +16,11 @@ Enumerates certificate status.
 CERT_STATUS_PROVISIONED = 0
 ```
 
-Device already provisioned.
+A device certificate is provisioned.
 
-**Since:** 14
+**Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
 
@@ -31,72 +31,72 @@ Device already provisioned.
 ## CERT_STATUS_NOT_PROVISIONED
 
 ```TypeScript
-CERT_STATUS_NOT_PROVISIONED
+CERT_STATUS_NOT_PROVISIONED = 1
 ```
 
-Device not provisioned.
+A device certificate is not provisioned.
 
-**Since:** 14
+**Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
 
-<!--Device-CertificateStatus-CERT_STATUS_NOT_PROVISIONED--><!--Device-CertificateStatus-CERT_STATUS_NOT_PROVISIONED-End-->
+<!--Device-CertificateStatus-CERT_STATUS_NOT_PROVISIONED = 1--><!--Device-CertificateStatus-CERT_STATUS_NOT_PROVISIONED = 1-End-->
 
 **System capability:** SystemCapability.Multimedia.Drm.Core
 
 ## CERT_STATUS_EXPIRED
 
 ```TypeScript
-CERT_STATUS_EXPIRED
+CERT_STATUS_EXPIRED = 2
 ```
 
-Cert already expired.
+The device certificate has expired.
 
-**Since:** 14
+**Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
 
-<!--Device-CertificateStatus-CERT_STATUS_EXPIRED--><!--Device-CertificateStatus-CERT_STATUS_EXPIRED-End-->
+<!--Device-CertificateStatus-CERT_STATUS_EXPIRED = 2--><!--Device-CertificateStatus-CERT_STATUS_EXPIRED = 2-End-->
 
 **System capability:** SystemCapability.Multimedia.Drm.Core
 
 ## CERT_STATUS_INVALID
 
 ```TypeScript
-CERT_STATUS_INVALID
+CERT_STATUS_INVALID = 3
 ```
 
-Certs are invalid.
+The device certificate is invalid.
 
-**Since:** 14
+**Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
 
-<!--Device-CertificateStatus-CERT_STATUS_INVALID--><!--Device-CertificateStatus-CERT_STATUS_INVALID-End-->
+<!--Device-CertificateStatus-CERT_STATUS_INVALID = 3--><!--Device-CertificateStatus-CERT_STATUS_INVALID = 3-End-->
 
 **System capability:** SystemCapability.Multimedia.Drm.Core
 
 ## CERT_STATUS_UNAVAILABLE
 
 ```TypeScript
-CERT_STATUS_UNAVAILABLE
+CERT_STATUS_UNAVAILABLE = 4
 ```
 
-Get certs status failed.
+The device certificate is unavailable.
 
-**Since:** 14
+**Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
 
-<!--Device-CertificateStatus-CERT_STATUS_UNAVAILABLE--><!--Device-CertificateStatus-CERT_STATUS_UNAVAILABLE-End-->
+<!--Device-CertificateStatus-CERT_STATUS_UNAVAILABLE = 4--><!--Device-CertificateStatus-CERT_STATUS_UNAVAILABLE = 4-End-->
 
 **System capability:** SystemCapability.Multimedia.Drm.Core
 

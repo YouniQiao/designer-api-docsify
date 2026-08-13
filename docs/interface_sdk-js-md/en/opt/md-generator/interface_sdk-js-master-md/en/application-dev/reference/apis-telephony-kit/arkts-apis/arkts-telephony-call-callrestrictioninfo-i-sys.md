@@ -1,6 +1,6 @@
 # CallRestrictionInfo (System API)
 
-Indicates the information of call restriction.
+Defines the call restriction information.
 
 **Since:** 8
 
@@ -22,7 +22,7 @@ import { call } from '@kit.TelephonyKit';
 mode: CallRestrictionMode
 ```
 
-Indicates the mode of call restriction.
+Enumerates call restriction modes.
 
 **Type:** [CallRestrictionMode](arkts-telephony-call-callrestrictionmode-e-sys.md)
 
@@ -40,7 +40,7 @@ Indicates the mode of call restriction.
 password: string
 ```
 
-Indicates the password required to set call restrictions.
+Password.
 
 **Type:** string
 
@@ -58,7 +58,7 @@ Indicates the password required to set call restrictions.
 type: CallRestrictionType
 ```
 
-Indicates the type of call restriction.
+Call restriction type.
 
 **Type:** [CallRestrictionType](arkts-telephony-call-callrestrictiontype-e-sys.md)
 

@@ -12,7 +12,7 @@ import { call } from '@kit.TelephonyKit';
 function setPreviewSurface(callId: number, surfaceId: string): Promise<void>
 ```
 
-Set preview surface when video call.
+Sets the local preview window. This API uses a promise to return the result.
 
 **Since:** 11
 

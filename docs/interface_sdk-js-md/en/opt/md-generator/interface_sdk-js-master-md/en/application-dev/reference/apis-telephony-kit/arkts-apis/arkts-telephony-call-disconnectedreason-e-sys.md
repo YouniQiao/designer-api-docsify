@@ -1,6 +1,6 @@
 # DisconnectedReason (System API)
 
-Indicates the causes of call disconnection.
+Enumerates call disconnection causes.
 
 **Since:** 8
 
@@ -16,7 +16,7 @@ Indicates the causes of call disconnection.
 UNASSIGNED_NUMBER = 1
 ```
 
-Indicates the call disconnect due to unassigned number.
+Unallocated (unassigned) number.
 
 **Since:** 8
 
@@ -32,7 +32,7 @@ Indicates the call disconnect due to unassigned number.
 NO_ROUTE_TO_DESTINATION = 3
 ```
 
-Indicates the call disconnect due to no route to destination.
+No route to destination.
 
 **Since:** 8
 
@@ -48,7 +48,7 @@ Indicates the call disconnect due to no route to destination.
 CHANNEL_UNACCEPTABLE = 6
 ```
 
-Indicates the call disconnect due to channel unacceptable.
+Channel unacceptable.
 
 **Since:** 8
 
@@ -64,7 +64,7 @@ Indicates the call disconnect due to channel unacceptable.
 OPERATOR_DETERMINED_BARRING = 8
 ```
 
-Indicates the call disconnect due to operator determined barring.
+Operator determined barring (ODB).
 
 **Since:** 8
 
@@ -80,7 +80,7 @@ Indicates the call disconnect due to operator determined barring.
 CALL_COMPLETED_ELSEWHERE = 13
 ```
 
-Indicates the call disconnect due to call completed elsewhere.
+Call completed elsewhere.
 
 **Since:** 9
 
@@ -96,7 +96,7 @@ Indicates the call disconnect due to call completed elsewhere.
 NORMAL_CALL_CLEARING = 16
 ```
 
-Indicates the call disconnect due to normal call clearing.
+Normal call clearing.
 
 **Since:** 8
 
@@ -112,7 +112,7 @@ Indicates the call disconnect due to normal call clearing.
 USER_BUSY = 17
 ```
 
-Indicates the call disconnect due to user busy.
+User busy.
 
 **Since:** 8
 
@@ -128,7 +128,7 @@ Indicates the call disconnect due to user busy.
 NO_USER_RESPONDING = 18
 ```
 
-Indicates the call disconnect due to no user responding.
+No user responding.
 
 **Since:** 8
 
@@ -144,7 +144,7 @@ Indicates the call disconnect due to no user responding.
 USER_ALERTING_NO_ANSWER = 19
 ```
 
-Indicates the call disconnect due to user alerting, no answer.
+User alerting, no answer.
 
 **Since:** 8
 
@@ -160,7 +160,7 @@ Indicates the call disconnect due to user alerting, no answer.
 CALL_REJECTED = 21
 ```
 
-Indicates the call disconnect due to call rejected.
+Call rejected.
 
 **Since:** 8
 
@@ -176,7 +176,7 @@ Indicates the call disconnect due to call rejected.
 NUMBER_CHANGED = 22
 ```
 
-Indicates the call disconnect due to number changed.
+Number changed.
 
 **Since:** 8
 
@@ -192,7 +192,7 @@ Indicates the call disconnect due to number changed.
 CALL_REJECTED_DUE_TO_FEATURE_AT_THE_DESTINATION = 24
 ```
 
-Indicates the call rejected due to feature at the destination.
+Call rejected due to reasons of the destination, for example, activation of Anonymous Call Rejection.
 
 **Since:** 9
 
@@ -208,7 +208,7 @@ Indicates the call rejected due to feature at the destination.
 FAILED_PRE_EMPTION = 25
 ```
 
-Indicates the call disconnect due to pre-emption.
+Failed preemption.
 
 **Since:** 9
 
@@ -224,7 +224,7 @@ Indicates the call disconnect due to pre-emption.
 NON_SELECTED_USER_CLEARING = 26
 ```
 
-Indicates the call disconnect due to non selected user clearing.
+Non-selected user clearing.
 
 **Since:** 9
 
@@ -240,7 +240,7 @@ Indicates the call disconnect due to non selected user clearing.
 DESTINATION_OUT_OF_ORDER = 27
 ```
 
-Indicates the call disconnect due to destination out of order.
+Destination out of order.
 
 **Since:** 8
 
@@ -256,7 +256,7 @@ Indicates the call disconnect due to destination out of order.
 INVALID_NUMBER_FORMAT = 28
 ```
 
-Indicates the call disconnect due to invalid number format.
+Invalid number format (incomplete number).
 
 **Since:** 8
 
@@ -272,7 +272,7 @@ Indicates the call disconnect due to invalid number format.
 FACILITY_REJECTED = 29
 ```
 
-Indicates the call disconnect due to facility rejected.
+Facility rejected.
 
 **Since:** 9
 
@@ -288,7 +288,7 @@ Indicates the call disconnect due to facility rejected.
 RESPONSE_TO_STATUS_ENQUIRY = 30
 ```
 
-Indicates the call disconnect due to response to status enquiry.
+Response to status enquiry.
 
 **Since:** 9
 
@@ -304,7 +304,7 @@ Indicates the call disconnect due to response to status enquiry.
 NORMAL_UNSPECIFIED = 31
 ```
 
-Indicates the call disconnected normally, no specified cause.
+Normal, unspecified.
 
 **Since:** 9
 
@@ -320,7 +320,7 @@ Indicates the call disconnected normally, no specified cause.
 NO_CIRCUIT_CHANNEL_AVAILABLE = 34
 ```
 
-Indicates the call disconnect due to no circuit/channel available.
+No circuit/channel available.
 
 **Since:** 9
 
@@ -336,7 +336,7 @@ Indicates the call disconnect due to no circuit/channel available.
 NETWORK_OUT_OF_ORDER = 38
 ```
 
-Indicates the call disconnect due to network out of order.
+Network fault.
 
 **Since:** 8
 
@@ -352,7 +352,7 @@ Indicates the call disconnect due to network out of order.
 TEMPORARY_FAILURE = 41
 ```
 
-Indicates the call disconnect due to temporary failure.
+Temporary failure.
 
 **Since:** 8
 
@@ -368,7 +368,7 @@ Indicates the call disconnect due to temporary failure.
 SWITCHING_EQUIPMENT_CONGESTION = 42
 ```
 
-Indicates the call disconnect due to switching equipment congestion.
+Switching equipment congestion.
 
 **Since:** 9
 
@@ -384,7 +384,7 @@ Indicates the call disconnect due to switching equipment congestion.
 ACCESS_INFORMATION_DISCARDED = 43
 ```
 
-Indicates the call disconnect due to access information discarded.
+Access information discarded.
 
 **Since:** 9
 
@@ -400,7 +400,7 @@ Indicates the call disconnect due to access information discarded.
 REQUEST_CIRCUIT_CHANNEL_NOT_AVAILABLE = 44
 ```
 
-Indicates the call disconnect due to requested circuit/channel not available.
+Requested circuit/channel unavailable.
 
 **Since:** 9
 
@@ -416,7 +416,7 @@ Indicates the call disconnect due to requested circuit/channel not available.
 RESOURCES_UNAVAILABLE_UNSPECIFIED = 47
 ```
 
-Indicates the call disconnect due to resources unavailable unspecified.
+Resources unavailable, unspecified.
 
 **Since:** 9
 
@@ -432,7 +432,7 @@ Indicates the call disconnect due to resources unavailable unspecified.
 QUALITY_OF_SERVICE_UNAVAILABLE = 49
 ```
 
-Indicates the call disconnect due to quality of service unavailable.
+QoS unavailable.
 
 **Since:** 9
 
@@ -448,7 +448,7 @@ Indicates the call disconnect due to quality of service unavailable.
 REQUESTED_FACILITY_NOT_SUBSCRIBED = 50
 ```
 
-Indicates the call disconnect due to requested facility not subscribed.
+Requested facility not subscribed.
 
 **Since:** 9
 
@@ -464,7 +464,7 @@ Indicates the call disconnect due to requested facility not subscribed.
 INCOMING_CALLS_BARRED_WITHIN_THE_CUG = 55
 ```
 
-Indicates the call disconnect due to incoming calls barred within the CUG.
+Incoming calls barred within the CUG.
 
 **Since:** 9
 
@@ -480,7 +480,7 @@ Indicates the call disconnect due to incoming calls barred within the CUG.
 BEARER_CAPABILITY_NOT_AUTHORIZED = 57
 ```
 
-Indicates the call disconnect due to bearer capability not authorized.
+Bearer capability not authorized.
 
 **Since:** 9
 
@@ -496,7 +496,7 @@ Indicates the call disconnect due to bearer capability not authorized.
 BEARER_CAPABILITY_NOT_PRESENTLY_AVAILABLE = 58
 ```
 
-Indicates the call disconnect due to bearer capability not presently available.
+Bearer capability presently available.
 
 **Since:** 9
 
@@ -512,7 +512,7 @@ Indicates the call disconnect due to bearer capability not presently available.
 SERVICE_OR_OPTION_NOT_AVAILABLE_UNSPECIFIED = 63
 ```
 
-Indicates the call disconnect due to service or option not available, unspecified.
+Service or option not available, unspecified.
 
 **Since:** 9
 
@@ -528,7 +528,7 @@ Indicates the call disconnect due to service or option not available, unspecifie
 BEARER_SERVICE_NOT_IMPLEMENTED = 65
 ```
 
-Indicates the call disconnect due to bearer service not implemented.
+Bearer service not implemented.
 
 **Since:** 9
 
@@ -544,7 +544,7 @@ Indicates the call disconnect due to bearer service not implemented.
 ACM_EQUALTO_OR_GREATER_THAN_THE_MAXIMUM_VALUE = 68
 ```
 
-Indicates the call disconnect due to ACM equal to or greater than the maximum value.
+ACM greater than or equal to the maximum value.
 
 **Since:** 9
 
@@ -560,7 +560,7 @@ Indicates the call disconnect due to ACM equal to or greater than the maximum va
 REQUESTED_FACILITY_NOT_IMPLEMENTED = 69
 ```
 
-Indicates the call disconnect due to requested facility not implemented.
+Requested facility not implemented.
 
 **Since:** 9
 
@@ -576,7 +576,7 @@ Indicates the call disconnect due to requested facility not implemented.
 ONLY_RESTRICTED_DIGITAL_INFO_BEARER_CAPABILITY_IS_AVAILABLE = 70
 ```
 
-Indicates the call disconnect due to only restricted digital info BC available.
+Only restricted digital information bearer capability available.
 
 **Since:** 9
 
@@ -592,7 +592,7 @@ Indicates the call disconnect due to only restricted digital info BC available.
 SERVICE_OR_OPTION_NOT_IMPLEMENTED_UNSPECIFIED = 79
 ```
 
-Indicates the call disconnect due to service or option not implemented, unspecified.
+Service or option not implemented, unspecified.
 
 **Since:** 9
 
@@ -608,7 +608,7 @@ Indicates the call disconnect due to service or option not implemented, unspecif
 INVALID_TRANSACTION_IDENTIFIER_VALUE = 81
 ```
 
-Indicates the call disconnect due to invalid transaction identifier value.
+Invalid transaction identifier value.
 
 **Since:** 9
 
@@ -624,7 +624,7 @@ Indicates the call disconnect due to invalid transaction identifier value.
 USER_NOT_MEMBER_OF_CUG = 87
 ```
 
-Indicates the call disconnect due to user not member of CUG.
+User not member of CUG.
 
 **Since:** 9
 
@@ -640,7 +640,7 @@ Indicates the call disconnect due to user not member of CUG.
 INCOMPATIBLE_DESTINATION = 88
 ```
 
-Indicates the call disconnect due to incompatible destination.
+Incompatible destination.
 
 **Since:** 9
 
@@ -656,7 +656,7 @@ Indicates the call disconnect due to incompatible destination.
 INVALID_TRANSIT_NETWORK_SELECTION = 91
 ```
 
-Indicates the call disconnect due to invalid transit network selection.
+Invalid transit network selection.
 
 **Since:** 9
 
@@ -672,7 +672,7 @@ Indicates the call disconnect due to invalid transit network selection.
 SEMANTICALLY_INCORRECT_MESSAGE = 95
 ```
 
-Indicates the call disconnect due to semantically incorrect message.
+Semantically incorrect message.
 
 **Since:** 9
 
@@ -688,7 +688,7 @@ Indicates the call disconnect due to semantically incorrect message.
 INVALID_MANDATORY_INFORMATION = 96
 ```
 
-Indicates the call disconnect due to invalid mandatory information.
+Invalid mandatory information.
 
 **Since:** 9
 
@@ -704,7 +704,7 @@ Indicates the call disconnect due to invalid mandatory information.
 MESSAGE_TYPE_NON_EXISTENT_OR_NOT_IMPLEMENTED = 97
 ```
 
-Indicates the call disconnect due to msg type non-existent or not implemented.
+Message type non-existent or not implemented.
 
 **Since:** 9
 
@@ -720,7 +720,7 @@ Indicates the call disconnect due to msg type non-existent or not implemented.
 MESSAGE_TYPE_NOT_COMPATIBLE_WITH_PROTOCOL_STATE = 98
 ```
 
-Indicates the call disconnect due to msg type not compatible with protocol state.
+Message type not compatible with protocol state.
 
 **Since:** 9
 
@@ -736,7 +736,7 @@ Indicates the call disconnect due to msg type not compatible with protocol state
 INFORMATION_ELEMENT_NON_EXISTENT_OR_NOT_IMPLEMENTED = 99
 ```
 
-Indicates the call disconnect due to IE non-existent or not implemented.
+IE non-existent or not implemented.
 
 **Since:** 9
 
@@ -752,7 +752,7 @@ Indicates the call disconnect due to IE non-existent or not implemented.
 CONDITIONAL_IE_ERROR = 100
 ```
 
-Indicates the call disconnect due to conditional IE error.
+Conditional IE error.
 
 **Since:** 9
 
@@ -768,7 +768,7 @@ Indicates the call disconnect due to conditional IE error.
 MESSAGE_NOT_COMPATIBLE_WITH_PROTOCOL_STATE = 101
 ```
 
-Indicates the call disconnect due to message not compatible with protocol state.
+Message not compatible with protocol state.
 
 **Since:** 9
 
@@ -784,7 +784,7 @@ Indicates the call disconnect due to message not compatible with protocol state.
 RECOVERY_ON_TIMER_EXPIRED = 102
 ```
 
-Indicates the call disconnect due to recovery on timer expiry timer number.
+Recovery on timer expiry.
 
 **Since:** 9
 
@@ -800,7 +800,7 @@ Indicates the call disconnect due to recovery on timer expiry timer number.
 PROTOCOL_ERROR_UNSPECIFIED = 111
 ```
 
-Indicates the call disconnect due to protocol error, unspecified.
+Protocol error, unspecified.
 
 **Since:** 9
 
@@ -816,7 +816,7 @@ Indicates the call disconnect due to protocol error, unspecified.
 INTERWORKING_UNSPECIFIED = 127
 ```
 
-Indicates the call disconnect due to interworking, unspecified.
+Interworking, unspecified.
 
 **Since:** 9
 
@@ -832,7 +832,7 @@ Indicates the call disconnect due to interworking, unspecified.
 CALL_BARRED = 240
 ```
 
-Indicates the call disconnect due to call barred.
+Call barred.
 
 **Since:** 9
 
@@ -848,7 +848,7 @@ Indicates the call disconnect due to call barred.
 FDN_BLOCKED = 241
 ```
 
-Indicates the call disconnect due to FDN blocked.
+FDN blocked.
 
 **Since:** 9
 
@@ -864,7 +864,7 @@ Indicates the call disconnect due to FDN blocked.
 IMSI_UNKNOWN_IN_VLR = 242
 ```
 
-Indicates the call disconnect due to IMSI in VLR is unknown.
+IMSI unknown in VLR.
 
 **Since:** 9
 
@@ -880,7 +880,7 @@ Indicates the call disconnect due to IMSI in VLR is unknown.
 IMEI_NOT_ACCEPTED = 243
 ```
 
-Indicates the call disconnect due to IMEI not accepted.
+IMEI not accepted.
 
 **Since:** 9
 
@@ -896,7 +896,7 @@ Indicates the call disconnect due to IMEI not accepted.
 DIAL_MODIFIED_TO_USSD = 244
 ```
 
-Indicates the call disconnect due to dial modified to USSD.
+Dial request modified to USSD request.
 
 **Since:** 9
 
@@ -912,7 +912,7 @@ Indicates the call disconnect due to dial modified to USSD.
 DIAL_MODIFIED_TO_SS = 245
 ```
 
-Indicates the call disconnect due to dial modified to SS.
+Dial request modified to SS request.
 
 **Since:** 9
 
@@ -928,7 +928,7 @@ Indicates the call disconnect due to dial modified to SS.
 DIAL_MODIFIED_TO_DIAL = 246
 ```
 
-Indicates the call disconnect due to dial modified to dial.
+Dial request modified to dial with different number.
 
 **Since:** 9
 
@@ -944,7 +944,7 @@ Indicates the call disconnect due to dial modified to dial.
 RADIO_OFF = 247
 ```
 
-Indicates the call disconnect due to Radio off.
+Radio off.
 
 **Since:** 9
 
@@ -960,7 +960,7 @@ Indicates the call disconnect due to Radio off.
 OUT_OF_SERVICE = 248
 ```
 
-Indicates the call disconnect due to out of service.
+Stops the service.
 
 **Since:** 9
 
@@ -976,7 +976,7 @@ Indicates the call disconnect due to out of service.
 NO_VALID_SIM = 249
 ```
 
-Indicates the call disconnect due to invalid SIM.
+No valid SIM.
 
 **Since:** 9
 
@@ -992,7 +992,7 @@ Indicates the call disconnect due to invalid SIM.
 RADIO_INTERNAL_ERROR = 250
 ```
 
-Indicates the call disconnect due to radio internal error.
+Radio internal error.
 
 **Since:** 9
 
@@ -1008,7 +1008,7 @@ Indicates the call disconnect due to radio internal error.
 NETWORK_RESP_TIMEOUT = 251
 ```
 
-Indicates the call disconnect due to network response timeout.
+Network response timeout.
 
 **Since:** 9
 
@@ -1024,7 +1024,7 @@ Indicates the call disconnect due to network response timeout.
 NETWORK_REJECT = 252
 ```
 
-Indicates the call disconnect due to network reject.
+Request rejected by network.
 
 **Since:** 9
 
@@ -1040,7 +1040,7 @@ Indicates the call disconnect due to network reject.
 RADIO_ACCESS_FAILURE = 253
 ```
 
-Indicates the call disconnect due to radio access failure.
+Radio access failure.
 
 **Since:** 9
 
@@ -1056,7 +1056,7 @@ Indicates the call disconnect due to radio access failure.
 RADIO_LINK_FAILURE = 254
 ```
 
-Indicates the call disconnect due to radio link failure.
+Radio link failure.
 
 **Since:** 9
 
@@ -1072,7 +1072,7 @@ Indicates the call disconnect due to radio link failure.
 RADIO_LINK_LOST = 255
 ```
 
-Indicates the call disconnect due to radio link lost.
+Radio link lost.
 
 **Since:** 9
 
@@ -1088,7 +1088,7 @@ Indicates the call disconnect due to radio link lost.
 RADIO_UPLINK_FAILURE = 256
 ```
 
-Indicates the call disconnect due to radio uplink failure.
+Radio uplink failure.
 
 **Since:** 9
 
@@ -1104,7 +1104,7 @@ Indicates the call disconnect due to radio uplink failure.
 RADIO_SETUP_FAILURE = 257
 ```
 
-Indicates the call disconnect due to radio setup failure.
+Radio setup failure.
 
 **Since:** 9
 
@@ -1120,7 +1120,7 @@ Indicates the call disconnect due to radio setup failure.
 RADIO_RELEASE_NORMAL = 258
 ```
 
-Indicates the call disconnect due to radio release normal.
+Radio release normal.
 
 **Since:** 9
 
@@ -1136,7 +1136,7 @@ Indicates the call disconnect due to radio release normal.
 RADIO_RELEASE_ABNORMAL = 259
 ```
 
-Indicates the call disconnect due to radio release abnormal.
+Radio release abnormal.
 
 **Since:** 9
 
@@ -1152,7 +1152,7 @@ Indicates the call disconnect due to radio release abnormal.
 ACCESS_CLASS_BLOCKED = 260
 ```
 
-Indicates the call disconnect due to access class blocked.
+Access class blocked.
 
 **Since:** 9
 
@@ -1168,7 +1168,7 @@ Indicates the call disconnect due to access class blocked.
 NETWORK_DETACH = 261
 ```
 
-Indicates the call disconnect due to network detach.
+Network detached.
 
 **Since:** 9
 
@@ -1184,7 +1184,7 @@ Indicates the call disconnect due to network detach.
 INVALID_PARAMETER = 1025
 ```
 
-Indicates the call disconnect due to invalid parameter.
+Invalid parameter.
 
 **Since:** 8
 
@@ -1200,7 +1200,7 @@ Indicates the call disconnect due to invalid parameter.
 SIM_NOT_EXIT = 1026
 ```
 
-Indicates the call disconnect due to sim not exit.
+SIM not exit.
 
 **Since:** 8
 
@@ -1216,7 +1216,7 @@ Indicates the call disconnect due to sim not exit.
 SIM_PIN_NEED = 1027
 ```
 
-Indicates the call disconnect due to sim pin need.
+SIM PIN needed.
 
 **Since:** 8
 
@@ -1232,7 +1232,7 @@ Indicates the call disconnect due to sim pin need.
 CALL_NOT_ALLOW = 1029
 ```
 
-Indicates the call disconnect due to call not allow.
+Call not allowed.
 
 **Since:** 8
 
@@ -1248,7 +1248,7 @@ Indicates the call disconnect due to call not allow.
 SIM_INVALID = 1045
 ```
 
-Indicates the call disconnect due to sim invalid.
+No valid SIM.
 
 **Since:** 8
 
@@ -1264,7 +1264,7 @@ Indicates the call disconnect due to sim invalid.
 UNKNOWN = 1279
 ```
 
-Indicates the call disconnect due to unknown error.
+Unknown reason.
 
 **Since:** 8
 

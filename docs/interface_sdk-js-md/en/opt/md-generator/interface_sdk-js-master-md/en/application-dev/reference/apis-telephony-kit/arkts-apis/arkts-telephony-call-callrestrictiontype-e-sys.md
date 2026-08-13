@@ -1,6 +1,6 @@
 # CallRestrictionType (System API)
 
-Indicates the type of call restriction.
+Enumerates call restriction types.
 
 **Since:** 8
 
@@ -16,7 +16,7 @@ Indicates the type of call restriction.
 RESTRICTION_TYPE_ALL_INCOMING = 0
 ```
 
-Indicates restrict all incoming calls.
+Barring of all incoming calls.
 
 **Since:** 8
 
@@ -32,7 +32,7 @@ Indicates restrict all incoming calls.
 RESTRICTION_TYPE_ALL_OUTGOING = 1
 ```
 
-Indicates restrict all outgoing calls.
+Barring of all outgoing calls.
 
 **Since:** 8
 
@@ -48,7 +48,7 @@ Indicates restrict all outgoing calls.
 RESTRICTION_TYPE_INTERNATIONAL = 2
 ```
 
-Indicates restrict international calls.
+Barring of international calls.
 
 **Since:** 8
 
@@ -64,7 +64,7 @@ Indicates restrict international calls.
 RESTRICTION_TYPE_INTERNATIONAL_EXCLUDING_HOME = 3
 ```
 
-Indicates restrict international roaming calls.
+Barring of international calls except those in the home country.
 
 **Since:** 8
 
@@ -80,7 +80,7 @@ Indicates restrict international roaming calls.
 RESTRICTION_TYPE_ROAMING_INCOMING = 4
 ```
 
-Indicates restrict roaming calls.
+Barring of incoming roaming calls.
 
 **Since:** 8
 
@@ -96,7 +96,7 @@ Indicates restrict roaming calls.
 RESTRICTION_TYPE_ALL_CALLS = 5
 ```
 
-Indicates restrict all calls.
+Barring of all calls.
 
 **Since:** 8
 
@@ -112,7 +112,7 @@ Indicates restrict all calls.
 RESTRICTION_TYPE_OUTGOING_SERVICES = 6
 ```
 
-Indicates restrict all outgoing services.
+Barring of outgoing services.
 
 **Since:** 8
 
@@ -128,7 +128,7 @@ Indicates restrict all outgoing services.
 RESTRICTION_TYPE_INCOMING_SERVICES = 7
 ```
 
-Indicates restrict all incoming services.
+Barring of incoming services.
 
 **Since:** 8
 

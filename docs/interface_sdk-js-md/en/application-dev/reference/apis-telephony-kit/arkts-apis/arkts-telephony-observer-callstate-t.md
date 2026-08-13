@@ -4,7 +4,7 @@
 type CallState = call.CallState
 ```
 
-Indicates the states of call.
+Enumerates call states.
 
 **Since:** 6
 

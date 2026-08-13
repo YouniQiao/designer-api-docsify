@@ -26,7 +26,7 @@ function registerApplicationStateObserver(observer: ApplicationStateObserver): n
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| observer | [ApplicationStateObserver](arkts-ability-applicationstateobserver-c.md) | 是 |
+| [observer](../../apis-telephony-kit/arkts-apis/arkts-telephony-observer.md) | [ApplicationStateObserver](arkts-ability-applicationstateobserver-c.md) | 是 |
 
 **返回值：**
 

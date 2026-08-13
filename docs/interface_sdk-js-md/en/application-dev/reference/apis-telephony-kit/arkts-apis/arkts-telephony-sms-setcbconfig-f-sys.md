@@ -12,7 +12,7 @@ import { sms } from '@kit.TelephonyKit';
 function setCBConfig(options: CBConfigOptions, callback: AsyncCallback<void>): void
 ```
 
-Turn on or off Cell BroadCast.
+Sets the cell broadcast configuration. This API uses an asynchronous callback to return the result.
 
 **Since:** 7
 
@@ -30,8 +30,8 @@ Turn on or off Cell BroadCast.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [CBConfigOptions](arkts-telephony-sms-cbconfigoptions-i-sys.md) | Yes | Indicates cell broadcast configuration options. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | The callback of setCBConfig. |
+| options | [CBConfigOptions](arkts-telephony-sms-cbconfigoptions-i-sys.md) | Yes | Cell broadcast configuration options. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
 
@@ -70,7 +70,7 @@ sms.setCBConfig(cbConfigOptions, (err: BusinessError) => {
 function setCBConfig(options: CBConfigOptions): Promise<void>
 ```
 
-Turn on or off Cell BroadCast.
+Sets the cell broadcast configuration. This API uses a promise to return the result.
 
 **Since:** 7
 
@@ -88,13 +88,13 @@ Turn on or off Cell BroadCast.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [CBConfigOptions](arkts-telephony-sms-cbconfigoptions-i-sys.md) | Yes | Indicates cell broadcast configuration options. |
+| options | [CBConfigOptions](arkts-telephony-sms-cbconfigoptions-i-sys.md) | Yes | Cell broadcast configuration options. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | The promise returned by the setCBConfig. |
+| Promise&lt;void&gt; | Promise used to return the result. |
 
 **Error codes:**
 

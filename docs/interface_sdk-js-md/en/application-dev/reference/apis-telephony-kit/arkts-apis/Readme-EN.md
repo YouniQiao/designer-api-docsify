@@ -74,6 +74,26 @@
   <!--Del-->
   - [off(system api)](arkts-telephony-call-off-f-sys.md)<!--DelEnd-->
   <!--Del-->
+  - [offAudioDeviceChange(system api)](arkts-telephony-call-offaudiodevicechange-f-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [offCallDetailsChange(system api)](arkts-telephony-call-offcalldetailschange-f-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [offCallDisconnectedCause(system api)](arkts-telephony-call-offcalldisconnectedcause-f-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [offCallEventChange(system api)](arkts-telephony-call-offcalleventchange-f-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [offCallSessionEvent(system api)](arkts-telephony-call-offcallsessionevent-f-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [offCameraCapabilitiesChange(system api)](arkts-telephony-call-offcameracapabilitieschange-f-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [offImsCallModeChange(system api)](arkts-telephony-call-offimscallmodechange-f-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [offMmiCodeResult(system api)](arkts-telephony-call-offmmicoderesult-f-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [offPeerDimensionsChange(system api)](arkts-telephony-call-offpeerdimensionschange-f-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [offPostDialDelay(system api)](arkts-telephony-call-offpostdialdelay-f-sys.md)<!--DelEnd-->
+  <!--Del-->
   - [offReceiveRttMessage(system api)](arkts-telephony-call-offreceiverttmessage-f-sys.md)<!--DelEnd-->
   <!--Del-->
   - [offRttErrCause(system api)](arkts-telephony-call-offrtterrcause-f-sys.md)<!--DelEnd-->
@@ -81,6 +101,26 @@
   - [offRttModifyInd(system api)](arkts-telephony-call-offrttmodifyind-f-sys.md)<!--DelEnd-->
   <!--Del-->
   - [on(system api)](arkts-telephony-call-on-f-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [onAudioDeviceChange(system api)](arkts-telephony-call-onaudiodevicechange-f-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [onCallDetailsChange(system api)](arkts-telephony-call-oncalldetailschange-f-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [onCallDisconnectedCause(system api)](arkts-telephony-call-oncalldisconnectedcause-f-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [onCallEventChange(system api)](arkts-telephony-call-oncalleventchange-f-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [onCallSessionEvent(system api)](arkts-telephony-call-oncallsessionevent-f-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [onCameraCapabilitiesChange(system api)](arkts-telephony-call-oncameracapabilitieschange-f-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [onImsCallModeChange(system api)](arkts-telephony-call-onimscallmodechange-f-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [onMmiCodeResult(system api)](arkts-telephony-call-onmmicoderesult-f-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [onPeerDimensionsChange(system api)](arkts-telephony-call-onpeerdimensionschange-f-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [onPostDialDelay(system api)](arkts-telephony-call-onpostdialdelay-f-sys.md)<!--DelEnd-->
   <!--Del-->
   - [onReceiveRttMessage(system api)](arkts-telephony-call-onreceiverttmessage-f-sys.md)<!--DelEnd-->
   <!--Del-->

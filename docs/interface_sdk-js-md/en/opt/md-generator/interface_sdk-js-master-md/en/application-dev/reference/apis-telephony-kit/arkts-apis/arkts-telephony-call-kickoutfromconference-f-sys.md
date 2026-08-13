@@ -12,7 +12,7 @@ import { call } from '@kit.TelephonyKit';
 function kickOutFromConference(callId: number, callback: AsyncCallback<void>): void
 ```
 
-Kick out call from the conference call.
+Removes a specified call from a conference call. This API uses an asynchronous callback to return the result.
 
 **Since:** 10
 
@@ -64,7 +64,7 @@ call.kickOutFromConference(1, (err: BusinessError) => {
 function kickOutFromConference(callId: number): Promise<void>
 ```
 
-Kick out call from the conference call.
+Removes a specified call from a conference call. This API uses a promise to return the result.
 
 **Since:** 10
 

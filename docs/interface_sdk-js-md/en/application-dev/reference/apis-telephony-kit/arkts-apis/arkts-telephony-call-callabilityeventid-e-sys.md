@@ -1,6 +1,6 @@
 # CallAbilityEventId (System API)
 
-Indicates the event ID of call ability.
+Enumerates call ability event IDs.
 
 **Since:** 8
 
@@ -18,7 +18,7 @@ Indicates the event ID of call ability.
 EVENT_DIAL_NO_CARRIER = 1
 ```
 
-Indicates there is no available carrier during dialing.
+No available carrier during dialing.
 
 **Since:** 8
 
@@ -36,7 +36,7 @@ Indicates there is no available carrier during dialing.
 EVENT_INVALID_FDN_NUMBER = 2
 ```
 
-Indicates invalid FDN.
+Invalid FDN.
 
 **Since:** 8
 
@@ -54,7 +54,7 @@ Indicates invalid FDN.
 EVENT_HOLD_CALL_FAILED = 3
 ```
 
-Indicates hold call fail.
+Failed to place the call on hold.
 
 **Since:** 11
 
@@ -72,7 +72,7 @@ Indicates hold call fail.
 EVENT_SWAP_CALL_FAILED = 4
 ```
 
-Indicates swap call fail.
+Failed to place the current call on hold and answer the waiting call.
 
 **Since:** 11
 
@@ -90,7 +90,7 @@ Indicates swap call fail.
 EVENT_COMBINE_CALL_FAILED = 5
 ```
 
-Indicates combine call failed.
+Failed to combine calls.
 
 **Since:** 11
 
@@ -108,7 +108,7 @@ Indicates combine call failed.
 EVENT_SPLIT_CALL_FAILED = 6
 ```
 
-Indicates split call failed.
+Failed to split the call.
 
 **Since:** 11
 
@@ -126,7 +126,7 @@ Indicates split call failed.
 EVENT_SHOW_FULL_SCREEN = 7
 ```
 
-Indicates show full screen.
+Displaying the call UI in full screen.
 
 **Since:** 12
 
@@ -144,7 +144,7 @@ Indicates show full screen.
 EVENT_SHOW_FLOAT_WINDOW = 8
 ```
 
-Indicates show float window.
+Displaying the call UI in a floating widow.
 
 **Since:** 12
 

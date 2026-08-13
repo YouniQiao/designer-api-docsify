@@ -12,7 +12,7 @@ import { call } from '@kit.TelephonyKit';
 function setCallTransfer(slotId: int, info: CallTransferInfo, callback: AsyncCallback<void>): void
 ```
 
-Set call forwarding information.
+Sets call transfer information. This API uses an asynchronous callback to return the result.
 
 **Since:** 8
 
@@ -30,9 +30,9 @@ Set call forwarding information.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| slotId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Indicates the card slot index number, ranging from 0 to the maximum card slot index number supported by the device. |
-| info | [CallTransferInfo](arkts-telephony-call-calltransferinfo-i-sys.md) | Yes | Indicates the set call forwarding information. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | The callback of setCallTransfer. |
+| slotId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Card slot ID. &lt;br&gt;- **0**: card slot 1. &lt;br&gt;- **1**: card slot 2. |
+| info | [CallTransferInfo](arkts-telephony-call-calltransferinfo-i-sys.md) | Yes | Call transfer information. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
 
@@ -72,7 +72,7 @@ call.setCallTransfer(0, callTransferInfo, (err: BusinessError) => {
 function setCallTransfer(slotId: int, info: CallTransferInfo): Promise<void>
 ```
 
-Set call forwarding information.
+Sets call transfer information. This API uses a promise to return the result.
 
 **Since:** 8
 
@@ -90,14 +90,14 @@ Set call forwarding information.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| slotId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Indicates the card slot index number, ranging from 0 to the maximum card slot index number supported by the device. |
-| info | [CallTransferInfo](arkts-telephony-call-calltransferinfo-i-sys.md) | Yes | Indicates the set call forwarding information. |
+| slotId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Card slot ID. &lt;br&gt;- **0**: card slot 1. &lt;br&gt;- **1**: card slot 2. |
+| info | [CallTransferInfo](arkts-telephony-call-calltransferinfo-i-sys.md) | Yes | Call transfer information. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | The promise returned by the setCallTransfer. |
+| Promise&lt;void&gt; | Promise used to return the result. |
 
 **Error codes:**
 

@@ -1,8 +1,8 @@
 # EventInfo
 
-Used to indicate the event info attached to specific event type.
+Defines the DRM event information.
 
-**Since:** 12
+**Since:** 11
 
 <!--Device-drm-interface EventInfo--><!--Device-drm-interface EventInfo-End-->
 
@@ -20,11 +20,11 @@ import { drm } from '@kit.DrmKit';
 extraInfo: string
 ```
 
-Event extra info.
+Additional event context.
 
 **Type:** string
 
-**Since:** 12
+**Since:** 11
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -38,11 +38,11 @@ Event extra info.
 info: Uint8Array
 ```
 
-Event info.
+Event payload data.
 
 **Type:** Uint8Array
 
-**Since:** 12
+**Since:** 11
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

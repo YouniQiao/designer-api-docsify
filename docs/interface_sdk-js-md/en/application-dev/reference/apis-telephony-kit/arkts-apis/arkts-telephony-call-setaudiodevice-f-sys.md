@@ -12,7 +12,7 @@ import { call } from '@kit.TelephonyKit';
 function setAudioDevice(device: AudioDevice, callback: AsyncCallback<void>): void
 ```
 
-Set the audio device.
+Sets the audio device for a call. This API uses an asynchronous callback to return the result.
 
 **Since:** 8
 
@@ -30,8 +30,8 @@ Set the audio device.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| device | [AudioDevice](arkts-telephony-call-audiodevice-i-sys.md) | Yes | Indicates the device of audio. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | The callback of setAudioDevice. |
+| device | [AudioDevice](arkts-telephony-call-audiodevice-i-sys.md) | Yes | Audio device. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
 
@@ -69,7 +69,7 @@ call.setAudioDevice(audioDevice, (err: BusinessError) => {
 function setAudioDevice(device: AudioDevice): Promise<void>
 ```
 
-Set the audio device.
+Sets the audio device for a call. This API uses a promise to return the result.
 
 **Since:** 10
 
@@ -87,13 +87,13 @@ Set the audio device.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| device | [AudioDevice](arkts-telephony-call-audiodevice-i-sys.md) | Yes | Indicates the device of audio. |
+| device | [AudioDevice](arkts-telephony-call-audiodevice-i-sys.md) | Yes | Audio device. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | The promise returned by the setAudioDevice. |
+| Promise&lt;void&gt; | Promise used to return the result. |
 
 **Error codes:**
 

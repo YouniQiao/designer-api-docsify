@@ -12,7 +12,7 @@ import { sms } from '@kit.TelephonyKit';
 function setSmscAddr(slotId: int, smscAddr: string, callback: AsyncCallback<void>): void
 ```
 
-Sets the address for the Short Message Service Center (SMSC) based on a specified slot ID.
+Sets the short message service center (SMSC) address. This API uses an asynchronous callback to return the result.
 
 **Since:** 7
 
@@ -30,9 +30,9 @@ Sets the address for the Short Message Service Center (SMSC) based on a specifie
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| slotId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Indicates the ID of the slot holding the SIM card for sending SMS messages. |
-| smscAddr | string | Yes | Indicates the SMSC address. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | The callback of setSmscAddr. |
+| slotId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | SIM card slot ID. &lt;br&gt;- **0**: card slot 1 &lt;br&gt;- **1**: card slot 2 |
+| smscAddr | string | Yes | SMSC address. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
 
@@ -66,7 +66,7 @@ sms.setSmscAddr(slotId, smscAddr, (err: BusinessError) => {
 function setSmscAddr(slotId: int, smscAddr: string): Promise<void>
 ```
 
-Sets the address for the Short Message Service Center (SMSC) based on a specified slot ID.
+Sets the SMSC address. This API uses a promise to return the result.
 
 **Since:** 7
 
@@ -84,14 +84,14 @@ Sets the address for the Short Message Service Center (SMSC) based on a specifie
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| slotId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Indicates the ID of the slot holding the SIM card for sending SMS messages. |
-| smscAddr | string | Yes | Indicates the SMSC address. |
+| slotId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | SIM card slot ID. &lt;br&gt;- **0**: card slot 1 &lt;br&gt;- **1**: card slot 2 |
+| smscAddr | string | Yes | SMSC address. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | The promise returned by the setSmscAddr. |
+| Promise&lt;void&gt; | Promise used to return the result. |
 
 **Error codes:**
 

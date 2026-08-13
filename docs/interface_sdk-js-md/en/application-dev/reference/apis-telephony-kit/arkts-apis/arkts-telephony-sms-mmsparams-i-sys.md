@@ -1,6 +1,6 @@
 # MmsParams (System API)
 
-Defines the MMS message param.
+Defines the parameters for sending SMS messages.
 
 **Since:** 11
 
@@ -24,7 +24,7 @@ import { sms } from '@kit.TelephonyKit';
 data: string
 ```
 
-Indicates the MMS pdu url used for sending the MMS message.
+MMS PDU address.
 
 **Type:** string
 
@@ -44,7 +44,7 @@ Indicates the MMS pdu url used for sending the MMS message.
 mmsConfig?: MmsConfig
 ```
 
-Indicates the MMS UA and MMS UaProf used for sending the MMS message.
+MMS configuration file. For details, see [MmsParams](#MmsParams).
 
 **Type:** [MmsConfig](arkts-telephony-sms-mmsconfig-i-sys.md)
 
@@ -64,7 +64,7 @@ Indicates the MMS UA and MMS UaProf used for sending the MMS message.
 mmsc: string
 ```
 
-Indicates the MMSC used for sending the MMS message.
+MMSC address.
 
 **Type:** string
 
@@ -84,7 +84,10 @@ Indicates the MMSC used for sending the MMS message.
 slotId: int
 ```
 
-Indicates the ID of the SIM card slot used for sending the MMS message.
+Slot ID of the SIM card used for sending SMS messages.
+
+- **0**: card slot 1  
+- **1**: card slot 2
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 

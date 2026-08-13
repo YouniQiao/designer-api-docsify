@@ -12,11 +12,11 @@ import { drm } from '@kit.DrmKit';
 function isMediaKeySystemSupported(name: string, mimeType: string, level: ContentProtectionLevel): boolean
 ```
 
-Judge whether a system that specifies name, mimetype and content protection level is supported.
+Checks whether the device supports the combination of the DRM solution, MIME type, and content protection level.
 
-**Since:** 14
+**Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
 
@@ -28,15 +28,15 @@ Judge whether a system that specifies name, mimetype and content protection leve
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| name | string | Yes | Used to point a Digital Right Management solution. |
-| mimeType | string | Yes | Used to specifies the media type. |
-| level | [ContentProtectionLevel](arkts-drm-drm-contentprotectionlevel-e.md) | Yes | Used to specifies the ContentProtectionLevel. |
+| name | string | Yes | DRM solution name. Before calling this API, ensure that the DRM solution name is supported by calling [isMediaKeySystemSupported](#isMediaKeySystemSupported-2). |
+| mimeType | string | Yes | MIME type. The supported MIME types depend on the DRM solution. Before calling this API, ensure that the MIME type is supported by calling [isMediaKeySystemSupported](#isMediaKeySystemSupported-1) . |
+| level | [ContentProtectionLevel](arkts-drm-drm-contentprotectionlevel-e.md) | Yes | Content protection level. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | Whether these conditions will be met. |
+| boolean | Check result for the support of the combination. **true** if supported, **false** otherwise. |
 
 **Error codes:**
 
@@ -68,11 +68,11 @@ try {
 function isMediaKeySystemSupported(name: string, mimeType: string): boolean
 ```
 
-Judge whether a system that specifies name, mimetype is supported.
+Checks whether the device supports the combination of the DRM solution and MIME type.
 
-**Since:** 14
+**Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
 
@@ -84,14 +84,14 @@ Judge whether a system that specifies name, mimetype is supported.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| name | string | Yes | Used to point a Digital Right Management solution. |
-| mimeType | string | Yes | Used to specifies the media type. |
+| name | string | Yes | DRM solution name. Before calling this API, ensure that the DRM solution name is supported by calling [isMediaKeySystemSupported](#isMediaKeySystemSupported-2). |
+| mimeType | string | Yes | MIME type. The supported MIME types depend on the DRM solution. For example, video/avc and video/hevc. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | Whether these conditions will be met. |
+| boolean | Check result for the support of the combination. **true** if supported, **false** otherwise. |
 
 **Error codes:**
 
@@ -123,11 +123,11 @@ try {
 function isMediaKeySystemSupported(name: string): boolean
 ```
 
-Judge whether a system that specifies name is supported.
+Checks whether the device supports the specified DRM solution.
 
-**Since:** 14
+**Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
 
@@ -139,13 +139,13 @@ Judge whether a system that specifies name is supported.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| name | string | Yes | Used to point a Digital Right Management solution. |
+| name | string | Yes | DRM solution name, for example, **"com.clearplay.drm"**. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | Whether these conditions will be met. |
+| boolean | Check result for the support of the DRM solution. **true** if supported, **false** otherwise. |
 
 **Error codes:**
 

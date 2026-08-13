@@ -1,6 +1,6 @@
 # RejectMessageOptions (System API)
 
-Indicates the options for call rejection message.
+Defines options for the call rejection message.
 
 **Since:** 7
 
@@ -22,7 +22,7 @@ import { call } from '@kit.TelephonyKit';
 messageContent: string
 ```
 
-Indicates the content of call rejection message.
+Message content.
 
 **Type:** string
 

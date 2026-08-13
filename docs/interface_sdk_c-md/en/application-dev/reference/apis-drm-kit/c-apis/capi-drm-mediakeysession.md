@@ -6,7 +6,7 @@ typedef struct MediaKeySession MediaKeySession
 
 ## Overview
 
-Media key session struct.
+The struct describes a media key session.
 
 **Since**: 11
 

@@ -20,7 +20,7 @@ import { sms } from '@kit.TelephonyKit';
 pdu: Array<number>
 ```
 
-Indicates the SMS delivery report.
+SMS message delivery report.
 
 **Type:** Array&lt;number&gt;
 

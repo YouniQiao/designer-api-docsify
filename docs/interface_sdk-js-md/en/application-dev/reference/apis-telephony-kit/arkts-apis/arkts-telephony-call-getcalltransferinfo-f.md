@@ -12,7 +12,7 @@ import { call } from '@kit.TelephonyKit';
 function getCallTransferInfo(type: CallTransferType, number: string): Promise<CallTransferResult>
 ```
 
-Obtains call transfer information with the phone number.
+Obtains call transfer information with the phone number. This API uses a promise to return the result.
 
 **Since:** 26.0.0
 
@@ -28,14 +28,14 @@ Obtains call transfer information with the phone number.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | [CallTransferType](arkts-telephony-call-calltransfertype-e.md) | Yes | Type of call transfer to be obtained. |
-| number | string | Yes | Phone number whose call transfer status is to be obtained. Whether the SIM card exists will be checked. |
+| type | [CallTransferType](arkts-telephony-call-calltransfertype-e.md) | Yes | Type of call forwarding to be obtained. |
+| number | string | Yes | Number used to obtain the call forwarding status. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;[CallTransferResult](arkts-telephony-call-calltransferresult-i.md)&gt; | Call transfer status. |
+| Promise&lt;[CallTransferResult](arkts-telephony-call-calltransferresult-i.md)&gt; | Promise used to return the call forwarding result. |
 
 **Error codes:**
 

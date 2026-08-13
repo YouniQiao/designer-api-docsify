@@ -12,7 +12,7 @@ import { call } from '@kit.TelephonyKit';
 function holdCall(callId: number, callback: AsyncCallback<void>): void
 ```
 
-Keep a call on hold.
+Holds a call based on the specified call ID. This API uses an asynchronous callback to return the result.
 
 **Since:** 7
 
@@ -64,7 +64,7 @@ call.holdCall(1, (err: BusinessError) => {
 function holdCall(callId: number): Promise<void>
 ```
 
-Keep a call on hold.
+Holds a call based on the specified call ID. This API uses a promise to return the result.
 
 **Since:** 7
 

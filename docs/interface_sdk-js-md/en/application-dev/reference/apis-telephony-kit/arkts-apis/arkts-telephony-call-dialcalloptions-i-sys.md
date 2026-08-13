@@ -1,6 +1,6 @@
 # DialCallOptions (System API)
 
-Indicates the options for initiating a call.
+Provides an option for determining whether a call is a video call.
 
 **Since:** 9
 
@@ -24,7 +24,10 @@ import { call } from '@kit.TelephonyKit';
 accountId?: int
 ```
 
-Indicates the card slot index number, ranging from 0 to the maximum card slot index number supported by the device.
+Account ID.
+
+- **0**: card slot 1.  
+- **1**: card slot 2.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -44,7 +47,7 @@ Indicates the card slot index number, ranging from 0 to the maximum card slot in
 dialScene?: DialScene
 ```
 
-Indicates the scenario of the call.
+Dialup scenario.
 
 **Type:** [DialScene](arkts-telephony-call-dialscene-e-sys.md)
 
@@ -64,7 +67,7 @@ Indicates the scenario of the call.
 dialType?: DialType
 ```
 
-Indicates the type of the call.
+Dialup type.
 
 **Type:** [DialType](arkts-telephony-call-dialtype-e-sys.md)
 
@@ -104,7 +107,7 @@ Indicates the extra call parameters.
 videoState?: VideoStateType
 ```
 
-Indicates the type of Video state.
+Video state type.
 
 **Type:** [VideoStateType](arkts-telephony-call-videostatetype-e-sys.md)
 
@@ -124,7 +127,7 @@ Indicates the type of Video state.
 xCallType?: XCallType
 ```
 
-Indicates the type of the xcall.
+XCALL type.
 
 **Type:** [XCallType](arkts-telephony-call-xcalltype-e-sys.md)
 

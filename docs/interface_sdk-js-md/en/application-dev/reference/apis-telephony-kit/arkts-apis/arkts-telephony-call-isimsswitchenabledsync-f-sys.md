@@ -12,7 +12,7 @@ import { call } from '@kit.TelephonyKit';
 function isImsSwitchEnabledSync(slotId: int): boolean
 ```
 
-Judge whether the Ims switch is enabled.
+Checks whether the IMS service is enabled. This API returns the result synchronously.
 
 **Since:** 12
 
@@ -28,13 +28,13 @@ Judge whether the Ims switch is enabled.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| slotId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Indicates the card slot index number, ranging from 0 to the maximum card slot index number supported by the device. |
+| slotId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Card slot ID. &lt;br&gt;- **0**: card slot 1. &lt;br&gt;- **1**: card slot 2. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | Returns { |
+| boolean | Boolean value indicating whether the IMS service is enabled. The value **true** indicates that the IMS service is enabled, and the value **false** indicates the opposite. |
 
 **Error codes:**
 

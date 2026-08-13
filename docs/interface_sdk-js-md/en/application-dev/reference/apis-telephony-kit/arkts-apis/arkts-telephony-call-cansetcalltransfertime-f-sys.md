@@ -12,9 +12,7 @@ import { call } from '@kit.TelephonyKit';
 function canSetCallTransferTime(slotId: int, callback: AsyncCallback<boolean>): void
 ```
 
-Checks whether can set call transfer time.
-
-The system checks whether IP multimedia subsystem domain (IMS) can set call transfer time.
+Checks whether the call forwarding time can be set. This API uses an asynchronous callback to return the result.
 
 **Since:** 10
 
@@ -32,8 +30,8 @@ The system checks whether IP multimedia subsystem domain (IMS) can set call tran
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| slotId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Indicates the card slot index number, ranging from 0 to the maximum card slot index number supported by the device. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;boolean&gt; | Yes | Returns {@code true} if the device can set call transfer time; returns {@code false} otherwise. |
+| slotId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Card slot ID. &lt;br&gt;- **0**: card slot 1. &lt;br&gt;- **1**: card slot 2. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;boolean&gt; | Yes | Callback used to return the result. The value **true** indicates that the call forwarding time can be set, and the value **false** indicates the opposite. |
 
 **Error codes:**
 
@@ -69,9 +67,7 @@ call.canSetCallTransferTime(slotId, (err: BusinessError, data: boolean) => {
 function canSetCallTransferTime(slotId: int): Promise<boolean>
 ```
 
-Checks whether can set call transfer time.
-
-The system checks whether IP multimedia subsystem domain (IMS) can set call transfer time.
+Checks whether the call forwarding time can be set. This API uses a promise to return the result.
 
 **Since:** 10
 
@@ -89,13 +85,13 @@ The system checks whether IP multimedia subsystem domain (IMS) can set call tran
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| slotId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Indicates the card slot index number, ranging from 0 to the maximum card slot index number supported by the device. |
+| slotId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Card slot ID. &lt;br&gt;- **0**: card slot 1. &lt;br&gt;- **1**: card slot 2. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;boolean&gt; | Returns { |
+| Promise&lt;boolean&gt; | Promise used to return the result. The value **true** indicates that the call forwarding time can be set, and the value **false** indicates the opposite. |
 
 **Error codes:**
 

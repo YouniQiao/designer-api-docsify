@@ -12,7 +12,7 @@ import { sms } from '@kit.TelephonyKit';
 function sendMms(context: Context, mmsParams: MmsParams, callback: AsyncCallback<void>): void
 ```
 
-Sends an MMS message.
+Sends an MMS message. This API uses an asynchronous callback to return the result.
 
 **Since:** 11
 
@@ -127,7 +127,7 @@ class EntryAbility extends UIAbility {
 function sendMms(context: Context, mmsParams: MmsParams): Promise<void>
 ```
 
-Sends an MMS message.
+Sends an MMS message. This API uses a promise to return the result.
 
 **Since:** 11
 

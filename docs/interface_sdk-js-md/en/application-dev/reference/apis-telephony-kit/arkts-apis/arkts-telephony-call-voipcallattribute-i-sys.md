@@ -1,6 +1,6 @@
 # VoipCallAttribute (System API)
 
-Indicates the voip call detail information.
+Defines the VoIP call information.
 
 **Since:** 11
 
@@ -24,7 +24,7 @@ import { call } from '@kit.TelephonyKit';
 abilityName: string
 ```
 
-Indicates the third-party application UI extension ability name.
+Ability name of the third-party application.
 
 **Type:** string
 
@@ -44,7 +44,7 @@ Indicates the third-party application UI extension ability name.
 extensionId: string
 ```
 
-Indicates the third-party application process specific identifier.
+Process ID of the third-party application.
 
 **Type:** string
 
@@ -64,7 +64,7 @@ Indicates the third-party application process specific identifier.
 isConferenceCall?: boolean
 ```
 
-Indicates whether the VoIP call is a conference call. Default value is false.
+Whether the call is a conference call.
 
 **Type:** boolean
 
@@ -84,7 +84,7 @@ Indicates whether the VoIP call is a conference call. Default value is false.
 isVoiceAnswerSupported?: boolean
 ```
 
-Indicates whether the VoIP incoming video call is support voice answer. Default value is true.
+Whether call answering with voice commands is supported.
 
 **Type:** boolean
 
@@ -104,7 +104,7 @@ Indicates whether the VoIP incoming video call is support voice answer. Default 
 showBannerForIncomingCall?: boolean
 ```
 
-Indicates whether the VoIP incoming call default show live call banner. Default value is true.
+Whether to display the incoming call banner.
 
 **Type:** boolean
 
@@ -124,7 +124,7 @@ Indicates whether the VoIP incoming call default show live call banner. Default 
 userName: string
 ```
 
-Indicates the user name of the VoIP call.
+User nickname.
 
 **Type:** string
 
@@ -144,7 +144,7 @@ Indicates the user name of the VoIP call.
 userProfile: image.PixelMap
 ```
 
-Indicates the user profile photo of the VoIP call.
+User profile picture.
 
 **Type:** image.PixelMap
 
@@ -164,7 +164,7 @@ Indicates the user profile photo of the VoIP call.
 voipBundleName: string
 ```
 
-Indicates the third-party application bundle name.
+Bundle name of the third-party application.
 
 **Type:** string
 
@@ -184,7 +184,7 @@ Indicates the third-party application bundle name.
 voipCallId: string
 ```
 
-Indicates the identifier of the voip call.
+Unique ID of a VoIP call.
 
 **Type:** string
 

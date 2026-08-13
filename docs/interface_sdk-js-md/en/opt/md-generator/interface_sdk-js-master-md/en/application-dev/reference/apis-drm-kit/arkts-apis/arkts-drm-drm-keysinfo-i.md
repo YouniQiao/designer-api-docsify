@@ -1,8 +1,8 @@
 # KeysInfo
 
-Used to indicate the media key status with a key and its value.
+Defines the status information of a media key.
 
-**Since:** 12
+**Since:** 11
 
 <!--Device-drm-interface KeysInfo--><!--Device-drm-interface KeysInfo-End-->
 
@@ -20,11 +20,11 @@ import { drm } from '@kit.DrmKit';
 keyId: Uint8Array
 ```
 
-Keys Id in media key.
+Media key ID.
 
 **Type:** Uint8Array
 
-**Since:** 12
+**Since:** 11
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -38,11 +38,11 @@ Keys Id in media key.
 value: string
 ```
 
-Keys status description.
+Media key status.
 
 **Type:** string
 
-**Since:** 12
+**Since:** 11
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

@@ -12,7 +12,7 @@ import { call } from '@kit.TelephonyKit';
 function rejectCall(callback: AsyncCallback<void>): void
 ```
 
-Reject the incoming call without callId.
+Rejects a call. This API uses an asynchronous callback to return the result.
 
 **Since:** 23
 

@@ -1,6 +1,6 @@
 # CallSessionEventId (System API)
 
-Indicates the type of video call event.
+Enumerates video call event types.
 
 **Since:** 11
 
@@ -16,7 +16,7 @@ Indicates the type of video call event.
 EVENT_CONTROL_CAMERA_FAILURE = 0
 ```
 
-Indicates set camera fail event.
+Camera setting failed.
 
 **Since:** 11
 
@@ -32,7 +32,7 @@ Indicates set camera fail event.
 EVENT_CONTROL_CAMERA_READY = 1
 ```
 
-Indicates set camera successful event.
+Camera setting succeeded.
 
 **Since:** 11
 
@@ -48,7 +48,7 @@ Indicates set camera successful event.
 EVENT_DISPLAY_SURFACE_RELEASED = 100
 ```
 
-Indicates release display surface event.
+Remote display window released.
 
 **Since:** 11
 
@@ -64,7 +64,7 @@ Indicates release display surface event.
 EVENT_PREVIEW_SURFACE_RELEASED = 101
 ```
 
-Indicates release preview surface event.
+Local preview window released.
 
 **Since:** 11
 

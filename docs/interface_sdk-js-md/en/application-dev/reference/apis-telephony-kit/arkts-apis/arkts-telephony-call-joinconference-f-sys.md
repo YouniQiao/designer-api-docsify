@@ -12,7 +12,7 @@ import { call } from '@kit.TelephonyKit';
 function joinConference(mainCallId: int, callNumberList: Array<string>, callback: AsyncCallback<void>): void
 ```
 
-Join the conference call.
+Joins a conference call. This API uses an asynchronous callback to return the result.
 
 **Since:** 8
 
@@ -28,9 +28,9 @@ Join the conference call.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| mainCallId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Indicates the identifier of the main call. |
-| callNumberList | Array&lt;string&gt; | Yes | Indicates a call list. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | The callback of joinConference. |
+| mainCallId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Main call ID. |
+| callNumberList | Array&lt;string&gt; | Yes | List of call numbers. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
 
@@ -67,7 +67,7 @@ call.joinConference(1, callNumberList, (err: BusinessError) => {
 function joinConference(mainCallId: int, callNumberList: Array<string>): Promise<void>
 ```
 
-Join the conference call.
+Joins a conference call. This API uses a promise to return the result.
 
 **Since:** 8
 
@@ -83,14 +83,14 @@ Join the conference call.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| mainCallId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Indicates the identifier of the main call. |
-| callNumberList | Array&lt;string&gt; | Yes | Indicates a call list. |
+| mainCallId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Main call ID. |
+| callNumberList | Array&lt;string&gt; | Yes | List of call numbers. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | The promise returned by the joinConference. |
+| Promise&lt;void&gt; | Promise used to return the result. |
 
 **Error codes:**
 

@@ -12,7 +12,7 @@ import { sms } from '@kit.TelephonyKit';
 function downloadMms(context: Context, mmsParams: MmsParams, callback: AsyncCallback<void>): void
 ```
 
-Downloads an MMS message.
+Downloads an MMS message. This API uses an asynchronous callback to return the result.
 
 **Since:** 11
 
@@ -30,9 +30,9 @@ Downloads an MMS message.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | Context | Yes | Indicates the context of application or capability. |
-| mmsParams | [MmsParams](arkts-telephony-sms-mmsparams-i-sys.md) | Yes | Indicates the parameters of the MMS message. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | The callback of downloadMms. For error code, see MmsFailCode. |
+| context | Context | Yes | Application context. &lt;br&gt;For details about the application context of the FA model, see [Context](./app/context). &lt;br&gt;For details about the application context of the stage model, see [Context](../../apis-ability-kit/arkts-apis/arkts-ability-uiabilitycontext-c.md#UIAbilityContext). |
+| mmsParams | [MmsParams](arkts-telephony-sms-mmsparams-i-sys.md) | Yes | Parameters (including the callback) for downloading MMS messages. For details, see [MmsParams](arkts-telephony-sms-mmsparams-i-sys.md#MmsParams). |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
 
@@ -135,7 +135,7 @@ class EntryAbility extends UIAbility {
 function downloadMms(context: Context, mmsParams: MmsParams): Promise<void>
 ```
 
-Downloads an MMS message.
+Downloads an MMS message. This API uses a promise to return the result.
 
 **Since:** 11
 
@@ -153,14 +153,14 @@ Downloads an MMS message.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | Context | Yes | Indicates the context of application or capability. |
-| mmsParams | [MmsParams](arkts-telephony-sms-mmsparams-i-sys.md) | Yes | Indicates the parameters of the MMS message. |
+| context | Context | Yes | Application context. &lt;br&gt;For details about the application context of the FA model, see [Context](./app/context). &lt;br&gt;For details about the application context of the stage model, see [Context](../../apis-ability-kit/arkts-apis/arkts-ability-uiabilitycontext-c.md#UIAbilityContext). |
+| mmsParams | [MmsParams](arkts-telephony-sms-mmsparams-i-sys.md) | Yes | Parameters (including the callback) for sending MMS messages. For details, see [MmsParams](arkts-telephony-sms-mmsparams-i-sys.md#MmsParams). |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | The promise returned by the downloadMms. For error code, see MmsFailCode. |
+| Promise&lt;void&gt; | Promise used to return the result. |
 
 **Error codes:**
 

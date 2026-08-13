@@ -12,7 +12,7 @@ import { call } from '@kit.TelephonyKit';
 function removeMissedIncomingCallNotification(callback: AsyncCallback<void>): void
 ```
 
-Remove missed incoming call notification.
+Removes missed call notifications. This API uses an asynchronous callback to return the result.
 
 **Since:** 10
 
@@ -62,7 +62,7 @@ call.removeMissedIncomingCallNotification((err: BusinessError) => {
 function removeMissedIncomingCallNotification(): Promise<void>
 ```
 
-Remove missed incoming call notification.
+Removes missed call notifications. This API uses a promise to return the result.
 
 **Since:** 10
 

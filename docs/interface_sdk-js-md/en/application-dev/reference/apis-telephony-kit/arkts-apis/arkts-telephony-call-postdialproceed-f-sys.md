@@ -12,7 +12,11 @@ import { call } from '@kit.TelephonyKit';
 function postDialProceed(callId: int, proceed: boolean, callback: AsyncCallback<void>): void
 ```
 
-Continue post-dial DTMF(Dual Tone Multi Frequency).
+Continues a call by playing a post-dial DTMF string. This API uses an asynchronous callback to return the result.
+
+If the called number is in the format of "common phone number + semicolon (;) + DTMF string", for example,  
+**400xxxxxxx;123**, and the listening for **postDialDelay** events is enabled, the system reports a  
+**postDialDelay** event when the call is connected. The application can then call this API to send DTMF tones.
 
 **Since:** 11
 
@@ -30,9 +34,9 @@ Continue post-dial DTMF(Dual Tone Multi Frequency).
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Indicates the identifier of the call. |
-| proceed | boolean | Yes | Indicates whether to continue the post-dial DTMF. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | The callback of postDialProceed. |
+| callId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Call ID. |
+| proceed | boolean | Yes | Whether to send DTMF tones. The default value is **false**. &lt;br&gt;- **true**: yes &lt;br&gt;- **false**: no |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
 
@@ -63,7 +67,11 @@ call.postDialProceed(1, true, (err: BusinessError) => {
 function postDialProceed(callId: int, proceed: boolean): Promise<void>
 ```
 
-Continue post-dial DTMF(Dual Tone Multi Frequency).
+Continues a call by playing a post-dial DTMF string. This API uses a promise to return the result.
+
+If the called number is in the format of "common phone number + semicolon (;) + DTMF string", for example,  
+**400xxxxxxx;123**, and the listening for **postDialDelay** events is enabled, the system reports a  
+**postDialDelay** event when the call is connected. The application can then call this API to send DTMF tones.
 
 **Since:** 11
 
@@ -81,14 +89,14 @@ Continue post-dial DTMF(Dual Tone Multi Frequency).
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Indicates the identifier of the call. |
-| proceed | boolean | Yes | Indicates whether to continue the post-dial DTMF. |
+| callId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Call ID. |
+| proceed | boolean | Yes | Whether to send DTMF tones. The default value is **false**. &lt;br&gt;- **true**: yes &lt;br&gt;- **false**: no |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | The promise returned by the postDialProceed. |
+| Promise&lt;void&gt; | Promise used to return the result. |
 
 **Error codes:**
 

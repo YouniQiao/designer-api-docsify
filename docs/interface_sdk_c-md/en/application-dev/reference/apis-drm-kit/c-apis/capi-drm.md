@@ -9,7 +9,7 @@ Provides APIs of Drm.
 
 | Name | Description |
 | -- | -- |
-| [native_mediakeysession.h](capi-native-mediakeysession-h.md) | Defines the Drm MediaKeySession APIs. Provide following function:generate media key request, process media key response, event listening,get content protection level, check media key status, remove media key etc.. |
-| [native_mediakeysystem.h](capi-native-mediakeysystem-h.md) | Defines the Drm MediaKeySystem APIs. Provide following function:query if specific drm supported or not, create media key session,get and set configurations, get statistics, get content protection level,generate provision request, process provision response, event listening,get content protection level, manage offline media key etc.. |
-| [native_drm_err.h](capi-native-drm-err-h.md) | Defines the Drm errors. |
-| [native_drm_common.h](capi-native-drm-common-h.md) | Defines the Drm common struct. |
+| [native_mediakeysession.h](capi-native-mediakeysession-h.md) | The file declares the MediaKeySession APIs for DRM operations.The APIs can be used to generate media key requests, process responses to media key requests, listen for events,obtain content protection levels, check media key status, and remove media keys. |
+| [native_mediakeysystem.h](capi-native-mediakeysystem-h.md) | The file declares the MediaKeySystem APIs for DRM operations.The APIs can be used to check the support for a DRM solution, create a media key session, obtain and setconfigurations, obtain DRM metrics, obtain the content protection level, generate media key system requests, processresponses to media key system requests, listen for events, and manage offline media keys. |
+| [native_drm_err.h](capi-native-drm-err-h.md) | The file declares the DRM error codes. |
+| [native_drm_common.h](capi-native-drm-common-h.md) | The file declares the DRM data types. |

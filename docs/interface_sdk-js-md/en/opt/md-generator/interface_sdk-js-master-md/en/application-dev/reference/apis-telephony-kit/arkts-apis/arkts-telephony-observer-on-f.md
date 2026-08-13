@@ -12,7 +12,9 @@ import { observer } from '@kit.TelephonyKit';
 function on(type: 'networkStateChange', callback: Callback<NetworkState>): void
 ```
 
-Callback when the network state corresponding to the default sim card is updated.
+Registers an observer for network status change events. This API uses an asynchronous callback to return the execution result.
+
+**Required permission**: ohos.permission.GET_NETWORK_INFO
 
 **Since:** 6
 
@@ -55,9 +57,11 @@ observer.on('networkStateChange', (data: observer.NetworkState) => {
 function on(type: 'networkStateChange', options: ObserverOptions, callback: Callback<NetworkState>): void
 ```
 
-Callback when the network state corresponding to the monitored {@code slotId} is updated.
+Registers an observer for network status change events of the SIM card in the specified slot. This API uses an asynchronous callback to return the execution result.
 
-**Since:** 11
+**Required permission**: ohos.permission.GET_NETWORK_INFO
+
+**Since:** 6
 
 **Required permissions:** ohos.permission.GET_NETWORK_INFO
 
@@ -102,7 +106,7 @@ observer.on('networkStateChange', options, (data: observer.NetworkState) => {
 function on(type: 'signalInfoChange', callback: Callback<Array<SignalInformation>>): void
 ```
 
-Callback when the signal strength corresponding to the default sim card is updated.
+Registers an observer for signal status change events. This API uses an asynchronous callback to return the execution result.
 
 **Since:** 6
 
@@ -144,9 +148,9 @@ observer.on('signalInfoChange', (data: Array<radio.SignalInformation>) => {
 function on(type: 'signalInfoChange', options: ObserverOptions, callback: Callback<Array<SignalInformation>>): void
 ```
 
-Callback when the signal strength corresponding to a monitored {@code slotId} is updated.
+Registers an observer for signal status change events of the SIM card in the specified slot. This API uses an asynchronous callback to return the execution result.
 
-**Since:** 11
+**Since:** 6
 
 <!--Device-observer-function on(type: 'signalInfoChange', options: ObserverOptions, callback: Callback<Array<SignalInformation>>): void--><!--Device-observer-function on(type: 'signalInfoChange', options: ObserverOptions, callback: Callback<Array<SignalInformation>>): void-End-->
 
@@ -190,9 +194,9 @@ observer.on('signalInfoChange', options, (data: Array<radio.SignalInformation>) 
 function on(type: 'cellularDataConnectionStateChange', callback: Callback<DataConnectionStateInfo>): void
 ```
 
-Callback when the cellular data link connection state corresponding to the default sim card is updated.
+Registers an observer for connection status change events of the cellular data link. This API uses an asynchronous callback to return the result.
 
-**Since:** 11
+**Since:** 7
 
 <!--Device-observer-function on(type: 'cellularDataConnectionStateChange', callback: Callback<DataConnectionStateInfo>): void--><!--Device-observer-function on(type: 'cellularDataConnectionStateChange', callback: Callback<DataConnectionStateInfo>): void-End-->
 
@@ -231,9 +235,9 @@ function on(type: 'cellularDataConnectionStateChange', options: ObserverOptions,
               callback: Callback<DataConnectionStateInfo>): void
 ```
 
-Callback when the cellular data link connection state corresponding to the monitored {@code slotId} is updated.
+Registers an observer for connection status change events of the cellular data link over the SIM card in the specified slot. This API uses an asynchronous callback to return the result.
 
-**Since:** 11
+**Since:** 7
 
 <!--Device-observer-function on(type: 'cellularDataConnectionStateChange', options: ObserverOptions,              callback: Callback<DataConnectionStateInfo>): void--><!--Device-observer-function on(type: 'cellularDataConnectionStateChange', options: ObserverOptions,              callback: Callback<DataConnectionStateInfo>): void-End-->
 
@@ -275,7 +279,7 @@ observer.on('cellularDataConnectionStateChange', options, (data: observer.DataCo
 function on(type: 'cellularDataFlowChange', callback: Callback<DataFlowType>): void
 ```
 
-Callback when the uplink and downlink data flow state of cellular data services corresponding to the default sim card is updated.
+Registers an observer for the uplink and downlink data flow status change events of the cellular data service. This API uses an asynchronous callback to return the result.
 
 **Since:** 7
 
@@ -317,9 +321,9 @@ observer.on('cellularDataFlowChange', (data: data.DataFlowType) => {
 function on(type: 'cellularDataFlowChange', options: ObserverOptions, callback: Callback<DataFlowType>): void
 ```
 
-Callback when the uplink and downlink data flow state of cellular data services corresponding to the monitored {@code slotId} is updated.
+Registers an observer for the uplink and downlink data flow status change events of the cellular data service on the SIM card in the specified slot. This API uses an asynchronous callback to return the result.
 
-**Since:** 11
+**Since:** 7
 
 <!--Device-observer-function on(type: 'cellularDataFlowChange', options: ObserverOptions, callback: Callback<DataFlowType>): void--><!--Device-observer-function on(type: 'cellularDataFlowChange', options: ObserverOptions, callback: Callback<DataFlowType>): void-End-->
 
@@ -363,9 +367,9 @@ observer.on('cellularDataFlowChange', options, (data: data.DataFlowType) => {
 function on(type: 'callStateChange', callback: Callback<CallStateInfo>): void
 ```
 
-Callback when the call state corresponding to the default sim card is updated.
+Registers an observer for call status change events. This API uses an asynchronous callback to return the execution result.
 
-**Since:** 11
+**Since:** 6
 
 <!--Device-observer-function on(type: 'callStateChange', callback: Callback<CallStateInfo>): void--><!--Device-observer-function on(type: 'callStateChange', callback: Callback<CallStateInfo>): void-End-->
 
@@ -403,9 +407,9 @@ observer.on('callStateChange', (data: observer.CallStateInfo) => {
 function on(type: 'callStateChange', options: ObserverOptions, callback: Callback<CallStateInfo>): void
 ```
 
-Callback when the call state corresponding to the monitored {@code slotId} is updated.
+Registers an observer for call status change events. This API uses an asynchronous callback to return the execution result.
 
-**Since:** 11
+**Since:** 6
 
 <!--Device-observer-function on(type: 'callStateChange', options: ObserverOptions, callback: Callback<CallStateInfo>): void--><!--Device-observer-function on(type: 'callStateChange', options: ObserverOptions, callback: Callback<CallStateInfo>): void-End-->
 
@@ -447,7 +451,7 @@ observer.on('callStateChange', options, (data: observer.CallStateInfo) => {
 function on(type: 'callStateChangeEx', callback: Callback<TelCallState>, options?: ObserverOptions): void
 ```
 
-Callback when the telCall state corresponding to the monitored {@code slotId} is updated.
+Registers an observer for extended call status change events. This API uses an asynchronous callback to return the execution result.
 
 **Since:** 21
 
@@ -495,7 +499,12 @@ observer.on('callStateChangeEx', callback);
 function on(type: 'simStateChange', callback: Callback<SimStateData>): void
 ```
 
-Callback when the sim state corresponding to the default sim card is updated.
+Registers an observer for SIM card status change events. This API uses an asynchronous callback to return the result.
+
+> **NOTE：**
+> 
+> The return result of this API does not contain the activation status of the SIM card. For details, see
+> [sim.isSimActive](arkts-telephony-sim-issimactive-f.md#isSimActive).
 
 **Since:** 7
 
@@ -535,9 +544,9 @@ observer.on('simStateChange', (data: observer.SimStateData) => {
 function on(type: 'simStateChange', options: ObserverOptions, callback: Callback<SimStateData>): void
 ```
 
-Callback when the sim state corresponding to the monitored {@code slotId} is updated.
+Registers an observer for status change events of the SIM card in the specified slot. This API uses an asynchronous callback to return the result.
 
-**Since:** 11
+**Since:** 7
 
 <!--Device-observer-function on(type: 'simStateChange', options: ObserverOptions, callback: Callback<SimStateData>): void--><!--Device-observer-function on(type: 'simStateChange', options: ObserverOptions, callback: Callback<SimStateData>): void-End-->
 
@@ -579,7 +588,7 @@ observer.on('simStateChange', options, (data: observer.SimStateData) => {
 function on(type: 'iccAccountInfoChange', callback: Callback<void>): void
 ```
 
-Receives an ICC account change. This callback is invoked when the ICC account updates and the observer is added to monitor the updates.
+Registers an observer for account information change events of the SIM card. This API uses an asynchronous callback to return the result.
 
 **Since:** 10
 

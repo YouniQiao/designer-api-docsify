@@ -188,7 +188,7 @@ Registers a callback function to be called when the scroll event start or stop.
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | type | 'scrollEvent' | 是 |
-| options | [ObserverOptions](arkts-arkui-uiobserver-observeroptions-i.md) | 是 |
+| options | [ObserverOptions](../../apis-telephony-kit/arkts-apis/arkts-telephony-observer-observeroptions-i.md) | 是 |
 | callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ScrollEventInfo](arkts-arkui-uiobserver-scrolleventinfo-i.md)&gt; | 是 |
 
 
@@ -460,7 +460,7 @@ export function on(type: 'tabContentUpdate', options: ObserverOptions, callback:
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | type | 'tabContentUpdate' | 是 |
-| options | [ObserverOptions](arkts-arkui-uiobserver-observeroptions-i.md) | 是 |
+| options | [ObserverOptions](../../apis-telephony-kit/arkts-apis/arkts-telephony-observer-observeroptions-i.md) | 是 |
 | callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[TabContentInfo](arkts-arkui-uiobserver-tabcontentinfo-i.md)&gt; | 是 |
 
 ## 示例

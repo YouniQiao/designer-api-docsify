@@ -14,7 +14,7 @@ Enumerates SMS message sending results.
 SEND_SMS_SUCCESS = 0
 ```
 
-Indicates that the SMS message is successfully sent.
+The SMS message is sent successfully.
 
 **Since:** 6
 
@@ -28,7 +28,7 @@ Indicates that the SMS message is successfully sent.
 SEND_SMS_FAILURE_UNKNOWN = 1
 ```
 
-Indicates that sending the SMS message fails due to an unknown reason.
+Failed to send the SMS message due to an unknown reason.
 
 **Since:** 6
 
@@ -42,7 +42,7 @@ Indicates that sending the SMS message fails due to an unknown reason.
 SEND_SMS_FAILURE_RADIO_OFF = 2
 ```
 
-Indicates that sending the SMS fails because the modem is powered off.
+Failed to send the SMS message because the modem is shut down.
 
 **Since:** 6
 
@@ -56,7 +56,7 @@ Indicates that sending the SMS fails because the modem is powered off.
 SEND_SMS_FAILURE_SERVICE_UNAVAILABLE = 3
 ```
 
-Indicates that sending the SMS message fails because the network is unavailable or does not support sending or reception of SMS messages.
+Failed to send the SMS message because the network is unavailable or SMS message sending or receiving is not supported.
 
 **Since:** 6
 

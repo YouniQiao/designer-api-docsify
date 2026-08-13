@@ -12,7 +12,7 @@ import { sms } from '@kit.TelephonyKit';
 function getAllSimMessages(slotId: number, callback: AsyncCallback<Array<SimShortMessage>>): void
 ```
 
-Get all SMS records in SIM.
+Obtains all SIM card messages. This API uses an asynchronous callback to return the result.
 
 **Since:** 7
 
@@ -62,7 +62,7 @@ sms.getAllSimMessages(slotId, (err: BusinessError, data: sms.SimShortMessage[]) 
 function getAllSimMessages(slotId: number): Promise<Array<SimShortMessage>>
 ```
 
-Get all SMS records in SIM.
+Obtains all SIM card messages. This API uses a promise to return the result.
 
 **Since:** 7
 

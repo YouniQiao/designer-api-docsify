@@ -12,7 +12,7 @@ import { observer } from '@kit.TelephonyKit';
 function onCCallStateChange(callback: Callback<CCallStateInfo>, options?: ObserverOptions): void
 ```
 
-Called when the carrier call state changes.
+Subscribes to the carrier call state changes and obtains the call number. This method uses an asynchronous callback to return the execution result.
 
 **Since:** 23
 
@@ -28,8 +28,8 @@ Called when the carrier call state changes.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[CCallStateInfo](arkts-telephony-observer-ccallstateinfo-i.md)&gt; | Yes | Indicates the callback for getting the carrier call state. |
-| options | ObserverOptions | No | Indicates the options for observer. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[CCallStateInfo](arkts-telephony-observer-ccallstateinfo-i.md)&gt; | Yes | Callback function used to return the call status information object. &lt;br&gt;The application can obtain CCallState. &lt;br&gt; |
+| options | ObserverOptions | No | Event subscription parameters. |
 
 **Error codes:**
 

@@ -12,7 +12,7 @@ import { call } from '@kit.TelephonyKit';
 function answerCall(callback: AsyncCallback<void>): void
 ```
 
-Answers the incoming call without callId.
+Answers a call. This API uses an asynchronous callback to return the result.
 
 **Since:** 23
 
@@ -28,7 +28,7 @@ Answers the incoming call without callId.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | The callback of answerCall. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the call is answered successfully, the value of **err** is **undefined**. Otherwise, the value is an error object. |
 
 **Error codes:**
 

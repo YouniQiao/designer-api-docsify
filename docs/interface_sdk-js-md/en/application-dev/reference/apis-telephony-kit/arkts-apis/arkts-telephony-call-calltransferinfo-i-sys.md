@@ -1,6 +1,6 @@
 # CallTransferInfo (System API)
 
-Indicates the information of call transfer.
+Defines the call transfer information.
 
 **Since:** 8
 
@@ -24,7 +24,7 @@ import { call } from '@kit.TelephonyKit';
 endHour?: int
 ```
 
-End time hours.
+Hour in the end time.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -44,7 +44,7 @@ End time hours.
 endMinute?: int
 ```
 
-End time minutes.
+Minute in the end time.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -64,7 +64,7 @@ End time minutes.
 settingType: CallTransferSettingType
 ```
 
-Call forwarding setting type.
+Enumerates call transfer setting types.
 
 **Type:** [CallTransferSettingType](arkts-telephony-call-calltransfersettingtype-e-sys.md)
 
@@ -84,7 +84,7 @@ Call forwarding setting type.
 startHour?: int
 ```
 
-Start time hours.
+Hour in the start time.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -104,7 +104,7 @@ Start time hours.
 startMinute?: int
 ```
 
-Start time minutes.
+Minute in the start time.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -124,7 +124,7 @@ Start time minutes.
 transferNum: string
 ```
 
-Phone number.
+Call transfer number.
 
 **Type:** string
 
@@ -144,7 +144,7 @@ Phone number.
 type: CallTransferType
 ```
 
-Call forwarding type.
+Call transfer type.
 
 **Type:** [CallTransferType](arkts-telephony-call-calltransfertype-e.md)
 

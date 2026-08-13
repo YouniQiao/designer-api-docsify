@@ -12,7 +12,7 @@ import { call } from '@kit.TelephonyKit';
 function cancelCallUpgrade(callId: number): Promise<void>
 ```
 
-Cancel call upgrade when voice call upgrade to video call.
+Cancels the upgrade of a video call. This API uses a promise to return the result.
 
 **Since:** 11
 

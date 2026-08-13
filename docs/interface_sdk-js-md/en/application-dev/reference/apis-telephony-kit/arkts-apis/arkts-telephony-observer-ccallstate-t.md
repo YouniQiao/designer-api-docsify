@@ -4,7 +4,7 @@
 type CCallState = call.CCallState
 ```
 
-Indicates the states of carrier call.
+Enumerates carrier call states.
 
 **Since:** 23
 

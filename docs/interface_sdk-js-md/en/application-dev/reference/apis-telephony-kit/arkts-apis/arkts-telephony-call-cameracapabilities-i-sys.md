@@ -1,6 +1,6 @@
 # CameraCapabilities (System API)
 
-Indicates the camera capabilities.
+Defines the local image resolution in a video call.
 
 **Since:** 11
 
@@ -24,7 +24,7 @@ import { call } from '@kit.TelephonyKit';
 callId: int
 ```
 
-Indicates the id of call.
+Call ID.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -44,7 +44,7 @@ Indicates the id of call.
 height: int
 ```
 
-Indicates the the camera height.
+Height of the local image, in pixels.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -64,7 +64,7 @@ Indicates the the camera height.
 width: int
 ```
 
-Indicates the camera width.
+Width of the local image, in pixels.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 

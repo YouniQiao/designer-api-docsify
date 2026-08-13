@@ -1,8 +1,8 @@
 # MediaKeyStatus
 
-Used to indicate the media key status.
+Defines a status attribute for a media key.
 
-**Since:** 12
+**Since:** 11
 
 <!--Device-drm-interface MediaKeyStatus--><!--Device-drm-interface MediaKeyStatus-End-->
 
@@ -20,11 +20,11 @@ import { drm } from '@kit.DrmKit';
 name: string
 ```
 
-Media key Id in string.
+Name of the media key status attribute, for example, expiration time or content protection level.
 
 **Type:** string
 
-**Since:** 12
+**Since:** 11
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -38,11 +38,11 @@ Media key Id in string.
 value: string
 ```
 
-Media key status description.
+Value of the media key status attribute.
 
 **Type:** string
 
-**Since:** 12
+**Since:** 11
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

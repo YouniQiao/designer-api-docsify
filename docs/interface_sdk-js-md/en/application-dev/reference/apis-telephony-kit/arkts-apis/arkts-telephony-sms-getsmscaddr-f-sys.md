@@ -12,7 +12,7 @@ import { sms } from '@kit.TelephonyKit';
 function getSmscAddr(slotId: int, callback: AsyncCallback<string>): void
 ```
 
-Obtains the SMSC address based on a specified slot ID.
+Obtains the SMSC address. This API uses an asynchronous callback to return the result.
 
 **Since:** 7
 
@@ -30,8 +30,8 @@ Obtains the SMSC address based on a specified slot ID.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| slotId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Indicates the ID of the slot holding the SIM card for sending SMS messages. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;string&gt; | Yes | Indicates the callback for getting the SMSC address. |
+| slotId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | SIM card slot ID. &lt;br&gt;- **0**: card slot 1 &lt;br&gt;- **1**: card slot 2 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;string&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
 
@@ -64,7 +64,7 @@ sms.getSmscAddr(slotId, (err: BusinessError, data: string) => {
 function getSmscAddr(slotId: int): Promise<string>
 ```
 
-Obtains the SMSC address based on a specified slot ID.
+Obtains the SMSC address. This API uses a promise to return the result.
 
 **Since:** 7
 
@@ -82,13 +82,13 @@ Obtains the SMSC address based on a specified slot ID.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| slotId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Indicates the ID of the slot holding the SIM card for sending SMS messages. |
+| slotId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | SIM card slot ID. &lt;br&gt;- **0**: card slot 1 &lt;br&gt;- **1**: card slot 2 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;string&gt; | Returns the SMSC address. |
+| Promise&lt;string&gt; | Promise used to return the result. |
 
 **Error codes:**
 

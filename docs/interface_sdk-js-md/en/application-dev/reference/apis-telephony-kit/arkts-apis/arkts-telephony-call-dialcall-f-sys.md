@@ -12,7 +12,7 @@ import { call } from '@kit.TelephonyKit';
 function dialCall(phoneNumber: string, options: DialCallOptions, callback: AsyncCallback<void>): void
 ```
 
-Makes a call.
+Initiates a call. You can set call options as needed. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
 
@@ -30,9 +30,9 @@ Makes a call.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| phoneNumber | string | Yes | Indicates the called number. |
-| options | [DialCallOptions](arkts-telephony-call-dialcalloptions-i-sys.md) | Yes | Indicates additional information carried in the call. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | The callback of dialCall. |
+| phoneNumber | string | Yes | Phone number. |
+| options | [DialCallOptions](arkts-telephony-call-dialcalloptions-i-sys.md) | Yes | Call options, which carry other configuration information of the call. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
 
@@ -75,7 +75,7 @@ call.dialCall("138xxxxxxxx", dialCallOptions, (err: BusinessError) => {
 function dialCall(phoneNumber: string, options?: DialCallOptions): Promise<void>
 ```
 
-Makes a call.
+Initiates a call. You can set call options as needed. This API uses a promise to return the result.
 
 **Since:** 9
 
@@ -93,14 +93,14 @@ Makes a call.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| phoneNumber | string | Yes | Indicates the called number. |
-| options | [DialCallOptions](arkts-telephony-call-dialcalloptions-i-sys.md) | No | Indicates additional information carried in the call. |
+| phoneNumber | string | Yes | Phone number. |
+| options | [DialCallOptions](arkts-telephony-call-dialcalloptions-i-sys.md) | No | Call options, which carry other configuration information of the call. &lt;br&gt;If this field is not set, the following configuration is used by default. For details, see [DialCallOptions](arkts-telephony-call-dialcalloptions-i-sys.md#DialCallOptions). &lt;br&gt;- **accountId**: 0 (card slot 1) &lt;br&gt;- **videoState**: voice call &lt;br&gt;- **dialScene**: common call &lt;br&gt;- **dialType**: carrier call |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | The promise returned by the dialCall. |
+| Promise&lt;void&gt; | Promise used to return the result. |
 
 **Error codes:**
 
@@ -141,7 +141,7 @@ call.dialCall("138xxxxxxxx", dialCallOptions).then(() => {
 function dialCall(phoneNumber: string, callback: AsyncCallback<void>): void
 ```
 
-Makes a call.
+Initiates a call. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
 
@@ -159,8 +159,8 @@ Makes a call.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| phoneNumber | string | Yes | Indicates the called number. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | The callback of dialCall. |
+| phoneNumber | string | Yes | Phone number. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
 

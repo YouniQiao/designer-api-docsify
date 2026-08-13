@@ -12,7 +12,7 @@ import { call } from '@kit.TelephonyKit';
 function isNewCallAllowed(callback: AsyncCallback<boolean>): void
 ```
 
-Judge whether to allow another new call.
+Checks whether a new call is allowed. This API uses an asynchronous callback to return the result.
 
 **Since:** 8
 
@@ -60,7 +60,7 @@ call.isNewCallAllowed((err: BusinessError, data: boolean) => {
 function isNewCallAllowed(): Promise<boolean>
 ```
 
-Judge whether to allow another new call.
+Checks whether a new call is allowed. This API uses a promise to return the result.
 
 **Since:** 8
 

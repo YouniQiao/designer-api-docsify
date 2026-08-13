@@ -12,7 +12,7 @@ import { call } from '@kit.TelephonyKit';
 function getCallTransferInfo(slotId: int, type: CallTransferType, callback: AsyncCallback<CallTransferResult>): void
 ```
 
-Get call forwarding information.
+Obtains call transfer information. This API uses an asynchronous callback to return the result.
 
 **Since:** 8
 
@@ -30,9 +30,9 @@ Get call forwarding information.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| slotId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Indicates the card slot index number, ranging from 0 to the maximum card slot index number supported by the device. |
-| type | [CallTransferType](arkts-telephony-call-calltransfertype-e.md) | Yes | Indicates which type of call forwarding to obtain. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[CallTransferResult](arkts-telephony-call-calltransferresult-i.md)&gt; | Yes | Indicates the callback for getting the call forwarding status. |
+| slotId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Card slot ID. &lt;br&gt;- **0**: card slot 1. &lt;br&gt;- **1**: card slot 2. |
+| type | [CallTransferType](arkts-telephony-call-calltransfertype-e.md) | Yes | Call transfer type. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[CallTransferResult](arkts-telephony-call-calltransferresult-i.md)&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
 
@@ -67,7 +67,7 @@ call.getCallTransferInfo(0, call.CallTransferType.TRANSFER_TYPE_BUSY, (err: Busi
 function getCallTransferInfo(slotId: int, type: CallTransferType): Promise<CallTransferResult>
 ```
 
-Get call forwarding information.
+Obtains call transfer information. This API uses a promise to return the result.
 
 **Since:** 8
 
@@ -85,14 +85,14 @@ Get call forwarding information.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| slotId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Indicates the card slot index number, ranging from 0 to the maximum card slot index number supported by the device. |
-| type | [CallTransferType](arkts-telephony-call-calltransfertype-e.md) | Yes | Indicates which type of call forwarding to obtain. |
+| slotId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Card slot ID. &lt;br&gt;- **0**: card slot 1. &lt;br&gt;- **1**: card slot 2. |
+| type | [CallTransferType](arkts-telephony-call-calltransfertype-e.md) | Yes | Call transfer type. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;[CallTransferResult](arkts-telephony-call-calltransferresult-i.md)&gt; | Returns the call forwarding status. |
+| Promise&lt;[CallTransferResult](arkts-telephony-call-calltransferresult-i.md)&gt; | Promise used to return the result. |
 
 **Error codes:**
 

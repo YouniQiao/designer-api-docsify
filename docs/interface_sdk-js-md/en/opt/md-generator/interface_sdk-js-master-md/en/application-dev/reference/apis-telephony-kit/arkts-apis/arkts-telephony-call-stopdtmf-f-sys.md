@@ -12,7 +12,7 @@ import { call } from '@kit.TelephonyKit';
 function stopDTMF(callId: number, callback: AsyncCallback<void>): void
 ```
 
-Stop DTMF(Dual Tone Multi Frequency).
+Stops playing DTMF tones. This API uses an asynchronous callback to return the result.
 
 **Since:** 7
 
@@ -64,7 +64,7 @@ call.stopDTMF(1, (err: BusinessError) => {
 function stopDTMF(callId: number): Promise<void>
 ```
 
-Stop DTMF(Dual Tone Multi Frequency).
+Stops playing DTMF tones. This API uses a promise to return the result.
 
 **Since:** 7
 

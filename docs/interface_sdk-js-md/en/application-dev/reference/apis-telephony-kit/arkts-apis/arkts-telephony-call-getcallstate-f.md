@@ -12,9 +12,7 @@ import { call } from '@kit.TelephonyKit';
 function getCallState(callback: AsyncCallback<CallState>): void
 ```
 
-Obtains the call state.
-
-If an incoming call is ringing or waiting, the system returns {@code CallState#CALL_STATE_RINGING}.If at least one call is in the active, hold, or dialing state, the system returns{@code CallState#CALL_STATE_OFFHOOK}.In other cases, the system returns {@code CallState#CALL_STATE_IDLE}.
+Obtains the call status. This API uses an asynchronous callback to return the result.
 
 **Since:** 6
 
@@ -28,7 +26,7 @@ If an incoming call is ringing or waiting, the system returns {@code CallState#C
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;CallState&gt; | Yes | Indicates the callback for getting the call state. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;CallState&gt; | Yes | Callback used to return the result. |
 
 ## Examples
 
@@ -51,9 +49,7 @@ call.getCallState((err: BusinessError, data: call.CallState) => {
 function getCallState(): Promise<CallState>
 ```
 
-Obtains the call state.
-
-If an incoming call is ringing or waiting, the system returns {@code CallState#CALL_STATE_RINGING}.If at least one call is in the active, hold, or dialing state, the system returns{@code CallState#CALL_STATE_OFFHOOK}.In other cases, the system returns {@code CallState#CALL_STATE_IDLE}.
+Obtains the call status. This API uses a promise to return the result.
 
 **Since:** 6
 
@@ -67,7 +63,7 @@ If an incoming call is ringing or waiting, the system returns {@code CallState#C
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;CallState&gt; | Returns the call state. |
+| Promise&lt;CallState&gt; | Promise used to return the result. |
 
 ## Examples
 

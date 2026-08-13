@@ -12,7 +12,7 @@ import { call } from '@kit.TelephonyKit';
 function getCallIdListForConference(callId: number, callback: AsyncCallback<Array<string>>): void
 ```
 
-Get the call Id list of the conference.
+Obtains the list of call IDs in a conference. This API uses an asynchronous callback to return the result.
 
 **Since:** 7
 
@@ -61,7 +61,7 @@ call.getCallIdListForConference(1, (err: BusinessError, data: Array<string>) => 
 function getCallIdListForConference(callId: number): Promise<Array<string>>
 ```
 
-Get the call Id list of the conference.
+Obtains the list of call IDs in a conference. This API uses a promise to return the result.
 
 **Since:** 7
 

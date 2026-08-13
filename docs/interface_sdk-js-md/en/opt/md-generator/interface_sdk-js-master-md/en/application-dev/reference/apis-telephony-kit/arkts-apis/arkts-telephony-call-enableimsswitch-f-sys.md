@@ -12,7 +12,7 @@ import { call } from '@kit.TelephonyKit';
 function enableImsSwitch(slotId: number, callback: AsyncCallback<void>): void
 ```
 
-Turn on Ims switch.
+Enables the IMS service. This API uses an asynchronous callback to return the result.
 
 **Since:** 8
 
@@ -64,7 +64,7 @@ call.enableImsSwitch(0, (err: BusinessError) => {
 function enableImsSwitch(slotId: number): Promise<void>
 ```
 
-Turn on Ims switch.
+Enables the IMS service. This API uses a promise to return the result.
 
 **Since:** 8
 

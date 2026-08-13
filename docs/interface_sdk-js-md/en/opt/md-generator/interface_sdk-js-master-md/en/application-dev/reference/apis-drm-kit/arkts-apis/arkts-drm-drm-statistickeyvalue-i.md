@@ -1,8 +1,8 @@
 # StatisticKeyValue
 
-Used to indicate the statistic info.
+Defines a key-value pair for DRM metrics.
 
-**Since:** 14
+**Since:** 11
 
 <!--Device-drm-interface StatisticKeyValue--><!--Device-drm-interface StatisticKeyValue-End-->
 
@@ -20,11 +20,11 @@ import { drm } from '@kit.DrmKit';
 name: string
 ```
 
-Statistic info name.
+Name of the metric.
 
 **Type:** string
 
-**Since:** 14
+**Since:** 11
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
 
@@ -38,11 +38,11 @@ Statistic info name.
 value: string
 ```
 
-Statistic info value.
+Value of the metric.
 
 **Type:** string
 
-**Since:** 14
+**Since:** 11
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
 

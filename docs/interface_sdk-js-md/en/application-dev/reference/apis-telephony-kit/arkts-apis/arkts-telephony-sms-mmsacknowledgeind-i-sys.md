@@ -1,6 +1,6 @@
 # MmsAcknowledgeInd (System API)
 
-Defines an MMS confirmation indication.
+Defines an MMS confirmation index.
 
 **Since:** 8
 
@@ -24,7 +24,7 @@ import { sms } from '@kit.TelephonyKit';
 reportAllowed?: ReportType
 ```
 
-Indicates the report allowed for the MMS confirmation indication.
+Report allowed.
 
 **Type:** ReportType
 
@@ -44,7 +44,7 @@ Indicates the report allowed for the MMS confirmation indication.
 transactionId: string
 ```
 
-Indicates the transaction ID for the MMS confirmation indication.
+Transaction ID.
 
 **Type:** string
 
@@ -64,7 +64,7 @@ Indicates the transaction ID for the MMS confirmation indication.
 version: MmsVersionType
 ```
 
-Indicates the version for the MMS confirmation indication.
+Version.
 
 **Type:** [MmsVersionType](arkts-telephony-sms-mmsversiontype-e-sys.md)
 

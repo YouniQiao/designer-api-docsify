@@ -14,7 +14,7 @@ function createMediaKeySystem(name: string): MediaKeySystem
 
 Creates a MediaKeySystem instance.
 
-**Since:** 14
+**Since:** 11
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
 

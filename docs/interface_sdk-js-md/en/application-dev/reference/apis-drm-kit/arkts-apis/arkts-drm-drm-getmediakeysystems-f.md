@@ -12,11 +12,11 @@ import { drm } from '@kit.DrmKit';
 function getMediaKeySystems(): MediaKeySystemDescription[]
 ```
 
-Get all media key systems supported.
+Obtains the list of plugins supported by the device.
 
-**Since:** 14
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
 
@@ -28,7 +28,7 @@ Get all media key systems supported.
 
 | Type | Description |
 | --- | --- |
-| [MediaKeySystemDescription](arkts-drm-drm-mediakeysystemdescription-i.md)[] | The MediaKeySystem name and uuid info list. |
+| [MediaKeySystemDescription](arkts-drm-drm-mediakeysystemdescription-i.md)[] | Array of supported plugins. |
 
 **Error codes:**
 

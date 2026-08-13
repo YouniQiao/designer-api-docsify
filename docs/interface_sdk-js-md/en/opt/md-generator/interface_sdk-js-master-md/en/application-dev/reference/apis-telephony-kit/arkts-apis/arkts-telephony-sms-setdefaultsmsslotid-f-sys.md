@@ -12,7 +12,7 @@ import { sms } from '@kit.TelephonyKit';
 function setDefaultSmsSlotId(slotId: number, callback: AsyncCallback<void>): void
 ```
 
-Sets the default SIM card for sending SMS messages. You can obtain the default SIM card by using {@code getDefaultSmsSlotId}.
+Sets the default slot ID of the SIM card used to send SMS messages. This API uses an asynchronous callback to return the result.
 
 **Since:** 7
 
@@ -62,7 +62,7 @@ sms.setDefaultSmsSlotId(0, (err: BusinessError) => {
 function setDefaultSmsSlotId(slotId: number): Promise<void>
 ```
 
-Sets the default SIM card for sending SMS messages. You can obtain the default SIM card by using {@code getDefaultSmsSlotId}.
+Sets the default slot ID of the SIM card used to send SMS messages. This API uses a promise to return the result.
 
 **Since:** 7
 

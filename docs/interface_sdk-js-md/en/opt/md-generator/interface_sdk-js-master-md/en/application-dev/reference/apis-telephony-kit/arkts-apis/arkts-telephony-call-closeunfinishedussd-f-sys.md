@@ -12,7 +12,7 @@ import { call } from '@kit.TelephonyKit';
 function closeUnfinishedUssd(slotId: number, callback: AsyncCallback<void>): void
 ```
 
-Close unfinished ussd.
+Cancels the unfinished USSD services. This API uses an asynchronous callback to return the result.
 
 **Since:** 10
 
@@ -65,7 +65,7 @@ call.closeUnfinishedUssd(slotId, (err: BusinessError) => {
 function closeUnfinishedUssd(slotId: number): Promise<void>
 ```
 
-Close unfinished ussd.
+Cancels the unfinished USSD services. This API uses a promise to return the result.
 
 **Since:** 10
 

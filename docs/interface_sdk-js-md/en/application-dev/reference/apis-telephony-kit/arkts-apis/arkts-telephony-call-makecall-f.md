@@ -12,11 +12,11 @@ import { call } from '@kit.TelephonyKit';
 function makeCall(phoneNumber: string, callback: AsyncCallback<void>): void
 ```
 
-Go to the dial screen and the called number is displayed.
+Launches the call screen and displays the dialed number. This API uses an asynchronous callback to return the result. This API can be called only in a UIAbility.
 
-**Since:** 11
+**Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -28,8 +28,8 @@ Go to the dial screen and the called number is displayed.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| phoneNumber | string | Yes | Indicates the called number. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | The callback of makeCall. |
+| phoneNumber | string | Yes | Phone number. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
 
@@ -62,11 +62,11 @@ call.makeCall("138xxxxxxxx", (err: BusinessError) => {
 function makeCall(phoneNumber: string): Promise<void>
 ```
 
-Go to the dial screen and the called number is displayed.
+Launches the call screen and displays the dialed number. This API uses a promise to return the result. This API can be called only in a UIAbility.
 
-**Since:** 11
+**Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -78,13 +78,13 @@ Go to the dial screen and the called number is displayed.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| phoneNumber | string | Yes | Indicates the called number. |
+| phoneNumber | string | Yes | Phone number. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | The promise returned by the makeCall. |
+| Promise&lt;void&gt; | Promise used to return the result. |
 
 **Error codes:**
 
@@ -115,7 +115,7 @@ call.makeCall("138xxxxxxxx").then(() => {
 function makeCall(phoneNumber: string, options?: MakeCallOptions): Promise<void>
 ```
 
-Go to the dial screen and the called number is displayed.
+Launches the call screen and displays the dialed number. This API uses a promise to return the result. This API can be called only in a UIAbility.
 
 **Since:** 24
 
@@ -131,14 +131,14 @@ Go to the dial screen and the called number is displayed.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| phoneNumber | string | Yes | Indicates the called number. |
-| options | [MakeCallOptions](arkts-telephony-call-makecalloptions-i.md) | No | Indicates additional information carried in the call. &lt;br&gt;Default value: false. |
+| phoneNumber | string | Yes | Phone number. |
+| options | [MakeCallOptions](arkts-telephony-call-makecalloptions-i.md) | No | Call options. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | The promise returned by the makeCall. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
@@ -156,7 +156,7 @@ Go to the dial screen and the called number is displayed.
 function makeCall(context: Context, phoneNumber: string): Promise<void>
 ```
 
-Go to the dial screen and the called number is displayed.
+Launches the call screen and displays the dialed number. This API uses a promise to return the result. You need to declare the **ohos.permission.START_ABILITIES_FROM_BACKGROUND** permission if you want to call the API in the background.
 
 **Since:** 12
 
@@ -172,14 +172,14 @@ Go to the dial screen and the called number is displayed.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | Context | Yes | Indicates the context. |
-| phoneNumber | string | Yes | Indicates the called number. |
+| context | Context | Yes | Application context. |
+| phoneNumber | string | Yes | Phone number. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | The promise returned by the makeCall. |
+| Promise&lt;void&gt; | Promise used to return the result. |
 
 **Error codes:**
 

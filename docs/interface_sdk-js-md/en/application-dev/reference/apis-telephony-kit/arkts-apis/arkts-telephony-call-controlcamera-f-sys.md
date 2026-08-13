@@ -12,7 +12,7 @@ import { call } from '@kit.TelephonyKit';
 function controlCamera(callId: int, cameraId: string): Promise<void>
 ```
 
-Control camera to open/close/switch camera by cameraId when video call.
+Uses the specified camera to make a video call. If **cameraId** is left empty, the camera is disabled. This API uses a promise to return the result.
 
 **Since:** 11
 
@@ -30,14 +30,14 @@ Control camera to open/close/switch camera by cameraId when video call.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Indicates the identifier of the call. |
-| cameraId | string | Yes | Indicates the identifier of the camera id. |
+| callId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Call ID. You can obtain the value by subscribing to **callDetailsChange** events. |
+| cameraId | string | Yes | Camera ID. For details about how to obtain the camera ID, see the [getSupportedCameras](../../apis-camera-kit/arkts-apis/arkts-camera-camera-cameramanager-i.md#getSupportedCameras) API in camera management. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | The promise returned by the controlCamera. |
+| Promise&lt;void&gt; | Promise used to return the result of starting, closing, or switching a camera. |
 
 **Error codes:**
 

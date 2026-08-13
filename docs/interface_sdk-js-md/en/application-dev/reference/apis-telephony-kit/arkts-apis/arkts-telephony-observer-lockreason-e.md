@@ -1,6 +1,6 @@
 # LockReason
 
-Enum for SIM card lock type.
+Enumerates SIM card lock types.
 
 **Since:** 8
 
@@ -16,7 +16,7 @@ Enum for SIM card lock type.
 SIM_NONE = 0
 ```
 
-Indicates no SIM lock.
+No lock.
 
 **Since:** 8
 
@@ -32,7 +32,7 @@ Indicates no SIM lock.
 SIM_PIN = 1
 ```
 
-Indicates the PIN lock.
+PIN lock.
 
 **Since:** 8
 
@@ -48,7 +48,7 @@ Indicates the PIN lock.
 SIM_PUK = 2
 ```
 
-Indicates the PUK lock.
+PUK lock.
 
 **Since:** 8
 
@@ -64,7 +64,7 @@ Indicates the PUK lock.
 SIM_PN_PIN = 3
 ```
 
-Indicates network personalization of PIN lock(refer 3GPP TS 22.022 [33]).
+Network PIN lock.
 
 **Since:** 8
 
@@ -80,7 +80,7 @@ Indicates network personalization of PIN lock(refer 3GPP TS 22.022 [33]).
 SIM_PN_PUK = 4
 ```
 
-Indicates network personalization of PUK lock(refer 3GPP TS 22.022 [33]).
+Network PUK lock.
 
 **Since:** 8
 
@@ -96,7 +96,7 @@ Indicates network personalization of PUK lock(refer 3GPP TS 22.022 [33]).
 SIM_PU_PIN = 5
 ```
 
-Indicates network subset personalization of PIN lock(refer 3GPP TS 22.022 [33]).
+Subnet PIN lock.
 
 **Since:** 8
 
@@ -112,7 +112,7 @@ Indicates network subset personalization of PIN lock(refer 3GPP TS 22.022 [33]).
 SIM_PU_PUK = 6
 ```
 
-Indicates network subset personalization of PUK lock(refer 3GPP TS 22.022 [33]).
+Subnet PUK lock.
 
 **Since:** 8
 
@@ -128,7 +128,7 @@ Indicates network subset personalization of PUK lock(refer 3GPP TS 22.022 [33]).
 SIM_PP_PIN = 7
 ```
 
-Indicates service provider personalization of PIN lock(refer 3GPP TS 22.022 [33]).
+Service provider PIN lock.
 
 **Since:** 8
 
@@ -144,7 +144,7 @@ Indicates service provider personalization of PIN lock(refer 3GPP TS 22.022 [33]
 SIM_PP_PUK = 8
 ```
 
-Indicates service provider personalization of PUK lock(refer 3GPP TS 22.022 [33]).
+Service provider PUK lock.
 
 **Since:** 8
 
@@ -160,7 +160,7 @@ Indicates service provider personalization of PUK lock(refer 3GPP TS 22.022 [33]
 SIM_PC_PIN = 9
 ```
 
-Indicates corporate personalization of PIN lock(refer 3GPP TS 22.022 [33]).
+Organization PIN lock.
 
 **Since:** 8
 
@@ -176,7 +176,7 @@ Indicates corporate personalization of PIN lock(refer 3GPP TS 22.022 [33]).
 SIM_PC_PUK = 10
 ```
 
-Indicates corporate personalization of PUK lock(refer 3GPP TS 22.022 [33]).
+Organization PUK lock.
 
 **Since:** 8
 
@@ -192,7 +192,7 @@ Indicates corporate personalization of PUK lock(refer 3GPP TS 22.022 [33]).
 SIM_SIM_PIN = 11
 ```
 
-Indicates SIM/USIM personalization of PIN lock(refer 3GPP TS 22.022 [33]).
+SIM PIN lock.
 
 **Since:** 8
 
@@ -208,7 +208,7 @@ Indicates SIM/USIM personalization of PIN lock(refer 3GPP TS 22.022 [33]).
 SIM_SIM_PUK = 12
 ```
 
-Indicates SIM/USIM personalization of PUK lock(refer 3GPP TS 22.022 [33]).
+SIM PUK lock.
 
 **Since:** 8
 

@@ -24,7 +24,7 @@ import { sms } from '@kit.TelephonyKit';
 pdu: string
 ```
 
-Indicates the protocol data unit for the SIM message options.
+Protocol data unit.
 
 **Type:** string
 
@@ -44,7 +44,7 @@ Indicates the protocol data unit for the SIM message options.
 slotId: int
 ```
 
-Indicates the card slot ID for the SIM message options.
+Card slot ID.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -64,7 +64,7 @@ Indicates the card slot ID for the SIM message options.
 smsc: string
 ```
 
-Indicates the short message service center for the SIM message options.
+Short message service center.
 
 **Type:** string
 
@@ -84,7 +84,7 @@ Indicates the short message service center for the SIM message options.
 status: SimMessageStatus
 ```
 
-Indicates the status for the SIM message options.
+Status.
 
 **Type:** [SimMessageStatus](arkts-telephony-sms-simmessagestatus-e-sys.md)
 

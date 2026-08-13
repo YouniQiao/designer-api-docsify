@@ -12,7 +12,7 @@ import { call } from '@kit.TelephonyKit';
 function setCallRestriction(slotId: number, info: CallRestrictionInfo, callback: AsyncCallback<void>): void
 ```
 
-Set call barring status.
+Sets the call restriction status. This API uses an asynchronous callback to return the result.
 
 **Since:** 8
 
@@ -70,7 +70,7 @@ call.setCallRestriction(0, callRestrictionInfo, (err: BusinessError) => {
 function setCallRestriction(slotId: number, info: CallRestrictionInfo): Promise<void>
 ```
 
-Set call barring status.
+Sets the call restriction status. This API uses a promise to return the result.
 
 **Since:** 8
 

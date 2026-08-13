@@ -12,11 +12,11 @@ import { drm } from '@kit.DrmKit';
 function getMediaKeySystemUuid(name: string): string
 ```
 
-Get a MediaKeySystem's UUID.
+Obtains the UUID of the DRM content protection system supported by the specified DRM solution.
 
-**Since:** 14
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
 
@@ -28,13 +28,13 @@ Get a MediaKeySystem's UUID.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| name | string | Yes | The Digital Right Management solution name. |
+| name | string | Yes | DRM solution name. You can check whether the solution name is supported by calling [isMediaKeySystemSupported](arkts-drm-drm-ismediakeysystemsupported-f.md#isMediaKeySystemSupported-2). |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| string | The MediaKeySystem uuid. |
+| string | UUID of the DRM content protection system. |
 
 **Error codes:**
 

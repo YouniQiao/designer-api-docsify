@@ -12,7 +12,9 @@ import { observer } from '@kit.TelephonyKit';
 function onGetSimActiveState(slotId: number, callback: Callback<boolean>): void
 ```
 
-Subscribe to sim active state change events using a callback-based approach as an asynchronous method.
+Registers an observer for SIM card activation state changes. This API uses an asynchronous callback to return the execution result.
+
+**Required permission**: ohos.permission.GET_TELEPHONY_STATE
 
 **Since:** 23
 

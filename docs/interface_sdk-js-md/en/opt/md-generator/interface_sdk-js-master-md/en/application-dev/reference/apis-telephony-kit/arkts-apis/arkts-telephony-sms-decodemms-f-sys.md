@@ -12,7 +12,7 @@ import { sms } from '@kit.TelephonyKit';
 function decodeMms(mmsFilePathName: string | Array<number>, callback: AsyncCallback<MmsInformation>): void
 ```
 
-Decode the message content.
+Decodes MMS messages. This API uses an asynchronous callback to return the result.
 
 **Since:** 8
 
@@ -64,7 +64,7 @@ sms.decodeMms(mmsPdu, (err: BusinessError, data: sms.MmsInformation) => {
 function decodeMms(mmsFilePathName: string | Array<number>): Promise<MmsInformation>
 ```
 
-Decode the message content.
+Decodes MMS messages. This API uses a promise to return the result.
 
 **Since:** 8
 

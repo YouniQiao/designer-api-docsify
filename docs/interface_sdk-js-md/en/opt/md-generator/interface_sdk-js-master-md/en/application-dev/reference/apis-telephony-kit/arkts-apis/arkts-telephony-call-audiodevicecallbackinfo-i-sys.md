@@ -1,6 +1,6 @@
 # AudioDeviceCallbackInfo (System API)
 
-Indicates the information of the audio device.
+Defines the audio device information.
 
 **Since:** 10
 
@@ -22,7 +22,7 @@ import { call } from '@kit.TelephonyKit';
 audioDeviceList: Array<AudioDevice>
 ```
 
-Indicates the list of support audio device.
+Audio device list.
 
 **Type:** Array&lt;[AudioDevice](arkts-telephony-call-audiodevice-i-sys.md)&gt;
 
@@ -40,7 +40,7 @@ Indicates the list of support audio device.
 currentAudioDevice: AudioDevice
 ```
 
-Indicates the type of current audio device.
+Current audio device.
 
 **Type:** [AudioDevice](arkts-telephony-call-audiodevice-i-sys.md)
 
@@ -58,7 +58,10 @@ Indicates the type of current audio device.
 isMicDisabled?: boolean
 ```
 
-Indicates the status of microphone disabled.
+Whether to disable the microphone.
+
+- **true**: yes.  
+- **false**: no.
 
 **Type:** boolean
 
@@ -76,7 +79,7 @@ Indicates the status of microphone disabled.
 isMuted: boolean
 ```
 
-Indicates the status of mute.
+Whether the audio device is muted.
 
 **Type:** boolean
 

@@ -12,7 +12,7 @@ import { call } from '@kit.TelephonyKit';
 function setDeviceDirection(callId: number, deviceDirection: DeviceDirection): Promise<void>
 ```
 
-Set device direction when video call.
+Sets the video call screen to follow the device direction. This API uses a promise to return the result.
 
 **Since:** 11
 

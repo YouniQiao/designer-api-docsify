@@ -12,7 +12,7 @@ import { call } from '@kit.TelephonyKit';
 function isRinging(callback: AsyncCallback<boolean>): void
 ```
 
-Judge whether there is a ringing call.
+Checks whether the ringtone is playing. This API uses an asynchronous callback to return the result.
 
 **Since:** 8
 
@@ -30,7 +30,7 @@ Judge whether there is a ringing call.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;boolean&gt; | Yes | The callback of isRinging. Returns {@code true} if the device is ringing; returns {@code false} otherwise. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;boolean&gt; | Yes | Callback used to return the result. The value true indicates that the **ringtone** is playing, and the value **false** indicates the opposite. |
 
 **Error codes:**
 
@@ -65,7 +65,7 @@ call.isRinging((err: BusinessError, data: boolean) => {
 function isRinging(): Promise<boolean>
 ```
 
-Judge whether there is a ringing call.
+Checks whether the ringtone is playing. This API uses a promise to return the result.
 
 **Since:** 8
 
@@ -83,7 +83,7 @@ Judge whether there is a ringing call.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;boolean&gt; | Returns { |
+| Promise&lt;boolean&gt; | Promise used to return the result. The value true indicates that the **ringtone** is playing, and the value **false** indicates the opposite. |
 
 **Error codes:**
 

@@ -22,7 +22,7 @@ import { sms } from '@kit.TelephonyKit';
 bcc?: Array<MmsAddress>
 ```
 
-Indicates the blind carbon copy address for the MMS message sending request.
+Blind carbon copy.
 
 **Type:** Array&lt;[MmsAddress](arkts-telephony-sms-mmsaddress-i-sys.md)&gt;
 
@@ -40,7 +40,7 @@ Indicates the blind carbon copy address for the MMS message sending request.
 cc?: Array<MmsAddress>
 ```
 
-Indicates the carbon copy address for the MMS message sending request.
+Carbon copy.
 
 **Type:** Array&lt;[MmsAddress](arkts-telephony-sms-mmsaddress-i-sys.md)&gt;
 
@@ -58,7 +58,7 @@ Indicates the carbon copy address for the MMS message sending request.
 contentType: string
 ```
 
-Indicates the content type for the MMS message sending request.
+Content type.
 
 **Type:** string
 
@@ -76,7 +76,7 @@ Indicates the content type for the MMS message sending request.
 date?: number
 ```
 
-Indicates the date for the MMS message sending request.
+Date.
 
 **Type:** number
 
@@ -94,7 +94,7 @@ Indicates the date for the MMS message sending request.
 deliveryReport?: number
 ```
 
-Indicates the delivery report for the MMS message sending request.
+Delivery report.
 
 **Type:** number
 
@@ -112,7 +112,7 @@ Indicates the delivery report for the MMS message sending request.
 expiry?: number
 ```
 
-Indicates the expiration for the MMS message sending request.
+Expiration.
 
 **Type:** number
 
@@ -130,7 +130,7 @@ Indicates the expiration for the MMS message sending request.
 from: MmsAddress
 ```
 
-Indicates the source address for the MMS message sending request.
+MMS message source.
 
 **Type:** [MmsAddress](arkts-telephony-sms-mmsaddress-i-sys.md)
 
@@ -148,7 +148,7 @@ Indicates the source address for the MMS message sending request.
 messageClass?: number
 ```
 
-Indicates the message class for the MMS message sending request.
+Message class.
 
 **Type:** number
 
@@ -166,7 +166,7 @@ Indicates the message class for the MMS message sending request.
 priority?: MmsPriorityType
 ```
 
-Indicates the priority for the MMS message sending request.
+Priority.
 
 **Type:** [MmsPriorityType](arkts-telephony-sms-mmsprioritytype-e-sys.md)
 
@@ -184,7 +184,7 @@ Indicates the priority for the MMS message sending request.
 readReport?: number
 ```
 
-Indicates the read report for the MMS message sending request.
+Read report.
 
 **Type:** number
 
@@ -202,7 +202,7 @@ Indicates the read report for the MMS message sending request.
 senderVisibility?: number
 ```
 
-Indicates the sender visibility for the MMS message sending request.
+Sender visibility.
 
 **Type:** number
 
@@ -220,7 +220,7 @@ Indicates the sender visibility for the MMS message sending request.
 subject?: string
 ```
 
-Indicates the subject for the MMS message sending request.
+Subject.
 
 **Type:** string
 
@@ -238,7 +238,7 @@ Indicates the subject for the MMS message sending request.
 to?: Array<MmsAddress>
 ```
 
-Indicates the destination address for the MMS message sending request.
+Destination address.
 
 **Type:** Array&lt;[MmsAddress](arkts-telephony-sms-mmsaddress-i-sys.md)&gt;
 
@@ -256,7 +256,7 @@ Indicates the destination address for the MMS message sending request.
 transactionId: string
 ```
 
-Indicates the transaction ID for the MMS message sending request.
+Transaction ID.
 
 **Type:** string
 
@@ -274,7 +274,7 @@ Indicates the transaction ID for the MMS message sending request.
 version: MmsVersionType
 ```
 
-Indicates the version for the MMS message sending request.
+Version.
 
 **Type:** [MmsVersionType](arkts-telephony-sms-mmsversiontype-e-sys.md)
 

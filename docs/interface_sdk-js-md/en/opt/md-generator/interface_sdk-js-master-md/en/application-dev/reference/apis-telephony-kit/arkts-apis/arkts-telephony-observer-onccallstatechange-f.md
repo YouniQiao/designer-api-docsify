@@ -12,7 +12,7 @@ import { observer } from '@kit.TelephonyKit';
 function onCCallStateChange(callback: Callback<CCallStateInfo>, options?: ObserverOptions): void
 ```
 
-Called when the carrier call state changes.
+Subscribes to the carrier call state changes and obtains the call number. This method uses an asynchronous callback to return the execution result.
 
 **Since:** 23
 

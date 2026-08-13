@@ -1,10 +1,10 @@
 # OfflineMediaKeyStatus
 
-Enumerates offline media key status.
+Enumerates the statuses of offline media keys.
 
-**Since:** 14
+**Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 <!--Device-drm-enum OfflineMediaKeyStatus--><!--Device-drm-enum OfflineMediaKeyStatus-End-->
 
@@ -16,11 +16,11 @@ Enumerates offline media key status.
 OFFLINE_MEDIA_KEY_STATUS_UNKNOWN = 0
 ```
 
-Offline media key status unknown.
+Unknown status.
 
-**Since:** 14
+**Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
 
@@ -34,11 +34,11 @@ Offline media key status unknown.
 OFFLINE_MEDIA_KEY_STATUS_USABLE = 1
 ```
 
-Offline media key status usable.
+The media key is available.
 
-**Since:** 14
+**Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
 
@@ -52,11 +52,11 @@ Offline media key status usable.
 OFFLINE_MEDIA_KEY_STATUS_INACTIVE = 2
 ```
 
-Offline media key status inactive.
+The media key is inactive.
 
-**Since:** 14
+**Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
 

@@ -12,7 +12,7 @@ import { call } from '@kit.TelephonyKit';
 function removeMissedIncomingCallNotification(callback: AsyncCallback<void>): void
 ```
 
-Remove missed incoming call notification.
+Removes missed call notifications. This API uses an asynchronous callback to return the result.
 
 **Since:** 10
 
@@ -30,7 +30,7 @@ Remove missed incoming call notification.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | The callback of removeMissedIncomingCallNotification. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
 
@@ -64,7 +64,7 @@ call.removeMissedIncomingCallNotification((err: BusinessError) => {
 function removeMissedIncomingCallNotification(): Promise<void>
 ```
 
-Remove missed incoming call notification.
+Removes missed call notifications. This API uses a promise to return the result.
 
 **Since:** 10
 
@@ -82,7 +82,7 @@ Remove missed incoming call notification.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | The promise returned by the removeMissedIncomingCallNotification. |
+| Promise&lt;void&gt; | Promise used to return the result. |
 
 **Error codes:**
 

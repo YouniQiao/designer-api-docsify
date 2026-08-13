@@ -12,7 +12,7 @@ import { call } from '@kit.TelephonyKit';
 function off(type: 'callDetailsChange', callback?: Callback<CallAttributeOptions>): void
 ```
 
-Unsubscribe from the callDetailsChange event.
+Unsubscribes from **callDetailsChange** events. This API uses an asynchronous callback to return the result.
 
 **Since:** 7
 
@@ -58,7 +58,7 @@ call.off('callDetailsChange', (data: call.CallAttributeOptions) => {
 function off(type: 'callEventChange', callback?: Callback<CallEventOptions>): void
 ```
 
-Unsubscribe from the callEventChange event.
+Unsubscribes from **callEventChange** events. This API uses an asynchronous callback to return the result.
 
 **Since:** 8
 
@@ -104,7 +104,7 @@ call.off('callEventChange', (data: call.CallEventOptions) => {
 function off(type: 'callDisconnectedCause', callback?: Callback<DisconnectedDetails>): void
 ```
 
-Unsubscribe from the callDisconnectedCause event.
+Unsubscribes from **callDisconnectedCause** events. This API uses an asynchronous callback to return the result.
 
 **Since:** 8
 
@@ -150,7 +150,7 @@ call.off('callDisconnectedCause', (data: call.DisconnectedDetails) => {
 function off(type: 'mmiCodeResult', callback?: Callback<MmiCodeResults>): void
 ```
 
-Unsubscribe from the mmiCodeResult event.
+Unsubscribes from **mmiCodeResult** events. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
 
@@ -196,7 +196,7 @@ call.off('mmiCodeResult', (data: call.MmiCodeResults) => {
 function off(type: 'audioDeviceChange', callback?: Callback<AudioDeviceCallbackInfo>): void
 ```
 
-Unsubscribe from the audioDeviceChange event.
+Unsubscribes from **audioDeviceChange** events. This API uses an asynchronous callback to return the result.
 
 **Since:** 10
 
@@ -242,7 +242,7 @@ call.off('audioDeviceChange', (data: call.AudioDeviceCallbackInfo) => {
 function off(type: 'postDialDelay', callback?: Callback<string>): void
 ```
 
-Unsubscribe from the postDialDelay event.
+Unsubscribes from **postDialDelay** events. This API uses an asynchronous callback to return the result.
 
 **Since:** 11
 
@@ -288,7 +288,7 @@ call.off('postDialDelay', (data: string) => {
 function off(type: 'imsCallModeChange', callback?: Callback<ImsCallModeInfo>): void
 ```
 
-Unsubscribe from the imsCallModeChange event.
+Unsubscribes from **imsCallModeChange** events. This API uses an asynchronous callback to return the result.
 
 **Since:** 11
 
@@ -336,7 +336,7 @@ call.off('imsCallModeChange', (data: call.ImsCallModeInfo) => {
 function off(type: 'callSessionEvent', callback?: Callback<CallSessionEvent>): void
 ```
 
-Unsubscribe from the callSessionEvent.
+Unsubscribes from **callSessionEvent** events. This API uses an asynchronous callback to return the result.
 
 **Since:** 11
 
@@ -384,7 +384,7 @@ call.off('callSessionEvent', (data: call.CallSessionEvent) => {
 function off(type: 'peerDimensionsChange', callback?: Callback<PeerDimensionsDetail>): void
 ```
 
-Unsubscribe from the peerDimensionsChange event.
+Unsubscribes from **peerDimensionsChange** events. This API uses an asynchronous callback to return the result.
 
 **Since:** 11
 
@@ -432,7 +432,7 @@ call.off('peerDimensionsChange', (data: call.PeerDimensionsDetail) => {
 function off(type: 'cameraCapabilitiesChange', callback?: Callback<CameraCapabilities>): void
 ```
 
-Unsubscribe from the cameraCapabilitiesChange event.
+Unsubscribes from **cameraCapabilitiesChange** events. This API uses an asynchronous callback to return the result.
 
 **Since:** 11
 

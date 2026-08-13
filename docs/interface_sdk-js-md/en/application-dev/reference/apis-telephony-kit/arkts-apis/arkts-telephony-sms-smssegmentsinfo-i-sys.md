@@ -24,7 +24,7 @@ import { sms } from '@kit.TelephonyKit';
 encodeCount: int
 ```
 
-Indicates the encoding count for the SMS message segment information.
+Encoding count.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -44,7 +44,7 @@ Indicates the encoding count for the SMS message segment information.
 encodeCountRemaining: int
 ```
 
-Indicates the remaining encoding count for the SMS message segment information.
+Remaining encoding count.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -64,7 +64,7 @@ Indicates the remaining encoding count for the SMS message segment information.
 scheme: SmsEncodingScheme
 ```
 
-Indicates the encoding scheme for the SMS message segment information.
+Encoding scheme.
 
 **Type:** [SmsEncodingScheme](arkts-telephony-sms-smsencodingscheme-e-sys.md)
 
@@ -84,7 +84,7 @@ Indicates the encoding scheme for the SMS message segment information.
 splitCount: int
 ```
 
-Indicates the split count for the SMS message segment information.
+Split count.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 

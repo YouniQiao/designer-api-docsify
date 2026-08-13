@@ -12,7 +12,7 @@ import { call } from '@kit.TelephonyKit';
 function isInEmergencyCall(callback: AsyncCallback<boolean>): void
 ```
 
-Judge whether the emergency call is in progress.
+Checks whether a call is an emergency call. This API uses an asynchronous callback to return the result.
 
 **Since:** 7
 
@@ -63,7 +63,7 @@ call.isInEmergencyCall((err: BusinessError, data: boolean) => {
 function isInEmergencyCall(): Promise<boolean>
 ```
 
-Judge whether the emergency call is in progress.
+Checks whether a call is an emergency call. This API uses a promise to return the result.
 
 **Since:** 7
 

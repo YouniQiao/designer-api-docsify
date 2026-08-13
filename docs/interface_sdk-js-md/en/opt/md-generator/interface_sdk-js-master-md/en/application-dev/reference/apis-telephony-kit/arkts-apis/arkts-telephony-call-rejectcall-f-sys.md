@@ -12,7 +12,7 @@ import { call } from '@kit.TelephonyKit';
 function rejectCall(callId: number, options: RejectMessageOptions, callback: AsyncCallback<void>): void
 ```
 
-Reject the incoming call.
+Rejects a call. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
 
@@ -68,7 +68,7 @@ call.rejectCall(1, rejectMessageOptions, (err: BusinessError) => {
 function rejectCall(callId?: number, options?: RejectMessageOptions): Promise<void>
 ```
 
-Reject the incoming call.
+Rejects a call. This API uses a promise to return the result.
 
 **Since:** 9
 
@@ -127,7 +127,7 @@ call.rejectCall(1, rejectMessageOptions).then(() => {
 function rejectCall(callId: number, callback: AsyncCallback<void>): void
 ```
 
-Reject the incoming call.
+Rejects a call. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
 
@@ -179,7 +179,7 @@ call.rejectCall(1, (err: BusinessError) => {
 function rejectCall(options: RejectMessageOptions, callback: AsyncCallback<void>): void
 ```
 
-Reject the incoming call without callId.
+Rejects a call. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
 

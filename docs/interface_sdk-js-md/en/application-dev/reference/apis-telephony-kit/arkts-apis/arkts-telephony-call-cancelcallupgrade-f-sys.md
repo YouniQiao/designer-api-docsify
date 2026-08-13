@@ -12,7 +12,7 @@ import { call } from '@kit.TelephonyKit';
 function cancelCallUpgrade(callId: int): Promise<void>
 ```
 
-Cancel call upgrade when voice call upgrade to video call.
+Cancels the upgrade of a video call. This API uses a promise to return the result.
 
 **Since:** 11
 
@@ -30,13 +30,13 @@ Cancel call upgrade when voice call upgrade to video call.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Indicates the identifier of the call. |
+| callId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Call ID. You can obtain the value by subscribing to **callDetailsChange** events. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | The promise returned by the cancelCallUpgrade. |
+| Promise&lt;void&gt; | Promise used to return the result. |
 
 **Error codes:**
 

@@ -12,7 +12,7 @@ import { call } from '@kit.TelephonyKit';
 function unHoldCall(callId: number, callback: AsyncCallback<void>): void
 ```
 
-Cancel call hold status.
+Unholds a call based on the specified call ID. This API uses an asynchronous callback to return the result.
 
 **Since:** 7
 
@@ -64,7 +64,7 @@ call.unHoldCall(1, (err: BusinessError) => {
 function unHoldCall(callId: number): Promise<void>
 ```
 
-Keep a call on hold.
+Unholds a call based on the specified call ID. This API uses a promise to return the result.
 
 **Since:** 7
 

@@ -1,6 +1,6 @@
 # NumberMarkInfo (System API)
 
-Indicates the mark information of the phone number.
+Defines a number mark.
 
 **Since:** 12
 
@@ -22,7 +22,10 @@ import { call } from '@kit.TelephonyKit';
 isCloud?: boolean
 ```
 
-Indicates if this is a number mark from cloud.
+Whether the number mark is from the cloud. The default value is **false**.
+
+- **true**: yes  
+- **false**: no
 
 **Type:** boolean
 
@@ -40,7 +43,7 @@ Indicates if this is a number mark from cloud.
 markContent?: string
 ```
 
-Indicates the content of number mark.
+Mark content. When **markType** is set to **MARK_TYPE_ENTERPRISE**, the returned information consists of the employee name and ID.
 
 **Type:** string
 
@@ -58,7 +61,7 @@ Indicates the content of number mark.
 markCount?: number
 ```
 
-Indicates the count of number mark.
+Mark count.
 
 **Type:** number
 
@@ -76,7 +79,7 @@ Indicates the count of number mark.
 markDetails?: string
 ```
 
-Indicates the details of number mark.
+Mark details. When **markType** is set to **MARK_TYPE_ENTERPRISE**, the value of this parameter is the department position.
 
 **Type:** string
 
@@ -94,7 +97,7 @@ Indicates the details of number mark.
 markSource?: string
 ```
 
-Indicates the source of number mark.
+Mark source.
 
 **Type:** string
 
@@ -112,7 +115,7 @@ Indicates the source of number mark.
 markType: MarkType
 ```
 
-Indicates the type of number mark.
+Mark type.
 
 **Type:** [MarkType](arkts-telephony-call-marktype-e-sys.md)
 

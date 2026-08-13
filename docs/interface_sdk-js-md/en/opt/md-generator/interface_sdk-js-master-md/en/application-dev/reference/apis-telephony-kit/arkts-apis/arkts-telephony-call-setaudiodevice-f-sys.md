@@ -12,7 +12,7 @@ import { call } from '@kit.TelephonyKit';
 function setAudioDevice(device: AudioDevice, callback: AsyncCallback<void>): void
 ```
 
-Set the audio device.
+Sets the audio device for a call. This API uses an asynchronous callback to return the result.
 
 **Since:** 8
 
@@ -67,7 +67,7 @@ call.setAudioDevice(audioDevice, (err: BusinessError) => {
 function setAudioDevice(device: AudioDevice): Promise<void>
 ```
 
-Set the audio device.
+Sets the audio device for a call. This API uses a promise to return the result.
 
 **Since:** 10
 

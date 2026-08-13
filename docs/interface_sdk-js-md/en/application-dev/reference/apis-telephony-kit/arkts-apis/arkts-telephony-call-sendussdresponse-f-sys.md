@@ -12,7 +12,7 @@ import { call } from '@kit.TelephonyKit';
 function sendUssdResponse(slotId: int, content: string): void
 ```
 
-Send ussd response.
+Sends a response to the Unstructured Supplementary Service Data (USSD) service to the carrier.
 
 **Since:** 26.0.0
 
@@ -30,8 +30,8 @@ Send ussd response.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| slotId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Indicates the slotId to send response. |
-| content | string | Yes | Indicates the response content. |
+| slotId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | ID of the card slot that sends the response. |
+| content | string | Yes | Response content. |
 
 **Error codes:**
 

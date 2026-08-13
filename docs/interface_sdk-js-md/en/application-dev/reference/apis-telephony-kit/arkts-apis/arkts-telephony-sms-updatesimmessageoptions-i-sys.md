@@ -24,7 +24,7 @@ import { sms } from '@kit.TelephonyKit';
 msgIndex: int
 ```
 
-Indicates the message index for the updating SIM message options.
+Message index.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -44,7 +44,7 @@ Indicates the message index for the updating SIM message options.
 newStatus: SimMessageStatus
 ```
 
-Indicates the new status for the updating SIM message options.
+New status.
 
 **Type:** [SimMessageStatus](arkts-telephony-sms-simmessagestatus-e-sys.md)
 
@@ -64,7 +64,7 @@ Indicates the new status for the updating SIM message options.
 pdu: string
 ```
 
-Indicates the protocol data unit for the updating SIM message options.
+Protocol data unit.
 
 **Type:** string
 
@@ -84,7 +84,7 @@ Indicates the protocol data unit for the updating SIM message options.
 slotId: int
 ```
 
-Indicates the card slot ID for the updating SIM message options.
+Card slot ID.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -104,7 +104,7 @@ Indicates the card slot ID for the updating SIM message options.
 smsc: string
 ```
 
-Indicates the short message service center for the updating SIM message options.
+Short message service center.
 
 **Type:** string
 

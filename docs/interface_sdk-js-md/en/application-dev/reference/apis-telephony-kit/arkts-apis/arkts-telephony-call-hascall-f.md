@@ -12,7 +12,7 @@ import { call } from '@kit.TelephonyKit';
 function hasCall(callback: AsyncCallback<boolean>): void
 ```
 
-Checks whether a call is ongoing.
+Checks whether a call is in progress. This API uses an asynchronous callback to return the result.
 
 **Since:** 6
 
@@ -26,7 +26,7 @@ Checks whether a call is ongoing.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;boolean&gt; | Yes | The callback of hasCall. Returns {@code true} if at least one call is not in the [CALL_STATE_IDLE](arkts-telephony-call-callstate-e.md#CALL_STATE_IDLE) state; returns {@code false} otherwise. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;boolean&gt; | Yes | Callback used to return the result. The value **true** indicates that a call is in progress, and the value **false** indicates the opposite. |
 
 ## Examples
 
@@ -49,7 +49,7 @@ call.hasCall((err: BusinessError, data: boolean) => {
 function hasCall(): Promise<boolean>
 ```
 
-Checks whether a call is ongoing.
+Checks whether a call is in progress. This API uses a promise to return the result.
 
 **Since:** 6
 
@@ -63,7 +63,7 @@ Checks whether a call is ongoing.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;boolean&gt; | Returns { |
+| Promise&lt;boolean&gt; | Promise used to return the result. The value **true** indicates that a call is in progress, and the value **false** indicates the opposite. |
 
 ## Examples
 

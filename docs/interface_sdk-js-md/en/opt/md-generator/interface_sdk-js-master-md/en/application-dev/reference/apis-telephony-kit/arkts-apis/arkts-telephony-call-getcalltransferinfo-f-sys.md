@@ -12,7 +12,7 @@ import { call } from '@kit.TelephonyKit';
 function getCallTransferInfo(slotId: number, type: CallTransferType, callback: AsyncCallback<CallTransferResult>): void
 ```
 
-Get call forwarding information.
+Obtains call transfer information. This API uses an asynchronous callback to return the result.
 
 **Since:** 8
 
@@ -65,7 +65,7 @@ call.getCallTransferInfo(0, call.CallTransferType.TRANSFER_TYPE_BUSY, (err: Busi
 function getCallTransferInfo(slotId: number, type: CallTransferType): Promise<CallTransferResult>
 ```
 
-Get call forwarding information.
+Obtains call transfer information. This API uses a promise to return the result.
 
 **Since:** 8
 

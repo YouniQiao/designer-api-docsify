@@ -32,7 +32,7 @@ addObserver函数用于注册自定义组件生命周期监听器。调用此方
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| observer | [CustomComponentLifecycleObserver](arkts-arkui-arkui-statemanagement-customcomponentlifecycleobserver-i.md) | 是 |
+| [observer](../../apis-telephony-kit/arkts-apis/arkts-telephony-observer.md) | [CustomComponentLifecycleObserver](arkts-arkui-arkui-statemanagement-customcomponentlifecycleobserver-i.md) | 是 |
 
 ## getCurrentState
 
@@ -80,4 +80,4 @@ removeObserver函数用于移除自定义组件生命周期监听器。调用此
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| observer | [CustomComponentLifecycleObserver](arkts-arkui-arkui-statemanagement-customcomponentlifecycleobserver-i.md) | 是 |
+| [observer](../../apis-telephony-kit/arkts-apis/arkts-telephony-observer.md) | [CustomComponentLifecycleObserver](arkts-arkui-arkui-statemanagement-customcomponentlifecycleobserver-i.md) | 是 |

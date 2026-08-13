@@ -1,6 +1,6 @@
 # VoNRState (System API)
 
-Indicates the VoNR state.
+Enumerates VoNR switch states.
 
 **Since:** 10
 
@@ -16,7 +16,7 @@ Indicates the VoNR state.
 VONR_STATE_OFF = 0
 ```
 
-Indicates the VoNR switch is off.
+Disabled.
 
 **Since:** 10
 
@@ -32,7 +32,7 @@ Indicates the VoNR switch is off.
 VONR_STATE_ON = 1
 ```
 
-Indicates the VoNR switch is on.
+Enabled.
 
 **Since:** 10
 

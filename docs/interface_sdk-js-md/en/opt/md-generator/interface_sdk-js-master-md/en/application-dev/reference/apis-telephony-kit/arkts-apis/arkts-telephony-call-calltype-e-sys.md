@@ -1,6 +1,6 @@
 # CallType (System API)
 
-Indicates the type of call.
+Enumerates call types.
 
 **Since:** 7
 
@@ -16,7 +16,7 @@ Indicates the type of call.
 TYPE_CS = 0
 ```
 
-Indicates the call type is CS.
+CS call.
 
 **Since:** 7
 
@@ -32,7 +32,7 @@ Indicates the call type is CS.
 TYPE_IMS = 1
 ```
 
-Indicates the call type is IMS.
+IMS call.
 
 **Since:** 7
 
@@ -48,7 +48,7 @@ Indicates the call type is IMS.
 TYPE_OTT = 2
 ```
 
-Indicates the call type is OTT.
+OTT call.
 
 **Since:** 7
 
@@ -64,7 +64,7 @@ Indicates the call type is OTT.
 TYPE_ERR_CALL = 3
 ```
 
-Indicates the call type is OTHER.
+Error call type.
 
 **Since:** 7
 
@@ -80,7 +80,7 @@ Indicates the call type is OTHER.
 TYPE_VOIP = 4
 ```
 
-Indicates the call type is VoIP.
+VoIP call.
 
 **Since:** 11
 
@@ -96,7 +96,7 @@ Indicates the call type is VoIP.
 TYPE_XCALL = 5
 ```
 
-Indicates the call type is XCALL.
+X-Call.
 
 **Since:** 26.0.0
 

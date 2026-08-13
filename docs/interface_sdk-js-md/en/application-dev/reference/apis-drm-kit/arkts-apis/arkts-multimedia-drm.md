@@ -1,10 +1,16 @@
 # @ohos.multimedia.drm(Defines the DRM capability.)
 
-This module provides the DRM capability to multimedia player.
+The Digital Rights Management (DRM) framework enables you to develop digital rights management features for audio and video services. By calling the DRM plugins provided by the system, you can achieve the following:
 
-**Since:** 12
+- DRM certificate management: Generate certificate requests and handle certificate responses to facilitate   
+certificate provisioning (downloading).  
+- DRM media key management: Generate media key requests, manage media key responses, and handle offline media keys.  
+- DRM content authorization: Allow DRM plugins to authorize content based on media key permissions.  
+- DRM content decryption: Decrypt DRM content to support media playback functionality.
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**Since:** 11
+
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 <!--Device-unnamed-declare namespace drm--><!--Device-unnamed-declare namespace drm-End-->
 
@@ -24,37 +30,37 @@ import { drm } from '@kit.DrmKit';
 | --- | --- |
 | [createMediaKeySystem](arkts-drm-drm-createmediakeysystem-f.md#createmediakeysystem) | Creates a MediaKeySystem instance. |
 | [createMediaKeySystem](arkts-drm-drm-createmediakeysystem-f.md#createmediakeysystem-1) | Creates a MediaKeySystem instance. |
-| [getMediaKeySystemUuid](arkts-drm-drm-getmediakeysystemuuid-f.md#getmediakeysystemuuid) | Get a MediaKeySystem's UUID. |
-| [getMediaKeySystems](arkts-drm-drm-getmediakeysystems-f.md#getmediakeysystems) | Get all media key systems supported. |
-| [isMediaKeySystemSupported](arkts-drm-drm-ismediakeysystemsupported-f.md#ismediakeysystemsupported) | Judge whether a system that specifies name, mimetype and content protection level is supported. |
-| [isMediaKeySystemSupported](arkts-drm-drm-ismediakeysystemsupported-f.md#ismediakeysystemsupported-1) | Judge whether a system that specifies name, mimetype is supported. |
-| [isMediaKeySystemSupported](arkts-drm-drm-ismediakeysystemsupported-f.md#ismediakeysystemsupported-2) | Judge whether a system that specifies name is supported. |
+| [getMediaKeySystemUuid](arkts-drm-drm-getmediakeysystemuuid-f.md#getmediakeysystemuuid) | Obtains the UUID of the DRM content protection system supported by the specified DRM solution. |
+| [getMediaKeySystems](arkts-drm-drm-getmediakeysystems-f.md#getmediakeysystems) | Obtains the list of plugins supported by the device. |
+| [isMediaKeySystemSupported](arkts-drm-drm-ismediakeysystemsupported-f.md#ismediakeysystemsupported) | Checks whether the device supports the combination of the DRM solution, MIME type, and content protection level. |
+| [isMediaKeySystemSupported](arkts-drm-drm-ismediakeysystemsupported-f.md#ismediakeysystemsupported-1) | Checks whether the device supports the combination of the DRM solution and MIME type. |
+| [isMediaKeySystemSupported](arkts-drm-drm-ismediakeysystemsupported-f.md#ismediakeysystemsupported-2) | Checks whether the device supports the specified DRM solution. |
 
 ### Interfaces
 
 | Name | Description |
 | --- | --- |
-| [EventInfo](arkts-drm-drm-eventinfo-i.md) | Used to indicate the event info attached to specific event type. |
-| [KeysInfo](arkts-drm-drm-keysinfo-i.md) | Used to indicate the media key status with a key and its value. |
-| [MediaKeyRequest](arkts-drm-drm-mediakeyrequest-i.md) | Provides the drm media key request definitions. |
-| [MediaKeySession](arkts-drm-drm-mediakeysession-i.md) | Provide functions and keep a decrypt module. Before calling an MediaKeySession method, we must use MediaKeySystem's createMediaKeySession to get a MediaKeySession instance. |
-| [MediaKeyStatus](arkts-drm-drm-mediakeystatus-i.md) | Used to indicate the media key status. |
-| [MediaKeySystem](arkts-drm-drm-mediakeysystem-i.md) | Manages and record MediaKeySessions. Before calling an MediaKeySystem method, we must use getMediaKeySystem to get a MediaKeySystem instance, then we can call functions. |
-| [MediaKeySystemDescription](arkts-drm-drm-mediakeysystemdescription-i.md) | Name and UUID of DRM plugin. |
-| [MediaKeySystemInfo](arkts-drm-drm-mediakeysysteminfo-i.md) | Used to indicate the media key system info of media source. |
-| [OptionsData](arkts-drm-drm-optionsdata-i.md) | Provides the drm media key request info optional data. |
-| [ProvisionRequest](arkts-drm-drm-provisionrequest-i.md) | Provides the drm provision request definitions. |
-| [StatisticKeyValue](arkts-drm-drm-statistickeyvalue-i.md) | Used to indicate the statistic info. |
+| [EventInfo](arkts-drm-drm-eventinfo-i.md) | Defines the DRM event information. |
+| [KeysInfo](arkts-drm-drm-keysinfo-i.md) | Defines the status information of a media key. |
+| [MediaKeyRequest](arkts-drm-drm-mediakeyrequest-i.md) | Defines a media key request. |
+| [MediaKeySession](arkts-drm-drm-mediakeysession-i.md) | MediaKeySession implements media key management. Before calling any API in MediaKeySession, you must use  [createMediaKeySession](arkts-drm-drm-mediakeysystem-i.md#createMediaKeySession-1)to create a MediaKeySession instance. |
+| [MediaKeyStatus](arkts-drm-drm-mediakeystatus-i.md) | Defines a status attribute for a media key. |
+| [MediaKeySystem](arkts-drm-drm-mediakeysystem-i.md) | MediaKeySystem manages MediaKeySystem instances, handles device certificate (DRM certificate) requests and processing, creates sessions, manages offline media keys, obtains DRM metrics, and obtain device configurations. Before calling any API in MediaKeySystem, you must use  [createMediaKeySystem](arkts-drm-drm-createmediakeysystem-f.md#createMediaKeySystem-1) to create a MediaKeySystem instance. |
+| [MediaKeySystemDescription](arkts-drm-drm-mediakeysystemdescription-i.md) | Defines the DRM plugin information. |
+| [MediaKeySystemInfo](arkts-drm-drm-mediakeysysteminfo-i.md) | Defines the DRM information for encrypted content. |
+| [OptionsData](arkts-drm-drm-optionsdata-i.md) | Defines optional parameters for a device certificate request. |
+| [ProvisionRequest](arkts-drm-drm-provisionrequest-i.md) | Defines a device certificate provisioning request. |
+| [StatisticKeyValue](arkts-drm-drm-statistickeyvalue-i.md) | Defines a key-value pair for DRM metrics. |
 
 ### Enums
 
 | Name | Description |
 | --- | --- |
-| [CertificateStatus](arkts-drm-drm-certificatestatus-e.md) | Enumerates certificate status. |
-| [ContentProtectionLevel](arkts-drm-drm-contentprotectionlevel-e.md) | Enumerates content protection level. |
-| [DrmErrorCode](arkts-drm-drm-drmerrorcode-e.md) | Enumerates DRM error codes. |
-| [MediaKeyRequestType](arkts-drm-drm-mediakeyrequesttype-e.md) | Enumerates media key request types. |
-| [MediaKeyType](arkts-drm-drm-mediakeytype-e.md) | Enumerates media key type. |
-| [OfflineMediaKeyStatus](arkts-drm-drm-offlinemediakeystatus-e.md) | Enumerates offline media key status. |
-| [PreDefinedConfigName](arkts-drm-drm-predefinedconfigname-e.md) | Enumerates the config names that can be obtained. |
+| [CertificateStatus](arkts-drm-drm-certificatestatus-e.md) | Enumerates the statuses of device certificates. |
+| [ContentProtectionLevel](arkts-drm-drm-contentprotectionlevel-e.md) | Enumerates the content protection levels. |
+| [DrmErrorCode](arkts-drm-drm-drmerrorcode-e.md) | Enumerates the DRM error codes. |
+| [MediaKeyRequestType](arkts-drm-drm-mediakeyrequesttype-e.md) | Enumerates the types of media key requests. |
+| [MediaKeyType](arkts-drm-drm-mediakeytype-e.md) | Enumerates the types of media keys. |
+| [OfflineMediaKeyStatus](arkts-drm-drm-offlinemediakeystatus-e.md) | Enumerates the statuses of offline media keys. |
+| [PreDefinedConfigName](arkts-drm-drm-predefinedconfigname-e.md) | Enumerates the predefined configuration properties. |
 

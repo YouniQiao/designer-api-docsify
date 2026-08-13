@@ -12,7 +12,7 @@ import { call } from '@kit.TelephonyKit';
 function sendCallUiEvent(callId: number, eventName: string): Promise<void>
 ```
 
-Send call ui event.
+Sends a call UI event. This API uses a promise to return the result.
 
 **Since:** 12
 

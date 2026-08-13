@@ -1,4 +1,4 @@
-- [Ability Kit (1348)](interface_sdk-js-md/zh-cn/application-dev/reference/apis-ability-kit/arkts-apis/arkts-ability-ability.md)
+- [Ability Kit (1389)](interface_sdk-js-md/zh-cn/application-dev/reference/apis-ability-kit/arkts-apis/arkts-ability-ability.md)
 - [Accessibility Kit (126)](interface_sdk-js-md/zh-cn/application-dev/reference/apis-accessibility-kit/arkts-apis/arkts-accessibility.md)
 - [Ads Kit (27)](interface_sdk-js-md/zh-cn/application-dev/reference/apis-ads-kit/arkts-apis/arkts-advertising.md)
 - [Arkdata (476)](interface_sdk-js-md/zh-cn/application-dev/reference/apis-arkdata/arkts-apis/arkts-application-datashareextensionability.md)
@@ -26,6 +26,7 @@
 - [Device Certificate Kit (166)](interface_sdk-js-md/zh-cn/application-dev/reference/apis-device-certificate-kit/arkts-apis/arkts-security-cert.md)
 - [Distributed Service Kit (157)](interface_sdk-js-md/zh-cn/application-dev/reference/apis-distributed-service-kit/arkts-apis/arkts-application-distributedextensionability.md)
 - [Driver Development Kit (81)](interface_sdk-js-md/zh-cn/application-dev/reference/apis-driver-development-kit/arkts-apis/arkts-app-ability-driverextensionability.md)
+- [Drm Kit (44)](interface_sdk-js-md/zh-cn/application-dev/reference/apis-drm-kit/arkts-apis/arkts-multimedia-drm.md)
 - [Function Flow Runtime Kit (26)](interface_sdk_c-md/zh-cn/application-dev/reference/apis-function-flow-runtime-kit/c-apis/capi-condition-variable-h.md)
 - [Game Controller Kit (15)](interface_sdk_c-md/zh-cn/application-dev/reference/apis-game-controller-kit/c-apis/capi-game-pad-event-h.md)
 - [Image Kit (188)](interface_sdk-js-md/zh-cn/application-dev/reference/apis-image-kit/arkts-apis/arkts-multimedia-image.md)
@@ -43,7 +44,7 @@
 - Others
 - [Performance Analysis Kit (249)](interface_sdk-js-md/zh-cn/application-dev/reference/apis-performance-analysis-kit/arkts-apis/arkts-bytrace.md)
 - [Sensor Service Kit (217)](interface_sdk-js-md/zh-cn/application-dev/reference/apis-sensor-service-kit/arkts-apis/arkts-sensor.md)
-- [Telephony Kit (82)](interface_sdk-js-md/zh-cn/application-dev/reference/apis-telephony-kit/arkts-apis/arkts-telephony-sim.md)
+- [Telephony Kit (343)](interface_sdk-js-md/zh-cn/application-dev/reference/apis-telephony-kit/arkts-apis/arkts-telephony-call.md)
 - [Test Kit (79)](interface_sdk-js-md/zh-cn/application-dev/reference/apis-test-kit/arkts-apis/arkts-uitest.md)
 - [Universal Keystore Kit (129)](interface_sdk-js-md/zh-cn/application-dev/reference/apis-universal-keystore-kit/arkts-apis/arkts-security-cryptoextensionability.md)
 - [User Authentication Kit (88)](interface_sdk-js-md/zh-cn/application-dev/reference/apis-user-authentication-kit/arkts-apis/arkts-app-ability-userauthextensionability.md)

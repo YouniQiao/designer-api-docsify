@@ -12,7 +12,7 @@ import { call } from '@kit.TelephonyKit';
 function hangUpCall(callback: AsyncCallback<void>): void
 ```
 
-Hang up the foreground call without callId.
+Ends a call. This API uses an asynchronous callback to return the result.
 
 **Since:** 23
 

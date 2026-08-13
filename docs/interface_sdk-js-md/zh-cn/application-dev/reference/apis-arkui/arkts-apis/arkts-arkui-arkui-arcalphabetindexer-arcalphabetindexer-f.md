@@ -32,7 +32,7 @@ export declare function ArcAlphabetIndexer(
 
 | 类型 | 说明 |
 | --- | --- |
-| [ArcAlphabetIndexerAttribute](arkts-arkui-arkui-arcalphabetindexer-arcalphabetindexerattribute-c.md) | ArcAlphabetIndexer实例对象。 |
+| [ArcAlphabetIndexerAttribute](arkts-arkui-arkui-arcalphabetindexer-arcalphabetindexerattribute-i.md) | ArcAlphabetIndexer实例对象。 |
 
 
 ## ArcAlphabetIndexer
@@ -61,11 +61,11 @@ export declare function ArcAlphabetIndexer(
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| style_ | CustomBuilderT&lt;[ArcAlphabetIndexerAttribute](arkts-arkui-arkui-arcalphabetindexer-arcalphabetindexerattribute-c.md)&gt; | 是 | arcAlphabetIndexer属性实例。 |
+| style_ | CustomBuilderT&lt;[ArcAlphabetIndexerAttribute](arkts-arkui-arkui-arcalphabetindexer-arcalphabetindexerattribute-i.md)&gt; | 是 | arcAlphabetIndexer属性实例。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| [ArcAlphabetIndexerAttribute](arkts-arkui-arkui-arcalphabetindexer-arcalphabetindexerattribute-c.md) |  |
+| [ArcAlphabetIndexerAttribute](arkts-arkui-arkui-arcalphabetindexer-arcalphabetindexerattribute-i.md) |  |
 

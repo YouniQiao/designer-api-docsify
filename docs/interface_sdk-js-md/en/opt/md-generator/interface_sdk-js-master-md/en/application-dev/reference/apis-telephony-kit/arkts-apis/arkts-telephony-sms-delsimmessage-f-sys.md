@@ -12,7 +12,7 @@ import { sms } from '@kit.TelephonyKit';
 function delSimMessage(slotId: number, msgIndex: number, callback: AsyncCallback<void>): void
 ```
 
-Delete an SMS Message from the SIM card.
+Deletes a message from the SIM card. If the specified **msgIndex** is invalid, an error is reported. This API uses an asynchronous callback to return the result.
 
 **Since:** 7
 
@@ -64,7 +64,7 @@ sms.delSimMessage(slotId, msgIndex, (err: BusinessError) => {
 function delSimMessage(slotId: number, msgIndex: number): Promise<void>
 ```
 
-Delete an SMS Message from the SIM card.
+Deletes a message from the SIM card. If the specified **msgIndex** is invalid, an error is reported. This API uses a promise to return the result.
 
 **Since:** 7
 

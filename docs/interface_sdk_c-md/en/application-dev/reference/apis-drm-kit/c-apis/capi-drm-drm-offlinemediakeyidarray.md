@@ -6,7 +6,7 @@ typedef struct DRM_OfflineMediakeyIdArray {...} DRM_OfflineMediakeyIdArray
 
 ## Overview
 
-Offline media key ids array.
+The struct describes an array of offline media key IDs.
 
 **Since**: 11
 

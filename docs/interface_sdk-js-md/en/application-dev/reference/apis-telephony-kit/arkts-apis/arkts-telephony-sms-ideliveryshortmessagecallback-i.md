@@ -22,7 +22,7 @@ import { sms } from '@kit.TelephonyKit';
 pdu: Array<int>
 ```
 
-Indicates the SMS delivery report.
+SMS message delivery report.
 
 **Type:** ArkTS-Dyn: Array&lt;number&gt;  <br>ArkTS-Sta：Array&lt;int&gt;
 
